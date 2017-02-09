@@ -21,7 +21,7 @@ body
 	scrollbar-base-color: $main_color   //для IE 
 	scrollbar-arrow-color: $main_color	//для IE
 	//внешний вид скроллбара для -webkit- остальное тут https://poselab.com/en/blog/custom-scrollbars-in-webkit/
-	background: url(../Melfori.jpg) center top no-repeat
+	//background: url(../Melfori.jpg) center top no-repeat
 	&::-webkit-scrollbar
 		width: 12px
 	&::-webkit-scrollbar-thumb
@@ -346,18 +346,20 @@ p
 		min-height: 100%
 		position: relative
 
-
+.header_top
+	text-align: left
 .header_logo
 	display: inline-block
 	margin-top: 40px
-	margin-left: -140px
+	margin-left: 17px
+	float: left
 	text-align: left
 	a
 		color: #fff
 		&:hover
 			text-decoration: none
 		span
-			margin-left: 10px
+			margin-left: 13px
 			display: inline-block
 			vertical-align: middle
 			@include font($main_txt_color, 13.8px, $font_SFUIDisplay-Light, 1.2)
@@ -365,7 +367,7 @@ p
 .header_nav		
 	display: inline-block
 	position: relative
-	margin-left: 10px
+	margin: 40px 0 0 0
 	ul
 		li		
 			list-style: none
