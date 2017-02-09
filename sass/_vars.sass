@@ -1,0 +1,85 @@
+@import "bourbon"
+
+//main_color: #17a9d8
+//main_txt_color: #262626
+//main_bg_color: #fff
+//auxiliary_txt_color: #443133
+//$font_SFUIDisplay-Thin: "SFUIDisplay-Thin", Arial, sans-serif
+//$font_SFUIDisplay-Regular: "SFUIDisplay-Regular", Arial, sans-serif
+//$font_SFUIDisplay-Medium: "SFUIDisplay-Medium", Arial, sans-serif
+//$font_SFUIDisplay-Light: "SFUIDisplay-Light", Arial, sans-serif
+//$font_SFUIDisplay-Bold: "SFUIDisplay-Bold", Arial, sans-serif
+
+
+$main_color: #01c1e6
+$main_txt_color: #1d1d1f
+$auxiliary_txt_color: #00be92
+$main_bg_color: #fff
+
+
+$font_SFUIDisplay-Thin: "SFUIDisplay-Thin", Arial, sans-serif
+$font_SFUIDisplay-Regular: "SFUIDisplay-Regular", Arial, sans-serif
+$font_SFUIDisplay-Medium: "SFUIDisplay-Medium", Arial, sans-serif
+$font_SFUIDisplay-Light: "SFUIDisplay-Light", Arial, sans-serif
+$font_SFUIDisplay-Bold: "SFUIDisplay-Bold", Arial, sans-serif
+
+
+
+@mixin font($color, $fz, $ff, $lh: 1.6)
+	color: $color
+	font: $fz $ff
+	line-height: $lh
+
+%main_btn
+	width: 270px
+	height: 50px
+	background-color: #01c1e6
+	border: 1px solid #01c1e6
+	border-radius: 10px
+	@include font(#fff, 16px, $font_SFUIDisplay-Regular)
+	transition: background-color, color, border, 0.5s
+%main_btn_hover
+	color: $main_color
+	background-color: transparent
+%main_btn_active
+	color: $main_color
+	background-color: transparent
+	outline: 0
+%main_btn_focus
+	color: $main_color
+	background-color: transparent
+	outline: 0
+
+%main_btn2
+	width: 370px
+	height: 50px
+	background-color: white
+	border-radius: 10px
+	@include font($main_color, 16px, $font_SFUIDisplay-Regular)
+	transition: background-color, color, border, 0.5s
+%main_btn2_hover
+	background-color: transparent
+	border: 1px solid white
+	color: white
+%main_btn2_active
+	background-color: transparent
+	border: 1px solid white
+	color: white
+	outline: 0
+%main_btn2_focus
+	background-color: transparent
+	border: 1px solid white
+	color: white
+	outline: 0
+
+%flex 
+	display: flex
+	align-items: center
+	justify-content: center
+
+	
+			
+
+
+
+
