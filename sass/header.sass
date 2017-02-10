@@ -372,14 +372,33 @@ p
 		li		
 			list-style: none
 			display: inline-block
+			&:last-of-type a
+				margin-right: 32px
 			a
-				margin-right: 15px
+				margin-right: 40px
 				color: $main_txt_color
-				font-size: 16px
+				font-size: 18px
 				text-decoration: none
 				transition: .5s
+				&:hover
+					color: $main_color
+
 .header_modal
 	display: inline-block
+	div
+		text-align: center
+	a
+		display: inline-block
+		vertical-align: super
+		font-size: 18px
+		color: $main_txt_color
+		&:hover
+			text-decoration: none
+		&:active
+			text-decoration: none
+		&:focus
+			text-decoration: none
+		
 	button
 		@extend %main_btn
 		&:hover

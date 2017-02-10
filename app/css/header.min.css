@@ -1,6 +1,6 @@
 .popup.pop3 .dm-modal ul,p{padding:0}
 .header_nav ul li,.popup.pop3 .dm-modal li{list-style:none}
-.dm-modal .select .drop li a,.header_logo a:hover,.header_nav ul li a{text-decoration:none}
+.dm-modal .select .drop li a,.header_logo a:hover,.header_modal a:active,.header_modal a:focus,.header_modal a:hover,.header_nav ul li a{text-decoration:none}
 .dm-modal input[type=submit],.header_modal button{width:270px;height:50px;background-color:#01c1e6;border:1px solid #01c1e6;-webkit-border-radius:10px;border-radius:10px;color:#fff;font:16px SFUIDisplay-Regular,Arial,sans-serif;line-height:1.6;-webkit-transition:background-color,color,border,.5s;transition:background-color,color,border,.5s}
 .dm-modal input[type=submit]:hover,.header_modal button:hover{color:#01c1e6;background-color:transparent}
 .dm-modal input[type=submit]:active,.dm-modal input[type=submit]:focus,.header_modal button:active,.header_modal button:focus{color:#01c1e6;background-color:transparent;outline:0}
@@ -60,22 +60,26 @@ p{margin:0}
 .modal_form_input_wrap .modal_input_error.input_error_email{width:215px}
 .modal_form_input_wrap .modal_input_error.input_error_phone{width:235px}
 .modal_form_input_wrap .modal_input_error.form_error{display:block}
-.header_logo,.header_logo a span,.header_modal,.header_nav,.header_nav ul li,label{display:inline-block}
+.header_logo,.header_logo a span,.header_modal,.header_modal a,.header_nav,.header_nav ul li,label{display:inline-block}
 .modal_form_input_wrap .modal_error_chest_img{width:9px;position:relative;background-image:url(../img/modal_error_chest_img.png);top:-33px;left:0;height:9px}
 .modal_form_input_wrap .modal_error_triangle{width:9px;position:relative;background-image:url(../img/modal_error_triangle.png);top:-43px;left:10px;height:8px}
 .header{text-align:center;min-height:600px;height:100vh;background-color:#fff}
 .header_logo,.header_top{text-align:left}
 .header .container{height:100%;min-height:100%;position:relative}
 .header_logo{margin-top:40px;margin-left:17px;float:left}
+.header_bot_txt,.header_modal div{text-align:center}
 .header_logo a{color:#fff}
 .header_logo a span{margin-left:13px;vertical-align:middle;color:#1d1d1f;font:13.8px SFUIDisplay-Light,Arial,sans-serif;line-height:1.2}
 .header_nav{position:relative;margin:40px 0 0}
-.header_nav ul li a{margin-right:15px;color:#1d1d1f;font-size:16px;-webkit-transition:.5s;transition:.5s}
+.header_nav ul li:last-of-type a{margin-right:32px}
+.header_nav ul li a{margin-right:40px;color:#1d1d1f;font-size:18px;-webkit-transition:.5s;transition:.5s}
 .header_bot_txt,.header_title{margin:auto;position:absolute;left:0;right:0}
+.header_nav ul li a:hover{color:#01c1e6}
+.header_modal a{vertical-align:super;font-size:18px;color:#1d1d1f}
 .header_title{top:-webkit-calc(50% - 200px);top:calc(50% - 200px)}
 .header_title p{font-size:20.5px;color:#1d1d1f}
 .header_title p+p{font-size:18px}
-.header_bot_txt{bottom:50px;text-align:center}
+.header_bot_txt{bottom:50px}
 .header_bot_txt p{font-size:18px;color:#1d1d1f}
 .header_bot_txt i{font-size:30px;color:#1d1d1f;-webkit-transition:.5s;transition:.5s}
 .header_bot_txt i:hover{color:#01c1e6}
