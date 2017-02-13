@@ -8,22 +8,44 @@
 //
 // At the bottom of this section, we provide information about the spritesheet itself
 // $spritesheet: width height image $spritesheet-sprites
+$bottom-title-decor-name: 'bottom_title_decor'
+$bottom-title-decor-x: 230px
+$bottom-title-decor-y: 0px
+$bottom-title-decor-offset-x: -230px
+$bottom-title-decor-offset-y: 0px
+$bottom-title-decor-width: 108px
+$bottom-title-decor-height: 5px
+$bottom-title-decor-total-width: 338px
+$bottom-title-decor-total-height: 230px
+$bottom-title-decor-image: '../img/sprite.png'
+$bottom-title-decor: (230px, 0px, -230px, 0px, 108px, 5px, 338px, 230px, '../img/sprite.png', 'bottom_title_decor', )
 $title-block-left-decor-name: 'title_block_left_decor'
-$title-block-left-decor-x: 0px
-$title-block-left-decor-y: 0px
-$title-block-left-decor-offset-x: 0px
-$title-block-left-decor-offset-y: 0px
+$title-block-left-decor-x: 230px
+$title-block-left-decor-y: 5px
+$title-block-left-decor-offset-x: -230px
+$title-block-left-decor-offset-y: -5px
 $title-block-left-decor-width: 5px
 $title-block-left-decor-height: 100px
-$title-block-left-decor-total-width: 5px
-$title-block-left-decor-total-height: 100px
+$title-block-left-decor-total-width: 338px
+$title-block-left-decor-total-height: 230px
 $title-block-left-decor-image: '../img/sprite.png'
-$title-block-left-decor: (0px, 0px, 0px, 0px, 5px, 100px, 5px, 100px, '../img/sprite.png', 'title_block_left_decor', )
-$spritesheet-width: 5px
-$spritesheet-height: 100px
+$title-block-left-decor: (230px, 5px, -230px, -5px, 5px, 100px, 338px, 230px, '../img/sprite.png', 'title_block_left_decor', )
+$who-are-we-item-img-back-name: 'who_are_we_item_img_back'
+$who-are-we-item-img-back-x: 0px
+$who-are-we-item-img-back-y: 0px
+$who-are-we-item-img-back-offset-x: 0px
+$who-are-we-item-img-back-offset-y: 0px
+$who-are-we-item-img-back-width: 230px
+$who-are-we-item-img-back-height: 230px
+$who-are-we-item-img-back-total-width: 338px
+$who-are-we-item-img-back-total-height: 230px
+$who-are-we-item-img-back-image: '../img/sprite.png'
+$who-are-we-item-img-back: (0px, 0px, 0px, 0px, 230px, 230px, 338px, 230px, '../img/sprite.png', 'who_are_we_item_img_back', )
+$spritesheet-width: 338px
+$spritesheet-height: 230px
 $spritesheet-image: '../img/sprite.png'
-$spritesheet-sprites: ($title-block-left-decor, )
-$spritesheet: (5px, 100px, '../img/sprite.png', $spritesheet-sprites, )
+$spritesheet-sprites: ($bottom-title-decor, $title-block-left-decor, $who-are-we-item-img-back, )
+$spritesheet: (338px, 230px, '../img/sprite.png', $spritesheet-sprites, )
 
 // The provided mixins are intended to be used with the array-like variables
 //

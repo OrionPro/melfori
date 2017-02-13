@@ -1,9 +1,12 @@
 .owl-carousel,.owl-carousel .owl-item{-webkit-tap-highlight-color:transparent;position:relative}
 .fa-fw,.fa-li,.our_advantages{text-align:center}
-.our_advantages button{height:50px;background-color:#01c1e6;border:1px solid #01c1e6;-webkit-border-radius:10px;border-radius:10px;color:#fff;font:16px SFUIDisplay-Regular,Arial,sans-serif;line-height:1.6;-webkit-transition:background-color,color,border,.5s;transition:background-color,color,border,.5s}
-.our_advantages button:hover{color:#01c1e6;background-color:transparent}
-.our_advantages button:active,.our_advantages button:focus{color:#01c1e6;background-color:transparent;outline:0}
-.our_advantages .our_advantages_item .our_advantages_item_big_num{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
+.our_advantages button,.unique_challenge input,.why_effective .why_effective_item button{width:270px;height:50px;background-color:#01c1e6;border:1px solid #01c1e6;-webkit-border-radius:10px;border-radius:10px;color:#fff;font:16px SFUIDisplay-Regular,Arial,sans-serif;line-height:1.6;-webkit-transition:background-color,color,border,.5s;transition:background-color,color,border,.5s}
+.our_advantages button:hover,.why_effective .why_effective_item button:hover{color:#01c1e6;background-color:transparent}
+.our_advantages button:active,.our_advantages button:focus,.why_effective .why_effective_item button:active,.why_effective .why_effective_item button:focus{color:#01c1e6;background-color:transparent;outline:0}
+.unique_challenge input[type=submit],.unique_challenge.you_always_know_what_you_pay button{width:370px;height:50px;background-color:#fff;border:transparent;-webkit-border-radius:10px;border-radius:10px;color:#01c1e6;font:16px SFUIDisplay-Regular,Arial,sans-serif;line-height:1.6;-webkit-transition:background-color,color,border,.5s;transition:background-color,color,border,.5s}
+.unique_challenge input[type=submit]:hover,.unique_challenge.you_always_know_what_you_pay button:hover{background-color:transparent;border:1px solid #fff;color:#fff}
+.unique_challenge input[type=submit]:active,.unique_challenge input[type=submit]:focus,.unique_challenge.you_always_know_what_you_pay button:active,.unique_challenge.you_always_know_what_you_pay button:focus{background-color:transparent;border:1px solid #fff;color:#fff;outline:0}
+.our_advantages .our_advantages_item .our_advantages_item_big_num,.who_are_we_items .who_are_we_item .who_are_we_item_img{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
 .animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
 .animated.infinite{-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}
 .animated.hinge{-webkit-animation-duration:2s;animation-duration:2s}
@@ -1397,23 +1400,50 @@ nav[canvas]{top:20px;left:20px;z-index:100}
 .our_advantages h3{margin-top:56px}
 .our_advantages button{width:370px}
 .title_block_left_decor{width:840px;margin:0 0 0 208px;position:relative}
+.title_block_left_decor.title_right{margin:0 0 0 308px}
 .title_block_left_decor p{width:800px;margin-bottom:0!important;display:Inline-block;vertical-align:middle;text-align:left;font-size:24px!important;line-height:1.25}
-.intermediate,.main_content,.why_effective{text-align:center}
-.title_block_left_decor_img{display:inline-block;vertical-align:middle;margin-right:20px;background-image:url(../img/sprite.png);background-position:0 0;width:5px;height:100px}
-.why_effective h2{margin-bottom:-5px;color:#01c1e6}
-.why_effective p{font-size:18px;margin-bottom:50px}
-.intermediate{min-height:300px;background-color:#00b6f4}
-.intermediate .intermediate_title{max-width:650px;margin:auto;color:#052243}
-.intermediate .intermediate_title h3{margin:30px;text-transform:uppercase;font-size:24px;color:#052243}
-.intermediate .intermediate_wrap{margin-top:40px}
-.intermediate .intermediate_wrap .intermediate_item{display:inline-block}
-.intermediate .intermediate_wrap .intermediate_item input{width:100%;display:inline-block;border:1px solid #a2b6c9;background:#fff;color:#43637f;height:40px;margin:0 10px;padding:0 0 0 9px}
-.intermediate .intermediate_wrap .intermediate_item input::-webkit-input-placeholder{color:#43637f}
-.intermediate .intermediate_wrap .intermediate_item input:-moz-placeholder{color:#43637f}
-.intermediate .intermediate_wrap .intermediate_item input::-moz-placeholder{color:#43637f}
-.intermediate .intermediate_wrap .intermediate_item input:-ms-input-placeholder{color:#43637f}
-.intermediate .intermediate_wrap .intermediate_item input[type=submit]{background:#052243;color:#fff}
-.footer{background-color:#333;height:200px;-webkit-box-flex:0;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto}
+.unique_challenge,.why_effective{text-align:center}
+.title_block_left_decor_img{display:inline-block;vertical-align:middle;margin-right:20px;background-image:url(../img/sprite.png);background-position:-230px -5px;width:5px;height:100px}
+.why_effective h2{margin-bottom:-7px;color:#01c1e6}
+.why_effective p{font-size:18px;margin-bottom:45px}
+.why_effective .why_effective_items{margin-top:70px;margin-bottom:35px}
+.why_effective .why_effective_item{margin-bottom:85px}
+.why_effective .why_effective_item p{margin-top:12px;margin-bottom:15px;line-height:1.1}
+.why_effective .why_effective_item button{width:230px}
+.why_effective .why_effective_item_img{min-height:170px}
+.unique_challenge{min-height:410px;background-color:#01c1e6}
+.unique_challenge h2{margin-bottom:-5px}
+.unique_challenge p{font-size:18px;color:#fff}
+.unique_challenge form{margin-top:30px}
+.unique_challenge .modal_form_input_wrap{display:inline-block;margin-right:30px}
+.unique_challenge input{color:#fff;width:370px;padding-left:15px;border:1px solid #fff}
+.unique_challenge input:active,.unique_challenge input:focus,.unique_challenge input:hover{outline:0}
+.unique_challenge input::-webkit-input-placeholder{color:#fff}
+.unique_challenge input:-moz-placeholder{color:#fff}
+.unique_challenge input::-moz-placeholder{color:#fff}
+.unique_challenge input:-ms-input-placeholder{color:#fff}
+.unique_challenge input[type=submit]{display:inline-block;color:#01c1e6}
+.why_effective.why_profitably .why_profitably_items{margin-top:50px;margin-bottom:120px;text-align:left}
+.why_effective.why_profitably .why_profitably_item_img{width:650px;height:510px;margin-right:50px;display:inline-block;vertical-align:top}
+.why_effective.why_profitably .why_profitably_item_txt{width:480px;display:inline-block;vertical-align:top}
+.why_effective.why_profitably .why_profitably_item_txt ul{padding:0}
+.why_effective.why_profitably .why_profitably_item_txt ul li{list-style:none}
+.why_effective.why_profitably .why_profitably_item_txt i{margin-right:15px;color:#00be92;font-size:24px}
+.why_effective.why_profitably .why_profitably_item_txt p{display:inline-block;margin-bottom:15px;color:#1d1d1f;font:24px SFUIDisplay-Light,Arial,sans-serif;line-height:1.2}
+.why_effective.why_profitably h3{margin-top:120px;margin-bottom:31px;line-height:.9}
+.unique_challenge.you_always_know_what_you_pay{min-height:430px}
+.unique_challenge.you_always_know_what_you_pay p{font-size:24px;line-height:1.2}
+.unique_challenge.you_always_know_what_you_pay p+p{font-size:18px}
+.unique_challenge.you_always_know_what_you_pay button{margin-top:30px}
+.who_are_we_items{margin-top:60px;margin-bottom:6px}
+.who_are_we_items .who_are_we_item{text-align:center;margin-bottom:70px}
+.who_are_we_items .who_are_we_item:last-of-type{margin-right:0}
+.who_are_we_items .who_are_we_item .who_are_we_item_img{margin:auto;background-image:url(../img/sprite.png);background-position:0 0;width:230px;height:230px}
+.who_are_we_items .who_are_we_item p{margin-top:6px;margin-bottom:0;font-size:24px}
+.who_are_we_bottom_title p{font-size:24px;margin-bottom:0;line-height:1.25;font-family:SFUIDisplay-Light,Arial,sans-serif}
+.who_are_we_bottom_title p.medium_title{font-family:SFUIDisplay-Medium,Arial,sans-serif}
+.who_are_we_bottom_title i{display:inline-block;margin-top:17px;background-image:url(../img/sprite.png);background-position:-230px 0;width:108px;height:5px}
+.footer{background-color:#fff;height:200px}
 @media only screen and (max-width:1200px){.header_modal{margin-top:20px}
 .intermediate .intermediate_wrap{margin-bottom:20px}
 .intermediate .intermediate_wrap .intermediate_item{display:block;margin:30px auto}

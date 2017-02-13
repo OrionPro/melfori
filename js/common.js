@@ -2,7 +2,8 @@
 // подключение common.js
 
 $(document).ready( function() {
-
+    // /Инициальзация маски в форме
+    $(".modal_form_phone").mask("+7(999) 999-99-99");
 
     // для инициализации tooltips
     // $( document ).tooltip({

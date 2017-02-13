@@ -94,6 +94,7 @@ gulp.task('libs', function() {
 		'app/libs/animate/animate-css.js',
 		'app/libs/slidebars/slidebars.min.js',
 		'app/libs/mobile-detect/mobile-detect.min.js',
+		'app/libs/inputmask/inputmask.js',
 		'app/libs/plugins-scroll/plugins-scroll.js',
 		'app/libs/owl.carousel/owl.carousel.min.js',
 		'app/libs/owl.carousel/jquery.mousewheel.min.js',

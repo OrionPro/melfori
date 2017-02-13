@@ -123,6 +123,8 @@ nav[canvas]
 	width: 840px
 	margin: 0 0 0 208px
 	position: relative
+	&.title_right
+		margin: 0 0 0 308px
 	p
 		width: 800px
 		margin-bottom: 0 !important
@@ -141,59 +143,160 @@ nav[canvas]
 .why_effective
 	text-align: center
 	h2
-		margin-bottom: -5px
+		margin-bottom: -7px
 		color: $main_color
 	p
 		font-size: 18px
-		margin-bottom: 50px
-// Секция main_content
-.main_content
-	text-align: center 
-// Секция 
-.intermediate
+		margin-bottom: 45px
+	.why_effective_items
+		margin-top: 70px
+		margin-bottom: 35px
+	.why_effective_item
+		margin-bottom: 85px
+		p
+			margin-top: 12px
+			margin-bottom: 15px
+			line-height: 1.1
+		button
+			@extend %main_btn
+			width: 230px
+			&:hover
+				@extend %main_btn_hover
+			&:active		
+				@extend %main_btn_active
+			&:focus
+				@extend %main_btn_focus
+	.why_effective_item_img
+		min-height: 170px
+//	Секция unique_challenge
+.unique_challenge
+	min-height: 410px
 	text-align: center
-	min-height: 300px
-	background-color: #00b6f4
-	.intermediate_title
-		max-width: 650px
-		margin: auto		
-		color: #052243
-		h3
-			margin: 30px 30px
-			text-transform: uppercase
-			font-size: 24px
-			color: #052243
-			
-			
+	background-color: $main_color
+	h2
+		margin-bottom: -5px
+	p
+		font-size: 18px
+		color: #ffffff
+	form
+		margin-top: 30px
+	.modal_form_input_wrap
+		display: inline-block
+		margin-right: 30px
+	input
+		@extend %main_btn
+		color: #ffffff
+		width: 370px
+		padding-left: 15px
+		border: 1px solid #fff
+		&:hover
+			outline: 0
+		&:active
+			outline: 0
+		&:focus
+			outline: 0
+		&::-webkit-input-placeholder
+			color: #fff
+		&:-moz-placeholder
+			color: #fff
+		&::-moz-placeholder
+			color: #fff
+		&:-ms-input-placeholder
+			color: #fff
+	input[type=submit]
+		display: inline-block
+		@extend %main_btn2
+		color: $main_color
+		&:hover
+			@extend %main_btn2_hover
+		&:active
+			@extend %main_btn2_active
+		&:focus
+			@extend %main_btn2_focus
 
-	.intermediate_wrap
-		margin-top: 40px
-		form
-		.intermediate_item
+
+// Секция why_profitably
+.why_effective
+	&.why_profitably
+		.why_profitably_items
+			margin-top: 50px
+			margin-bottom: 120px
+			text-align: left
+		.why_profitably_item_img
+			width: 650px
+			height: 510px
+			margin-right: 50px
 			display: inline-block
-			input
-				width: 100%
-				display: inline-block	
-				border: 1px solid #a2b6c9
-				background: #fff
-				color: #43637f
-				height: 40px
-				margin: 0 10px
-				padding: 0 0 0 9px
-				&::-webkit-input-placeholder
-					color: #43637f
-				&:-moz-placeholder
-					color: #43637f
-				&::-moz-placeholder
-					color: #43637f
-				&:-ms-input-placeholder
-					color: #43637f
-			input[type=submit]
-				background: #052243
-				color: #fff
-	
-//	Секция 
-//	Секция
+			vertical-align: top
+		.why_profitably_item_txt
+			width: 480px
+			display: inline-block
+			vertical-align: top
+			ul
+				padding: 0
+				li
+					list-style: none
+			i
+				margin-right: 15px
+				color: $auxiliary_txt_color
+				font-size: 24px
+			p
+				display: inline-block
+				margin-bottom: 15px
+				@include font($main_txt_color, 24px, $font_SFUIDisplay-Light, 1.2)
+		h3
+			margin-top: 120px
+			margin-bottom: 31px
+			line-height: 0.9
+
+//	Секция you_always_know_what_you_pay
+.unique_challenge
+	&.you_always_know_what_you_pay
+		min-height: 430px
+		p
+			font-size: 24px
+			line-height: 1.2
+			& + p
+				font-size: 18px
+		button
+			margin-top: 30px
+			@extend %main_btn2
+			&:hover
+				@extend %main_btn2_hover
+			&:active		
+				@extend %main_btn2_active
+			&:focus
+				@extend %main_btn2_focus
+				
+//	Секция who_are_we
+.who_are_we_items
+	margin-top: 60px
+	margin-bottom: 6px
+	.who_are_we_item
+		text-align: center
+		margin-bottom: 70px
+		&:last-of-type
+			margin-right: 0
+		.who_are_we_item_img
+			margin: auto
+			@extend %flex
+			@include sprite($who_are_we_item_img_back)
+		p
+			margin-top: 6px
+			margin-bottom: 0
+			font-size: 24px
+.who_are_we_bottom_title
+	p
+		font-size: 24px
+		margin-bottom: 0
+		line-height: 1.25
+		font-family: $font_SFUIDisplay-Light
+		&.medium_title
+			font-family: $font_SFUIDisplay-Medium
+	i
+		display: inline-block
+		margin-top: 17px
+		@include sprite($bottom_title_decor)
 //	Секция
 //	Секция 
 //	Секция 
@@ -203,9 +306,9 @@ nav[canvas]
 
 // Секия footer 
 .footer
-	background-color: #333
+	background-color: #fff
 	height: 200px
-	flex: 0 0 auto	
+
 
 
 //ALWAYS END
