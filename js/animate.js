@@ -15,7 +15,7 @@ class Animation{
 
 	someAnim(){
 		this.tl1.from('.header_title', 0.7, {
-			x: -100,
+			y: -100,
 			opacity: 0,
 			ease: Power4.easeOut
 		},'+=1');
