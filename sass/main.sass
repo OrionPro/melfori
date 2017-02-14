@@ -314,6 +314,45 @@ nav[canvas]
 		display: inline-block
 		margin-top: 17px
 		@include sprite($bottom_title_decor)
+
+
+.vacancies-developers
+	min-height: 1010px
+	background-color: #f8f8fa
+	text-align: center
+	.title-wrap
+		margin-bottom: 56px
+		h2
+			margin-bottom: -5px
+			color: $main_color
+		p
+			font-size: 18px
+	button
+		display: table-cell
+		vertical-align: middle
+		@extend %main_btn
+		width: 270px
+		&:hover
+			@extend %main_btn_hover
+		&:active
+			@extend %main_btn_active
+		&:focus
+			@extend %main_btn_focus
+	.requirements
+		text-align: left
+		margin-top: 14px
+		h4
+			font-size: 18px
+			margin: 0
+			line-height: 1.2
+			font-weight: 100
+			margin-bottom: 23px
+			span
+				font-size: 24px
+		.list-wrap
+
+	.button-wrap
+		display: table
 //	Секция
 //	Секция 
 //	Секция 
