@@ -3,7 +3,6 @@
 
 
 class Animation{
-	//привет Илья
 
 	constructor(){
 
@@ -13,7 +12,7 @@ class Animation{
 		
 	}
 
-	someAnim(){
+	description(){
 		this.tl1.from('.header_title', 0.7, {
 			y: -100,
 			opacity: 0,
@@ -42,7 +41,7 @@ $(window).scroll(function () {
 $(window).ready(function() {
 
 	if (document.documentElement.clientWidth >= 1200) {
-		anim.someAnim();
+		anim.description();
 		anim.play();
 	}
 
