@@ -10,6 +10,9 @@ class Animation{
 
 		this.tl1 = new TimelineMax();
 		this.tl1.pause();
+
+
+		this.developEffect = new TimelineMax();
 		
 	}
 
@@ -28,6 +31,10 @@ class Animation{
 			this.tl1.resume();
 		}
 	}
+
+	hovers(){
+
+	}
 }
 
 
@@ -45,5 +52,7 @@ $(window).ready(function() {
 		anim.someAnim();
 		anim.play();
 	}
+
+
 
 });
