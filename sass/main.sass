@@ -279,8 +279,25 @@ nav[canvas]
 			margin-right: 0
 		.who_are_we_item_img
 			margin: auto
+			position: relative
+			padding: 5px
 			@extend %flex
 			@include sprite($who_are_we_item_img_back)
+		.who_are_we_item_text
+			position: absolute
+			top: 0px
+			padding: 5px
+			font-size: 18px
+			left: 0px
+			right: 0px
+			height: 100%
+			width: 100%
+			display: table
+			span
+				background: #ccc
+				border-radius: 50%
+				display: table-cell
+				vertical-align: middle
 		p
 			margin-top: 6px
 			margin-bottom: 0
@@ -297,7 +314,10 @@ nav[canvas]
 		display: inline-block
 		margin-top: 17px
 		@include sprite($bottom_title_decor)
-//	Секция
+
+//	Секция how_good
+.how_good
+
 //	Секция 
 //	Секция 
 //	Секция
