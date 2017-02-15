@@ -3,15 +3,24 @@
 
 $(document).ready( function() {
 	//  Инициальзация маски в форме
-	$(".modal_form_phone").mask("+7(999) 999-99-99");
+
 	//  Стилизация скролла
 	$(".couple_of_words_txt").mCustomScrollbar({
 		theme:"my-theme"
 	});
 
-	if( $(".modal_form_phone").attr('class') !== undefined && $(".modal_form_phone").attr('class').match(/class1|class2|class3|class4|class5/) ) {
-		console.log("match");
-	}
+
+    $(".modal_form_phone").each(function () {
+        var className = $(this).attr('class').split(' ');
+
+        className.map(el => {
+            if(el == "ua"){
+                $(".modal_form_phone").mask("+38(999) 999-99-99");
+            }else {
+                $(".modal_form_phone").mask("+7(999) 999-99-99");
+            }
+        })
+    });
 	// для инициализации tooltips
 	// $( document ).tooltip({
 	//   track: true
