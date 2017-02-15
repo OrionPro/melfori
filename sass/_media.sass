@@ -9,7 +9,13 @@
 	// body
 	// 	width: 1200px
 	.header_modal
-		margin-top: 20px
+		margin-top: 14px
+		margin-left: 19px
+		button
+			width: 210px
+			font-size: 14px
+		a
+			font-size: 14px
 	.intermediate
 		.intermediate_wrap
 			margin-bottom: 20px
@@ -18,24 +24,134 @@
 				margin: 30px auto 30px
 			.modal_form_input_wrap
 				display: inline-block
-
+	.header_logo
+		margin-left: 0
+		margin-top: 40px
+		img
+			height: 40px
+	.header_nav
+		margin: 0
+		ul
+			margin: 0
+			margin-top: 13px
+			padding-left: 20px
+			li
+				&:last-child
+					a
+						margin-right: 0
+				a
+					margin-right: 20px
+	.vacancies-developers
+		&.vacancies
+			.vacancies-item
+				.image-wrap
+					float: left
+					.img2
+						height: 225px
+					.img1
+						height: 177px
+					.img3
+						height: 320px
+					.img4
+						height: 230px
+				.requirements-wrap
+					float: left
+				.requirements
+					h4
+						width: 284px
+						font-size: 16px
+						span
+							font-size: 20px
+					.salary
+						font-size: 26px
+			.button-wrap
+				float: left
+				button
+					width: 214px
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
+@media only screen and (max-width : 993px)
 	/**/
+	.header_top
+		text-align: center
 	.header_nav
 		display: none
 	.header_logo
 		display: block
+		margin-top: 37px
+		padding-left: 82px
 	.header_modal
-		margin-top: 40px
+		margin-top: 7px
+		float: right
 	nav[canvas]
 		display: block
 	.header
 		video
 			display: none
+		display: block
+
+	.vacancies-developers
+		&.vacancies
+			.vacancies-item
+				.image-wrap
+					.img2
+						height: 150px
+						margin-top: 64px
+					.img1
+						height: 118px
+						margin-top: 88px
+					.img3
+						height: 222px
+						margin-top: 15px
+					.img4
+						height: 162px
+						margin-top: 55px
+				.requirements
+					h4
+						width: 260px
+			.button-wrap
+				button
+					width: 146px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	
+
+	.unique_challenge
+		&.vacancies-form
+			h2
+				font-size: 35px
+				padding: 0 15px
+	.header_logo
+		display: block
+
+	.vacancies-developers
+		&.vacancies
+			.vacancies-item
+				.image-wrap
+					float: none
+					display: inline-block
+					vertical-align: top
+					.img2
+						margin-top: 64px
+					.img1
+						margin-top: 88px
+					.img3
+						margin-top: 15px
+					.img4
+						margin-top: 55px
+				.requirements-wrap
+					float: none
+					display: inline-block
+				.requirements
+					h4
+						width: 260px
+			.button-wrap
+				float: none
+				display: block
+				text-align: center
+				padding-left: 233px
+				button
+					width: 215px
+					margin-top: 25px
+
 	/*Disable Animation on Mobile Devices*/
 	.animated
 		/*CSS transitions*/
@@ -62,19 +178,61 @@
 			font-size: 30px
 			margin-top: 40px
 	.header_modal
-		margin-top: 40px
+		margin-right: 10px
 	[off-canvas*=left]
 		width: 255px
 
 /* Extra Small Devices, Phones */
+@media only screen and (max-width : 580px)
+	.vacancies-developers
+		.title-wrap
+			h2
+				font-size: 45px
+		&.vacancies
+			.vacancies-item
+				.image-wrap
+					.img2
+						margin-top: 0
+						margin-bottom: 15px
+					.img1
+						margin-top: 0
+						margin-bottom: 15px
+					.img3
+						margin-top: 0
+						margin-bottom: 15px
+					.img4
+						margin-top: 0
+						margin-bottom: 15px
+			.button-wrap
+				padding-left: 15px
+				button
+					width: 255px
+			.requirements
+				padding-left: 30px
+
+@media only screen and (max-width : 570px)
+	.header_logo
+		a
+			span
+				display: none
 @media only screen and (max-width : 520px)
 	/**/
-		
+	.header_modal
+		float: none
 	.dm-modal
 		width: 100%
 	.dm-modal
 		input[type=submit]
 			width: 100%
+	.unique_challenge
+		&.vacancies-form
+			form
+				padding: 0 15px
+				input
+					width: 100%
+				.texarea-wrap
+					textarea
+						width: 100%
 @media only screen and (max-width : 480px)
 	/**/
 
@@ -89,6 +247,11 @@
 			h3
 				font-size: 20px
 
+
+@media only screen and (max-width : 380px)
+	.header_modal
+		button
+			width: 160px
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
