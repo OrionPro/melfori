@@ -96,6 +96,7 @@ gulp.task('libs', function() {
 		'app/libs/inputmask/inputmask.js',
 		//'app/libs/owl.carousel/owl.carousel.min.js',
 		//'app/libs/owl.carousel/jquery.mousewheel.min.js',
+		'app/libs/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js',
 		'app/libs/matchMedia/matchMedia.js',
 		'app/libs/matchMedia/matchMedia.addListener.js'
 		])
