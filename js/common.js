@@ -3,8 +3,16 @@
 
 $(document).ready( function() {
     // /Инициальзация маски в форме
+    
+    
+    
     $(".modal_form_phone").mask("+7(999) 999-99-99");
+    //$(".modal_form_phone ua").mask("+38(999) 999-99-99");
 
+
+    if( $(".modal_form_phone").attr('class') !== undefined && $(".modal_form_phone").attr('class').match(/class1|class2|class3|class4|class5/) ) {
+        console.log("match");
+    }
     // для инициализации tooltips
     // $( document ).tooltip({
     //   track: true

@@ -41,7 +41,7 @@ body textarea:required:valid
 	background-color: transparent
 nav[canvas]
 	position: fixed	
-	top: 20px
+	top: 35px
 	left: 20px
 	display: none
 	z-index: 100
@@ -267,8 +267,34 @@ nav[canvas]
 				@extend %main_btn2_active
 			&:focus
 				@extend %main_btn2_focus
+	&.vacancies-form
+		form
+			margin-bottom: 120px
+		.modal_form_input_wrap
+			display: block
+			margin-right: 0
+			margin-bottom: 13px
+		.texarea-wrap
+			margin-bottom: 13px
+			textarea
+				&:focus
+					outline: none
+				@extend %main_btn
+				width: 370px
+				height: 145px
+				padding-left: 15px
+				border: 1px solid #fff
+				resize: none
+				&::-webkit-input-placeholder
+					color: #ffffff
+				&:-moz-placeholder
+					color: #ffffff
+				&::-moz-placeholder
+					color: #ffffff
+				&:-ms-input-placeholder
+					color: #ffffff
 
-				
+
 //	Секция who_are_we
 .who_are_we_items
 	margin-top: 60px
@@ -330,62 +356,66 @@ nav[canvas]
 			color: $main_color
 		p
 			font-size: 18px
-	.button-wrap
-		button
-			margin-top: 114px
-	button
-		display: table-cell
-		vertical-align: middle
-		@extend %main_btn
-		width: 270px
-		&:hover
-			@extend %main_btn_hover
-		&:active
-			@extend %main_btn_active
-		&:focus
-			@extend %main_btn_focus
-	.requirements
-		text-align: left
-		margin-top: 14px
-		h4
-			font-size: 18px
-			margin: 0
-			line-height: 1.2
-			font-weight: 100
-			margin-bottom: 20px
-			span
-				font-size: 24px
-		.list-wrap
-			margin-bottom: 16px
-			ul
-				padding: 0
+
+
+
+.vacancies-developers
+	&.vacancies
+		.button-wrap
+			button
+				margin-top: 114px
+				display: table-cell
+				vertical-align: middle
+				@extend %main_btn
+				width: 270px
+				&:hover
+					@extend %main_btn_hover
+				&:active
+					@extend %main_btn_active
+				&:focus
+					@extend %main_btn_focus
+		.requirements
+			text-align: left
+			margin-top: 14px
+			h4
+				font-size: 18px
 				margin: 0
-				margin-top: -3px
-				li
-					list-style-type: none
-					font-size: 18px
-					line-height: 1.3
-					position: relative
-					padding-left: 12px
-					&:before
-						content: ''
-						position: absolute
-						width: 9px
-						display: inline-block
-						height: 1px
-						background: #545456
-						left: 0px
-						top: 10px
-			p
-				font-size: 24px
-		.salary
-			font-size: 30px
-
-	.button-wrap
-		display: table
-	.vacancies-item
-		margin-bottom: 82px
-
+				line-height: 1.2
+				font-weight: 100
+				margin-bottom: 20px
+				span
+					font-size: 24px
+			.list-wrap
+				margin-bottom: 16px
+				ul
+					padding: 0
+					margin: 0
+					margin-top: -3px
+					li
+						list-style-type: none
+						font-size: 18px
+						line-height: 1.3
+						position: relative
+						padding-left: 12px
+						&:before
+							content: ''
+							position: absolute
+							width: 9px
+							display: inline-block
+							height: 1px
+							background: #545456
+							left: 0px
+							top: 10px
+				p
+					font-size: 24px
+			.salary
+				font-size: 30px
+		.button-wrap
+			display: table
+		.vacancies-item
+			margin-bottom: 82px
+			.img1
+				margin-top: 29px
 //	Секция
 
 //	Секция how_good
