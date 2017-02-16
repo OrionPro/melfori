@@ -460,7 +460,7 @@ p
 			color: $main_color
 
 // Бутерброд
-.mnu_btn
+
 		
 #nav-button-label
 	height: 35px
@@ -471,37 +471,36 @@ p
 	position: relative
 	z-index: 1002	
 	pointer-events: all
-	&:hover .nav-line
-		background: $main_color
+
 	
-.nav-on .nav-line:first-child,
-.nav-on .nav-line:last-child
-	transition: .5s
-	width: 0
-	opacity: 0
-	left: 50%
-	top: 11px
+//.nav-on .nav-line:first-child,
+//.nav-on .nav-line:last-child
+//	transition: 1s
+//	width: 0
+//	opacity: 0
+//	left: 50%
+//	top: 11px
 .nav-on	
 	#nav-button-label
 		.nav-line
 			margin: 0
-	.nav-line
-		&:nth-child(2)
-			-webkit-transition: .5s
-			-o-transition: .5s
-			transition: .5s
-			-webkit-transform: rotate(45deg)
-			-ms-transform: rotate(45deg)
-			-o-transform: rotate(45deg)
-			transform: rotate(45deg)
-		&:nth-child(3)
-			-webkit-transition: .5s
-			-o-transition: .5s
-			transition: .5s
-			-webkit-transform: rotate(-45deg)
-			-ms-transform: rotate(-45deg)
-			-o-transform: rotate(-45deg)
-			transform: rotate(-45deg)
+	//.nav-line
+	//	&:nth-child(2)
+	//		-webkit-transition: 1s
+	//		-o-transition: 1s
+	//		transition: 1s
+	//		-webkit-transform: rotate(45deg)
+	//		-ms-transform: rotate(45deg)
+	//		-o-transform: rotate(45deg)
+	//		transform: rotate(45deg)
+	//	&:nth-child(3)
+	//		-webkit-transition: 1s
+	//		-o-transition: 1s
+	//		transition: 1s
+	//		-webkit-transform: rotate(-45deg)
+	//		-ms-transform: rotate(-45deg)
+	//		-o-transform: rotate(-45deg)
+	//		transform: rotate(-45deg)
 label
 	display: inline-block
 	max-width: 100%
@@ -511,32 +510,29 @@ label
 .nav-line
 	display: block
 	height: 3px
-	background: #1d1d1f
 	position: absolute
 	left: 0
 	width: 100%
 	transition: 2s
-	&.active
-		background: $main_color
 	&:nth-child(2)
-		-webkit-transition: .5s
-		-o-transition: .5s
-		transition: .5s
+		-webkit-transition: 1s
+		-o-transition: 1s
+		transition: 1s
 		top: 14px
 	&:nth-child(1)
-		-webkit-transition: .5s
-		-o-transition: .5s
-		transition: .5s
+		-webkit-transition: 1s
+		-o-transition: 1s
+		transition: 1s
 		top: 0
 	&:nth-child(4)
-		-webkit-transition: .5s
-		-o-transition: .5s
-		transition: .5s
+		-webkit-transition: 1s
+		-o-transition: 1s
+		transition: 1s
 		top: 28px
 	&:nth-child(3)
-		-webkit-transition: .5s
-		-o-transition: .5s
-		transition: .5s
+		-webkit-transition: 1s
+		-o-transition: 1s
+		transition: 1s
 		top: 14px
 
 
