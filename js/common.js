@@ -1,62 +1,110 @@
-
 // подключение common.js
+// class BurgerEff{
+//     constructor(){
+//         this.line = $('#nav-lines').find('.nav-line');
+//         this.state = 993;
+//         this.limitX = 0;
+//         this.limitY = 0;
+//         this.flag = 0;
+//         this.descriprion = this.descriprion.bind(this);
+//     }
+//
+//     descriprion(){
+//         if(document.documentElement.clientWidth <= this.state){
+//             this.descriprion;
+//             if(this.flag == 0){
+//                 this.limitX++;
+//                 this.line.css('background-position-x',Math.sin(this.limitX) + "px");
+//             }else{
+//                 this.limitY++;
+//                 this.flag = 0;
+//                 this.line.css('background-position-x',Math.sin(this.limitY) + "px");
+//             }
+//
+//             console.log('obj')
+//
+//
+//             this.flag = 1;
+//         }
+//     }
+// }
 
-
-class BurgerEff{
-    constructor(){
+class BurgerEff {
+    constructor() {
         this.line = $('#nav-lines').find('.nav-line');
-        //this.state = 993;
         this.state = 993;
-        this.start = new Date().getTime();
+        this.color = [
+            'f97b02',
+            'e90320',
+            '920182',
+            '01c1e6',
+            '00be92'
+
+        ];
+
+        this.descriprion = this.descriprion.bind(this);
     }
 
-    descriprion(){
-        if(document.documentElement.clientWidth <= this.state){
-            setTimeout(function () {
-                let now = new Date().getTime()
-            },10)
 
+    descriprion() {
+
+        setTimeout(()=> {
+            this.descriprion();
+        }, 1500)
+
+
+        if (document.documentElement.clientWidth <= this.state) {
+            var color = this.color;
+            this.line.each(function () {
+                let random = parseInt((Math.random(5) * 5) + 1);
+
+                for (var i = 0; i < color.length; i++) {
+                    if (random == i) {
+                        $(this).css('background', "#" + color[i]);
+                    }
+                }
+            })
         }
     }
 }
+
+
 var burgerEff = new BurgerEff;
-$(window).resize(function() {
+$(window).resize(function () {
     burgerEff.descriprion();
 });
 
 
-$(document).ready( function() {
-	//  Инициальзация маски в форме
+$(document).ready(function () {
+    //  Инициальзация маски в форме
 
 
     burgerEff.descriprion();
 
-    
-	//  Стилизация скролла
-	$(".couple_of_words_txt").mCustomScrollbar({
-		theme:"my-theme"
-	});
+
+    //  Стилизация скролла
+    $(".couple_of_words_txt").mCustomScrollbar({
+        theme: "my-theme"
+    });
 
 
     $(".modal_form_phone").each(function () {
         var className = $(this).attr('class').split(' ');
 
         className.map(el => {
-            if(el == "ua"){
+            if (el == "ua") {
                 $(".modal_form_phone").mask("+38(999) 999-99-99");
-            }else {
+            } else {
                 $(".modal_form_phone").mask("+7(999) 999-99-99");
             }
         })
     });
-	// для инициализации tooltips
-	// $( document ).tooltip({
-	//   track: true
-	// });  
-    
-    
-   
-    
+    // для инициализации tooltips
+    // $( document ).tooltip({
+    //   track: true
+    // });  
+
+
     // для инициализации tooltips
     // $( document ).tooltip({
     //   track: true
@@ -73,7 +121,7 @@ $(document).ready( function() {
     // });
 
     // Скролл по классу .scroll_to и атрибуту data-scroll у кнопки к примеру (data-scroll="куда скроллим" в элементе куда скроллим ставим id потом впишем в куда скроллим)
-    $(".scroll_to").on("click", function(e) {
+    $(".scroll_to").on("click", function (e) {
         e.preventDefault();
         var anchor = $(this);
         $('html, body').stop().animate({
@@ -102,15 +150,15 @@ $(document).ready( function() {
     //     // Parameters has to be in square bracket '[]'
     //     owl.trigger('prev.owl.carousel', [700]);
     // });  
-    
+
 
 });
 
-$(window).resize(function() {
+$(window).resize(function () {
 
 });
 
-$(window).scroll(function() {
-    
+$(window).scroll(function () {
+
 });
 
