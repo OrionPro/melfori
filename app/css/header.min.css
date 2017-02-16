@@ -95,7 +95,7 @@ p{margin:0}
 .nav-on .nav-line:nth-child(2){-webkit-transition:.5s;transition:.5s;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}
 .nav-on .nav-line:nth-child(3){-webkit-transition:.5s;transition:.5s;-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg)}
 label{max-width:100%;margin-bottom:5px;font-weight:700}
-.nav-line{display:block;height:3px;background:#1d1d1f;position:absolute;left:0;width:100%;-webkit-transition:2s;transition:2s}
+.nav-line{display:block;height:3px;background:url(../img/decor-cub.jpg);position:absolute;left:0;width:100%;-webkit-transition:2s;transition:2s}
 .nav-line.active{background:#01c1e6}
 .nav-line:nth-child(2){-webkit-transition:.5s;transition:.5s;top:14px}
 .nav-line:nth-child(1){-webkit-transition:.5s;transition:.5s;top:0}
