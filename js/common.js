@@ -1,33 +1,4 @@
 // подключение common.js
-// class BurgerEff{
-//     constructor(){
-//         this.line = $('#nav-lines').find('.nav-line');
-//         this.state = 993;
-//         this.limitX = 0;
-//         this.limitY = 0;
-//         this.flag = 0;
-//         this.descriprion = this.descriprion.bind(this);
-//     }
-//
-//     descriprion(){
-//         if(document.documentElement.clientWidth <= this.state){
-//             this.descriprion;
-//             if(this.flag == 0){
-//                 this.limitX++;
-//                 this.line.css('background-position-x',Math.sin(this.limitX) + "px");
-//             }else{
-//                 this.limitY++;
-//                 this.flag = 0;
-//                 this.line.css('background-position-x',Math.sin(this.limitY) + "px");
-//             }
-//
-//             console.log('obj')
-//
-//
-//             this.flag = 1;
-//         }
-//     }
-// }
 
 class BurgerEff {
     constructor() {
