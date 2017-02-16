@@ -5,7 +5,7 @@
 .unique_challenge input[type=submit],.unique_challenge.you_always_know_what_you_pay button{width:370px;height:50px;background-color:#fff;border:transparent;-webkit-border-radius:10px;border-radius:10px;color:#01c1e6;font:16px SFUIDisplay-Regular,Arial,sans-serif;line-height:1.6;-webkit-transition:background-color,color,border,.5s;transition:background-color,color,border,.5s}
 .unique_challenge input[type=submit]:hover,.unique_challenge.you_always_know_what_you_pay button:hover{background-color:transparent;border:1px solid #fff;color:#fff}
 .unique_challenge input[type=submit]:active,.unique_challenge input[type=submit]:focus,.unique_challenge.you_always_know_what_you_pay button:active,.unique_challenge.you_always_know_what_you_pay button:focus{background-color:transparent;border:1px solid #fff;color:#fff;outline:0}
-.how_good .how_good_item_img,.our_advantages .our_advantages_item .our_advantages_item_big_num,.who_are_we_items .who_are_we_item .who_are_we_item_img{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
+.how_good .how_good_item_img,.our_advantages .our_advantages_item .our_advantages_item_big_num,.services .services_item_txt,.who_are_we_items .who_are_we_item .who_are_we_item_img{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
 .animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
 .animated.infinite{-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}
 .animated.hinge{-webkit-animation-duration:2s;animation-duration:2s}
@@ -1684,10 +1684,11 @@ nav[canvas]{position:fixed;top:35px;left:20px;display:none;z-index:100}
 .why_effective.why_profitably .why_profitably_item_txt i{margin-right:15px;color:#00be92;font-size:24px}
 .why_effective.why_profitably .why_profitably_item_txt p{display:inline-block;margin-bottom:15px;color:#1d1d1f;font:24px SFUIDisplay-Light,Arial,sans-serif;line-height:1.2}
 .why_effective.why_profitably h3{margin-top:120px;margin-bottom:31px;line-height:.9}
+.why_effective.our-team-section{background-color:#f8f8fa}
 .why_effective.our-team-section h2{margin-bottom:32px}
 .why_effective.our-team-section .title_block_left_decor{width:auto;margin:0}
 .why_effective.our-team-section .title_block_left_decor p{width:937px}
-.why_effective.our-team-section .who_are_we_items{margin-top:68px}
+.why_effective.our-team-section .who_are_we_items{margin-top:68px;margin-bottom:61px}
 .unique_challenge.you_always_know_what_you_pay{min-height:430px}
 .unique_challenge.you_always_know_what_you_pay p{font-size:24px;line-height:1.2}
 .unique_challenge.you_always_know_what_you_pay p+p{font-size:18px}
@@ -1701,6 +1702,22 @@ nav[canvas]{position:fixed;top:35px;left:20px;display:none;z-index:100}
 .unique_challenge.vacancies-form .texarea-wrap textarea:-moz-placeholder{color:#fff}
 .unique_challenge.vacancies-form .texarea-wrap textarea::-moz-placeholder{color:#fff}
 .unique_challenge.vacancies-form .texarea-wrap textarea:-ms-input-placeholder{color:#fff}
+.unique_challenge.about-us-form{min-height:633px}
+.unique_challenge.about-us-form .title-wrap{margin-top:111px;margin-bottom:39px}
+.unique_challenge.about-us-form .title-wrap h2{margin-bottom:8px}
+.unique_challenge.about-us-form .title-wrap h2 p{font-size:inherit;line-height:1}
+.unique_challenge.about-us-form .title-wrap p{word-spacing:2px;font-size:18px}
+.unique_challenge.about-us-form .unique_challenge_form p{font-size:16px}
+.unique_challenge.about-us-form #form{margin-top:12px}
+.unique_challenge.about-us-form .social-links-container{margin-top:43px}
+.unique_challenge.about-us-form .social-links-container p{margin-bottom:17px}
+.unique_challenge.about-us-form .social-links-container ul{margin:0;padding:0 0 0 35px}
+.unique_challenge.about-us-form .social-links-container ul li{list-style-type:none;display:inline-block;margin-right:19px}
+.unique_challenge.about-us-form .social-links-container ul li a{display:table;border:1px solid #fff;-webkit-border-radius:50%;border-radius:50%;height:38px;width:38px;-webkit-transition:.2s;transition:.2s}
+.unique_challenge.about-us-form .social-links-container ul li a .fa{display:table-cell;vertical-align:middle;color:#fff}
+.unique_challenge.about-us-form .social-links-container ul li a:hover{background:#fff;text-decoration:none}
+.unique_challenge.about-us-form .social-links-container ul li a:hover .fa{color:#01c1e6}
+.unique_challenge.about-us-form .social-links-container ul li a:active,.unique_challenge.about-us-form .social-links-container ul li a:focus{text-decoration:none}
 .who_are_we_items{margin-top:60px;margin-bottom:6px}
 .who_are_we_items .who_are_we_item{text-align:center;margin-bottom:70px}
 .who_are_we_items .who_are_we_item:last-of-type{margin-right:0}
@@ -1748,6 +1765,27 @@ nav[canvas]{position:fixed;top:35px;left:20px;display:none;z-index:100}
 .mCS-my-theme.mCSB_scrollTools .mCSB_draggerRail{background-color:#01c1e6;height:1px}
 .mCS-my-theme.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:25px;height:25px;-webkit-border-radius:50%;border-radius:50%;margin:0;background-color:#01c1e6;position:relative;right:9px;top:-5px}
 .mCS-my-theme.mCSB_scrollTools .mCSB_draggerContainer{width:10px;margin-top:5px;margin-right:4px;-webkit-border-radius:6px;border-radius:6px;border:1px solid #01c1e6}
+.us-office-section{min-height:780px;background-color:#fff;text-align:center}
+.us-office-section .title-wrap{margin-top:107px;margin-bottom:44px}
+.us-office-section .title-wrap h2{margin:0;color:#01c1e6;line-height:1.2;padding-bottom:4px}
+.us-office-section.about-us-office .img-container{background:url(../img/decor-cub-.jpg);padding:5px;width:970px;margin:auto;font-size:0}
+.us-office-section.about-us-office .img-container .main-img{margin-right:5px}
+.us-office-section.about-us-office .img-container .img-item{display:inline-block;vertical-align:middle}
+.us-office-section.about-us-office .img-container .img-item img{display:block;margin-bottom:5px}
+.us-office-section.about-us-office .img-container .img-item img:last-child{margin-bottom:0}
+.contacts-map-section{min-height:580px;background-color:#f8f8fa;text-align:center}
+.contacts-map-section .title-wrap{margin-top:107px;margin-bottom:22px}
+.contacts-map-section .title-wrap h2{margin:0;color:#01c1e6;line-height:1.2;padding-bottom:4px}
+.contacts-map-section.about-us-map .map-container{height:260px;background:url(../img/decor-cub-.jpg);padding:5px}
+.contacts-map-section.about-us-map .map-container #map{height:100%;width:100%}
+.contacts-map-section.about-us-map .contacts ul{margin:0;padding:48px 0 0}
+.contacts-map-section.about-us-map .contacts ul li{list-style-type:none;position:relative;padding-left:30px;text-align:left;font-size:18px;margin-bottom:26px;line-height:1.1}
+.contacts-map-section.about-us-map .contacts ul li .fa{position:absolute;left:3px;top:1px}
+.services .services_item a{width:100%;height:100%;position:absolute;top:0;right:0;left:0;z-index:2}
+.services .services_item_img_wrap{float:left;position:relative}
+.services .services_item_img_wrap:hover .services_item_mask{opacity:1}
+.services .services_item_txt{position:absolute;opacity:0;-webkit-transition:.5s;transition:.5s;z-index:1}
+.services .services_item_mask{position:absolute;width:100%;height:100%;top:0;right:0;left:0;opacity:0;-webkit-transition:.5s;transition:.5s;background-color:rgba(255,255,255,.7)}
 .footer{background-color:#fff;height:200px}
 @media only screen and (max-width:1200px){.vacancies-developers.vacancies .button-wrap,.vacancies-developers.vacancies .vacancies-item .image-wrap,.vacancies-developers.vacancies .vacancies-item .requirements-wrap{float:left}
 .header_modal{margin-top:14px;margin-left:19px}
@@ -1783,6 +1821,15 @@ nav[canvas]{position:fixed;top:35px;left:20px;display:none;z-index:100}
 .why_effective.why_profitably .why_profitably_item_txt{margin:auto}
 .how_good .how_good_item{margin:0 auto 30px;float:none}
 .how_good .how_good_item:nth-of-type(2n+1),.how_good .how_good_item:nth-of-type(2n+2){margin:0 auto 30px}
+.why_effective.our-team-section .title_block_left_decor p{width:100%}
+.us-office-section.about-us-office .img-container{background-size:contain;width:auto;display:inline-block}
+.contacts-map-section.about-us-map .contacts ul li p,.unique_challenge.about-us-form .title-wrap p{display:inline}
+.us-office-section.about-us-office .img-container .main-img{height:280px}
+.us-office-section.about-us-office .img-container .img-item img{height:138px}
+.unique_challenge.about-us-form .title-wrap h2{line-height:1}
+.contacts-map-section.about-us-map .contacts{margin-bottom:70px}
+.couple_of_words{background:0 0}
+.couple_of_words .couple_of_words_txt{margin:0 auto 100px;float:none}
 }
 @media only screen and (max-width:993px){.header_top{text-align:center}
 .header_nav{display:none}
@@ -1798,6 +1845,9 @@ nav[canvas]{position:fixed;top:35px;left:20px;display:none;z-index:100}
 .vacancies-developers.vacancies .button-wrap button{width:146px}
 .unique_challenge .modal_form_input_wrap{margin-right:0;margin-bottom:20px;display:block}
 .unique_challenge input[type=submit]{margin-bottom:50px}
+.unique_challenge.about-us-form .modal_form_input_wrap{margin-right:0;display:block;margin-bottom:30px}
+.unique_challenge.about-us-form .social-links-container{margin-bottom:50px}
+.unique_challenge p.p_light{margin-bottom:100px}
 }
 @media only screen and (max-width:768px){h2,h2+p,h3{padding:0 15px}
 .header_title h1+p+p,h2{line-height:1.2}
@@ -1815,6 +1865,10 @@ h3{font-size:28px}
 .vacancies-developers.vacancies .button-wrap{float:none;display:block;text-align:center;padding-left:233px}
 .vacancies-developers.vacancies .button-wrap button{width:215px;margin-top:25px}
 .title_block_left_decor p{font-size:18px!important}
+.us-office-section.about-us-office{min-height:680px}
+.us-office-section.about-us-office .img-container{background-size:contain;width:auto;display:inline-block}
+.us-office-section.about-us-office .img-container .main-img{height:220px}
+.us-office-section.about-us-office .img-container .img-item img{height:107px}
 .animated{-webkit-transition-property:none!important;transition-property:none!important;-ms-transform:none!important;-webkit-transform:none!important;transform:none!important;-webkit-animation:none!important;animation:none!important}
 .header_title h1{font-size:35px;margin-top:40px}
 .header_title h1+p{font-size:18px;padding:0 15px;line-height:1.2}
@@ -1824,6 +1878,7 @@ h3{font-size:28px}
 .unique_challenge.you_always_know_what_you_pay p+p{padding:0 15px;font-size:16px}
 .unique_challenge.you_always_know_what_you_pay button{width:300px}
 .who_are_we_bottom_title p{font-size:18px;padding:0 15px}
+.couple_of_words .couple_of_words_txt{width:100%;padding:0 15px}
 }
 @media only screen and (max-width:580px){h3{font-size:24px}
 .header_title h1{font-size:28px;line-height:1;padding:0 15px}
@@ -1834,6 +1889,10 @@ h3{font-size:28px}
 .vacancies-developers.vacancies .button-wrap{padding-left:15px}
 .vacancies-developers.vacancies .button-wrap button{width:255px}
 .vacancies-developers.vacancies .requirements{padding-left:30px}
+.us-office-section.about-us-office .img-container .main-img{margin-right:0;margin-bottom:5px;height:223px}
+.us-office-section.about-us-office .img-container .img-item{display:block}
+.us-office-section.about-us-office .img-container .img-item img{display:inline-block;height:212px;vertical-align:text-top;margin-bottom:0;margin-right:5px}
+.us-office-section.about-us-office .img-container .img-item img:last-child{margin-right:0}
 .why_effective.why_profitably .why_profitably_item_txt{width:90%}
 .why_effective.why_profitably .why_profitably_item_txt p{font-size:16px}
 .how_good .how_good_items{padding:0 15px}
@@ -1842,6 +1901,7 @@ h3{font-size:28px}
 .how_good .how_good_item_img img{width:98%;max-width:98%;height:auto;padding-top:5px;padding-bottom:5px;display:block}
 }
 @media only screen and (max-width:570px){.header_logo a span{display:none}
+.unique_challenge.about-us-form .modal_form_input_wrap input,.unique_challenge.about-us-form input[type=submit]{width:90%}
 }
 @media only screen and (max-width:520px){.dm-modal,.dm-modal input[type=submit],.unique_challenge.vacancies-form form .texarea-wrap textarea,.unique_challenge.vacancies-form form input{width:100%}
 .header_modal{float:none}
@@ -1853,8 +1913,14 @@ h3{font-size:28px}
 .intermediate .intermediate_title h3{font-size:20px}
 .our_advantages .our_advantages_item{width:310px}
 .our_advantages button{width:280px}
+.us-office-section.about-us-office .img-container .main-img{height:157px}
+.us-office-section.about-us-office .img-container .img-item img{height:148px}
+.how_good button{width:90%}
 }
-@media only screen and (max-width:380px){.header_modal button{width:160px}
+@media only screen and (max-width:380px){h2{font-size:30px}
+.header_modal button{width:160px}
+.us-office-section.about-us-office .img-container .main-img{height:150px}
+.us-office-section.about-us-office .img-container .img-item img{height:142px}
 }
-@media only screen and (min-width:1200px){.container{width:1200px}
+@media only screen and (min-width:1201px){.container{width:1200px}
 }

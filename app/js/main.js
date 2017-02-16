@@ -2,8 +2,10 @@
 
 // подключение common.js
 
+
 $(document).ready(function () {
     //  Инициальзация маски в форме
+
 
     //  Стилизация скролла
     $(".couple_of_words_txt").mCustomScrollbar({
