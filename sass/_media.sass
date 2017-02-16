@@ -114,11 +114,15 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 
-	.unique_challenge
-		&.vacancies-form
-			h2
-				font-size: 35px
-				padding: 0 15px
+	h2
+		font-size: 32px
+		padding: 0 15px
+		& + p
+			font-size: 16px
+			padding: 0 15px
+	h3
+		font-size: 28px
+		padding: 0 15px
 	.header_logo
 		display: block
 
@@ -175,8 +179,14 @@
 	
 	.header_title
 		h1
-			font-size: 30px
+			font-size: 35px
 			margin-top: 40px
+			& + p
+				font-size: 18px
+				padding: 0 15px
+				line-height: 1.2
+				& + p
+					line-height: 1.2
 	.header_modal
 		margin-right: 10px
 	[off-canvas*=left]
@@ -184,10 +194,20 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 580px)
+	.header_title
+		h1
+			font-size: 28px
+			line-height: 1
+			padding: 0 15px
+			& + p
+				font-size: 16px
+				& + p
+					font-size: 18px
+					padding: 0 15px
 	.vacancies-developers
 		.title-wrap
 			h2
-				font-size: 45px
+				font-size: 28px
 		&.vacancies
 			.vacancies-item
 				.image-wrap
