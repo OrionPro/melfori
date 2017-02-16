@@ -19,6 +19,8 @@
 	.title_block_left_decor
 		width: 100%
 		margin: auto
+		&.title_right
+			margin: 0
 		p
 			text-align: center
 			width: 100%
@@ -77,6 +79,41 @@
 				float: left
 				button
 					width: 214px
+	.our_advantages
+		.our_advantages_item
+			margin: 0 auto 50px
+			float: none
+			&:first-of-type
+				margin: 0 auto 50px
+			&:last-of-type
+				margin: 0 auto 50px
+		button
+			margin-bottom: 50px
+	.why_effective
+		&.why_profitably
+			.why_profitably_items
+				text-align: center
+			.why_profitably_item_img
+				width: 100%
+				height: auto
+				padding-left: 15px
+				padding-right: 15px
+				margin-right: 0
+				img
+					display: block
+					max-width: 100%
+					height: auto
+					margin: auto
+			.why_profitably_item_txt
+				margin: auto
+	.how_good
+		.how_good_item
+			margin: 0 auto 30px
+			float: none
+			&:nth-of-type(2n+1)
+				margin: 0 auto 30px
+			&:nth-of-type(2n+2)
+				margin: 0 auto 30px
 	//секция our-team-section
 	.why_effective
 		&.our-team-section
@@ -158,6 +195,14 @@
 			.button-wrap
 				button
 					width: 146px
+	.unique_challenge
+		.modal_form_input_wrap
+			margin-right: 0
+			margin-bottom: 20px
+			display: block
+		input[type=submit]
+			margin-bottom: 50px
+
 
 	//секция about-us-form
 	.unique_challenge
@@ -172,8 +217,10 @@
 @media only screen and (max-width : 768px)
 
 	h2
+		margin-bottom: 10px !important
 		font-size: 32px
 		padding: 0 15px
+		line-height: 1.2
 		& + p
 			font-size: 16px
 			padding: 0 15px
@@ -266,9 +313,23 @@
 		margin-right: 10px
 	[off-canvas*=left]
 		width: 255px
-
+	.unique_challenge
+		&.you_always_know_what_you_pay
+			p
+				font-size: 18px
+				& + p
+					padding: 0 15px
+					font-size: 16px
+			button
+				width: 300px
+	.who_are_we_bottom_title
+		p
+			font-size: 18px
+			padding: 0 15px
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 580px)
+	h3
+		font-size: 24px
 	.header_title
 		h1
 			font-size: 28px
@@ -323,6 +384,28 @@
 							margin-right: 0
 
 
+	.why_effective
+		&.why_profitably
+			.why_profitably_item_txt
+				width: 90%
+				p
+					font-size: 16px
+	.how_good
+		.how_good_items
+			padding: 0 15px
+		.how_good_item
+			width: 100%
+			height: 100%
+		.how_good_item_img
+			width: 100%
+			height: auto
+			img
+				width: 98%
+				max-width: 98%
+				height: auto
+				padding-top: 5px
+				padding-bottom: 5px
+				display: block
 @media only screen and (max-width : 570px)
 	.header_logo
 		a
@@ -355,6 +438,11 @@
 				.texarea-wrap
 					textarea
 						width: 100%
+	.unique_challenge
+		input
+			width: 90%
+		input[type=submit]
+			width: 90%
 @media only screen and (max-width : 480px)
 	/**/
 
@@ -369,6 +457,11 @@
 			h3
 				font-size: 20px
 
+	.our_advantages
+		.our_advantages_item
+			width: 310px
+		button
+			width: 280px
 
 	//секция about-us-office
 	.us-office-section
