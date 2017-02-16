@@ -2,9 +2,34 @@
 // подключение common.js
 
 
+class BurgerEff{
+    constructor(){
+        this.line = $('#nav-lines').find('.nav-line');
+        //this.state = 993;
+        this.state = 993;
+        this.start = new Date().getTime();
+    }
+
+    descriprion(){
+        if(document.documentElement.clientWidth <= this.state){
+            setTimeout(function () {
+                let now = new Date().getTime()
+            },10)
+
+        }
+    }
+}
+var burgerEff = new BurgerEff;
+$(window).resize(function() {
+    burgerEff.descriprion();
+});
+
+
 $(document).ready( function() {
 	//  Инициальзация маски в форме
-    
+
+
+    burgerEff.descriprion();
 
     
 	//  Стилизация скролла
