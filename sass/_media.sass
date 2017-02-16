@@ -114,6 +114,44 @@
 				margin: 0 auto 30px
 			&:nth-of-type(2n+2)
 				margin: 0 auto 30px
+	//секция our-team-section
+	.why_effective
+		&.our-team-section
+			.title_block_left_decor
+				p
+					width: 100%
+
+	// секция about-us-office
+	.us-office-section
+		&.about-us-office
+			.img-container
+				background-size: contain
+				width: auto
+				display: inline-block
+				.main-img
+					height: 280px
+				.img-item
+					img
+						height: 138px
+	//секция about-us-form
+	.unique_challenge
+		&.about-us-form
+			.title-wrap
+				h2
+					line-height: 1
+				p
+					display: inline
+
+	// секция about-us-map
+	.contacts-map-section
+		&.about-us-map
+			.contacts
+				margin-bottom: 70px
+			.contacts
+				ul
+					li
+						p
+							display: inline
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 993px)
 	/**/
@@ -165,6 +203,16 @@
 		input[type=submit]
 			margin-bottom: 50px
 
+
+	//секция about-us-form
+	.unique_challenge
+		&.about-us-form
+			.modal_form_input_wrap
+				margin-right: 0px
+				display: block
+				margin-bottom: 30px
+			.social-links-container
+				margin-bottom: 50px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 
@@ -214,6 +262,22 @@
 	.title_block_left_decor
 		p
 			font-size: 18px !important
+
+	// секция about-us-office
+	.us-office-section
+		&.about-us-office
+			min-height: 680px
+			.img-container
+				background-size: contain
+				width: auto
+				display: inline-block
+				.main-img
+					height: 220px
+				.img-item
+					img
+						height: 107px
+
+
 	/*Disable Animation on Mobile Devices*/
 	.animated
 		/*CSS transitions*/
@@ -301,6 +365,25 @@
 					width: 255px
 			.requirements
 				padding-left: 30px
+	.us-office-section
+		&.about-us-office
+			.img-container
+				.main-img
+					margin-right: 0
+					margin-bottom: 5px
+					height: 223px
+				.img-item
+					display: block
+					img
+						display: inline-block
+						height: 212px
+						vertical-align: text-top
+						margin-bottom: 0
+						margin-right: 5px
+						&:last-child
+							margin-right: 0
+
+
 	.why_effective
 		&.why_profitably
 			.why_profitably_item_txt
@@ -328,6 +411,15 @@
 		a
 			span
 				display: none
+
+	// секция about-us-form
+	.unique_challenge
+		&.about-us-form
+			.modal_form_input_wrap
+				input
+					width: 90%
+			input[type=submit]
+				width: 90%
 @media only screen and (max-width : 520px)
 	/**/
 	.header_modal
@@ -370,10 +462,34 @@
 			width: 310px
 		button
 			width: 280px
+
+	//секция about-us-office
+	.us-office-section
+		&.about-us-office
+			.img-container
+				.main-img
+					height: 157px
+				.img-item
+					img
+						height: 148px
 @media only screen and (max-width : 380px)
+
+	h2
+		font-size: 30px
 	.header_modal
 		button
 			width: 160px
+
+	//секция about-us-office
+	.us-office-section
+		&.about-us-office
+			.img-container
+				.main-img
+					height: 150px
+				.img-item
+					img
+						height: 142px
+
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
@@ -402,7 +518,7 @@
 
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px)
+@media only screen and (min-width : 1201px)
 	.container
 		width: 1200px
 
