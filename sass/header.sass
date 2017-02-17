@@ -16,7 +16,7 @@ body
 	font-family: $font_SFUIDisplay-Regular
 	overflow-x: hidden
 	color: $main_txt_color
-	-webkit-tap-highlight-color:transparent
+	-webkit-tap-highlight-color: transparent
 	//внешний вид скроллбара 
 	scrollbar-base-color: $main_color   //для IE 
 	scrollbar-arrow-color: $main_color	//для IE
@@ -344,8 +344,15 @@ p
 	min-height: 600px
 	height: 100vh
 	position: relative
-	background: #fff
-	//background: #fff url(../img/header_video.gif) center top no-repeat
+	background: #fff url(../img/header_video.gif) center top no-repeat
+	&.internet-shop-header
+		.header_title
+			h1
+				line-height: 1.2
+				margin-bottom: 0
+			.price
+				font-weight: bold
+				font-size: 20px
 .header
 	video
 		position: absolute
