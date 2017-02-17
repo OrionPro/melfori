@@ -8,6 +8,17 @@
 //
 // At the bottom of this section, we provide information about the spritesheet itself
 // $spritesheet: width height image $spritesheet-sprites
+$arrow-name: 'arrow'
+$arrow-x: 235px
+$arrow-y: 5px
+$arrow-offset-x: -235px
+$arrow-offset-y: -5px
+$arrow-width: 6px
+$arrow-height: 9px
+$arrow-total-width: 338px
+$arrow-total-height: 230px
+$arrow-image: '../img/sprite.png'
+$arrow: (235px, 5px, -235px, -5px, 6px, 9px, 338px, 230px, '../img/sprite.png', 'arrow', )
 $bottom-title-decor-name: 'bottom_title_decor'
 $bottom-title-decor-x: 230px
 $bottom-title-decor-y: 0px
@@ -19,6 +30,17 @@ $bottom-title-decor-total-width: 338px
 $bottom-title-decor-total-height: 230px
 $bottom-title-decor-image: '../img/sprite.png'
 $bottom-title-decor: (230px, 0px, -230px, 0px, 108px, 5px, 338px, 230px, '../img/sprite.png', 'bottom_title_decor', )
+$ellipse-name: 'ellipse'
+$ellipse-x: 241px
+$ellipse-y: 5px
+$ellipse-offset-x: -241px
+$ellipse-offset-y: -5px
+$ellipse-width: 7px
+$ellipse-height: 7px
+$ellipse-total-width: 338px
+$ellipse-total-height: 230px
+$ellipse-image: '../img/sprite.png'
+$ellipse: (241px, 5px, -241px, -5px, 7px, 7px, 338px, 230px, '../img/sprite.png', 'ellipse', )
 $title-block-left-decor-name: 'title_block_left_decor'
 $title-block-left-decor-x: 230px
 $title-block-left-decor-y: 5px
@@ -44,7 +66,7 @@ $who-are-we-item-img-back: (0px, 0px, 0px, 0px, 230px, 230px, 338px, 230px, '../
 $spritesheet-width: 338px
 $spritesheet-height: 230px
 $spritesheet-image: '../img/sprite.png'
-$spritesheet-sprites: ($bottom-title-decor, $title-block-left-decor, $who-are-we-item-img-back, )
+$spritesheet-sprites: ($arrow, $bottom-title-decor, $ellipse, $title-block-left-decor, $who-are-we-item-img-back, )
 $spritesheet: (338px, 230px, '../img/sprite.png', $spritesheet-sprites, )
 
 // The provided mixins are intended to be used with the array-like variables
