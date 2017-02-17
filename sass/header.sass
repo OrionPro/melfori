@@ -34,7 +34,7 @@ body
 	//-moz-osx-font-smoothing: grayscale
 
 h1
-	@include font($main_txt_color, 57px, $font_SFUIDisplay-Thin)
+	@include font($main_txt_color, 57px, $font_SFUIDisplay-Thin, 1.2)
 	margin-bottom: 15px
 h2
 	margin-top: 100px
@@ -357,7 +357,7 @@ p
 		min-height: 100%
 		width: auto
 		height: auto
-		z-index: -100
+		z-index: 0
 		transform: translateX(-50%) translateY(-50%)
 	.container
 		height: 100%
@@ -434,6 +434,10 @@ p
 	left: 0
 	right: 0
 	top: calc(50% - 200px)
+	&.unique_portal
+		h1
+			line-height: 1.1
+			margin-bottom: 5px
 	b
 		font-size: 21px
 	p
@@ -441,7 +445,10 @@ p
 		color: $main_txt_color
 		& + p
 			font-size: 18px
-
+.header_i
+	display: inline-block
+	margin-top: 15px
+	@include sprite($bottom_title_decor)
 .header_bot_txt
 	margin: auto
 	position: absolute

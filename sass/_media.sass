@@ -157,6 +157,26 @@
 		.couple_of_words_txt
 			margin: 0 auto 100px
 			float: none
+	//Секция  services
+	.services
+		.services_items
+			margin: 0
+			padding: 0 15px
+		.services_item
+		.services_item_img_wrap
+			display: inline-block
+			margin: 0 auto 30px
+			float: none
+		.services_item_txt_wrap
+			display: inline-block
+			margin: auto
+			float: none
+			text-align: center
+			.services_item_txt_inner
+				width: 100%
+			button
+				position: static
+				margin-top: 30px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 993px)
 	/**/
@@ -419,6 +439,29 @@
 				padding-top: 5px
 				padding-bottom: 5px
 				display: block
+		.how_good_item_mask
+			width: 97.8%;
+			height: 96.8%;
+	//Секция services
+	.services
+		.services_item_img
+			width: 100%
+			height: auto
+			img
+				width: 98%
+				max-width: 98%
+				height: auto
+				padding-top: 5px
+				padding-bottom: 5px
+				display: block
+		.services_item_mask
+			width: 98%
+			height: 97%
+		.services_item_txt_wrap
+			width: 100%
+		.services_item_txt
+			button
+				width: 50%
 @media only screen and (max-width : 570px)
 	.header_logo
 		a
@@ -433,6 +476,9 @@
 					width: 90%
 			input[type=submit]
 				width: 90%
+
+	.header_title
+		top: calc(50% - 105px)
 @media only screen and (max-width : 520px)
 	/**/
 	.header_modal
@@ -458,10 +504,15 @@
 			width: 90%
 @media only screen and (max-width : 480px)
 	/**/
-
+	.header
+		min-height: 400px
 	.header_title
 		h1
 			font-size: 26px
+		p, b
+			padding: 0 15px
+			font-size: 16px
+			display: block
 	.modal_form_input_wrap
 		.modal_input_error
 			right: 0px
@@ -490,6 +541,10 @@
 		button
 			width: 90%
 
+	.services
+		.services_item_mask
+			width: 98%
+			height: 95.5%
 @media only screen and (max-width : 380px)
 
 	h2
@@ -508,6 +563,11 @@
 					img
 						height: 142px
 
+	.how_good
+		.how_good_item_mask
+			width: 97.7%
+			height: 94.6%
+			left: 4px
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
