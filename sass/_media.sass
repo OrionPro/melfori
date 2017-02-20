@@ -177,6 +177,36 @@
 			button
 				position: static
 				margin-top: 30px
+
+	.internet-shop-instruction
+		.content
+			ul
+				li
+					aside
+						p
+							display: inline
+						width: 540px
+					.button
+						width: 285px
+						margin-right: 0
+
+	.our_advantages
+		&.internet-shop-goods
+			.title_block_left_decor
+				width: auto
+				padding: 0
+
+
+@media only screen and (max-width : 1030px)
+	.internet-shop-instruction
+		.content
+			.gear-wrap
+				display: none
+			ul
+				li
+					.arrow
+						display: none
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 993px)
 	/**/
@@ -242,6 +272,35 @@
 		p
 			&.p_light
 				margin-bottom: 100px
+	.our_advantages
+		&.internet-shop-goods
+			.form-wrap
+				.modal_form_input_wrap
+					margin-right: 0px
+					display: block
+					margin-bottom: 15px
+
+	.internet-shop-instruction
+		.content
+			ul
+				li
+					aside
+						width: auto
+					.button
+						float: none
+
+	.why_effective
+		&.us-internet-shop-section
+			.items-wrap
+				text-align: center
+				margin-bottom: 0
+			.item-wrap
+				margin-bottom: 40px
+				.list-wrap
+					display: inline-block
+				.img-wrap
+					margin: auto
+					width: 320px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 
@@ -462,6 +521,14 @@
 		.services_item_txt
 			button
 				width: 50%
+	.internet-shop-instruction
+		.content
+			ul
+				padding-left: 15px
+				li
+					padding-left: 0
+					img
+						display: none
 @media only screen and (max-width : 570px)
 	.header_logo
 		a
@@ -545,6 +612,28 @@
 		.services_item_mask
 			width: 98%
 			height: 95.5%
+
+	.our_advantages
+		&.internet-shop-goods
+			.form-wrap
+				input,
+				input[type=submit]
+					width: 90%
+	.internet-shop-instruction
+		.content
+			.addition-wrap
+				input[type=submit]
+					width: 90%
+					font-size: 14px
+
+	.why_effective
+		&.us-internet-shop-section
+			button
+				width: 90%
+				font-size: 14px
+	.internet-shops-video
+		.button
+			width: 90%
 @media only screen and (max-width : 380px)
 
 	h2
@@ -568,6 +657,18 @@
 			width: 97.7%
 			height: 94.6%
 			left: 4px
+
+	.internet-shop-instruction
+		.content
+			.addition-wrap
+				input[type=submit]
+					font-size: 12px
+
+	.why_effective
+		&.us-internet-shop-section
+			.item-wrap
+				.img-wrap
+					width: 95%
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/

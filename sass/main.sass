@@ -35,7 +35,7 @@ body textarea:required:valid
 // Оформление слайдбара
 [off-canvas]
 	transition: transform 0.4s
-	overflow: auto
+	//overflow: auto
 	-webkit-overflow-scrolling: touch
 [off-canvas*=left]
 	width: 250px
@@ -340,6 +340,7 @@ nav[canvas]
 		.addition-wrap
 			text-align: center
 			margin-top: 82px
+			margin-bottom: 123px
 			h3
 				margin: 0
 			.text
@@ -597,6 +598,24 @@ nav[canvas]
 							text-decoration: none
 						&:focus
 							text-decoration: none
+	&.internet-shop-form-section
+		.title-wrap
+			margin-top: 108px
+			margin-bottom: 20px
+			h2
+				margin: 0
+				margin-bottom: 4px
+		.modal_form_input_wrap
+			display: block
+			margin-right: 0px
+			margin-bottom: 17px
+		.unique_challenge_form
+			aside
+				line-height: 1.3
+		form
+			margin-bottom: 122px
+			margin-top: 9px
+
 
 
 //	Секция who_are_we
@@ -789,6 +808,8 @@ nav[canvas]
 		background: #fff
 		h2
 			margin-bottom: 3px
+		.items-wrap
+			margin-bottom: 45px
 		.item-wrap
 			.img-wrap
 				display: block
@@ -802,7 +823,7 @@ nav[canvas]
 					position: absolute
 					height: calc(100% - 10px)
 					width: calc(100% - 10px)
-					top: -50px
+					top: 5px
 					opacity: 0
 					background: rgba(255,255,255,0.7)
 					transition: .3s
@@ -811,18 +832,15 @@ nav[canvas]
 						font-size: 18px
 						color: $main_txt_color
 						position: absolute
-						bottom: -40px
-						left: -15px
+						bottom: 15px
+						left: 15px
 						opacity: 0
 						transition: .3s
 				&:hover
 					.hover-eff
 						opacity: 1
-						top: 5px
 						p
-							bottom: 15px
 							opacity: 1
-							left: 15px
 			.list-wrap
 				padding: 0
 				margin: 0px
@@ -836,6 +854,17 @@ nav[canvas]
 					padding-left: 20px
 					list-style-type: none
 					position: relative
+					a
+						transition: .1s
+						color: $main_txt_color
+						&:hover
+							color: #01c1e6
+							text-decoration: none
+						&:active
+							text-decoration: none
+						&:focus
+							text-decoration: none
+
 					&:before
 						content: ''
 						display: inline-block
@@ -843,6 +872,16 @@ nav[canvas]
 						top: 9px
 						@include sprite($hz)
 						left: 0px
+		button
+			margin-bottom: 115px
+			@extend %main_btn
+			width: 370px
+			&:hover
+				@extend %main_btn_hover
+			&:active
+				@extend %main_btn_active
+			&:focus
+				@extend %main_btn_focus
 
 //	Секция couple_of_words
 .couple_of_words
