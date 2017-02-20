@@ -355,6 +355,76 @@ p
 			.price
 				font-weight: bold
 				font-size: 20px
+	&.langing-pages-header
+		.header_title
+			top: calc(50% - 264px)
+			h1
+				margin-bottom: 4px
+			b
+				font-size: 20px
+			p
+				font-size: 18px
+			.decor-bottom-border
+				text-align: center
+				span
+					display: inline-block
+					@include sprite($bottom_title_decor)
+		.header-form
+			position: absolute
+			left: 0
+			right: 0
+			top: calc(100% - 464px)
+			h2
+				margin: 0
+				color: $main_txt_color
+				margin-bottom: 5px
+			p
+				font-size: 18px
+			form
+				margin-top: 20px
+			.modal_form_input_wrap
+				display: inline-block
+				margin-right: 30px
+				text-align: left
+				input
+					display: block
+				label
+					font-weight: 100
+					font-size: 18px
+					padding-left: 15px
+			input
+				@extend %main_btn2
+				color: $main_color
+				width: 370px
+				background: transparent
+				padding-left: 15px
+				border: 1px solid $main_color
+				&:hover
+					outline: 0
+				&:active
+					outline: 0
+				&:focus
+					outline: 0
+				&::-webkit-input-placeholder
+					color: $main_color
+				&:-moz-placeholder
+					color: $main_color
+				&::-moz-placeholder
+					color: $main_color
+				&:-ms-input-placeholder
+					color: $main_color
+			input[type=submit]
+				width: 370px
+				display: inline-block
+				@extend %main_btn
+				color: #fff
+				&:hover
+					@extend %main_btn_hover
+				&:active
+					@extend %main_btn_active
+				&:focus
+					@extend %main_btn_focus
+
 .header
 	video
 		position: absolute
@@ -552,4 +622,5 @@ label
 
 // Секция 
 // Секция 
-// Секция 
+// Секция
+//
