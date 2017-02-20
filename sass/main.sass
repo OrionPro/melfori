@@ -776,7 +776,67 @@ nav[canvas]
 			@extend %main_btn_active
 		&:focus
 			@extend %main_btn_focus
-		
+
+.why_effective
+	&.us-internet-shop-section
+		background: #fff
+		h2
+			margin-bottom: 3px
+		.item-wrap
+			.img-wrap
+				display: block
+				background-image:  url('../img/decor-cub1.jpg')
+				background-size: contain
+				padding: 5px
+				position: relative
+				img
+					width: 100%
+				.hover-eff
+					position: absolute
+					height: calc(100% - 10px)
+					width: calc(100% - 10px)
+					top: -50px
+					opacity: 0
+					background: rgba(255,255,255,0.7)
+					transition: .3s
+					p
+						margin: 0px
+						font-size: 18px
+						color: $main_txt_color
+						position: absolute
+						bottom: -40px
+						left: -15px
+						opacity: 0
+						transition: .3s
+				&:hover
+					.hover-eff
+						opacity: 1
+						top: 5px
+						p
+							bottom: 15px
+							opacity: 1
+							left: 15px
+			.list-wrap
+				padding: 0
+				margin: 0px
+				text-align: left
+				margin-top: 13px
+				p
+					margin: 0
+				li
+					margin-bottom: 2px
+					font-size: 18px
+					padding-left: 20px
+					list-style-type: none
+					position: relative
+					&:before
+						content: ''
+						display: inline-block
+						position: absolute
+						top: 9px
+						@include sprite($hz)
+						left: 0px
+
 //	Секция couple_of_words
 .couple_of_words
 	text-align: center
