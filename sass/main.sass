@@ -221,17 +221,27 @@ nav[canvas]
 					@extend %main_btn_active
 				&:focus
 					@extend %main_btn_focus
-	&.langing-page
+	&.langing-page-doing
+		min-height: 928px
+		h3
+			margin-top: 95px
+			margin-bottom: 25px
 		.title-wrap
-			margin-bottom: 71px
+			margin-bottom: 77px
+
 		.title_block_left_decor
 			width: 840px
 			padding: 0
-			padding-left: 55px
+			padding-left: 33px
 			p
 				line-height: 1.5
+		.internet-shop-goods-wrap
+			margin-bottom: 58px
 		.title_block_left_decor_img
-			left: 25px
+			position: absolute
+			margin: 0
+			left: 5px
+			top: calc(50% - 50px)
 		.aside-container
 			font-size: 24px
 			.decor-bottom-border
@@ -239,6 +249,127 @@ nav[canvas]
 				span
 					display: inline-block
 					@include sprite($bottom_title_decor)
+		.langing-page-doing-item
+			height: 150px
+			background: #fff
+			display: table
+			width: 100%
+			margin-bottom: 32px
+			.item
+				display: table-cell
+				vertical-align: middle
+				position: relative
+				color: #00be92
+				z-index: 0
+				font-size: 18px
+				line-height: 1.1
+				p
+					margin: 0
+				b
+					span
+						font-weight: 100
+				.decor
+					font-size: 86px
+					position: absolute
+					top: calc(50% - 47px)
+					left: 0px
+					right: 0px
+					color: #f4f4f4
+					z-index: -1
+
+.langing-page-understanding
+	min-height: 748px
+	background-color: #fff
+	text-align: center
+	position: relative
+	z-index: 1
+	h2
+		margin: 0
+		margin-bottom: 5px
+		color: $main_color
+	.title-wrap
+		margin-bottom: 49px
+		margin-top: 106px
+	.title_block_left_decor
+		width: 840px
+		padding: 0
+		margin-bottom: 88px
+		padding-left: 33px
+		p
+			line-height: 1.3
+	.title_block_left_decor_img
+		position: absolute
+		margin: 0
+		left: 5px
+		top: calc(50% - 50px)
+	.more-content
+		h3
+			line-height: 1.1
+			margin: 0
+			margin-bottom: 23px
+		lable
+			margin-bottom: 4px
+			display: inline-block
+			font-size: 18px
+		button
+			@extend %main_btn
+			width: 370px
+			&:hover
+				@extend %main_btn_hover
+			&:active
+				@extend %main_btn_active
+			&:focus
+				@extend %main_btn_focus
+
+
+.langing-page-whe-call-section
+	background: #f8f8fa
+	min-height: 874px
+	.title-wrap
+		margin: 100px 0 40px 0
+		text-align: center
+		h2
+			margin: 0
+			color: $main_color
+		p
+			margin: 0
+	.content
+		.decor-bottom-border
+			text-align: left
+			margin-top: -14px
+			span
+				display: inline-block
+				@include sprite($bottom_title_decor)
+		.img-wrap
+			vertical-align: top
+			margin-right: 50px
+			width: 659px
+			display: inline-block
+			img
+				width: 100%
+		.text-wrap
+			padding-top: 62px
+			width: 470px
+			display: inline-block
+			h3
+				margin: 0
+				line-height: 0.9
+				margin-bottom: 39px
+			aside
+				line-height: 1.3
+				font-size: 24px
+				p
+					margin-bottom: 15px
+				a
+					color: #01c1e6
+					&:hover
+						text-decoration: none
+					&:active
+						text-decoration: none
+					&:focus
+						text-decoration: none
+
+
 
 .internet-shops-video
 	text-align: center
@@ -522,7 +653,7 @@ nav[canvas]
 		.who_are_we_items
 			margin-top: 68px
 			margin-bottom: 61px
-//who-are-we-section
+
 //	Секция you_always_know_what_you_pay
 .unique_challenge
 	&.you_always_know_what_you_pay
@@ -550,7 +681,30 @@ nav[canvas]
 			margin-bottom: 13px
 		.texarea-wrap
 			margin-bottom: 13px
+			position: relative
+			display: inline-block
+			.lable
+				margin-bottom: 10px
+			.add-tz
+				position: absolute
+				right: 3px
+				top: 143px
+				.text
+					padding-right: 10px
+					color: #fff
+				button
+					background: #fff
+					border: 0
+					border-radius: 50%
+					width: 35px
+					height: 35px
+					span
+						font-size: 38px
+						line-height: 0
+						vertical-align: sub
+						color: #01c1e6
 			textarea
+				border-radius: 18px
 				&:focus
 					outline: none
 				@extend %main_btn
@@ -636,6 +790,266 @@ nav[canvas]
 			margin-bottom: 122px
 			margin-top: 9px
 
+.langing-page-form-section
+	min-height: 560px
+	text-align: center
+	background-color: $main_color
+	h2
+		margin-bottom: 49px
+		margin-top: 113px
+		line-height: 1
+		p
+			font-size: inherit
+	p
+		font-size: 18px
+	.form-wrap
+		margin-bottom: 46px
+		aside
+			p
+				@include font(#fff, 16px, $font_SFUIDisplay-Light, 1.2)
+	form
+		margin: 20px 0
+		.modal_form_input_wrap
+			display: inline-block
+			margin-right: 30px
+		input
+			@extend %main_btn
+			color: #fff
+			width: 370px
+			background: transparent
+			padding-left: 15px
+			border: 1px solid #fff
+			&:hover
+				outline: 0
+			&:active
+				outline: 0
+			&:focus
+				outline: 0
+			&::-webkit-input-placeholder
+				color: #fff
+			&:-moz-placeholder
+				color: #fff
+			&::-moz-placeholder
+				color: #fff
+			&:-ms-input-placeholder
+				color: #fff
+		input[type=submit]
+			width: 370px
+			display: inline-block
+			@extend %main_btn2
+			color: $main_color
+			&:hover
+				@extend %main_btn2_hover
+			&:active
+				@extend %main_btn2_active
+			&:focus
+				@extend %main_btn2_focus
+	.content-wrap
+		float: none
+		margin: auto
+	.content
+		padding: 41px 4px 12px 95px
+		color: #fff
+		border: 3px solid
+		text-align: left
+		margin-bottom: 120px
+		.title-content
+			width: 398px
+			margin: 0
+			display: inline-block
+			color: #fff
+			font-size: 36px
+			line-height: 1.1
+			font-family: $font_SFUIDisplay-Regular
+		.list
+			padding: 0px
+			margin: 0px
+			display: inline-block
+			width: 445px
+			vertical-align: top
+			margin-top: 8px
+			li
+				padding-left: 39px
+				list-style-type: none
+				font-size: 18px
+				margin-bottom: 17px
+				line-height: 1.2
+				position: relative
+				.icon
+					position: absolute
+					left: 0
+
+
+.landing-development-steps
+	background: #fff
+	text-align: center
+	.title-wrap
+		margin: 110px 0 30px
+		h2
+			color: #01c1e6
+			margin: 0
+			margin-bottom: 2px
+			p
+				line-height: 1
+				font-size: inherit
+		p
+			line-height: 1.4
+			font-size: 18px
+	.content
+		text-align: left
+		position: relative
+		margin-bottom: 80px
+		.lists-wrap
+			width: 460px
+			float: left
+			ul
+				margin: 0px
+				padding: 30px 0 0 50px
+				li
+					padding-left: 90px
+					list-style-type: none
+					position: relative
+					margin-bottom: 41px
+					font-size: 18px
+					aside
+						display: inline-block
+					.arrow
+						position: absolute
+						left: -30px
+						top: 53px
+						height: 130%
+						width: 17px
+						border: 2px dashed #acb0bc
+						border-right: 0
+						&:before
+							content: ''
+							display: inline-block
+							@include sprite($ellipse)
+							position: absolute
+							right: -9px
+							top: -3px
+						&:after
+							content: ''
+							display: inline-block
+							@include sprite($arrow)
+							position: absolute
+							right: 0
+							top: calc(100% - 4px)
+					p
+						line-height: 1.3
+					img
+						position: absolute
+						left: 0
+						top: 7px
+			.gear-wrap
+				position: absolute
+				top: 0px
+				left: 10px
+				.gear-2
+					display: inline-block
+					width: 45px
+					height: 45px
+					background: url('../img/gear1.png') no-repeat
+					background-size: contain
+				.gear-1
+					top: 34px
+					position: absolute
+					left: -16px
+					display: inline-block
+					width: 30px
+					height: 30px
+					background: url('../img/gear2.png') no-repeat
+					background-size: contain
+	.video-wrap
+		width: 740px
+		float: left
+		margin-bottom: 26px
+		margin-top: 37px
+		text-align: center
+		font-size: 18px
+		.video-item
+			display: inline-block
+			font-size: 0
+			background: url("../img/decor-cub1.jpg")
+			padding: 5px
+			width: 100%
+			margin-bottom: 20px
+	.form-container
+		margin-bottom: 120px
+		h3
+			margin: 0px
+			margin-bottom: 28px
+		#form
+			margin: 20px 0
+			.modal_form_input_wrap
+				display: inline-block
+				margin-right: 30px
+			input
+				@extend %main_btn2
+				color: $main_color
+				width: 370px
+				background: transparent
+				padding-left: 15px
+				border: 1px solid $main_color
+				&:hover
+					outline: 0
+				&:active
+					outline: 0
+				&:focus
+					outline: 0
+				&::-webkit-input-placeholder
+					color: $main_color
+				&:-moz-placeholder
+					color: $main_color
+				&::-moz-placeholder
+					color: $main_color
+				&:-ms-input-placeholder
+					color: $main_color
+			input[type=submit]
+				width: 370px
+				display: inline-block
+				@extend %main_btn
+				color: #fff
+				&:hover
+					@extend %main_btn_hover
+				&:active
+					@extend %main_btn_active
+				&:focus
+					@extend %main_btn_focus
+
+.langing-page-our
+	text-align: center
+	background-color: #fff
+	position: relative
+	z-index: 1
+	h2
+		margin-bottom: -7px
+		color: $main_color
+		&.lineH-1
+			line-height: 1
+			margin-bottom: 0
+	p
+		margin-bottom: 45px
+	.why_effective_items
+		margin-top: 70px
+		margin-bottom: 35px
+	.why_effective_item
+		margin-bottom: 85px
+		p
+			margin-top: 12px
+			margin-bottom: 15px
+			line-height: 1.1
+		button
+			@extend %main_btn
+			width: 230px
+			&:hover
+				@extend %main_btn_hover
+			&:active
+				@extend %main_btn_active
+			&:focus
+				@extend %main_btn_focus
+	.why_effective_item_img
+		min-height: 170px
 
 
 //	Секция who_are_we
@@ -823,6 +1237,7 @@ nav[canvas]
 		&:focus
 			@extend %main_btn_focus
 
+
 .why_effective
 	&.us-internet-shop-section
 		background: #fff
@@ -861,6 +1276,10 @@ nav[canvas]
 						opacity: 1
 						p
 							opacity: 1
+			.for-why
+				font-size: 18px
+				margin-top: 26px
+				margin-bottom: 46px
 			.list-wrap
 				padding: 0
 				margin: 0px
