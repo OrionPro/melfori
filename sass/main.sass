@@ -610,6 +610,8 @@ nav[canvas]
 
 // Секция why_profitably
 .why_effective
+	&.grey
+		background-color: #f8f8fa
 	&.why_profitably
 		.why_profitably_items
 			margin-top: 50px
@@ -620,25 +622,31 @@ nav[canvas]
 			height: 510px
 			margin-right: 50px
 			display: inline-block
-			vertical-align: top
+			vertical-align: middle
 		.why_profitably_item_txt
 			width: 480px
 			display: inline-block
-			vertical-align: top
+			vertical-align: middle
 			ul
 				padding: 0
 				li
 					list-style: none
+					margin-bottom: 15px
 			i
+				vertical-align: middle
 				margin-right: 15px
 				color: $auxiliary_txt_color
 				font-size: 24px
 			p
+				width: 440px
 				display: inline-block
-				margin-bottom: 15px
-				@include font($main_txt_color, 24px, $font_SFUIDisplay-Light, 1.2)
+				vertical-align: middle
+				margin-bottom: 0
+				@include font($main_txt_color, 24px, $font_SFUIDisplay-Light, 1)
+			span
+				font-family: $font_SFUIDisplay-Medium
 		h3
-			margin-top: 120px
+			margin-top: 0
 			margin-bottom: 31px
 			line-height: 0.9
 	&.our-team-section
@@ -1312,7 +1320,11 @@ nav[canvas]
 						position: absolute
 						top: 9px
 						@include sprite($hz)
-						left: 0px
+						left: 0
+			p
+				&.light
+					text-align: left
+					@include font($main_txt_color, 18px, $font_SFUIDisplay-Light, 1)
 		button
 			margin-bottom: 115px
 			@extend %main_btn
