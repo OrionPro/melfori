@@ -1809,6 +1809,17 @@
 		</div>
 	</div>
 </div>
+
+<!-- Модальное окно 2-->
+<div class="popup" data-modal="modal-res">
+	<div class="dm-table">
+		<div class="dm-cell">
+			<div class="dm-modal">
+				<p class='success_mail'>Заявка отправлена</p>
+			</div>
+		</div>
+	</div>
+</div>
 <!-- вариант меню на мобильном -->
 
 <!-- Здесь пишем код -->
@@ -2043,13 +2054,15 @@
 				</h2>
 				<div class="form-wrap">
 					<form id="form">
-						<div class="modal_form_input_wrap">
-							<div class="modal_input_error">Заполните поле
-								<div class="modal_error_triangle"></div>
-								<div class="modal_error_chest_img"></div>
+						<div>
+							<div class="modal_form_input_wrap">
+								<div class="modal_input_error">Заполните поле
+									<div class="modal_error_triangle"></div>
+									<div class="modal_error_chest_img"></div>
+								</div>
+								<input name="email" class="modal_form_email" placeholder="E-mail"
+									   type="text">
 							</div>
-							<input name="email" class="modal_form_email" placeholder="E-mail"
-								   type="text">
 						</div>
 						<input type="submit" value="Получить договор на почту">
 					</form>
@@ -2177,13 +2190,15 @@
 						<p>Начнём сегодня?</p>
 					</h3>
 					<form id="form">
-						<div class="modal_form_input_wrap">
-							<div class="modal_input_error">Заполните поле
-								<div class="modal_error_triangle"></div>
-								<div class="modal_error_chest_img"></div>
+						<div>
+							<div class="modal_form_input_wrap">
+								<div class="modal_input_error">Заполните поле
+									<div class="modal_error_triangle"></div>
+									<div class="modal_error_chest_img"></div>
+								</div>
+								<input name="email" class="modal_form_phone ua" placeholder="+38(___) ___-__-__"
+									   type="text">
 							</div>
-							<input name="email" class="modal_form_phone ua" placeholder="+38(___) ___-__-__"
-								   type="text">
 						</div>
 						<input type="submit" value="Начать работу">
 					</form>
@@ -2255,26 +2270,34 @@
 				<p>Хотите поделиться своей задачей и узнать,</p>
 				<p>насколько быстро и выгодно мы её выполним?</p>
 				<div class="unique_challenge_form">
-					<form id="form">
+					<form id="form3">
 						<div class="texarea-wrap">
 							<p class="lable">Заполните два поля ниже, мы перезвоним.</p>
 							<textarea placeholder="Напишите буквально пару предложений
 о том, кто вы такой, что умеете и чем хотели
 бы заниматься у нас."></textarea>
-							<div class="add-tz">
-								<span class="text">Прикрепить ТЗ</span>
-								<button>
-									<span>+</span>
-								</button>
+							<div class="fileload">
+								<div class="file-load-block">
+									<input type="file" value="" id="file" />
+									<div class="fileLoad">
+										<input type="text" value="Прикрепить ТЗ" />
+										<button type="button"><span></span></button>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="modal_form_input_wrap">
-							<div class="modal_input_error">Заполните поле
-								<div class="modal_error_triangle"></div>
-								<div class="modal_error_chest_img"></div>
+						<input type="hidden" name="form_data" value="">
+						<input type="hidden" name="id_form" value="form_2">
+						<input type="hidden" name="form_type" value="normal">
+						<div>
+							<div class="modal_form_input_wrap">
+								<div class="modal_input_error">Заполните поле
+									<div class="modal_error_triangle"></div>
+									<div class="modal_error_chest_img"></div>
+								</div>
+								<input name="phone" class="modal_form_phone ua" placeholder="+38(___) ___-__-__"
+									   type="text">
 							</div>
-							<input name="phone" class="modal_form_phone ua" placeholder="+38(___) ___-__-__"
-								   type="text">
 						</div>
 						<input type="submit" value="Проконсультироваться">
 					</form>

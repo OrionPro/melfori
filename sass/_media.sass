@@ -221,6 +221,10 @@
 	.landing-development-steps
 		.video-wrap
 			width: 510px
+
+	.langing-page-form-section
+		.content
+			padding: 41px 4px 12px 67px
 @media only screen and (max-width : 1030px)
 	.internet-shop-instruction
 		.content
@@ -231,23 +235,7 @@
 					.arrow
 						display: none
 
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
-	.header
-		&.langing-pages-header
-			.header-form
-				.modal_form_input_wrap
-					margin-right: 0
-					text-align: center
-					display: block
-					margin-bottom: 30px
-					input
-						margin: auto
 
-	.our_advantages
-		&.langing-page-doing
-			.aside-container
-				margin-bottom: 60px
 @media only screen and (max-width : 993px)
 	/**/
 	h2
@@ -293,12 +281,13 @@
 				button
 					width: 146px
 	.unique_challenge
-		.modal_form_input_wrap
-			margin-right: 0
-			margin-bottom: 20px
-			display: block
-		input[type=submit]
-			margin-bottom: 50px
+		form
+			.modal_form_input_wrap
+				margin-right: 0
+				margin-bottom: 20px
+				display: block
+			input[type=submit]
+				margin-bottom: 50px
 
 
 	//секция about-us-form
@@ -361,10 +350,11 @@
 
 	.langing-page-form-section
 		form
-			.modal_form_input_wrap
-				margin-right: 0
+			& > div
 				display: block
 				text-align: center
+			.modal_form_input_wrap
+				margin-right: 0
 				margin-bottom: 30px
 		.content
 			padding: 30px 4px 12px 40px
@@ -395,15 +385,37 @@
 			margin: auto
 		.form-container
 			#form
-				.modal_form_input_wrap
-					margin-right: 0
+				& > div
 					display: block
 					text-align: center
+				.modal_form_input_wrap
+					margin-right: 0
 					margin-bottom: 30px
 
 	.header_title
 		h1
 			font-size: 48px
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.header
+		&.langing-pages-header
+			.header-form
+				form
+					& > div
+						display: block
+						text-align: center
+				.modal_form_input_wrap
+					margin-right: 0
+
+					margin-bottom: 30px
+					input
+						margin: auto
+
+	.our_advantages
+		&.langing-page-doing
+			.aside-container
+				margin-bottom: 60px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 

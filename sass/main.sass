@@ -675,8 +675,9 @@ nav[canvas]
 	&.vacancies-form
 		form
 			margin-bottom: 120px
+			& > div
+				display: block
 		.modal_form_input_wrap
-			display: block
 			margin-right: 0
 			margin-bottom: 13px
 		.texarea-wrap
@@ -685,24 +686,41 @@ nav[canvas]
 			display: inline-block
 			.lable
 				margin-bottom: 10px
-			.add-tz
+			.fileload
 				position: absolute
 				right: 3px
 				bottom: 10px
-				.text
-					padding-right: 10px
-					color: #fff
-				button
-					background: #fff
+				overflow: hidden
+				.file-load-block
+					position: relative
+				input[type=text]
 					border: 0
-					border-radius: 50%
-					width: 35px
 					height: 35px
-					span
-						font-size: 38px
-						line-height: 0
-						vertical-align: sub
+					width: 135px
+				input[type=file]
+					position: absolute
+					opacity: 0
+					width: 36px
+					right: 0
+					cursor: pointer
+					padding: 0
+					top: -13px
+					z-index: 2
+					width: 175px
+				.fileLoad
+					button
+						border: 0
+						background: #fff
+						vertical-align: bottom
 						color: #01c1e6
+						width: 35px
+						height: 35px
+						display: inline-block
+						border-radius: 50%
+						span
+							vertical-align: middle
+							display: inline-block
+							@include sprite($plus)
 			textarea
 				border-radius: 18px
 				&:focus
@@ -809,6 +827,8 @@ nav[canvas]
 				@include font(#fff, 16px, $font_SFUIDisplay-Light, 1.2)
 	form
 		margin: 20px 0
+		& > div
+			display: inline-block
 		.modal_form_input_wrap
 			display: inline-block
 			margin-right: 30px
@@ -981,6 +1001,8 @@ nav[canvas]
 			margin-bottom: 28px
 		#form
 			margin: 20px 0
+			& > div
+				display: inline-block
 			.modal_form_input_wrap
 				display: inline-block
 				margin-right: 30px

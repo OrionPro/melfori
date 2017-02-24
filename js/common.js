@@ -111,7 +111,22 @@ $(document).ready(function () {
 	//     owl.trigger('prev.owl.carousel', [700]);
 	// });
 
+	// отслеживаем изменение инпута file
+	$('#file').change(function(){
+		// Если файл прикрепили то заносим значение value в переменную
+		var fileResult = $(this).val();
+		// И дальше передаем значение в инпут который под загрузчиком
+		$(this).parent().find('.fileLoad').find('input').val(fileResult);
+	});
 
+	/* Добавляем новый класс кнопке если инпут файл получил фокус */
+	$('#file').hover(function(){
+		$(this).parent().find('span').addClass('button-hover');
+	}, function(){
+		$(this).parent().find('span').removeClass('button-hover');
+	});
+
+	// Chec
 });
 
 $(window).resize(function () {
