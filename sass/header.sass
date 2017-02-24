@@ -148,7 +148,7 @@ p
 			position: absolute
 			right: -2px
 			top: 40px
-			padding-left: 10px
+			padding-left: 17px
 			font: 15px/35px $font_SFUIDisplay-Regular
 			background-color: #F4F4F4
 			border: 1px solid #C8C8C8
@@ -307,7 +307,7 @@ p
 		position: absolute
 		right: -5px
 		top: 40px
-		padding-left: 10px
+		padding-left: 17px
 		font: 15px/35px $font_SFUIDisplay-Regular
 		background-color: #F4F4F4
 		border: 1px solid #C8C8C8
@@ -331,8 +331,8 @@ p
 		position: relative
 		background-image: url('../img/modal_error_triangle.png')
 	.modal_error_chest_img
-		top: -33px
-		left: 0				
+		top: -31px
+		left: -11px
 		height: 9px
 	.modal_error_triangle
 		top: -43px
@@ -375,14 +375,18 @@ p
 			left: 0
 			right: 0
 			top: calc(100% - 394px)
-			h2
+			h3
 				margin: 0
 				color: $main_txt_color
 				margin-bottom: 5px
 			p
 				font-size: 18px
+				padding-left: 15px
+				padding-right: 15px
 			form
 				margin-top: 20px
+				& > div
+					display: inline-block
 			.modal_form_input_wrap
 				display: inline-block
 				margin-right: 30px
@@ -425,7 +429,13 @@ p
 					@extend %main_btn_active
 				&:focus
 					@extend %main_btn_focus
-
+		&.unique_portal
+			.header_title
+				top: calc(50% - 275px)
+			.header-form
+				top: calc(100% - 445px)
+			h3
+				margin-bottom: 0
 .header
 	video
 		position: absolute

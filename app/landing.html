@@ -1809,6 +1809,17 @@
 		</div>
 	</div>
 </div>
+
+<!-- Модальное окно 2-->
+<div class="popup" data-modal="modal-res">
+	<div class="dm-table">
+		<div class="dm-cell">
+			<div class="dm-modal">
+				<p class='success_mail'>Заявка отправлена</p>
+			</div>
+		</div>
+	</div>
+</div>
 <!-- вариант меню на мобильном -->
 
 <!-- Здесь пишем код -->
@@ -1878,15 +1889,17 @@
 					<h3>Сэкономьте время</h3>
 					<p>Обсудить задачу по телефону – быстрее и информативнее.</p>
 					<form>
-						<div class="modal_form_input_wrap">
+						<div>
+							<div class="modal_form_input_wrap">
 
-							<div class="modal_input_error">Заполните поле
-								<div class="modal_error_triangle"></div>
-								<div class="modal_error_chest_img"></div>
+								<div class="modal_input_error">Заполните поле
+									<div class="modal_error_triangle"></div>
+									<div class="modal_error_chest_img"></div>
+								</div>
+								<label>Напишите номер, мы перезвоним.</label>
+								<input name="phone" class="modal_form_phone ua" placeholder="+38(___) ___-__-__"
+									   type="text">
 							</div>
-							<label>Напишите номер, мы перезвоним.</label>
-							<input name="phone" class="modal_form_phone ua" placeholder="+38(___) ___-__-__"
-								   type="text">
 						</div>
 						<input type="submit" value="Обсудить по телефон">
 						<input type="hidden" name="form_name" value="Обсудить по телефон (Лендинг)">
@@ -2015,7 +2028,9 @@
 						</h3>
 						<aside>
 							<p>В результате в течение часа вы увидите на
-								почте документ, <a href="#">похожий на этот.</a></p>
+								почте документ,
+								<a href="#">похожий на этот.</a>
+							</p>
 							<p>Из него вы узнаете про этапы разработки,
 								стоимость и сроки. Сделаете вывод о том,
 								подходят ли вам наши условия
@@ -2039,13 +2054,15 @@
 				</h2>
 				<div class="form-wrap">
 					<form id="form">
-						<div class="modal_form_input_wrap">
-							<div class="modal_input_error">Заполните поле
-								<div class="modal_error_triangle"></div>
-								<div class="modal_error_chest_img"></div>
+						<div>
+							<div class="modal_form_input_wrap">
+								<div class="modal_input_error">Заполните поле
+									<div class="modal_error_triangle"></div>
+									<div class="modal_error_chest_img"></div>
+								</div>
+								<input name="email" class="modal_form_email" placeholder="E-mail"
+									   type="text">
 							</div>
-							<input name="email" class="modal_form_email" placeholder="E-mail"
-								   type="text">
 						</div>
 						<input type="submit" value="Получить договор на почту">
 					</form>
@@ -2060,12 +2077,24 @@
 							здесь всё для вашей
 							безопасности</h3>
 						<ul class="list">
-							<li><i class="icon"><img src="img/check_active.png"></i>Финансовая гарантия соблюдения
+							<li>
+								<i class="icon">
+									<img src="img/check_active.png">
+								</i>
+								Финансовая гарантия соблюдения
 								сроков
 							</li>
-							<li><i class="icon"><img src="img/check_active.png"></i>Индивидуальная гарантия конверсии
+							<li>
+								<i class="icon">
+									<img src="img/check_active.png">
+								</i>
+								Индивидуальная гарантия конверсии
 							</li>
-							<li><i class="icon"><img src="img/check_active.png"></i>Наши обязанности прописаны крупным
+							<li>
+								<i class="icon">
+									<img src="img/check_active.png">
+								</i>
+								Наши обязанности прописаны крупным
 								шрифтом
 							</li>
 					</div>
@@ -2161,13 +2190,15 @@
 						<p>Начнём сегодня?</p>
 					</h3>
 					<form id="form">
-						<div class="modal_form_input_wrap">
-							<div class="modal_input_error">Заполните поле
-								<div class="modal_error_triangle"></div>
-								<div class="modal_error_chest_img"></div>
+						<div>
+							<div class="modal_form_input_wrap">
+								<div class="modal_input_error">Заполните поле
+									<div class="modal_error_triangle"></div>
+									<div class="modal_error_chest_img"></div>
+								</div>
+								<input name="email" class="modal_form_phone ua" placeholder="+38(___) ___-__-__"
+									   type="text">
 							</div>
-							<input name="email" class="modal_form_phone ua" placeholder="+38(___) ___-__-__"
-								   type="text">
 						</div>
 						<input type="submit" value="Начать работу">
 					</form>
@@ -2176,7 +2207,7 @@
 		</div>
 	</section>
 
-	<section class="why_effective us-internet-shop-section">
+	<section class="why_effective us-internet-shop-section gray-bg">
 		<div class="container">
 			<div class="row">
 				<h2>Посмотрите на лендинги</h2>
@@ -2239,25 +2270,34 @@
 				<p>Хотите поделиться своей задачей и узнать,</p>
 				<p>насколько быстро и выгодно мы её выполним?</p>
 				<div class="unique_challenge_form">
-					<form id="form">
+					<form id="form3">
 						<div class="texarea-wrap">
 							<p class="lable">Заполните два поля ниже, мы перезвоним.</p>
 							<textarea placeholder="Напишите буквально пару предложений
 о том, кто вы такой, что умеете и чем хотели
 бы заниматься у нас."></textarea>
-							<div class="add-tz">
-								<span class="text">Прикрепить ТЗ</span>
-								<button>
-									<span>+</span>
-								</button>
+							<div class="fileload">
+								<div class="file-load-block">
+									<input type="file" value="" id="file" />
+									<div class="fileLoad">
+										<input type="text" value="Прикрепить ТЗ" />
+										<button type="button"><span></span></button>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="modal_form_input_wrap">
-							<div class="modal_input_error">Заполните поле
-								<div class="modal_error_triangle"></div>
-								<div class="modal_error_chest_img"></div>
+						<input type="hidden" name="form_data" value="">
+						<input type="hidden" name="id_form" value="form_2">
+						<input type="hidden" name="form_type" value="normal">
+						<div>
+							<div class="modal_form_input_wrap">
+								<div class="modal_input_error">Заполните поле
+									<div class="modal_error_triangle"></div>
+									<div class="modal_error_chest_img"></div>
+								</div>
+								<input name="phone" class="modal_form_phone ua" placeholder="+38(___) ___-__-__"
+									   type="text">
 							</div>
-							<input name="phone" class="modal_form_phone ua" placeholder="+38(___) ___-__-__" type="text">
 						</div>
 						<input type="submit" value="Проконсультироваться">
 					</form>

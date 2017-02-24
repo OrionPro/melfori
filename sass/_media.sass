@@ -198,16 +198,33 @@
 
 	.our_advantages
 		&.langing-page-doing
-			.title_block_left_decor
-				padding: 0
-				width: auto
-	.our_advantages
-		&.langing-page-doing
 			min-height: 858px
 			h3
 				margin-top: 50px
+			.title_block_left_decor
+				padding: 0
+				width: auto
 			.title-wrap
 				margin-bottom: 30px
+	.langing-page-whe-call-section
+		min-height: 730px
+		.content
+			.img-wrap
+				width: 446px
+			.text-wrap
+				padding-top: 35px
+				h3
+					font-size: 30px
+					margin: 0 0 30px
+				aside
+					font-size: 20px
+	.landing-development-steps
+		.video-wrap
+			width: 510px
+
+	.langing-page-form-section
+		.content
+			padding: 41px 4px 12px 67px
 @media only screen and (max-width : 1030px)
 	.internet-shop-instruction
 		.content
@@ -218,25 +235,11 @@
 					.arrow
 						display: none
 
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
-	.header
-		&.langing-pages-header
-			.header-form
-				.modal_form_input_wrap
-					margin-right: 0
-					text-align: center
-					display: block
-					margin-bottom: 30px
-					input
-						margin: auto
 
-	.our_advantages
-		&.langing-page-doing
-			.aside-container
-				margin-bottom: 60px
 @media only screen and (max-width : 993px)
 	/**/
+	h2
+		margin-top: 50px
 	.header_top
 		text-align: center
 	.header_nav
@@ -278,12 +281,13 @@
 				button
 					width: 146px
 	.unique_challenge
-		.modal_form_input_wrap
-			margin-right: 0
-			margin-bottom: 20px
-			display: block
-		input[type=submit]
-			margin-bottom: 50px
+		form
+			.modal_form_input_wrap
+				margin-right: 0
+				margin-bottom: 20px
+				display: block
+			input[type=submit]
+				margin-bottom: 50px
 
 
 	//секция about-us-form
@@ -328,6 +332,93 @@
 				.img-wrap
 					margin: auto
 					width: 320px
+				p
+					&.light
+						width: 320px
+						margin: auto
+	.langing-page-understanding
+		.title_block_left_decor
+			width: auto
+			padding: 0
+
+	.langing-page-whe-call-section
+		.content
+			.img-wrap
+				display: block
+				margin: auto
+			.text-wrap
+				display: block
+				margin: auto
+				margin-bottom: 50px
+
+	.langing-page-form-section
+		form
+			& > div
+				display: block
+				text-align: center
+			.modal_form_input_wrap
+				margin-right: 0
+				margin-bottom: 30px
+		.content
+			padding: 30px 4px 12px 40px
+			.title-content
+				width: 270px
+				font-size: 27px
+			.list
+				width: 385px
+
+	.landing-development-steps
+		.content
+			.lists-wrap
+				float: none
+				text-align: center
+				width: auto
+				.gear-wrap
+					display: none
+				ul
+					width: 460px
+					display: inline-block
+					text-align: left
+					padding: 30px 0 1px 0
+					li
+						.arrow
+							display: none
+		.video-wrap
+			float: none
+			margin: auto
+		.form-container
+			#form
+				& > div
+					display: block
+					text-align: center
+				.modal_form_input_wrap
+					margin-right: 0
+					margin-bottom: 30px
+
+	.header_title
+		h1
+			font-size: 48px
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.header
+		&.langing-pages-header
+			.header-form
+				form
+					& > div
+						display: block
+						text-align: center
+				.modal_form_input_wrap
+					margin-right: 0
+
+					margin-bottom: 30px
+					input
+						margin: auto
+
+	.our_advantages
+		&.langing-page-doing
+			.aside-container
+				margin-bottom: 60px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 
@@ -398,6 +489,23 @@
 				width: 300px
 				margin: auto
 				margin-bottom: 30px
+
+	.langing-page-form-section
+		.content
+			.title-content
+				width: auto
+				margin-bottom: 30px
+			.list
+				width: auto
+
+	.landing-development-steps
+		.video-wrap
+			width: calc(100% - 15px)
+		.content
+			padding: 0 15px
+			.lists-wrap
+				ul
+					width: auto
 	/*Disable Animation on Mobile Devices*/
 	.animated
 		/*CSS transitions*/
@@ -601,6 +709,21 @@
 			width: 90%
 		input[type=submit]
 			width: 90%
+	.unique_challenge
+		&.vacancies-form
+			.texarea-wrap
+				display: block
+
+	.langing-page-whe-call-section
+		.content
+			padding: 0 15px
+			.img-wrap
+				width: auto
+			.text-wrap
+				width: auto
+				h3
+					padding: 0
+
 @media only screen and (max-width : 480px)
 	/**/
 	.header
@@ -666,6 +789,41 @@
 	.internet-shops-video
 		.button
 			width: 90%
+
+	.landing-development-steps
+		.form-container
+			#form
+				input,
+				input[type=submit]
+					width: 95%
+	.langing-page-understanding
+		.more-content
+			button
+				width: 95%
+
+	.header.langing-pages-header
+		.header-form
+			input,
+			input[type=submit]
+				width: 95%
+
+	.unique_challenge
+		&.vacancies-form
+			.texarea-wrap
+				textarea
+					&::-webkit-input-placeholder
+						font-size: 12px
+					&:-moz-placeholder
+						font-size: 12px
+					&::-moz-placeholder
+						font-size: 12px
+					&:-ms-input-placeholder
+						font-size: 12px
+	.why_effective
+		&.why_profitably
+			.why_profitably_item_txt
+				p
+					width: 240px
 @media only screen and (max-width : 380px)
 
 	h2

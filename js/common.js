@@ -8,21 +8,16 @@ class BurgerEff {
 			'f97b02',
 			'e90320',
 			'920182',
-			'01c1e6',
 			'00be92'
 
 		];
-
 		this.descriprion = this.descriprion.bind(this);
 	}
-
-
 	descriprion() {
 
 		setTimeout(()=> {
 			this.descriprion();
 		}, 1500)
-
 
 		if (document.documentElement.clientWidth <= this.state) {
 			var color = this.color;
@@ -39,25 +34,19 @@ class BurgerEff {
 	}
 }
 
-
 var burgerEff = new BurgerEff;
 $(window).resize(function () {
 	burgerEff.descriprion();
 });
 
-
 $(document).ready(function () {
 	//  Инициальзация маски в форме
-
-
 	burgerEff.descriprion();
-
 
 	//  Стилизация скролла
 	$(".couple_of_words_txt").mCustomScrollbar({
 		theme: "my-theme"
 	});
-
 
 	$(".modal_form_phone").each(function () {
 		var className = $(this).attr('class').split(' ');
@@ -122,7 +111,22 @@ $(document).ready(function () {
 	//     owl.trigger('prev.owl.carousel', [700]);
 	// });
 
+	// отслеживаем изменение инпута file
+	$('#file').change(function(){
+		// Если файл прикрепили то заносим значение value в переменную
+		var fileResult = $(this).val();
+		// И дальше передаем значение в инпут который под загрузчиком
+		$(this).parent().find('.fileLoad').find('input').val(fileResult);
+	});
 
+	/* Добавляем новый класс кнопке если инпут файл получил фокус */
+	$('#file').hover(function(){
+		$(this).parent().find('span').addClass('button-hover');
+	}, function(){
+		$(this).parent().find('span').removeClass('button-hover');
+	});
+
+	// Chec
 });
 
 $(window).resize(function () {
