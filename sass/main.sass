@@ -402,6 +402,35 @@ nav[canvas]
 			text-decoration: none
 		&:focus
 			text-decoration: none
+	.checkbox-container
+		.check
+			background-position: 0 3px
+			cursor: pointer
+			position: relative
+			border: 1px solid $main_color
+			display: inline-block
+			border-radius: 4px
+			height: 20px
+			.checkbox
+				display: block
+				top: 0
+				position: absolute
+				width: 100%
+				height: 100%
+				z-index: 0
+			input[type=checkbox]
+				position: relative
+				z-index: 1
+				opacity: 0
+				width: 16px
+				height: 16px
+				&:checked + span
+					background: $main_color
+					&:before
+						content: "\f046"
+
+
+
 
 
 .internet-shop-instruction
@@ -1563,7 +1592,51 @@ nav[canvas]
 				@extend %main_btn_active
 			&:focus
 				@extend %main_btn_focus
-			
+
+.company-site-why-effective
+	h2
+		line-height: 1
+		margin-bottom: 53px
+	.why_profitably_items
+		margin-top: 50px
+		margin-bottom: 48px
+		text-align: left
+		.why_profitably_item_img
+			width: 650px
+			height: 510px
+			margin-right: 55px
+			display: inline-block
+			vertical-align: top
+			img
+				width: 100%
+		.why_profitably_item_txt
+			padding-top: 114px
+			width: 480px
+			display: inline-block
+			vertical-align: middle
+			ul
+				padding: 0
+				li
+					list-style: none
+					margin-bottom: 15px
+			i
+				vertical-align: top
+				margin-right: 15px
+				color: $auxiliary_txt_color
+				font-size: 24px
+			p
+				width: 440px
+				display: inline-block
+				vertical-align: middle
+				margin-bottom: 0
+				@include font($main_txt_color, 24px, $font_SFUIDisplay-Light, 1)
+			span
+				font-family: $font_SFUIDisplay-Medium
+		h3
+			margin-top: 0
+			margin-bottom: 25px
+			line-height: 0.85
+
 //	Секция
 //	Секция
 //	Секция
