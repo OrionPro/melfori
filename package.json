@@ -30,6 +30,8 @@
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp.spritesmith": "^6.2.1",
+    "imagemin-jpegoptim": "^5.0.0",
+    "imagemin-jpegtran": "^5.0.2",
     "imagemin-svgo": "^5.2.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"

@@ -3,10 +3,10 @@ var 	gulp         = require('gulp'),
 		autoprefixer = require('gulp-autoprefixer'),
 		minifycss    = require('gulp-minify-css'),
 		rename       = require('gulp-rename'),
-		browserSync  = require('browser-sync').create(),		
+		browserSync  = require('browser-sync').create(),
 		concat       = require('gulp-concat'),
 		uglify       = require('gulp-uglify'),
-		imagemin 	 = require('gulp-imagemin'),
+		imagemin 	 = require('gulp-imagemin')
 		imageminSvgo = require('imagemin-svgo'),
 		spritesmith  = require('gulp.spritesmith'),
 		livereload 	 = require('gulp-livereload'),
@@ -60,7 +60,7 @@ gulp.task('styles', function () {
 
 gulp.task('compress-img', function () {
 	return gulp.src('app/img/*')
-        .pipe(imagemin({ proressive: true }))
+        .pipe(imagemin())
         .pipe(gulp.dest('app/img'));
 });
 
@@ -94,7 +94,7 @@ gulp.task('libs', function() {
 		'app/libs/slidebars/slidebars.min.js',
 		'app/libs/mobile-detect/mobile-detect.min.js',
 		'app/libs/inputmask/inputmask.js',
-		//'app/libs/owl.carousel/owl.carousel.min.js',
+		'app/libs/owl.carousel/owl.carousel.min.js',
 		//'app/libs/owl.carousel/jquery.mousewheel.min.js',
 		'app/libs/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js',
 		'app/libs/matchMedia/matchMedia.js',

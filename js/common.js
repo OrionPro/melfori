@@ -37,9 +37,19 @@ class BurgerEff {
 var burgerEff = new BurgerEff;
 $(window).resize(function () {
 	burgerEff.descriprion();
+
+	// Убираем br
+	if(window.matchMedia("(max-width: 450px)").matches) {
+		$(".SEO-audit_will_be_useful .SEO-audit_will_be_useful_item_txt p br").remove();
+	}
 });
 
 $(document).ready(function () {
+	// Убираем br
+	if(window.matchMedia("(max-width: 450px)").matches) {
+		$(".SEO-audit_will_be_useful .SEO-audit_will_be_useful_item_txt p br").remove();
+	}
+
 	//  Инициальзация маски в форме
 	burgerEff.descriprion();
 
@@ -91,11 +101,11 @@ $(document).ready(function () {
 	});
 
 	//  Активация слайдера
-	// $(".owl-carousel").owlCarousel({
-	//     loop: true,
-	//     items: 1,
-	//     dots: true
-	// });
+	$(".owl-carousel").owlCarousel({
+	    loop: true,
+	    items: 1,
+	    dots: true
+	});
 
 	// Кастомные кнопки управления слайдером
 	// var owl = $('.owl-carousel');
