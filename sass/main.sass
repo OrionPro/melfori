@@ -1875,9 +1875,27 @@ nav[canvas]
 	h2
 		color: $main_color
 		line-height: 1
+.carousel_wrap
+	position: relative
+	.customPrevBtn
+		position: absolute
+		top: calc(50% - 30px)
+		left: 0
+		cursor: pointer
+	.customNextBtn
+		position: absolute
+		top: calc(50% - 30px)
+		right: 0
+		cursor: pointer
+	.fa
+		font-size: 90px
+		transition: 0.5s
+		&:hover
+			color: $main_color
 .owl-carousel
 	width: 970px
 	margin: 20px auto 20px
+	position: relative
 	.owl-item
 		& > div
 			padding: 5px

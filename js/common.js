@@ -39,7 +39,6 @@ function chechBoxes() {
 	var container = $('.checkbox-container .item'),
 		checkbox = container.find('input[type=checkbox]');
 	checkbox.change(function(){
-
 		var parent = $(this).parent('.check'),
 			text = parent.siblings('.text');
 		text.find('b').toggleClass('active');
@@ -120,25 +119,24 @@ $(document).ready(function () {
 	});
 
 	//  Активация слайдера
-	// $(".owl-carousel").owlCarousel({
-	//     loop: true,
-	//     items: 1,
-	//     dots: true
-	// });
+	$(".owl-carousel").owlCarousel({
+	    loop: true,
+	    items: 1
+	});
 
 	// Кастомные кнопки управления слайдером
-	// var owl = $('.owl-carousel');
-	// owl.owlCarousel();
-	// // Go to the next item
-	// $('.customNextBtn').click(function() {
-	//     owl.trigger('next.owl.carousel', [700]);
-	// });
-	// // Go to the previous item
-	// $('.customPrevBtn').click(function() {
-	//     // With optional speed parameter
-	//     // Parameters has to be in square bracket '[]'
-	//     owl.trigger('prev.owl.carousel', [700]);
-	// });
+	var owl = $('.owl-carousel');
+	owl.owlCarousel();
+	// Go to the next item
+	$('.customNextBtn').click(function() {
+	    owl.trigger('next.owl.carousel', [700]);
+	});
+	// Go to the previous item
+	$('.customPrevBtn').click(function() {
+	    // With optional speed parameter
+	    // Parameters has to be in square bracket '[]'
+	    owl.trigger('prev.owl.carousel', [700]);
+	});
 
 	// отслеживаем изменение инпута file
 	$('#file').change(function(){
