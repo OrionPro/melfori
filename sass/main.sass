@@ -402,35 +402,159 @@ nav[canvas]
 			text-decoration: none
 		&:focus
 			text-decoration: none
-	.checkbox-container
-		.check
-			background-position: 0 3px
-			cursor: pointer
-			position: relative
-			border: 1px solid $main_color
+
+
+
+.components-company-sites-section
+	text-align: center
+	.title-wrap
+		margin-bottom: 48px
+		h2
+			color: #01c1e6
+			margin-top: 117px
+			margin-bottom: 7px
+			line-height: 1
+		p
+			line-height: 1.4
+			font-size: 18px
+	.video-wrap
+		margin-bottom: 39px
+		.video-item
 			display: inline-block
-			border-radius: 4px
-			height: 20px
-			.checkbox
-				display: block
-				top: 0
+			font-size: 0
+			background: url("../img/decor-cub1.jpg")
+			padding: 5px
+			width: 100%
+	.button
+		margin-bottom: 123px
+		display: inline-block
+		@extend %main_btn
+		width: 370px
+		&:hover
+			text-decoration: none
+			@extend %main_btn_hover
+		&:active
+			text-decoration: none
+		&:focus
+			text-decoration: none
+	.checkbox-container
+		.item
+			//margin-bottom: 46px
+			padding-left: 40px
+			text-align: left
+			position: relative
+			min-height: 140px
+			.text
+				font-size: 18px
+				b
+					color: #1d1d1f
+					font-family: $font_SFUIDisplay-Bold
+					transition: .1s
+					&.active
+						color: #01c1e6
+				p
+					line-height: 1.2
+			.check
+				background-position: 0 3px
+				cursor: pointer
 				position: absolute
-				width: 100%
-				height: 100%
-				z-index: 0
-			input[type=checkbox]
-				position: relative
-				z-index: 1
-				opacity: 0
-				width: 16px
-				height: 16px
-				&:checked + span
-					background: $main_color
-					&:before
-						content: "\f046"
+				left: 3px
+				top: 4px
+				display: inline-block
+				height: 20px
+				z-index: 10
+				.checkbox
+					display: block
+					font-size: 21px
+					top: 0
+					border-radius: 4px
+					position: absolute
+					width: 100%
+					color: $main_color
+					height: 100%
+					z-index: 0
+					.fa
+						position: absolute
+						top: 0
+						left: 0
+					.fa-2
+						display: none
+				input[type=checkbox]
+					cursor: pointer
+					position: relative
+					z-index: 1
+					opacity: 0
+					width: 16px
+					height: 16px
+					&:checked + .checkbox
+						border: none
+						.fa-1
+							display: none
+						.fa-2
+							display: block
+	.components-company-sites-form
+		h3
+			margin-bottom: 5px
+			margin-top: 34px
+			line-height: 1
+			color: $main_txt_color
+			p
+				font-size: inherit
+		p
+			font-size: 18px
+		.form-wrap
+			aside
+				p
+					@include font($main_color, 16px, $font_SFUIDisplay-Light, 1.2)
+		form
+			margin: 22px 0 52px
+			& > div
+				display: inline-block
+			.modal_form_input_wrap
+				display: inline-block
+				margin-right: 30px
+			input
+				@extend %main_btn2
+				color: $main_color
+				width: 370px
+				background: transparent
+				padding-left: 15px
+				border: 1px solid $main_color
+				&:hover
+					outline: 0
+				&:active
+					outline: 0
+				&:focus
+					outline: 0
+				&::-webkit-input-placeholder
+					color: $main_color
+				&:-moz-placeholder
+					color: $main_color
+				&::-moz-placeholder
+					color: $main_color
+				&:-ms-input-placeholder
+					color: $main_color
+			input[type=submit]
+				width: 370px
+				display: inline-block
+				@extend %main_btn
+				&:hover
+					@extend %main_btn_hover
+				&:active
+					@extend %main_btn_active
+				&:focus
+					@extend %main_btn_focus
+		.content-wrap
+			margin-bottom: 120px
+			padding: 0 13px
+		.content
+			padding: 46px 0
+			color: $main_txt_color
+			border: 3px solid $main_color
 
-
-
+			h3
+				margin: 13px 0 3px
+				font-weight: 900
 
 
 .internet-shop-instruction
@@ -790,6 +914,16 @@ nav[canvas]
 			p
 				word-spacing: 2px
 				font-size: 18px
+				a
+					color: #fff
+					&:hover
+						color: #fff
+						text-decoration: none
+					&:active
+						text-decoration: none
+					&:focus
+						text-decoration: none
+
 		.unique_challenge_form
 			p
 				font-size: 16px

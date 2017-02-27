@@ -9,21 +9,17 @@ class BurgerEff {
 			'e90320',
 			'920182',
 			'00be92'
-
 		];
-		this.descriprion = this.descriprion.bind(this);
+		this.description = this.description.bind(this);
 	}
-	descriprion() {
-
+	description() {
 		setTimeout(()=> {
-			this.descriprion();
+			this.description();
 		}, 1500)
-
 		if (document.documentElement.clientWidth <= this.state) {
 			var color = this.color;
 			this.line.each(function () {
 				let random = parseInt((Math.random(5) * 5) + 1);
-
 				for (var i = 0; i < color.length; i++) {
 					if (random == i) {
 						$(this).css('background', "#" + color[i]);
@@ -34,15 +30,33 @@ class BurgerEff {
 	}
 }
 
+
+function chechBoxes() {
+	var container = $('.checkbox-container .item'),
+		checkbox = container.find('input[type=checkbox]');
+	checkbox.change(function(){
+		var parent = $(this).parent('.check'),
+			text = parent.siblings('.text');
+		text.find('b').toggleClass('active');
+	})
+
+}
+
+
 var burgerEff = new BurgerEff;
 $(window).resize(function () {
-	burgerEff.descriprion();
+	burgerEff.description();
 });
 
 $(document).ready(function () {
 	//  Инициальзация маски в форме
-	burgerEff.descriprion();
+	burgerEff.description();
 
+	chechBoxes();
+	
+	
+	
+	
 	//  Стилизация скролла
 	$(".couple_of_words_txt").mCustomScrollbar({
 		theme: "my-theme"
