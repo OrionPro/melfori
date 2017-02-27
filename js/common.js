@@ -11,12 +11,12 @@ class BurgerEff {
 			'00be92'
 
 		];
-		this.descriprion = this.descriprion.bind(this);
+		this.description = this.description.bind(this);
 	}
-	descriprion() {
+	description() {
 
 		setTimeout(()=> {
-			this.descriprion();
+			this.description();
 		}, 1500)
 
 		if (document.documentElement.clientWidth <= this.state) {
@@ -39,6 +39,7 @@ function chechBoxes() {
 	var container = $('.checkbox-container .item'),
 		checkbox = container.find('input[type=checkbox]');
 	checkbox.change(function(){
+
 		var parent = $(this).parent('.check'),
 			text = parent.siblings('.text');
 		text.find('b').toggleClass('active');
@@ -49,7 +50,7 @@ function chechBoxes() {
 
 var burgerEff = new BurgerEff;
 $(window).resize(function () {
-	burgerEff.descriprion();
+	burgerEff.description();
 
 	// Убираем br
 	if(window.matchMedia("(max-width: 450px)").matches) {
