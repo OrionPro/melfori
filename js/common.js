@@ -11,9 +11,9 @@ class BurgerEff {
 			'00be92'
 
 		];
-		this.descriprion = this.descriprion.bind(this);
+		this.descriprion = this.description.bind(this);
 	}
-	descriprion() {
+	description() {
 
 		setTimeout(()=> {
 			this.descriprion();
@@ -49,7 +49,7 @@ function chechBoxes() {
 
 var burgerEff = new BurgerEff;
 $(window).resize(function () {
-	burgerEff.descriprion();
+	burgerEff.description();
 
 	// Убираем br
 	if(window.matchMedia("(max-width: 450px)").matches) {
@@ -119,25 +119,24 @@ $(document).ready(function () {
 	});
 
 	//  Активация слайдера
-	// $(".owl-carousel").owlCarousel({
-	//     loop: true,
-	//     items: 1,
-	//     dots: true
-	// });
+	$(".owl-carousel").owlCarousel({
+	    loop: true,
+	    items: 1
+	});
 
 	// Кастомные кнопки управления слайдером
-	// var owl = $('.owl-carousel');
-	// owl.owlCarousel();
-	// // Go to the next item
-	// $('.customNextBtn').click(function() {
-	//     owl.trigger('next.owl.carousel', [700]);
-	// });
-	// // Go to the previous item
-	// $('.customPrevBtn').click(function() {
-	//     // With optional speed parameter
-	//     // Parameters has to be in square bracket '[]'
-	//     owl.trigger('prev.owl.carousel', [700]);
-	// });
+	var owl = $('.owl-carousel');
+	owl.owlCarousel();
+	// Go to the next item
+	$('.customNextBtn').click(function() {
+	    owl.trigger('next.owl.carousel', [700]);
+	});
+	// Go to the previous item
+	$('.customPrevBtn').click(function() {
+	    // With optional speed parameter
+	    // Parameters has to be in square bracket '[]'
+	    owl.trigger('prev.owl.carousel', [700]);
+	});
 
 	// отслеживаем изменение инпута file
 	$('#file').change(function(){
