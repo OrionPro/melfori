@@ -9,17 +9,21 @@ class BurgerEff {
 			'e90320',
 			'920182',
 			'00be92'
+
 		];
-		this.description = this.description.bind(this);
+		this.descriprion = this.descriprion.bind(this);
 	}
-	description() {
+	descriprion() {
+
 		setTimeout(()=> {
-			this.description();
+			this.descriprion();
 		}, 1500)
+
 		if (document.documentElement.clientWidth <= this.state) {
 			var color = this.color;
 			this.line.each(function () {
 				let random = parseInt((Math.random(5) * 5) + 1);
+
 				for (var i = 0; i < color.length; i++) {
 					if (random == i) {
 						$(this).css('background', "#" + color[i]);
@@ -45,10 +49,20 @@ function chechBoxes() {
 
 var burgerEff = new BurgerEff;
 $(window).resize(function () {
-	burgerEff.description();
+	burgerEff.descriprion();
+
+	// Убираем br
+	if(window.matchMedia("(max-width: 450px)").matches) {
+		$(".SEO-audit_will_be_useful .SEO-audit_will_be_useful_item_txt p br").remove();
+	}
 });
 
 $(document).ready(function () {
+	// Убираем br
+	if(window.matchMedia("(max-width: 450px)").matches) {
+		$(".SEO-audit_will_be_useful .SEO-audit_will_be_useful_item_txt p br").remove();
+	}
+
 	//  Инициальзация маски в форме
 	burgerEff.description();
 

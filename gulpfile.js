@@ -3,11 +3,9 @@ var 	gulp         = require('gulp'),
 		autoprefixer = require('gulp-autoprefixer'),
 		minifycss    = require('gulp-minify-css'),
 		rename       = require('gulp-rename'),
-		browserSync  = require('browser-sync').create(),		
+		browserSync  = require('browser-sync').create(),
 		concat       = require('gulp-concat'),
 		uglify       = require('gulp-uglify'),
-		imagemin 	 = require('gulp-imagemin'),
-		imageminSvgo = require('imagemin-svgo'),
 		spritesmith  = require('gulp.spritesmith'),
 		livereload 	 = require('gulp-livereload'),
 		babel 		 = require('gulp-babel'),
@@ -42,8 +40,6 @@ gulp.task('browser-sync', ['libs', 'styles', 'scripts','browserify'], function()
 		});
 });
 
-
-
 gulp.task('styles', function () {
 	return gulp.src('sass/*.sass')
 	.pipe(sass({
@@ -54,20 +50,8 @@ gulp.task('styles', function () {
 	.pipe(minifycss({
 		keepBreaks: true
 	}))
-	.pipe(gulp.dest('app/css'))		
+	.pipe(gulp.dest('app/css'))
 	.pipe(livereload());
-});
-
-gulp.task('compress-img', function () {
-	return gulp.src('app/img/*')
-        .pipe(imagemin({ proressive: true }))
-        .pipe(gulp.dest('app/img'));
-});
-
-gulp.task('default', function () {
-    return gulp.src('app/img/*.svg')
-        .pipe(imageminSvgo()())
-        .pipe(gulp.dest('app/img/'));
 });
 
 gulp.task('sprite', function() {
@@ -94,7 +78,7 @@ gulp.task('libs', function() {
 		'app/libs/slidebars/slidebars.min.js',
 		'app/libs/mobile-detect/mobile-detect.min.js',
 		'app/libs/inputmask/inputmask.js',
-		//'app/libs/owl.carousel/owl.carousel.min.js',
+		'app/libs/owl.carousel/owl.carousel.min.js',
 		//'app/libs/owl.carousel/jquery.mousewheel.min.js',
 		'app/libs/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js',
 		'app/libs/matchMedia/matchMedia.js',
@@ -105,20 +89,18 @@ gulp.task('libs', function() {
 		.pipe(gulp.dest('app/js/'));
 });
 
-gulp.task('scripts', function() {
+gulp.task('scripts', () => {
 	return gulp.src([
 		"js/common.js",
 		'js/animate.js',
-		'js/functions.js'
-		])
+		'js/functions.js'])
 		.pipe(babel({
-            presets: ['es2015', 'react']
-        }))
+			presets: ['es2015', 'react']
+		}))
 		.pipe(concat('main.js'))
 		// .pipe(uglify()) //Minify main.js
 		.pipe(gulp.dest('app/js/'));
 });
-
 
 
 gulp.task('watch', function () {
@@ -132,4 +114,4 @@ gulp.task('watch', function () {
 	gulp.watch('app/*.html').on('change', browserSync.reload);
 });
 
-gulp.task('default', ['browser-sync', 'watch', 'compress-img', 'sprite', 'browserify']);
+gulp.task('default', ['browser-sync', 'watch', 'sprite', 'browserify']);
