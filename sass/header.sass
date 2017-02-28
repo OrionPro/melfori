@@ -430,13 +430,74 @@ p
 					@extend %main_btn_active
 				&:focus
 					@extend %main_btn_focus
-		&.unique_portal
-			.header_title
-				top: calc(50% - 275px)
-			.header-form
-				top: calc(100% - 420px)
+	&.unique_portal
+		.header_title
+			top: calc(50% - 275px)
+		.header-form
+			top: calc(100% - 420px)
+		h3
+			margin-bottom: 0
+	&.company-site-header
+		min-height: 730px
+		.header_title
+			top: calc(50% - 277px)
+		.header-form
+			margin-top: 50px
 			h3
-				margin-bottom: 0
+				margin: 0
+				color: $main_txt_color
+				margin-bottom: 5px
+			p
+				font-size: 18px
+				padding-left: 15px
+				padding-right: 15px
+			form
+				margin-top: 20px
+				& > div
+					display: inline-block
+			.modal_form_input_wrap
+				display: inline-block
+				margin-right: 30px
+				text-align: left
+				input
+					display: block
+				label
+					font-weight: 100
+					font-size: 18px
+					padding-left: 15px
+			input
+				@extend %main_btn2
+				color: $main_color
+				width: 370px
+				background: transparent
+				padding-left: 15px
+				border: 1px solid $main_color
+				&:hover
+					outline: 0
+				&:active
+					outline: 0
+				&:focus
+					outline: 0
+				&::-webkit-input-placeholder
+					color: $main_color
+				&:-moz-placeholder
+					color: $main_color
+				&::-moz-placeholder
+					color: $main_color
+				&:-ms-input-placeholder
+					color: $main_color
+			input[type=submit]
+				width: 370px
+				display: inline-block
+				vertical-align: bottom
+				@extend %main_btn
+				color: #fff
+				&:hover
+					@extend %main_btn_hover
+				&:active
+					@extend %main_btn_active
+				&:focus
+					@extend %main_btn_focus
 .header
 	video
 		position: absolute

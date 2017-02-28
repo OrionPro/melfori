@@ -225,6 +225,44 @@
 	.langing-page-form-section
 		.content
 			padding: 41px 4px 12px 67px
+	.header
+		&.company-site-header
+			h1
+				font-size: 55px
+			.header-form
+				form
+					& > div
+						display: block
+				.modal_form_input_wrap
+					margin: 0 0 20px
+	.company-site-why-effective
+		.why_profitably_items
+			h3
+				font-size: 30px
+			.why_profitably_item_img
+				height: auto
+				width: 431px
+			.why_profitably_item_txt
+				padding-top: 39px
+
+	.internet-shop-instruction
+		.content
+			ul
+				li
+					.input-wrap
+						input[type=submit]
+							width: 285px
+					aside
+						&.center-text
+							font-size: 18px
+
+	.company-site-agreement-section
+		.list-wrap
+			ul
+				li
+					margin-bottom: 35px
+					h3
+						font-size: 25px
 @media only screen and (max-width : 1030px)
 	.internet-shop-instruction
 		.content
@@ -319,6 +357,12 @@
 						width: auto
 					.button
 						float: none
+		&.company-site
+			.content
+				ul
+					li
+						.button
+							float: right
 
 	.why_effective
 		&.us-internet-shop-section
@@ -400,6 +444,11 @@
 			font-size: 48px
 	.owl-carousel
 		width: 90%
+
+	.header
+		&.company-site-header
+			h1
+				font-size: 42px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	.header
@@ -420,6 +469,63 @@
 		&.langing-page-doing
 			.aside-container
 				margin-bottom: 60px
+
+	.company-site-why-effective
+		.why_profitably_items
+			h3
+				font-size: 25px
+				line-height: 1
+				margin-bottom: 19px
+			.why_profitably_item_img
+				width: 380px
+				margin-right: 13px
+			.why_profitably_item_txt
+				padding-top: 0
+				width: 353px
+				i
+					position: absolute
+					left: 0
+				ul
+					li
+						margin-bottom: 10px
+						padding-left: 40px
+						position: relative
+						p
+							width: auto
+
+	.components-company-sites-section
+		.components-company-sites-form
+			form
+				& > div
+					display: block
+				.modal_form_input_wrap
+					margin: 0 0 20px
+			.content
+				padding: 45px
+
+	.internet-shop-instruction
+		&.company-site
+			.content
+				ul
+					li
+						.button
+							float: none
+		.content
+			ul
+				li
+					.input-wrap
+						float: left
+						position: relative
+						padding-bottom: 158px
+	.company-site-agreement-section
+		.img-wrap
+			margin-bottom: 50px
+		.components-company-sites-form
+			form
+				& > div
+					display: block
+				.modal_form_input_wrap
+					margin: 0 0 20px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 
@@ -507,7 +613,41 @@
 			.lists-wrap
 				ul
 					width: auto
-	/*Disable Animation on Mobile Devices*/
+	.company-site-why-effective
+		padding: 0 15px
+		.why_profitably_items
+			.why_profitably_item_img
+				width: 100%
+				margin-right: 0
+				margin-bottom: 50px
+			.why_profitably_item_txt
+				width: 100%
+	.components-company-sites-section
+		.checkbox-container
+			text-align: center
+			.item
+				text-align: left
+				min-width: 80%
+				display: inline-block
+
+	.company-site-agreement-section
+		.components-company-sites-form
+			padding: 0 15px
+			h3
+				padding: 0
+
+	.header
+		&.company-site-header
+			.header_title
+				position: static
+
+	.company-site-agreement-section
+		.list-wrap
+			ul
+				li
+					h3
+						padding: 0
+	/*Disable Animation on Mobile Devices*
 	.animated
 		/*CSS transitions*/
 		-o-transition-property: none !important
@@ -674,6 +814,13 @@
 					padding-left: 0
 					img
 						display: none
+		&.company-site
+			ul
+				padding-left: 15px
+				li
+					padding-left: 90px
+					img
+						display: none
 @media only screen and (max-width : 570px)
 	.header_logo
 		a
@@ -730,7 +877,42 @@
 				width: auto
 				h3
 					padding: 0
+	.components-company-sites-section
+		.components-company-sites-form
+			.content
+				padding: 45px 5px
 
+	.company-site-agreement-section,
+	.components-company-sites-section
+		.components-company-sites-form
+			form
+				input,
+				input[type=submit]
+					width: 100%
+				.modal_form_input_wrap
+					display: block
+	.header
+		&.company-site-header
+			min-height: 100vh
+			height: auto
+			.header-form
+				padding: 0 15px 100px
+				input,
+				input[type=submit]
+					width: 100%
+				.modal_form_input_wrap
+					display: block
+
+	.internet-shop-instruction
+		.content
+			ul
+				li
+					padding-left: 65px
+					.decor-img
+						width: 66px
+						height: 64px
+						span
+							font-size: 25px
 @media only screen and (max-width : 480px)
 	/**/
 	.header
@@ -834,6 +1016,31 @@
 	.SEO-audit_will_be_useful
 		button
 			width: 90%
+
+	.components-company-sites-section
+		padding: 0 15px
+		.checkbox-container
+			text-align: left
+			.item
+				display: block
+				min-width: 0px
+				min-height: 0px
+				margin-bottom: 30px
+
+	.internet-shop-instruction
+			.content
+				ul
+					li
+						.button
+							width: 95%
+						.input-wrap
+							float: none
+							width: 95%
+							input[type=submit]
+								width: 100%
+						aside
+							&.center-text
+								float: none
 @media only screen and (max-width : 380px)
 
 	h2
