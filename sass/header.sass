@@ -498,6 +498,24 @@ p
 					@extend %main_btn_active
 				&:focus
 					@extend %main_btn_focus
+	&.contextual-header
+		.header_title
+			top: calc(50% - 280px)
+		input[type=submit]
+			width: 370px
+			display: inline-block
+			vertical-align: bottom
+			@extend %main_btn
+			color: #fff
+			&:hover
+				@extend %main_btn_hover
+			&:active
+				@extend %main_btn_active
+			&:focus
+				@extend %main_btn_focus
+		h3
+			font-family: $font_SFUIDisplay-Regular
+			margin: 120px 0 30px
 .header
 	video
 		position: absolute
