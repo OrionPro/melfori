@@ -270,6 +270,22 @@
 				margin: auto
 		.carousel_you_have_done
 			width: 435px
+
+	.contextual-not-pay-section
+		.about-wrap
+			font-size: 18px
+
+	.contextual-google-yandex-section
+		.img-wrap
+			margin-bottom: 20px
+
+	.header
+		&.contextual-header
+			h3
+				margin: 50px 0 30px
+
+	br
+		display: none
 @media only screen and (max-width : 1030px)
 	.internet-shop-instruction
 		.content
@@ -464,6 +480,21 @@
 		.carousel_analitics
 			margin: auto
 			float: none
+
+	.contextual-not-pay-section
+		.img-wrap
+			padding-right: 0
+		.about-wrap
+			margin-left: 0
+
+	.contextual-google-yandex-section
+		.contextual-google-yandex-form
+			form
+				& > div
+					display: block
+				.modal_form_input_wrap
+					margin-right: 0
+					margin-bottom: 20px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	.header
@@ -541,6 +572,16 @@
 					display: block
 				.modal_form_input_wrap
 					margin: 0 0 20px
+
+	.contextual-steps-section
+		.content
+			ul
+				padding: 0 10px
+				li
+					.arrow
+						display: none
+			.gear-wrap
+				display: none
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 
@@ -660,6 +701,43 @@
 				li
 					h3
 						padding: 0
+
+	.contextual-not-pay-section
+		.img-wrap
+			display: none
+		.decore-scheme-wrap
+			width: 100%
+			.item
+				.content
+					padding: 30px 20px
+					font-size: 18px
+
+	.contextual-google-yandex-section
+		.img-wrap
+			margin-top: 20px
+
+	.contextual-steps-section
+		.content
+			margin-bottom: 20px
+			ul
+				li
+					padding-left: 60px
+					aside
+						&.center-text
+							p
+								b
+									font-size: 18px
+					.decor-img
+						width: 56px
+						height: 55px
+						span
+								font-size: 30px
+		.context-prise-wrap
+			padding: 0 15px
+			h3
+				padding: 0
+			.decore-img
+				display: none
 	/*Disable Animation on Mobile Devices*
 	.animated
 		/*CSS transitions*/
@@ -862,6 +940,11 @@
 						width: 45px
 						padding-left: 20px
 						font-size: 20px
+	.contextual-not-pay-section
+		.about-wrap
+			padding: 20px 0 0
+			&:before
+				display: none
 @media only screen and (max-width : 570px)
 	.header_logo
 		a
@@ -1088,6 +1171,21 @@
 				width: 90%
 			input[type=submit]
 				width: 90%
+@media only screen and (max-width : 400px)
+
+	.header
+		&.contextual-header
+			input[type=submit]
+				width: 95%
+	.contextual-google-yandex-section
+		.contextual-google-yandex-form
+			form
+				input[type=submit]
+					width: 95%
+				.modal_form_input_wrap
+					display: block
+					input
+						width: 95%
 @media only screen and (max-width : 380px)
 
 	h2

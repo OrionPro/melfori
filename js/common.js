@@ -51,17 +51,11 @@ var burgerEff = new BurgerEff;
 $(window).resize(function () {
 	burgerEff.description();
 
-	// Убираем br
-	if(window.matchMedia("(max-width: 450px)").matches) {
-		$(".SEO-audit_will_be_useful .SEO-audit_will_be_useful_item_txt p br").remove();
-	}
+
 });
 
 $(document).ready(function () {
-	// Убираем br
-	if(window.matchMedia("(max-width: 450px)").matches) {
-		$(".SEO-audit_will_be_useful .SEO-audit_will_be_useful_item_txt p br").remove();
-	}
+
 
 	//  Инициальзация маски в форме
 	burgerEff.description();
