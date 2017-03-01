@@ -775,6 +775,7 @@ nav[canvas]
 		.modal_form_input_wrap
 			display: inline-block
 			margin-right: 30px
+			margin-bottom: 30px
 		input
 			@extend %main_btn
 			color: #fff
@@ -1872,6 +1873,7 @@ nav[canvas]
 //	Секция several_cases
 .several_cases
 	text-align: center
+	background-color: #ffffff
 	h2
 		color: $main_color
 		line-height: 1
@@ -1879,14 +1881,16 @@ nav[canvas]
 	position: relative
 	.customPrevBtn
 		position: absolute
-		top: calc(50% - 30px)
+		top: calc(50% - 45px)
 		left: 0
 		cursor: pointer
+		z-index: 10
 	.customNextBtn
 		position: absolute
-		top: calc(50% - 30px)
+		top: calc(50% - 45px)
 		right: 0
 		cursor: pointer
+		z-index: 10
 	.fa
 		font-size: 90px
 		transition: 0.5s
@@ -1950,7 +1954,13 @@ nav[canvas]
 				line-height: 1.2
 				margin-bottom: 5px
 				font-size: 18px
-
+// Секция ten_recommendations
+.unique_challenge
+	&.ten_recommendations
+		min-height: 510px
+		h2
+			line-height: 1
+			margin-bottom: 10px
 
 .company-site-agreement-section
 	text-align: center
