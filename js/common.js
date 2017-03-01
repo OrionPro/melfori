@@ -123,7 +123,8 @@ $(document).ready(function () {
 	//  Активация слайдера
 	$(".owl-carousel").owlCarousel({
 	    loop: true,
-	    items: 1
+	    items: 1,
+		margin: 10
 	});
 
 	// Кастомные кнопки управления слайдером
