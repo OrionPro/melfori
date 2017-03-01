@@ -82,8 +82,10 @@ $(document).ready(function () {
 		className.map(el => {
 			if (el == "ua") {
 				$(".modal_form_phone").mask("+38(999) 999-99-99");
+				$(".modal_form_phone").attr('placeholder','+38(___) ___-__-__' );
 			} else {
 				$(".modal_form_phone").mask("+7(999) 999-99-99");
+				$(".modal_form_phone").attr('placeholder','+7(___) ___-__-__' );
 			}
 		})
 	});
