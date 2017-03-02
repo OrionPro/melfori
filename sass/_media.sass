@@ -286,6 +286,28 @@
 
 	br
 		display: none
+
+	.contextual-not-pay-section
+		&.smm-pages
+			.social-item
+				.text
+					font-size: 19px
+					br
+						display: block
+
+	.smm-guarantees-section
+		.guarantees-wrap
+			text-align: center
+			padding: 0
+			.item
+				font-size: 24px
+				width: 248px
+				&.item-1
+					margin-right: 130px
+				img
+					width: 80%
+
+
 @media only screen and (max-width : 1030px)
 	.internet-shop-instruction
 		.content
@@ -366,6 +388,8 @@
 				margin-bottom: 100px
 	.our_advantages
 		&.internet-shop-goods
+			.internet-shop-goods-item
+				padding: 0 10px
 			.form-wrap
 				.modal_form_input_wrap
 					margin-right: 0px
@@ -495,6 +519,19 @@
 				.modal_form_input_wrap
 					margin-right: 0
 					margin-bottom: 20px
+
+	.smm-guarantees-section
+		.warning-wrap
+			.content
+				padding: 46px 30px
+
+	.contextual-not-pay-section
+		&.smm-pages
+			.social-item
+				margin-bottom: 30px
+				img
+					width: 70px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	.header
@@ -738,6 +775,27 @@
 				padding: 0
 			.decore-img
 				display: none
+
+	.smm-guarantees-section
+		.guarantees-wrap
+			.item
+				&.item-1
+					margin-right: 60px
+
+	.smm-steps-section
+		.content
+			ul
+				padding: 0 10px
+				li
+					.arrow
+						display: none
+			.gear-wrap
+				display: none
+	.contextual-not-pay-section
+		.decore-scheme-wrap
+			.title-item
+				.title-item-decore
+
 	/*Disable Animation on Mobile Devices*
 	.animated
 		/*CSS transitions*/
@@ -801,7 +859,17 @@
 			ul
 				li
 					font-size: 16px
+
+
 /* Extra Small Devices, Phones */
+@media only screen and (max-width : 620px)
+	.smm-guarantees-section
+		.guarantees-wrap
+			.item
+				display: block
+				margin: auto
+				&.item-1
+					margin: 0 auto 30px
 @media only screen and (max-width : 580px)
 	h3
 		font-size: 24px
