@@ -99,9 +99,15 @@ gulp.task('scripts', () => {
 		}))
 		.pipe(concat('main.js'))
 		// .pipe(uglify()) //Minify main.js
-		.pipe(gulp.dest('app/js/'));
+		.pipe(gulp.dest('app/js/'))
+		.pipe(livereload());
 });
 
+gulp.task('html', () => {
+	return gulp.src(
+		"app/*.html")
+		.pipe(livereload());
+});
 
 gulp.task('watch', function () {
 	 var server = livereload({ start: true });	
@@ -109,6 +115,7 @@ gulp.task('watch', function () {
 	gulp.watch('app/libs/**/*.js', ['libs']);
 	gulp.watch('js/*.js', ['scripts']);
 	gulp.watch('react/*.js', ['browserify']);
+	gulp.watch('app/*.html', ['html']);
 	gulp.watch('app/js/*.js').on("change", browserSync.reload);
 	gulp.watch('js/*.js').on("change", browserSync.reload);
 	gulp.watch('app/*.html').on('change', browserSync.reload);

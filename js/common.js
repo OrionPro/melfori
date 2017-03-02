@@ -56,7 +56,6 @@ $(window).resize(function () {
 
 $(document).ready(function () {
 
-
 	//  Инициальзация маски в форме
 	burgerEff.description();
 
