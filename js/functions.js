@@ -241,6 +241,9 @@ $(document).ready(function() {
 				console.log(111);
 
 			}
+			$(this).focus(function() {
+				$(this).siblings().hide("fade", 500);
+			});
 		});
 		form.find('.modal_form_email').each(function() { // пробежим по каждому полю в форме
 			var pattern = /^(([a-zA-Z0-9]|[!#$%\*\/\?\|^\{\}`~&'\+=-_])+\.)*([a-zA-Z0-9\-]|[!#$%\*\/\?\|^\{\}`~&'\+=-_])+@([a-zA-Z0-9-]+\.)+[a-zA-Z0-9-]+$/;
