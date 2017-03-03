@@ -309,8 +309,15 @@
 					margin-right: 130px
 				img
 					width: 80%
-
-
+	.develop-site-problem-section
+		.item
+			.content
+				font-size: 16px
+				max-width: 255px
+				a
+					width: 100%
+				.title
+					font-size: 22px
 @media only screen and (max-width : 1030px)
 	.internet-shop-instruction
 		.content
@@ -372,7 +379,6 @@
 			.modal_form_input_wrap
 				margin-right: 0
 				margin-bottom: 20px
-				display: block
 			input[type=submit]
 				margin-bottom: 50px
 
@@ -380,9 +386,11 @@
 	//секция about-us-form
 	.unique_challenge
 		&.about-us-form
+			form
+				& > div
+					display: block
 			.modal_form_input_wrap
 				margin-right: 0px
-				display: block
 				margin-bottom: 30px
 			.social-links-container
 				margin-bottom: 50px
@@ -395,11 +403,13 @@
 			.internet-shop-goods-item
 				padding: 0 10px
 			.form-wrap
+				form
+					& > div
+						display: block
 				.modal_form_input_wrap
-					margin-right: 0px
-					display: block
-					margin-bottom: 15px
 
+					margin-right: 0px
+					margin-bottom: 15px
 	.internet-shop-instruction
 		.content
 			ul
@@ -435,7 +445,6 @@
 		.title_block_left_decor
 			width: auto
 			padding: 0
-
 	.langing-page-whe-call-section
 		.content
 			.img-wrap
@@ -539,7 +548,14 @@
 				margin-bottom: 30px
 				img
 					width: 70px
-
+	.develop-site-problem-section
+		.item
+			text-align: center
+			.img-wrap
+				margin: 0 0 20px 0
+			.content
+				text-align: center
+				max-width: 255px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	.header
@@ -551,7 +567,6 @@
 						text-align: center
 				.modal_form_input_wrap
 					margin-right: 0
-
 					margin-bottom: 30px
 					input
 						margin: auto
@@ -683,7 +698,13 @@
 	.title_block_left_decor
 		p
 			font-size: 18px !important
-
+	.develop-site-problem-section
+		.item
+			text-align: center
+			.img-wrap
+				margin: 0 20px 0
+			.content
+				text-align: left
 	// секция about-us-office
 	.us-office-section
 		&.about-us-office
@@ -1019,8 +1040,7 @@
 			ul
 				padding-left: 15px
 				li
-					padding-left: 90px
-					img
+					.decor-img
 						display: none
 	.owl-carousel
 		.carousel_txt_wrap
@@ -1062,6 +1082,7 @@
 	.unique_challenge
 		&.about-us-form
 			.modal_form_input_wrap
+				display: block
 				input
 					width: 90%
 			input[type=submit]
@@ -1138,12 +1159,23 @@
 		.content
 			ul
 				li
-					padding-left: 65px
+					padding-left: 0
 					.decor-img
 						width: 66px
 						height: 64px
 						span
 							font-size: 25px
+@media only screen and (max-width : 495px)
+	.develop-site-problem-section
+		.item
+			text-align: center
+			.img-wrap
+				margin: 0 0 20px
+			.content
+				display: block
+				text-align: center
+				margin: auto
+
 @media only screen and (max-width : 480px)
 	/**/
 	.header
@@ -1191,13 +1223,20 @@
 	.our_advantages
 		&.internet-shop-goods
 			.form-wrap
+				.modal_form_input_wrap
+					display: block
+				form
+					& > div
+						display: block
 				input,
-				input[type=submit]
+				input[type=submit],
+				.more-link
 					width: 90%
 	.internet-shop-instruction
 		.content
 			.addition-wrap
-				input[type=submit]
+				input[type=submit],
+				.more-link
 					width: 90%
 					font-size: 14px
 
@@ -1277,7 +1316,12 @@
 			input
 				width: 90%
 			input[type=submit]
-				width: 90%
+				width: 100%
+		&.vacancies-form
+			.texarea-wrap
+				.fileload
+					input[type=text]
+						width: 230px
 	.unlike_contextual_of_advertising
 		.unlike_contextual_of_advertising_wrap
 			p
@@ -1342,6 +1386,11 @@
 			.item-wrap
 				.img-wrap
 					width: 95%
+
+	.develop-site-problem-section
+		.item
+			.content
+				max-width: 100%
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/

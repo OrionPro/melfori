@@ -1731,489 +1731,466 @@
 	</noscript>
 </head>
 
-<body>
-<div class="loader">
-	<div class="loader_inner"></div>
-</div>
-<!-- Модальное окно -->
-<div class="popup" data-modal="modal-1">
-	<div class="dm-table">
-		<div class="dm-cell">
-			<div class="dm-modal">
-				<a href="#" class="close">
-				</a>
-				<p class='success_mail'>Спасибо! Ваша заявка уже обрабатывается менеджером и в ближайшее время он с вами
-					свяжется.</p>
-				<form id="form">
-					<div>
-						<label>Введите своё имя</label>
-						<div class="modal_form_input_wrap">
-							<div class="modal_input_error">Заполните поле
-								<div class="modal_error_triangle"></div>
-								<div class="modal_error_chest_img"></div>
-							</div>
-							<input name="name" class="modal_form_input" type="text">
-						</div>
-					</div>
-					<div>
-						<label>Введите свой телефон</label>
-						<div class="modal_form_input_wrap">
-							<div class="modal_input_error">Заполните поле
-								<div class="modal_error_triangle"></div>
-								<div class="modal_error_chest_img"></div>
-							</div>
-							<input name="phone" class="modal_form_phone" type="text">
-						</div>
-					</div>
-					<div>
-						<label>Введите свой e-mail</label>
-						<div class="modal_form_input_wrap">
-							<div class="modal_input_error">Заполните поле
-								<div class="modal_error_triangle"></div>
-								<div class="modal_error_chest_img"></div>
-							</div>
-							<input name="email" class="modal_form_email" type="text">
-						</div>
-					</div>
-					<div>
-						<div class="select">
-							<div class="slct_arrow">
-								<i class="fa fa-angle-down"></i>
-							</div>
-							<a href="#" class="slct">Выбор заголовков:</a>
-							<ul class="drop">
-								<li>Вы крутые</li>
-								<li>Я в Вас влюбился</li>
-								<li>Быстрей Вас только Флеш</li>
-							</ul>
-							<input type="hidden" id="select" name="services">
-						</div>
-					</div>
-					<input type="hidden" name="form_name" value="">
-					<input type="hidden" name="form_type" value="modal">
-					<input type="submit" value="Отправить">
-				</form>
-			</div>
-		</div>
+<div>
+	<div class="loader">
+		<div class="loader_inner"></div>
 	</div>
-	<div class="overlay">
-	</div>
-</div>
-<!-- Модальное окно 2-->
-<div class="popup" data-modal="modal-res">
-	<div class="dm-table">
-		<div class="dm-cell">
-			<div class="dm-modal">
-				<p class='success_mail'>Заявка отправлена</p>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- вариант меню на мобильном -->
-
-<!-- Здесь пишем код -->
-<!-- header -->
-<nav canvas="" class="">
-	<div class="mnu_btn">
-		<label id="nav-button-label">
-			<div id="nav-lines">
-				<i class="nav-line"></i>
-				<i class="nav-line"></i>
-				<i class="nav-line"></i>
-				<i class="nav-line"></i>
-			</div>
-		</label>
-	</div>
-</nav>
-<div canvas="container">
-	<header class="header">
-		<div class="container">
-			<div class="row">
-				<div class="header_top">
-					<div class="header_logo">
-						<a href="/" class="logo">
-							<img src="img/top_logo.png" alt="">
-                            <span>Делаем маркетинг <br/>
-                            в интернете эффективным</span>
-						</a>
-					</div>
-					<nav class="header_nav">
-						<ul>
-							<li>
-								<a href="/">Главная</a>
-							</li>
-							<li>
-								<a href="#">Услуги</a>
-							</li>
-							<li>
-								<a href="#">Смотреть работы</a>
-							</li>
-							<li>
-								<a href="#">Вакансии</a>
-							</li>
-							<li>
-								<a href="#">О нас</a>
-							</li>
-						</ul>
-					</nav>
-					<div class="header_modal">
-						<div>
-							<a href="tel:+380935848035">+38 (093) 58 48 035</a>
-						</div>
-						<button data-modal="modal-1" data-info="Обратный звонок" href="#" class="modal active">Обратный
-							звонок
-						</button>
-					</div>
-				</div>
-				<div class="header_title">
-					<h1>Ищем ответственные таланты</h1>
-					<b>Разбираетесь в интернет-маркетинге, хотите расти вместе?</b>
-					<p>У нас к вам предложение :)</p>
-				</div>
-				<div class="header_bot_txt">
-					<a href="#" class="scroll_to" data-scroll="our-team-section">
-						<i class="fa fa-angle-down"></i>
+	<!-- Модальное окно -->
+	<div class="popup" data-modal="modal-1">
+		<div class="dm-table">
+			<div class="dm-cell">
+				<div class="dm-modal">
+					<a href="#" class="close">
 					</a>
-				</div>
-			</div>
-		</div>
-	</header>
-
-
-	<!-- Секция our-team-section-->
-	<section id="our-team-section" class="why_effective our-team-section">
-		<div class="container">
-			<div class="row">
-				<h2>Сильная команда – основа результата</h2>
-				<div class="title_block_left_decor title_right">
-					<div class="title_block_left_decor_img">
-					</div>
-					<p>Дизайн, программирование, тексты, реклама – задачи, не похожие друг на друга.<br>
-						На каждую из них в Мелфори есть специалист.<br>
-						Распределение зон ответственности позволяет нам делать работу хорошо,<br>
-						а вам – быть уверенными в том, что каждый этап выполнен на высшем уровне.
-					</p>
-				</div>
-				<div class="who_are_we_items clearfix">
-					<div class="who_are_we_item col-lg-3 col-md-4 col-sm-6">
-						<div class="who_are_we_item_img">
-							<img src="img/who_are_we_item_img1.png" alt="">
-							<div class="who_are_we_item_text">
-								<span>Веб-дизайнер</span>
-							</div>
-						</div>
-						<p>Боженко Андрей</p>
-					</div>
-					<div class="who_are_we_item col-lg-3 col-md-4 col-sm-6">
-						<div class="who_are_we_item_img">
-							<img src="img/who_are_we_item_img1.png" alt="">
-							<div class="who_are_we_item_text">
-								<span>Веб-дизайнер</span>
-							</div>
-
-						</div>
-						<p>Боженко Андрей</p>
-					</div>
-					<div class="who_are_we_item col-lg-3 col-md-4 col-sm-6">
-						<div class="who_are_we_item_img">
-							<img src="img/who_are_we_item_img1.png" alt="">
-							<div class="who_are_we_item_text">
-								<span>Веб-дизайнер</span>
-							</div>
-						</div>
-						<p>Боженко Андрей</p>
-					</div>
-					<div class="who_are_we_item col-lg-3 col-md-4 col-sm-6">
-						<div class="who_are_we_item_img">
-							<img src="img/who_are_we_item_img1.png" alt="">
-							<div class="who_are_we_item_text">
-								<span>Веб-дизайнер</span>
-							</div>
-						</div>
-						<p>Боженко Андрей</p>
-					</div>
-					<div class="who_are_we_item col-lg-3 col-md-4 col-sm-6">
-						<div class="who_are_we_item_img">
-							<img src="img/who_are_we_item_img1.png" alt="">
-							<div class="who_are_we_item_text">
-								<span>Веб-дизайнер</span>
-							</div>
-						</div>
-						<p>Боженко Андрей</p>
-					</div>
-					<div class="who_are_we_item col-lg-3 col-md-4 col-sm-6">
-						<div class="who_are_we_item_img">
-							<img src="img/who_are_we_item_img1.png" alt="">
-							<div class="who_are_we_item_text">
-								<span>Веб-дизайнер</span>
-							</div>
-						</div>
-						<p>Боженко Андрей</p>
-					</div>
-					<div class="who_are_we_item col-lg-3 col-md-4 col-sm-6">
-						<div class="who_are_we_item_img">
-							<img src="img/who_are_we_item_img1.png" alt="">
-							<div class="who_are_we_item_text">
-								<span>Веб-дизайнер</span>
-							</div>
-						</div>
-						<p>Боженко Андрей</p>
-					</div>
-					<div class="who_are_we_item col-lg-3 col-md-4 col-sm-6">
-						<div class="who_are_we_item_img">
-							<img src="img/who_are_we_item_img1.png" alt="">
-							<div class="who_are_we_item_text">
-								<span>Веб-дизайнер</span>
-							</div>
-						</div>
-						<p>Боженко Андрей</p>
-					</div>
-					<div class="who_are_we_item col-lg-3 col-md-4 col-sm-6">
-						<div class="who_are_we_item_img">
-							<img src="img/who_are_we_item_img1.png" alt="">
-							<div class="who_are_we_item_text">
-								<span>Веб-дизайнер</span>
-							</div>
-						</div>
-						<p>Боженко Андрей</p>
-					</div>
-					<div class="who_are_we_item col-lg-3 col-md-4 col-sm-6">
-						<div class="who_are_we_item_img">
-							<img src="img/who_are_we_item_img1.png" alt="">
-							<div class="who_are_we_item_text">
-								<span>Веб-дизайнер</span>
-							</div>
-						</div>
-						<p>Боженко Андрей</p>
-					</div>
-					<div class="who_are_we_item col-lg-3 col-md-4 col-sm-6">
-						<div class="who_are_we_item_img">
-							<img src="img/who_are_we_item_img1.png" alt="">
-							<div class="who_are_we_item_text">
-								<span>Веб-дизайнер</span>
-							</div>
-						</div>
-						<p>Боженко Андрей</p>
-					</div>
-					<div class="who_are_we_item col-lg-3 col-md-4 col-sm-6">
-						<div class="who_are_we_item_img">
-							<img src="img/who_are_we_item_img1.png" alt="">
-							<div class="who_are_we_item_text">
-								<span>Веб-дизайнер</span>
-							</div>
-						</div>
-						<p>Боженко Андрей</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--секция us-office-section-->
-	<section class="us-office-section about-us-office">
-		<div class="container">
-			<div class="row">
-				<div class="title-wrap">
-					<h2>А здесь мы работаем</h2>
-					<p>Наш офис</p>
-				</div>
-				<div class="content">
-					<div class="img-container">
-						<img class="main-img" src="img/foto-ofice.png">
-						<div class="img-item">
-							<img src="img/foto-ofice-1.jpg">
-							<img src="img/foto-ofice-2.png">
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-	<!--секция contacts-map-section-->
-	<section class="contacts-map-section about-us-map">
-		<div class="container">
-			<div class="row">
-				<div class="title-wrap">
-					<h2>Нас легко найти</h2>
-				</div>
-				<div class="content">
-					<div class="col-lg-8">
-						<div class="map-container ">
-							<div id="map"></div>
-							<script type="text/javascript">
-
-
-								function initMap() {
-									var map = new google.maps.Map(document.getElementById('map'), {
-										center: {lat: 49.9933921, lng: 36.2554937},
-										zoom: 18.25,
-									});
-									var image = 'img/marker.png';
-									var beachMarker = new google.maps.Marker({
-										position: {lat: 49.9933921, lng: 36.2554937},
-										map: map,
-										icon: image
-									});
-								}
-
-
-							</script>
-							<script async defer
-									src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAt2q0PNWL7v8H3ATDMupQZDWZquGlxI3A&callback=initMap">
-							</script>
-
-						</div>
-					</div>
-					<div class="col-lg-4">
-						<div class="contacts">
-							<ul>
-								<li>
-									<i class="fa fa-home"></i>
-									<p>г. Харьков, ул. Юрьевка 17</p>
-								</li>
-								<li>
-									<i class="fa fa-car"></i>
-									<p>Если вы привыкли решать дела лично</p>
-									<p>– приезжайте в гости, обсудим.</p>
-								</li>
-								<li>
-									<i class="fa fa-clock-o"></i>
-									<p>Мы работаем с 10 до 18 часов,
-										с понедельника по субботу.</p>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-	<section class="unique_challenge about-us-form">
-		<div class="container">
-			<div class="row">
-				<div class="title-wrap">
-					<h2><p>Нам всегда можно позвонить,и обсудить </p>
-						<p>задачу голосом:</p></h2>
-					<p>В Украине: <a href="tel:+380960714622">+38 096 071 4622</a> | В России: <a href="tel:+74993228470">+7 499 322
-						8470</a> | По скайпу: <a href="skype:melfori_studio">melfori_studio</a></p>
-				</div>
-				<div class="unique_challenge_form">
-					<p>Или оставьте ваш телефон – мы перезвоним</p>
+					<p class='success_mail'>Спасибо! Ваша заявка уже обрабатывается менеджером и в ближайшее время он с
+						вами
+						свяжется.</p>
 					<form id="form">
 						<div>
+							<label>Введите своё имя</label>
 							<div class="modal_form_input_wrap">
 								<div class="modal_input_error">Заполните поле
 									<div class="modal_error_triangle"></div>
 									<div class="modal_error_chest_img"></div>
 								</div>
-								<input name="phone" class="modal_form_phone ua" placeholder="+38(___) ___-__-__"
-									   type="text">
+								<input name="name" class="modal_form_input" type="text">
 							</div>
 						</div>
-						<input type="submit" value="Обсудить задачу">
+						<div>
+							<label>Введите свой телефон</label>
+							<div class="modal_form_input_wrap">
+								<div class="modal_input_error">Заполните поле
+									<div class="modal_error_triangle"></div>
+									<div class="modal_error_chest_img"></div>
+								</div>
+								<input name="phone" class="modal_form_phone" type="text">
+							</div>
+						</div>
+						<div>
+							<label>Введите свой e-mail</label>
+							<div class="modal_form_input_wrap">
+								<div class="modal_input_error">Заполните поле
+									<div class="modal_error_triangle"></div>
+									<div class="modal_error_chest_img"></div>
+								</div>
+								<input name="email" class="modal_form_email" type="text">
+							</div>
+						</div>
+						<div>
+							<div class="select">
+								<div class="slct_arrow">
+									<i class="fa fa-angle-down"></i>
+								</div>
+								<a href="#" class="slct">Выбор заголовков:</a>
+								<ul class="drop">
+									<li>Вы крутые</li>
+									<li>Я в Вас влюбился</li>
+									<li>Быстрей Вас только Флеш</li>
+								</ul>
+								<input type="hidden" id="select" name="services">
+							</div>
+						</div>
+						<input type="hidden" name="form_name" value="">
+						<input type="hidden" name="form_type" value="modal">
+						<input type="submit" value="Отправить">
 					</form>
 				</div>
-				<div class="social-links-container">
-					<p>Следите за нами в социальных сетях:</p>
-					<ul>
-						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-						<li><a href="#"><i class="fa fa-vk"></i></a></li>
-						<li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-					</ul>
+			</div>
+		</div>
+		<div class="overlay">
+		</div>
+	</div>
+	<!-- Модальное окно 2-->
+	<div class="popup" data-modal="modal-res">
+		<div class="dm-table">
+			<div class="dm-cell">
+				<div class="dm-modal">
+					<p class='success_mail'>Заявка отправлена</p>
 				</div>
 			</div>
 		</div>
-	</section>
-
-
-	<!-- Секция footer -->
-	<footer class="footer">
-		<div class="container">
-			<div class="row">
+	</div>
+	<!-- вариант меню на мобильном -->
+	<div class="popup pop3" data-modal="modal-3">
+		<div class="dm-table">
+			<div class="dm-cell">
+				<div class="dm-modal">
+					<nav class="header_nav_mobile">
+						<ul>
+							<li>
+								<a href="#">Примеры кухонь</a>
+							</li>
+							<li>
+								<a href="#">Преимущества</a>
+							</li>
+							<li>
+								<a href="#">Отзывы</a>
+							</li>
+							<li>
+								<a href="tel:73842596168">+7 3842 59 61 68</a>
+							</li>
+							<li>
+								<a href="#">Примеры кухонь</a>
+							</li>
+							<li>
+								<a href="#">Преимущества</a>
+							</li>
+							<li>
+								<a href="#">Отзывы</a>
+							</li>
+							<li>
+								<a href="#">Примеры кухонь</a>
+							</li>
+							<li>
+								<a href="#">Преимущества</a>
+							</li>
+							<li>
+								<a href="#">Отзывы</a>
+							</li>
+							<li>
+								<a href="#">Примеры кухонь</a>
+							</li>
+							<li>
+								<a href="#">Преимущества</a>
+							</li>
+							<li>
+								<a href="#">Отзывы</a>
+							</li>
+							<li>
+								<a href="#">Примеры кухонь</a>
+							</li>
+							<li>
+								<a href="#">Преимущества</a>
+							</li>
+							<li>
+								<a href="#">Отзывы</a>
+							</li>
+							<li>
+								<a href="#">Примеры кухонь</a>
+							</li>
+							<li>
+								<a href="#">Преимущества</a>
+							</li>
+							<li>
+								<a href="#">Отзывы</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
 			</div>
 		</div>
-	</footer>
-</div>
-<div off-canvas="id-1 left shift">
-	<nav class="header_nav_mobile">
-		<ul class="menu">
-
-			<li>
-				<a href="#">Главная</a>
-			</li>
-			<li>
-				<a href="#">Услуги</a>
-			</li>
-			<li>
-				<a href="#">Смотреть работы</a>
-			</li>
-			<li>
-				<a href="#">О нас</a>
-			</li>
-
-		</ul>
+		<div class="overlay">
+		</div>
+	</div>
+	<!-- Здесь пишем код -->
+	<!-- header -->
+	<nav canvas="" class="">
+		<div class="mnu_btn">
+			<label id="nav-button-label">
+				<div id="nav-lines">
+					<i class="nav-line"></i>
+					<i class="nav-line"></i>
+					<i class="nav-line"></i>
+					<i class="nav-line"></i>
+				</div>
+			</label>
+		</div>
 	</nav>
-</div>
-<div off-canvas="id-2 right push">
-</div>
-<div off-canvas="id-3 top overlay">
-</div>
-<div off-canvas="id-4 bottom shift">
-</div>
-<div class="hidden"></div>
-<!--[if lt IE 9]>
-</script>
+	<div canvas="container">
+		<header class="header">
+			<div class="container">
+				<div class="row">
+					<div class="header_top clearfix">
+						<div class="header_logo">
+							<a href="/" class="logo">
+								<img src="img/top_logo.png" alt="">
+                            <span>Делаем маркетинг <br/>
+                            в интернете эффективным</span>
+							</a>
+						</div>
+						<nav class="header_nav">
+							<ul>
+								<li>
+									<a href="/">Главная</a>
+								</li>
+								<li>
+									<a href="#">Услуги</a>
+								</li>
+								<li>
+									<a href="#">Смотреть работы</a>
+								</li>
+								<li>
+									<a href="#">Вакансии</a>
+								</li>
+								<li>
+									<a href="#">О нас</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="header_modal">
+							<div>
+								<a href="tel:+380935848035">+38 (093) 58 48 035</a>
+							</div>
+							<button data-modal="modal-1" data-info="Обратный звонок" href="#" class="modal active">
+								Обратный
+								звонок
+							</button>
+						</div>
+					</div>
+					<div class="header_title">
+						<h1>
+							Создаём сайты для любых задач
+						</h1>
+						<p>
+							<b>Грамотный продающий сайт – основа коммерческого успеха. Мы поможем!</b> <br>
+							Продажи в интернете – дело тонкое
+						</p>
+					</div>
+
+					<div class="header_bot_txt">
+						<a href="#" class="scroll_to" data-scroll="develop-site-problem-section">
+							<i class="fa fa-angle-down"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
 
 
-<
-script
-src = "libs/html5shiv/es5-shim.min.js" ></script>
-<script src="libs/html5shiv/html5shiv.min.js"></script>
-<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>`
-<script src="libs/respond/respond.min.js"></script>
-<![endif]-->
-<!-- Load Scripts Start -->
-<script>
-	var scr = {
-		"scripts": [{
-			"src": "js/libs.js",
-			"async": false
-		},
-			{
-				"src": "js/App.js",
+		<section class="develop-site-problem-section" id="develop-site-problem-section">
+			<div class="container">
+				<div class="row">
+					<div class="title-wrap">
+						<h2>У каждого бизнеса свои задачи</h2>
+						<p><b>Выберите, какой тип интернет-ресурса решит вашу</b></p>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<div class="item">
+							<div class="img-wrap">
+								<img src="img/foto-insta.jpg" alt="">
+							</div>
+							<div class="content">
+								<p class="title">Лендинг</p>
+								<p>Идеален, когда вы продаёте ограниченное <br>
+									число услуг или товаров.</p>
+								<p>Эффективно превращает <br>
+									посетителя – в клиента</p>
+								<a href="#">Узнать подробнее</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<div class="item">
+							<div class="img-wrap">
+								<img src="img/foto-insta.jpg" alt="">
+							</div>
+							<div class="content">
+								<p class="title">Многостраничный сайт</p>
+								<p>Подходит тем, кто хочет подробно <br>
+									рассказать о своей компании и услугах.</p>
+								<p>Раскрывает экспертность и имидж компании.</p>
+								<a href="#">Узнать подробнее</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<div class="item">
+							<div class="img-wrap">
+								<img src="img/foto-insta.jpg" alt="">
+							</div>
+							<div class="content">
+								<p class="title">Интернет-магазин</p>
+								<p>Выбор для тех, кто продаёт большое число <br>
+									товаров самого разного типа.</p>
+								<p>Вы получаете автономную платформу <br>
+									массовых продаж.</p>
+								<a href="#">Узнать подробнее</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<div class="item">
+							<div class="img-wrap">
+								<img src="img/foto-insta.jpg" alt="">
+							</div>
+							<div class="content">
+								<p class="title">Уникальный сервис</p>
+								<p>Биржа, сервис, платформа для разного типа
+									задач – берёмся за нестандартные проекты.</p>
+								<p>Подходит, когда нужно что-то с особенным <br>
+									функционалом.</p>
+								<a href="#">Узнать подробнее</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Секция unique_challenge -->
+		<section class="unique_challenge vacancies-form">
+			<div class="container">
+				<div class="row">
+					<h2>Есть вопросы? </h2>
+					<p>Хотите поделиться своей задачей и узнать, <br>
+						насколько быстро и выгодно мы её выполним?
+						<div class="unique_challenge_form">
+							<form id="form3">
+								<div class="texarea-wrap">
+					<p class="lable">Заполните два поля ниже, мы перезвоним.</p>
+							<textarea placeholder="Коротко опишите, что необходимо
+разработать.
+Можете прикрепить техническое задание."></textarea>
+					<div class="fileload">
+						<div class="file-load-block">
+							<input type="file" multiple value="" id="file" />
+							<div class="fileLoad">
+								<input type="text" value="Прикрепить ТЗ" />
+								<button type="button"><span></span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<input type="hidden" name="form_name" value="Т.З.">
+				<input type="hidden" name="form_type" value="normal">
+				<div>
+					<div class="modal_form_input_wrap">
+						<div class="modal_input_error">Заполните поле
+							<div class="modal_error_triangle"></div>
+							<div class="modal_error_chest_img"></div>
+						</div>
+						<input name="phone" class="modal_form_phone ua" placeholder="+38(___) ___-__-__"
+							   type="text">
+
+					</div>
+				</div>
+				<input type="hidden" name="form_name" value="Есть вопросы? (Разработка сайтов)">
+				<input type="submit" value="Проконсультироваться">
+				<input type="hidden" name="form_type" value="normal">
+				</form>
+			</div>
+	</div>
+</div>
+</section>
+
+		<!-- Секция footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div off-canvas="id-1 left shift">
+		<nav class="header_nav_mobile">
+			<ul class="menu">
+				<li>
+					<a href="#">1</a>
+				</li>
+				<li>
+					<a href="#">Преимущества</a>
+				</li>
+				<li>
+					<a href="#">Отзывы</a>
+				</li>
+				<li>
+					<a href="tel:73842596168">+7 3842 59 61 68</a>
+				</li>
+				<li>
+					<a href="#">Преимущества</a>
+				</li>
+				<li>
+					<a href="#">Отзывы</a>
+				</li>
+				<li>
+					<a href="#">Примеры кухонь</a>
+				</li>
+				<li>
+					<a href="#">Преимущества</a>
+				</li>
+				<li>
+					<a href="#">Отзывы</a>
+				</li>
+				<li>
+					<a href="#">Примеры кухонь</a>
+				</li>
+				<li>
+					<a href="#">Преимущества</a>
+				</li>
+				<li>
+					<a href="#">Отзывы</a>
+				</li>
+				<li>
+					<a href="#">Примеры кухонь</a>
+				</li>
+				<li>
+					<a href="#">Преимущества</a>
+				</li>
+				<li>
+					<a href="#">Отзывы</a>
+				</li>
+				<li>
+					<a href="#">Примеры кухонь</a>
+				</li>
+				<li>
+					<a href="#">Преимущества</a>
+				</li>
+				<li>
+					<a href="#">Отзывы</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<div off-canvas="id-2 right push">
+	</div>
+	<div off-canvas="id-3 top overlay">
+	</div>
+	<div off-canvas="id-4 bottom shift">
+	</div>
+	<div class="hidden"></div>
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>`
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+	<!-- Load Scripts Start -->
+	<script>
+		var scr = {
+			"scripts": [{
+				"src": "js/libs.js",
 				"async": false
 			},
-			{
-				"src": "js/main.js",
-				"async": false
-			}]
-	};
-	!function (t, n, r) {
-		"use strict";
-		var c = function (t) {
-			if ("[object Array]" !== Object.prototype.toString.call(t)) return !1;
-			for (var r = 0; r < t.length; r++) {
-				var c = n.createElement("script"),
-						e = t[r];
-				c.src = e.src, c.async = e.async, n.body.appendChild(c)
-			}
-			return !0
+				{
+					"src": "js/App.js",
+					"async": false
+				},
+				{
+					"src": "js/main.js",
+					"async": false
+				}]
 		};
-		t.addEventListener ? t.addEventListener("load", function () {
-			c(r.scripts);
-		}, !1) : t.attachEvent ? t.attachEvent("onload", function () {
-			c(r.scripts)
-		}) : t.onload = function () {
-			c(r.scripts)
-		}
-	}(window, document, scr);
-</script>
-<!-- Load Scripts End -->
-</body>
+		!function (t, n, r) {
+			"use strict";
+			var c = function (t) {
+				if ("[object Array]" !== Object.prototype.toString.call(t)) return !1;
+				for (var r = 0; r < t.length; r++) {
+					var c = n.createElement("script"),
+							e = t[r];
+					c.src = e.src, c.async = e.async, n.body.appendChild(c)
+				}
+				return !0
+			};
+			t.addEventListener ? t.addEventListener("load", function () {
+				c(r.scripts);
+			}, !1) : t.attachEvent ? t.attachEvent("onload", function () {
+				c(r.scripts)
+			}) : t.onload = function () {
+				c(r.scripts)
+			}
+		}(window, document, scr);
+	</script>
+	<!-- Load Scripts End -->
+	</body>
 
 </html>

@@ -428,7 +428,6 @@ $(document).ready(function() {
 
 		if (files === undefined) {
 			$('.fileLoad input').val('Файл не выбран!');
-			$('.file-load-block input[type=text]').css('border', '1px solid red');
 			error.push(true); // ошибка
 		}
 

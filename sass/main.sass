@@ -158,6 +158,9 @@ nav[canvas]
 
 		.form-wrap
 			margin-bottom: 120px
+			form
+				& > div
+					display: inline-block
 			h3
 				margin-top: 48px
 				margin-bottom: 7px
@@ -170,11 +173,12 @@ nav[canvas]
 			.modal_form_input_wrap
 				display: inline-block
 				margin-right: 30px
+			input[type=text]
+				padding-left: 15px
 			input
 				@extend %main_btn2
 				color: $main_color
 				width: 370px
-				padding-left: 15px
 				border: 1px solid $main_color
 				&:hover
 					outline: 0
@@ -195,6 +199,19 @@ nav[canvas]
 				@extend %main_btn
 				width: 370px
 				color: #fff
+				&:hover
+					@extend %main_btn_hover
+				&:active
+					@extend %main_btn_active
+				&:focus
+					@extend %main_btn_focus
+			.more-link
+				display: inline-block
+				@extend %main_btn
+				width: 370px
+				color: #fff
+				height: auto
+				padding: 11.5px 0
 				&:hover
 					@extend %main_btn_hover
 				&:active
@@ -703,11 +720,21 @@ nav[canvas]
 				margin: 0
 			.text
 				margin-bottom: 26px
-			input[type=submit]
+			.more-link
+				display: inline-block
 				@extend %main_btn
 				width: 370px
+				height: auto
+				padding: 11.5px 0
 				&:hover
 					@extend %main_btn_hover
+					text-decoration: none
+				&:active
+					text-decoration: none
+				&:focus
+					text-decoration: none
+
+
 
 .title_block_left_decor
 	width: 840px
@@ -922,7 +949,8 @@ nav[canvas]
 				input[type=text]
 					border: 0
 					height: 35px
-					width: 135px
+					width: 328px
+					text-align: right
 				input[type=file]
 					position: absolute
 					opacity: 0
@@ -992,8 +1020,10 @@ nav[canvas]
 		.unique_challenge_form
 			p
 				font-size: 16px
-		#form
+		form
 			margin-top: 12px
+			& > div
+				display: inline-block
 		.social-links-container
 			margin-top: 43px
 			p
@@ -1034,7 +1064,6 @@ nav[canvas]
 				margin: 0
 				margin-bottom: 4px
 		.modal_form_input_wrap
-			display: block
 			margin-right: 0px
 			margin-bottom: 17px
 		.unique_challenge_form
@@ -2711,7 +2740,66 @@ nav[canvas]
 				margin-bottom: 28px
 			&.item-1
 				margin-right: 158px
-//	Секция
+
+
+//	Секция develop-site-problem-section
+.develop-site-problem-section
+	text-align: center
+	background: #f8f8fa
+	padding: 111px 0 50px
+	h2
+		color: $main_color
+		margin: 0
+	.title-wrap
+		margin-bottom: 50px
+	.item
+		text-align: left
+		margin-bottom: 71px
+		font-size: 0
+		.img-wrap
+			display: inline-block
+			vertical-align: middle
+			background: url("../img/slider_border.jpg") no-repeat 50% 50%
+			background-size: cover
+			padding: 5px
+			width: 170px
+			margin-right: 30px
+			img
+				width: 100%
+		.content
+			vertical-align: top
+			display: inline-block
+			font-size: 17.5px
+			max-width: 360px
+			min-height: 219px
+			position: relative
+			padding-bottom: 50px
+			p
+				margin-bottom: 11px
+				line-height: 1.2
+			.title
+				font-size: 24px
+				line-height: 1
+			a
+				@extend %main_btn
+				width: 270px
+				display: block
+				text-align: center
+				height: auto
+				position: absolute
+				padding: 10px 0
+				bottom: 0px
+				left: 0
+				&:hover
+					text-decoration: none
+					@extend %main_btn_hover
+				&:active
+					text-decoration: none
+				&:focus
+					text-decoration: none
+
+
+
 //	Секция
 //	Секция
 
