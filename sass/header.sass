@@ -76,16 +76,6 @@ p
 	display: none
 // Модальное окно
 
-.popup2
-	width: 100%
-	height: 100%
-	background: rgba(0, 0, 0, 0.65)	
-	position: fixed
-	top: 0
-	left: 0
-	display: none
-	overflow: auto
-	z-index: 1000
 .popup
 	width: 100%
 	height: 100%
@@ -109,6 +99,44 @@ p
 				a
 					font-size: 30px
 					color: #fff
+	&.pop4
+		.dm-modal
+			width: 630px
+			max-width: 60em
+			text-align: center
+			.modal_input_error
+				text-align: center
+			p
+				&.title
+					margin-bottom: 10px
+			.pop4_inner_wrap
+				width: 370px
+				margin-right: 20px
+				text-align: left
+				display: inline-block
+				vertical-align: super
+				p
+					font-family: $font_SFUIDisplay-Light
+					font-size: 18px
+					margin-bottom: 15px
+					line-height: 1.25
+				span
+					font-family: $font_SFUIDisplay-Medium
+			.pop4_foto
+				width: 170px
+				display: inline-block
+				vertical-align: bottom
+				text-align: center
+				img
+					margin-bottom: 5px
+				p
+					font-size: 18px
+					font-family: $font_SFUIDisplay-Medium
+					line-height: 1.2
+					margin-bottom: 5px
+					& + p
+						font-size: 16px
+						font-family: $font_SFUIDisplay-Light
 .dm-table
 	display: table
 	width: 100%
@@ -127,17 +155,17 @@ p
 	text-align: center
 
 .dm-modal
-	width: 470px		
+	width: 430px
 	max-width: 50em
 	display: inline-block
-	padding: 50px 46px 50px 46px
-	border: 3px solid $main_color	
+	padding: 30px
 	text-align: center
-	position: relative	
-	animation: fade .8s
-	background-color: #fff
-	border-radius: 20px
+	position: relative
+	background-color: $main_color
+	border-radius: 10px
 	z-index: 1002
+	animation: fade .8s
+	color: #fff
 	.modal_form_input_wrap
 		position: relative
 		display: block
@@ -150,12 +178,10 @@ p
 			top: 40px
 			padding-left: 17px
 			font: 15px/35px $font_SFUIDisplay-Regular
-			background-color: #F4F4F4
-			border: 1px solid #C8C8C8
-			-webkit-border-radius: 5px
-			border-radius: 5px
-			-webkit-box-shadow: 0 0 10px rgba(0,0,0,.3)
-			box-shadow: 0 0 10px rgba(0,0,0,.3)
+			background-color: #fff
+			border: 1px solid #fff
+			color: $main_color
+			border-radius: 7px
 			z-index: 100
 			&.input_error_email
 				width: 215px
@@ -172,15 +198,17 @@ p
 			position: relative
 			background-image: url('../img/modal_error_triangle.png')
 		.modal_error_chest_img
-			top: -33px
-			left: 0				
+			top: -31px
+			left: -8px
 			height: 9px
 		.modal_error_triangle
 			top: -43px
-			left: 10px				
-			height: 8px			
-		
-
+			left: 10px
+			height: 8px
+	p
+		&.title
+			font-size: 24px
+			margin-bottom: 15px
 	label
 		margin-bottom: 7px
 		margin-left: 5px
@@ -192,18 +220,15 @@ p
 			color: $main_color
 	input
 		width: 100%
-		height: 40px
-		margin-bottom: 10px
+		height: 50px
+		margin-bottom: 20px
 		padding-left: 20px
-		border: none		
-		background-color: #F4F4F4		
-		border-radius: 5px		
-		box-shadow: 0 1px 0 rgba(0,0,2,.28)		
+		border: 1px solid #fff
+		background-color: transparent
+		border-radius: 10px
 		transition: 1s
 		&:focus		
 			outline: 0
-			box-shadow: 0 1px 0 rgba(255,81,46,.88)
-	
 	.success_mail
 		display: none
 		color: $main_color
@@ -212,16 +237,16 @@ p
 			display: block
 	input[type=submit]
 		margin-bottom: 0
-		margin-top: 20px
 		padding-left: 0
 		padding-right: 0
-		@extend %main_btn
+		@extend %main_btn2
+		width: 100%
 		&:hover
-			@extend %main_btn_hover		
-		&:active		
-			@extend %main_btn_active				
+			@extend %main_btn2_hover
+		&:active
+			@extend %main_btn2_active
 		&:focus
-			@extend %main_btn_focus
+			@extend %main_btn2_focus
 			outline: 0
 	.select
 		position: relative
@@ -288,12 +313,16 @@ p
 				transform: rotate(180deg)
 .close
 	position: absolute
-	right: 25px
-	top: 25px
-	width: 35px
-	height: 36px
+	right: 0px
+	top: -30px
+	width: 15px
+	height: 15px
 	display: block
-	background: url('../img/modal_close.png') 0 0 no-repeat
+	font-size: 18px
+	color: #fff
+	transition: 0.5s
+	&:hover
+		color: $main_color
 // конец модального
 
 // всплывающие ошибки в формах
