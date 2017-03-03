@@ -1741,22 +1741,22 @@
 		<div class="dm-cell">
 			<div class="dm-modal">
 				<a href="#" class="close">
+					<i class="fa fa-close"></i>
 				</a>
 				<p class='success_mail'>Спасибо! Ваша заявка уже обрабатывается менеджером и в ближайшее время он с вами
 					свяжется.</p>
 				<form id="form">
+					<p class="title">Обратный звонок</p>
 					<div>
-						<label>Введите своё имя</label>
 						<div class="modal_form_input_wrap">
 							<div class="modal_input_error">Заполните поле
 								<div class="modal_error_triangle"></div>
 								<div class="modal_error_chest_img"></div>
 							</div>
-							<input name="name" class="modal_form_input" type="text">
+							<input name="name" class="modal_form_input" placeholder="Имя" type="text">
 						</div>
 					</div>
 					<div>
-						<label>Введите свой телефон</label>
 						<div class="modal_form_input_wrap">
 							<div class="modal_input_error">Заполните поле
 								<div class="modal_error_triangle"></div>
@@ -1766,27 +1766,12 @@
 						</div>
 					</div>
 					<div>
-						<label>Введите свой e-mail</label>
 						<div class="modal_form_input_wrap">
 							<div class="modal_input_error">Заполните поле
 								<div class="modal_error_triangle"></div>
 								<div class="modal_error_chest_img"></div>
 							</div>
-							<input name="email" class="modal_form_email" type="text">
-						</div>
-					</div>
-					<div>
-						<div class="select">
-							<div class="slct_arrow">
-								<i class="fa fa-angle-down"></i>
-							</div>
-							<a href="#" class="slct">Выбор заголовков:</a>
-							<ul class="drop">
-								<li>Вы крутые</li>
-								<li>Я в Вас влюбился</li>
-								<li>Быстрей Вас только Флеш</li>
-							</ul>
-							<input type="hidden" id="select" name="services">
+							<input name="email" class="modal_form_email" placeholder="E-mail" type="text">
 						</div>
 					</div>
 					<input type="hidden" name="form_name" value="">
@@ -1807,6 +1792,49 @@
 				<p class='success_mail'>Заявка отправлена</p>
 			</div>
 		</div>
+	</div>
+</div>
+<div class="popup pop4" data-modal="modal-4">
+	<div class="dm-table">
+		<div class="dm-cell">
+			<div class="dm-modal">
+				<a href="#" class="close">
+					<i class="fa fa-close"></i>
+				</a>
+				<p class='success_mail'>Спасибо! Ваша заявка уже обрабатывается менеджером и в ближайшее время он с вами
+					свяжется.</p>
+				<form>
+					<p class="title">НЕ УХОДИТЕ С ПУСТЫМИ РУКАМИ!</p>
+					<div class="pop4_inner_wrap">
+						<p>Оставьте почту и получите чек-лист, который
+							поможет проанализировать вашу рекламную
+							кампанию и улучшит ее.<span> Снижайте затраты
+						и повышайте количество клиентов.</span>
+						</p>
+						<div>
+							<div class="modal_form_input_wrap">
+								<div class="modal_input_error">Заполните поле
+									<div class="modal_error_triangle"></div>
+									<div class="modal_error_chest_img"></div>
+								</div>
+								<input name="email" class="modal_form_email" placeholder="E-mail" type="text">
+							</div>
+						</div>
+						<input type="hidden" name="form_name" value="Не уходите с пустыми руками!">
+						<input type="hidden" name="form_type" value="modal">
+						<input type="submit" value="Заказать">
+					</div>
+					<div class="pop4_foto">
+						<img src="img/madal4_foto.png" alt="">
+						<p>Андрей Боженко</p>
+						<p>Руководитель отдела
+							маркетинга</p>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="overlay">
 	</div>
 </div>
 <!-- вариант меню на мобильном -->
@@ -2007,7 +2035,8 @@
 				</div>
 			</div>
 			<div>
-				<button>Скачать образец договора</button>
+				<a target="_blank" href="img/Порядок%20работы%20frontend%20разработчика.pdf">Скачать образец договора
+				</a>
 			</div>
 		</div>
 	</section>
@@ -2031,28 +2060,28 @@
 							<img src="img/why_effective_item_img1.png" alt="">
 						</div>
 						<p>Разработка сайтов</p>
-						<button>Подробнее</button>
+						<a href="#">Подробнее</a>
 					</div>
 					<div class="why_effective_item col-lg-3 col-md-4 col-sm-6">
 						<div class="why_effective_item_img">
 							<img src="img/why_effective_item_img2.png" alt="">
 						</div>
 						<p>Копирайтинг</p>
-						<button>Подробнее</button>
+						<a href="#">Подробнее</a>
 					</div>
 					<div class="why_effective_item col-lg-3 col-md-4 col-sm-6">
 						<div class="why_effective_item_img">
 							<img src="img/why_effective_item_img3.png" alt="">
 						</div>
 						<p>Проектирование дизайна</p>
-						<button>Подробнее</button>
+						<a href="#">Подробнее</a>
 					</div>
 					<div class="why_effective_item col-lg-3 col-md-4 col-sm-6">
 						<div class="why_effective_item_img">
 							<img src="img/why_effective_item_img4.png" alt="">
 						</div>
 						<p>SEO-продвижение</p>
-						<button>Подробнее</button>
+						<a href="#">Подробнее</a>
 					</div>
 					<div class="why_effective_item col-lg-3 col-md-4 col-sm-6">
 						<div class="why_effective_item_img">
@@ -2060,7 +2089,7 @@
 						</div>
 						<p>Работа с соцсетями <br/>
 							(SMM)</p>
-						<button>Подробнее</button>
+						<a href="#">Подробнее</a>
 					</div>
 					<div class="why_effective_item col-lg-3 col-md-4 col-sm-6">
 						<div class="why_effective_item_img">
@@ -2068,7 +2097,7 @@
 						</div>
 						<p>Создание контекстной <br/>
 							рекламы</p>
-						<button>Подробнее</button>
+						<a href="#">Подробнее</a>
 					</div>
 					<div class="why_effective_item col-lg-3 col-md-4 col-sm-6">
 						<div class="why_effective_item_img">
@@ -2076,7 +2105,7 @@
 						</div>
 						<p>Аудит и аналитика интернет
 							ресурсов</p>
-						<button>Подробнее</button>
+						<a href="#">Подробнее</a>
 					</div>
 					<div class="why_effective_item col-lg-3 col-md-4 col-sm-6">
 						<div class="why_effective_item_img">
@@ -2084,7 +2113,7 @@
 						</div>
 						<p>Создание маркетинг-китов
 							и коммерческих предложений</p>
-						<button>Подробнее</button>
+						<a href="#">Подробнее</a>
 					</div>
 				</div>
 			</div>
@@ -2098,12 +2127,15 @@
 				<p>Давайте обсудим. Мы умеем больше, чем пишем.</p>
 				<div class="unique_challenge_form">
 					<form>
-						<div class="modal_form_input_wrap">
-							<div class="modal_input_error">Заполните поле
-								<div class="modal_error_triangle"></div>
-								<div class="modal_error_chest_img"></div>
+						<div>
+							<div class="modal_form_input_wrap">
+								<div class="modal_input_error">Заполните поле
+									<div class="modal_error_triangle"></div>
+									<div class="modal_error_chest_img"></div>
+								</div>
+								<input name="phone" class="modal_form_phone" placeholder="+7(___) ___-__-__"
+									   type="text">
 							</div>
-							<input name="phone" class="modal_form_phone" placeholder="+7(___) ___-__-__" type="text">
 						</div>
 						<input type="submit" value="Обсудить">
 						<input type="hidden" name="form_name" value="Остались вопросы?">
@@ -2168,7 +2200,9 @@
 				<h2>Вы всегда знаете, за что платите. </h2>
 				<p>Кстати, хотите узнать точную стоимость вашей задачи сейчас? </p>
 				<p>Это быстро и полезно для принятия решения о сотрудничестве.</p>
-				<button>Узнать стоимость</button>
+				<button data-modal="modal-1" data-info="Узнать стоимость" href="#" class="modal active">Узнать
+					стоимость
+				</button>
 
 			</div>
 		</div>
@@ -2356,7 +2390,7 @@
 						<div class="how_good_item_mask"></div>
 					</div>
 				</div>
-				<button>Смотреть больше работ</button>
+				<a class="link" href="#">Смотреть больше работ</a>
 			</div>
 		</div>
 	</section>
@@ -2410,13 +2444,16 @@
 				<p>Перезвоним в течение 30 секунд и ответим
 				</p>
 				<div class="unique_challenge_form">
-					<form>
-						<div class="modal_form_input_wrap">
-							<div class="modal_input_error">Заполните поле
-								<div class="modal_error_triangle"></div>
-								<div class="modal_error_chest_img"></div>
+					<form class="no_margin_bottom">
+						<div>
+							<div class="modal_form_input_wrap">
+								<div class="modal_input_error">Заполните поле
+									<div class="modal_error_triangle"></div>
+									<div class="modal_error_chest_img"></div>
+								</div>
+								<input name="phone" class="modal_form_phone" placeholder="+7(___) ___-__-__"
+									   type="text">
 							</div>
-							<input name="phone" class="modal_form_phone" placeholder="+7(___) ___-__-__" type="text">
 						</div>
 						<input type="submit" value="Заказать звонок">
 						<input type="hidden" name="form_name" value="Остались вопросы?">
@@ -2439,58 +2476,19 @@
 	<nav class="header_nav_mobile">
 		<ul class="menu">
 			<li>
-				<a href="#">1</a>
+				<a href="#">Главная</a>
 			</li>
 			<li>
-				<a href="#">Преимущества</a>
+				<a href="#">Услуги</a>
 			</li>
 			<li>
-				<a href="#">Отзывы</a>
+				<a href="#">Смотреть работы</a>
 			</li>
 			<li>
-				<a href="tel:73842596168">+7 3842 59 61 68</a>
+				<a href="#">Вакансии</a>
 			</li>
 			<li>
-				<a href="#">Преимущества</a>
-			</li>
-			<li>
-				<a href="#">Отзывы</a>
-			</li>
-			<li>
-				<a href="#">Примеры кухонь</a>
-			</li>
-			<li>
-				<a href="#">Преимущества</a>
-			</li>
-			<li>
-				<a href="#">Отзывы</a>
-			</li>
-			<li>
-				<a href="#">Примеры кухонь</a>
-			</li>
-			<li>
-				<a href="#">Преимущества</a>
-			</li>
-			<li>
-				<a href="#">Отзывы</a>
-			</li>
-			<li>
-				<a href="#">Примеры кухонь</a>
-			</li>
-			<li>
-				<a href="#">Преимущества</a>
-			</li>
-			<li>
-				<a href="#">Отзывы</a>
-			</li>
-			<li>
-				<a href="#">Примеры кухонь</a>
-			</li>
-			<li>
-				<a href="#">Преимущества</a>
-			</li>
-			<li>
-				<a href="#">Отзывы</a>
+				<a href="#">О нас</a>
 			</li>
 		</ul>
 	</nav>

@@ -87,7 +87,7 @@
 				margin: 0 auto 50px
 			&:last-of-type
 				margin: 0 auto 50px
-		button
+		a
 			margin-bottom: 50px
 	.why_effective
 		&.why_profitably
@@ -369,10 +369,12 @@
 					width: 146px
 	.unique_challenge
 		form
+			& > div
+				display: block
 			.modal_form_input_wrap
 				margin-right: 0
 				margin-bottom: 20px
-				display: block
+				display: inline-block
 			input[type=submit]
 				margin-bottom: 50px
 
@@ -539,7 +541,9 @@
 				margin-bottom: 30px
 				img
 					width: 70px
-
+	.unique_challenge
+		&.services
+			min-height: 100%
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	.header
@@ -851,6 +855,7 @@
 		width: 255px
 	.unique_challenge
 		&.you_always_know_what_you_pay
+			min-height: 300px
 			p
 				font-size: 18px
 				& + p
@@ -858,6 +863,7 @@
 					font-size: 16px
 			button
 				width: 300px
+				margin-bottom: 50px
 	.who_are_we_bottom_title
 		p
 			font-size: 18px
@@ -887,7 +893,23 @@
 				width: inherit
 			.header_i
 				margin-left: 15px
+	.popup.pop4
+		.dm-modal
+			width: 90%
+			.pop4_foto
+				display: none
+			.pop4_inner_wrap
+				width: 100%
+				margin-right: 0
+			p.title
+				font-size: 20px
 /* Extra Small Devices, Phones */
+@media only screen and (max-width: 760px) and (orientation: landscape)
+	.close
+		right: 20px
+		top: 10px
+		&:hover
+			color: #920182
 @media only screen and (max-width : 630px)
 	.unlike_contextual_of_advertising
 		.unlike_contextual_of_advertising_wrap
@@ -1166,8 +1188,8 @@
 	.our_advantages
 		.our_advantages_item
 			width: 310px
-		button
-			width: 280px
+		a
+			padding: 11.5px 40.6px
 
 	//секция about-us-office
 	.us-office-section
@@ -1180,8 +1202,9 @@
 						height: 148px
 
 	.how_good
-		button
-			width: 90%
+		a
+			&.link
+				padding: 11.5px 50px
 
 	.services
 		.services_item_mask
@@ -1274,6 +1297,8 @@
 								float: none
 	.unique_challenge
 		form
+			.modal_form_input_wrap
+				display: block
 			input
 				width: 90%
 			input[type=submit]
@@ -1283,6 +1308,8 @@
 			p
 				font-size: 16px
 				width: 330px
+	.popup.pop4 .dm-modal
+		width: 100%
 @media only screen and (max-width : 400px)
 
 	.header

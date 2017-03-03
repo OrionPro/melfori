@@ -11,19 +11,19 @@
 
 
 *::-webkit-input-placeholder
-	color: #666
+	color: #fff
 	opacity: 1
 
 *:-moz-placeholder
-	color: #666
+	color: #fff
 	opacity: 1
 
 *::-moz-placeholder
-	color: #666
+	color: #fff
 	opacity: 1
 
 *:-ms-input-placeholder
-	color: #666
+	color: #fff
 	opacity: 1
 
 body input:focus:required:invalid,
@@ -37,6 +37,7 @@ body textarea:required:valid
 	transition: transform 0.4s
 	//overflow: auto
 	-webkit-overflow-scrolling: touch
+	background-color: #00be92
 [off-canvas*=left]
 	width: 250px
 [canvas=container]
@@ -53,9 +54,12 @@ nav[canvas]
 	ul
 		&.menu
 			margin: 0
-			padding: 0
+			padding: 50px 0 0 20px
 			display: block
 			list-style: none
+		a
+			color: #fff
+			font-size: 20px
 
 
 
@@ -111,14 +115,20 @@ nav[canvas]
 				z-index: 0
 	h3
 		margin-top: 56px
-	button
+	a
 		@extend %main_btn
-		width: 370px
+		width: inherit
+		height: inherit
+		padding: 11.5px 85.6px
+		display: inline-block
 		&:hover
+			text-decoration: none
 			@extend %main_btn_hover
 		&:active
+			text-decoration: none
 			@extend %main_btn_active
 		&:focus
+			text-decoration: none
 			@extend %main_btn_focus
 
 // секция internet-shop-goods (страница internet-shops)
@@ -754,14 +764,20 @@ nav[canvas]
 			margin-top: 12px
 			margin-bottom: 15px
 			line-height: 1.1
-		button
+		a
 			@extend %main_btn
-			width: 230px
+			height: auto
+			padding: 11.5px 5px
+			display: block
+			margin: auto
 			&:hover
+				text-decoration: none
 				@extend %main_btn_hover
-			&:active		
+			&:active
+				text-decoration: none
 				@extend %main_btn_active
 			&:focus
+				text-decoration: none
 				@extend %main_btn_focus
 	.why_effective_item_img
 		min-height: 170px
@@ -770,6 +786,8 @@ nav[canvas]
 	min-height: 410px
 	text-align: center
 	background-color: $main_color
+	&.services
+		min-height: 500px
 	h2
 		margin-bottom: -5px
 		p
@@ -783,6 +801,10 @@ nav[canvas]
 	form
 		margin-top: 20px
 		margin-bottom: 120px
+		&.no_margin_bottom
+			margin-bottom: 0
+		& > div
+			display: inline-block
 		.modal_form_input_wrap
 			display: inline-block
 			margin-right: 30px
@@ -1485,16 +1507,23 @@ nav[canvas]
 		opacity: 0
 		transition: 0.5s
 		background-color: rgba(255, 255, 255, 0.7)
-	button
-		margin-bottom: 115px
-		@extend %main_btn
-		width: 370px
-		&:hover
-			@extend %main_btn_hover
-		&:active
-			@extend %main_btn_active
-		&:focus
-			@extend %main_btn_focus
+	a
+		&.link
+			margin-bottom: 115px
+			@extend %main_btn
+			width: inherit
+			height: inherit
+			padding: 11.5px 85.6px
+			display: inline-block
+			&:hover
+				text-decoration: none
+				@extend %main_btn_hover
+			&:active
+				text-decoration: none
+				@extend %main_btn_active
+			&:focus
+				text-decoration: none
+				@extend %main_btn_focus
 
 
 .why_effective
