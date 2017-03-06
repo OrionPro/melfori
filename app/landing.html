@@ -1838,6 +1838,12 @@
 </nav>
 <div canvas="container">
 	<header class="header langing-pages-header">
+		<div class="video-container">
+			<video id="Video" class="video" loop autoplay muted>
+				<source src="img/header_video.webm" type="video/webm">
+				<source src="img/header_video.mp4" type="video/mp4">
+			</video>
+		</div>
 		<div class="container">
 			<div class="row">
 				<div class="header_top">
@@ -2060,6 +2066,9 @@
 									<div class="modal_error_triangle"></div>
 									<div class="modal_error_chest_img"></div>
 								</div>
+								<input type="hidden" name="form_name"
+									   value="Получить на почту информацию по лендингам">
+								<input type="hidden" name="form_type" value="normal">
 								<input name="email" class="modal_form_email" placeholder="E-mail"
 									   type="text">
 							</div>
@@ -2080,9 +2089,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="title-wrap">
-					<h2>
-						<p>Дальше – 5 этапов разработки</p>
-						<p>вашего лендинга</p>
+					<h2 class="lineH-1">
+						Дальше – 5 этапов разработки <br>
+							вашего лендинга
 					</h2>
 				</div>
 				<div class="content clearfix">
@@ -2157,8 +2166,8 @@
 				</div>
 				<div class="form-container">
 					<h3>
-						<p>Впереди – горячие клиенты и продажи.</p>
-						<p>Начнём сегодня?</p>
+						Впереди – горячие клиенты и продажи. <br>
+						Начнём сегодня?
 					</h3>
 					<form id="form">
 						<div>
@@ -2167,10 +2176,13 @@
 									<div class="modal_error_triangle"></div>
 									<div class="modal_error_chest_img"></div>
 								</div>
-								<input name="email" class="modal_form_phone ua" placeholder="+38(___) ___-__-__"
+								<input name="phone" class="modal_form_phone ua" placeholder="+38(___) ___-__-__"
 									   type="text">
 							</div>
 						</div>
+						<input type="hidden" name="form_name"
+							   value="перезвонить по лендингам">
+						<input type="hidden" name="form_type" value="normal">
 						<input type="submit" value="Начать работу">
 					</form>
 				</div>
@@ -2229,7 +2241,7 @@
 						</div>
 					</div>
 				</div>
-				<button class="modal" data-modal="modal-1">Смотреть ещё</button>
+				<button>Смотреть ещё</button>
 			</div>
 		</div>
 	</section>
@@ -2244,7 +2256,7 @@
 					<form id="form3">
 						<div class="texarea-wrap">
 							<p class="lable">Заполните два поля ниже, мы перезвоним.</p>
-							<textarea placeholder="Напишите буквально пару предложений
+							<textarea name="textarea" placeholder="Напишите буквально пару предложений
 о том, кто вы такой, что умеете и чем хотели
 бы заниматься у нас."></textarea>
 							<div class="fileload">
@@ -2257,19 +2269,18 @@
 								</div>
 							</div>
 						</div>
-						<input type="hidden" name="form_data" value="">
-						<input type="hidden" name="id_form" value="form_2">
-						<input type="hidden" name="form_type" value="normal">
 						<div>
 							<div class="modal_form_input_wrap">
 								<div class="modal_input_error">Заполните поле
 									<div class="modal_error_triangle"></div>
 									<div class="modal_error_chest_img"></div>
 								</div>
-								<input name="phone" class="modal_form_phone ua" placeholder="+38(___) ___-__-__"
-									   type="text">
+								<input name="phone" class="modal_form_phone" type="text">
 							</div>
 						</div>
+						<input type="hidden" name="form_name"
+							   value="страница по лендингам (форма с ТЗ)">
+						<input type="hidden" name="form_type" value="normal">
 						<input type="submit" value="Проконсультироваться">
 					</form>
 				</div>
