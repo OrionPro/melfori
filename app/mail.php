@@ -28,7 +28,7 @@ if ($_POST) {
     }
     if (isset($_POST['textarea']) and $_POST['textarea'] != "") {
         $textarea = $_POST['textarea'];
-        $message .= '<div style="font-size: 18px; margin-bottom: 10px; padding-left: 10px">Размеры кухни: ' . $textarea . '</div>';
+        $message .= '<div style="font-size: 18px; margin-bottom: 10px; padding-left: 10px">Сообщение: ' . $textarea . '</div>';
     }
     if (isset($_POST['name']) and $_POST['name'] != "") {
         $name = $_POST['name'];
@@ -37,12 +37,16 @@ if ($_POST) {
      if(isset($_POST["services"])) {
         $services = $_POST["services"];
         $message .= '<div style="font-size: 18px; margin-bottom: 10px; padding-left: 10px">Select: ' . $services . '</div>';
-    } 
+    }
+    if(isset($_POST["checkboxes"])) {
+        $checkboxes = $_POST["checkboxes"];
+        $message .= '<div style="font-size: 18px; margin-bottom: 10px; padding-left: 10px">Компоненты для сайта компании: ' . $checkboxes . '</div>';
+    }
 
 
     $mailer = new PHPMailer();
     $subject = "Заявка с сайта Название сайта";
-    $to = 'orionpro79@gmail.com';
+    $to = 'mini_van@ukr.net';
  //   $mailer->IsSMTP();
     $mailer->Host = 'smtp.yandex.ru';
     $mailer->Port = 465;

@@ -13,6 +13,10 @@ class BurgerEff {
 		];
 		this.description = this.description.bind(this);
 	}
+	mobileMenuBg(){
+		var menu = $('div[off-canvas]');
+		
+	}
 	description() {
 
 		setTimeout(()=> {
@@ -35,34 +39,79 @@ class BurgerEff {
 }
 
 
+
 function chechBoxes() {
 	var container = $('.checkbox-container .item'),
 		checkbox = container.find('input[type=checkbox]');
 	checkbox.change(function(){
 		var parent = $(this).parent('.check'),
 			text = parent.siblings('.text');
+		$(this).toggleClass('active');
 		text.find('b').toggleClass('active');
+
+		var	arrVal = [];
+		checkbox.each(function () {
+			if($(this).hasClass('active')){
+				arrVal.push(' ' + $(this).parent('.check').siblings('.text').find('b').text() )
+					$('.setting-check-hidden').val(arrVal)
+			}
+		})
 	})
 
 }
 
 
-var burgerEff = new BurgerEff;
+
+
 $(window).resize(function () {
 	burgerEff.description();
+	burgerEff.mobileMenuBg();
 
 
 });
+
+
+class CheckboxesInoputs{
+	constructor(){
+
+	}
+
+	setValues(value){
+		var hidden = $('[data-sync=setting-check-hidden]'),
+			arrVal = [];
+
+		$('[data-sync='+ value +']').click(function () {
+			var nowVal = hidden.val();
+			
+			if($(this).attr('type') === 'checkbox'){
+				var checkbox = $('[data-sync='+ value +'][type=checkbox]');
+
+				checkbox.each(function () {
+					if($(this).hasClass('active')){
+					
+						console.log(valueText)
+
+					}
+				})
+			}else{
+				return false;
+			}
+		});
+	}
+}
+
+
+var burgerEff = new BurgerEff;
 
 $(document).ready(function () {
 
 	//  Инициальзация маски в форме
 	burgerEff.description();
+	burgerEff.mobileMenuBg();
+
+
 
 	chechBoxes();
-	
-	
-	
 	
 	//  Стилизация скролла
 	$(".couple_of_words_txt").mCustomScrollbar({

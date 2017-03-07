@@ -231,7 +231,7 @@ p
 			outline: 0
 	.success_mail
 		display: none
-		color: $main_color
+		color: #fff
 		font: 24px $font_SFUIDisplay-Bold
 		&.active
 			display: block
@@ -334,17 +334,16 @@ p
 		height: 35px
 		display: none
 		position: absolute
-		right: 15px
+		right: -2px
 		top: 40px
 		padding-left: 17px
 		font: 15px/35px $font_SFUIDisplay-Regular
-		background-color: #F4F4F4
-		border: 1px solid #C8C8C8
-		-webkit-border-radius: 5px
-		border-radius: 5px
-		-webkit-box-shadow: 0 0 10px rgba(0,0,0,.3)
-		box-shadow: 0 0 10px rgba(0,0,0,.3)
+		background-color: #fff
+		border: 1px solid #fff
+		color: $main_color
+		border-radius: 7px
 		z-index: 100
+		box-shadow: 0px 1px 9px 1px #ccc
 		&.input_error_email
 			width: 215px
 		&.input_error_phone
@@ -376,6 +375,16 @@ p
 	height: 100vh
 	position: relative
 	//background: #fff url(../img/header_video.gif) center top no-repeat
+	.video-container
+		bottom: 0
+		right: 0
+		z-index: -1000
+		overflow: hidden
+		min-width: 100%
+		min-height: 100%
+		width: auto
+		height: auto
+		position: absolute
 	&.internet-shop-header
 		.header_title
 			h1
@@ -484,16 +493,18 @@ p
 				margin-top: 20px
 				& > div
 					display: inline-block
+				.label
+					display: block
+					text-align: left
+					font-weight: 100
+					font-size: 18px
+					padding-left: 15px
 			.modal_form_input_wrap
 				display: inline-block
 				margin-right: 30px
 				text-align: left
 				input
 					display: block
-				label
-					font-weight: 100
-					font-size: 18px
-					padding-left: 15px
 			input
 				@extend %main_btn2
 				color: $main_color
