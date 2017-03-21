@@ -105,6 +105,7 @@ var burgerEff = new BurgerEff;
 
 $(document).ready(function () {
 
+
 	//  Инициальзация маски в форме
 	burgerEff.description();
 	burgerEff.mobileMenuBg();

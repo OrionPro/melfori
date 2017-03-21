@@ -320,6 +320,34 @@
 					width: 100%
 				.title
 					font-size: 22px
+
+	.internet-shop-instruction
+		&.mk
+			.list-items
+				width: 50%
+			.content
+				text-align: center
+				.gear-wrap
+					display: none
+				ul
+					padding: 0 50px 0 0
+					text-align: left
+					li
+						padding-left: 0
+						.decor-img
+							display: none
+						.arrow
+							display: none
+						aside
+							display: inline
+							&.center-text
+								height: auto
+						img
+							display: none
+			.img-wrap-mk
+				width: 50%
+
+
 @media only screen and (max-width : 1030px)
 	.internet-shop-instruction
 		.content
@@ -842,6 +870,23 @@
 					display: none
 				.title-item-decore
 					padding: 0 34px 0 29px
+
+	.internet-shop-instruction
+		&.mk
+			.list-items
+				width: 50%
+			.content
+				padding: 0 15px
+				text-align: center
+				ul
+					float: none
+					width: auto
+					display: block
+					padding: 0
+			.img-wrap-mk
+				width: auto
+				display: inline-block
+				float: none
 	/*Disable Animation on Mobile Devices*
 	.animated
 		/*CSS transitions*/
@@ -954,6 +999,10 @@
 @media only screen and (max-width : 580px)
 	h3
 		font-size: 24px
+	.internet-shop-instruction
+		&.mk
+			.list-items
+				width: inherit
 	.header_title
 		h1
 			font-size: 28px
@@ -1203,6 +1252,11 @@
 
 @media only screen and (max-width : 480px)
 	/**/
+	.why_effective
+		&.us-internet-shop-section
+			.item-wrap
+				.button
+					width: 95%
 	.header
 		min-height: 400px
 	.header_title
