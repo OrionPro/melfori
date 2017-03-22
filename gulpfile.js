@@ -14,13 +14,13 @@ var 	gulp         = require('gulp'),
 		source = require('vinyl-source-stream');
 
 
-gulp.task('browserify', function () {
-	browserify({entries: 'react/App.js', extensions: ['.js'], debug: true})
-		.transform(babelify, { presets: ['es2015', 'react']})
-		.bundle()
-		.pipe(source('App.js'))
-		.pipe(gulp.dest('app/js/'));
-});
+// gulp.task('browserify', function () {
+// 	browserify({entries: 'react/App.js', extensions: ['.js'], debug: true})
+// 		.transform(babelify, { presets: ['es2015', 'react']})
+// 		.bundle()
+// 		.pipe(source('App.js'))
+// 		.pipe(gulp.dest('app/js/'));
+// });
 
 // gulp.task('App-uglify', function() {
 // 	return gulp.src(
@@ -92,7 +92,7 @@ gulp.task('libs', function() {
 gulp.task('scripts', () => {
 	return gulp.src([
 		"js/common.js",
-		'js/animate.js',
+		
 		'js/functions.js'])
 		.pipe(babel({
 			presets: ['es2015', 'react']
@@ -102,6 +102,16 @@ gulp.task('scripts', () => {
 		.pipe(gulp.dest('app/js/'))
 		.pipe(livereload());
 });
+
+
+gulp.task('browserify', function () {
+	browserify({entries: 'js/animate.js', extensions: ['.js'], debug: true})
+		.transform(babelify, { presets: ['es2015']})
+		.bundle()
+		.pipe(source('animation.js'))
+		.pipe(gulp.dest('app/js/'));
+});
+
 
 gulp.task('html', () => {
 	return gulp.src(
@@ -115,6 +125,9 @@ gulp.task('watch', function () {
 	gulp.watch('app/libs/**/*.js', ['libs']);
 	gulp.watch('js/*.js', ['scripts']);
 	gulp.watch('react/*.js', ['browserify']);
+	gulp.watch('js/animate.js', ['browserify']);
+	gulp.watch('js//helper/helper.js', ['browserify']);
+	gulp.watch('js//model-animation/*.js', ['browserify']);
 	gulp.watch('app/*.html', ['html']);
 	gulp.watch('app/js/*.js').on("change", browserSync.reload);
 	gulp.watch('js/*.js').on("change", browserSync.reload);

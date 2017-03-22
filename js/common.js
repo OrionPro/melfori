@@ -72,9 +72,6 @@ $(window).resize(function () {
 
 
 class CheckboxesInoputs{
-	constructor(){
-
-	}
 
 	setValues(value){
 		var hidden = $('[data-sync=setting-check-hidden]'),
@@ -99,6 +96,7 @@ class CheckboxesInoputs{
 		});
 	}
 }
+
 
 
 var burgerEff = new BurgerEff;
