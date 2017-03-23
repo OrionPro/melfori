@@ -7,9 +7,9 @@ class IndexPageAnimation{
 
 
 		if(getCookie('loader')){
-			this.headerTime = '+=2';
+			this.headerTime = '+=1';
 		}else{
-			this.headerTime = '+=5';
+			this.headerTime = '+=3';
 		}
 
 		//time line статический
@@ -43,7 +43,9 @@ class IndexPageAnimation{
 		this.tl11.pause();
 
 		//инициализация настроек time line
-		this.description();
+
+
+		this.start = this.start;
 	}
 
 	description(){
@@ -232,6 +234,8 @@ class IndexPageAnimation{
 	}
 
 	start(){
+
+		
 		if (activeSection('section-1')) {
 			this.tl1.resume();
 		}

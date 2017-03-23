@@ -4,26 +4,49 @@ import {activePages} from './helper/helper.js';
 
 // подключение анимаций для страниц
 import IndexPageAnimation  from './model-animation/index-pages.js';
+import AboutUsAnimation  from './model-animation/about-us-pages.js';
+import ContextualAnimation  from './model-animation/contextual-pages.js';
 
 // Запуск необходимой анимации
 class Animation {
 	constructor(){
 		this.IndexPageAnimation = new IndexPageAnimation();
+		this.AboutUsAnimation = new AboutUsAnimation();
+		this.ContextualAnimation = new ContextualAnimation();
+
+
+		// Инициализация настроек анимаций
+		if(activePages('main-pages')){
+			this.IndexPageAnimation.description();
+		}
+		if(activePages('about-us-pages')){
+			this.AboutUsAnimation.description();
+		}
+		if(activePages('contextual-pages')){
+			this.ContextualAnimation.description();
+		}
 	}
 	
 	play(){
-		
+		//	Запуск анимация
 		if(activePages('main-pages')){
-			this.IndexPageAnimation.start()
+			this.IndexPageAnimation.start();
+		}
+		if(activePages('about-us-pages')){
+			this.AboutUsAnimation.start();
+		}
+		if(activePages('contextual-pages')){
+			this.ContextualAnimation.start();
 		}
 	}
-
 }
 
 
 function hovers(){
-	TweenMax.set('.who_are_we_item_text',{scaleX:0});
-	TweenMax.set('.who_are_we_item_img img',{scaleX:1});
+
+
+	TweenMax.set('.who_are_we_item_text', {scaleX:0});
+	TweenMax.set('.who_are_we_item_img img', {scaleX:1});
 	$('.who_are_we_item').hover(function() {
 
 
