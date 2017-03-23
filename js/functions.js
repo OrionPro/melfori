@@ -490,6 +490,26 @@ $(document).ready(function() {
 	});
 
 });
+function getCookie(data) {
+	var cookieArr = document.cookie.split(';');
+	for(var i =0; i < cookieArr.length; i++){
+		if (cookieArr[i].indexOf(data) >= 0) {
+			return true;
+		}
+	}
+}
 
-$(".loader_inner").fadeOut();
-$(".loader").delay(400).fadeOut("slow");
+function setCookie(data){
+	document.cookie = data;
+}
+
+if(getCookie('loader')){
+	$(".loader_inner").fadeOut();
+	$(".loader").delay(400).fadeOut("slow");
+}else{
+	setCookie('loader');
+	setTimeout(function () {
+		$(".loader_inner").fadeOut();
+		$(".loader").delay(400).fadeOut("slow");
+	},3000)
+}

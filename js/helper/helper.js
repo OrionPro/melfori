@@ -1,10 +1,14 @@
 
 
-export function activeSection(section, start = 0){
-	var topPosition = $(section).offset().top - start,
-		bottomPosition = $(section).offset().top + $(section).height() + start;
-	if(($(window).scrollTop() >= topPosition) && ($(window).scrollTop() <= bottomPosition)){
-		return true;
+export function activeSection(section, startTop = 0, startBotton = 0){
+	
+	section = '.' + section;
+	if($(section).offset() !== undefined){
+		var topPosition = $(section).offset().top - startTop,
+			bottomPosition = $(section).offset().top + $(section).height() - startBotton;
+		if(($(window).scrollTop() >= topPosition) && ($(window).scrollTop() <= bottomPosition)){
+			return true;
+		}
 	}
 }
 
@@ -15,3 +19,19 @@ export function activePages(className) {
 		return false;
 	}
 }
+
+export function getCookie(data) {
+	var cookieArr = document.cookie.split(';');
+	for(var i =0; i < cookieArr.length; i++){
+		if (cookieArr[i].indexOf(data) >= 0) {
+			return true;
+		}
+	}
+
+}
+
+export function setCookie(data){
+	document.cookie = data;
+}
+
+
