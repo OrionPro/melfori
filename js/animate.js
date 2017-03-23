@@ -29,6 +29,8 @@ class Animation {
 	
 	play(){
 		//	Запуск анимация
+		console.log('obj')
+
 		if(activePages('main-pages')){
 			this.IndexPageAnimation.start();
 		}
