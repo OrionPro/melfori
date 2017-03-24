@@ -34,4 +34,14 @@ export function setCookie(data){
 	document.cookie = data;
 }
 
+export function rotationGear(elements, direction = 1){
+	var gearSmall = new TimelineMax();
+	gearSmall
+		.from(elements, 2,{
+			rotation: 360 * direction,
+			ease: Power0.easeNone
+		});
+	gearSmall.repeat(Infinity);
+}
+
 

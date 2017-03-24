@@ -94,6 +94,7 @@ if ( 'addEventListener' in document ) {
 	});
 })($);
 
+
 $(document).ready(function() {
    
 	var md = new MobileDetect(window.navigator.userAgent);
@@ -209,7 +210,7 @@ $(document).ready(function() {
 		var slcInput = $('#select'); // этот самый input с атрибутом name="services"
 		slcInput.val(slcVal); // заносим в переменную значение скрытого inputa, которое потом передастся в письмо (по атрибуту name="services")
 	});
-	
+
 	$("form:not('#form3')").submit(function() { // перехватываем все при событии отправки
 		var form = $(this); // запишем форму, чтобы потом не было проблем с this
 		var error = [];
@@ -217,6 +218,11 @@ $(document).ready(function() {
 
 			if ($(this).val() == '') { // если находим пустое
 				$(this).siblings('.modal_input_error').show("fade", 500);
+				$('.modal_form_input').animated('swing');
+				setTimeout(function () {
+					$('.modal_form_input').removeClass('swing');
+					$('.modal_form_input').removeClass('animated');
+				},500);
 				error.push(true); // ошибка
 			} else if ($(this).val() !== '') { // если находим не пустое
 				$(this).siblings('.modal_input_error').hide("fade", 500)
@@ -229,9 +235,15 @@ $(document).ready(function() {
 		});
 		form.find('.modal_form_phone').each(function() { // пробежим по каждому полю в форме
 			if ($(this).val() == '') { // если пустое
+				$('.modal_form_phone').animated('swing');
+				setTimeout(function () {
+					$('.modal_form_phone').removeClass('swing');
+					$('.modal_form_phone').removeClass('animated');
+				},500);
 				$(this).siblings().show("fade", 500);
 				error.push(true); // ошибка
 				if ($(this).siblings('.modal_input_error').hasClass('input_error_phone')) {
+
 					$(this).siblings('.modal_input_error').removeClass('input_error_phone').text("").prepend("Заполните поле<div class='modal_error_triangle'></div><div class='modal_error_chest_img'></div>");
 				}
 			} else {
@@ -248,9 +260,15 @@ $(document).ready(function() {
 		form.find('.modal_form_email').each(function() { // пробежим по каждому полю в форме
 			var pattern = /^(([a-zA-Z0-9]|[!#$%\*\/\?\|^\{\}`~&'\+=-_])+\.)*([a-zA-Z0-9\-]|[!#$%\*\/\?\|^\{\}`~&'\+=-_])+@([a-zA-Z0-9-]+\.)+[a-zA-Z0-9-]+$/;
 			if ($(this).val() == '') { // если пустое
+				$('.modal_form_email').animated('swing');
+				setTimeout(function () {
+					$('.modal_form_email').removeClass('swing');
+					$('.modal_form_email').removeClass('animated');
+				},500);
 				$(this).siblings('.modal_input_error').show("fade", 500);
 				error.push(true); // ошибка
 				if ($(this).siblings('.modal_input_error').hasClass('input_error_email')) {
+
 					$(this).siblings('.modal_input_error').removeClass('input_error_email').text("").prepend("Заполните поле<div class='modal_error_triangle'></div><div class='modal_error_chest_img'></div>");
 				}
 

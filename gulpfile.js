@@ -75,6 +75,7 @@ gulp.task('libs', function() {
 		'app/libs/GreenSock-JS/TweenMax.min.js',
 		'app/libs/GreenSock-JS/DrawSVGPlugin.min.js',
 		'app/libs/animate/animate-css.js',
+		'app/libs/waypoints/waypoints.min.js',
 		'app/libs/slidebars/slidebars.min.js',
 		'app/libs/mobile-detect/mobile-detect.min.js',
 		'app/libs/inputmask/inputmask.js',

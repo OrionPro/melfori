@@ -29,8 +29,6 @@ class Animation {
 	
 	play(){
 		//	Запуск анимация
-		console.log('obj')
-
 		if(activePages('main-pages')){
 			this.IndexPageAnimation.start();
 		}
@@ -97,7 +95,7 @@ $(window).scroll(function () {
 $(window).ready(function() {
 	hovers();
 
-
+	
 	if (document.documentElement.clientWidth >= 1200) {
 		anim.play();
 	}

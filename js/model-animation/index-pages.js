@@ -234,7 +234,6 @@ class IndexPageAnimation{
 	}
 
 	start(){
-
 		
 		if (activeSection('section-1')) {
 			this.tl1.resume();
