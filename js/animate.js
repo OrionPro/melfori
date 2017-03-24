@@ -6,14 +6,16 @@ import {activePages} from './helper/helper.js';
 import IndexPageAnimation  from './model-animation/index-pages.js';
 import AboutUsAnimation  from './model-animation/about-us-pages.js';
 import ContextualAnimation  from './model-animation/contextual-pages.js';
+import DesignPagesAnimation  from './model-animation/design-pages.js';
 
 // Запуск необходимой анимации
 class Animation {
+	
 	constructor(){
 		this.IndexPageAnimation = new IndexPageAnimation();
 		this.AboutUsAnimation = new AboutUsAnimation();
 		this.ContextualAnimation = new ContextualAnimation();
-
+		this.DesignPagesAnimation = new DesignPagesAnimation();
 
 		// Инициализация настроек анимаций
 		if(activePages('main-pages')){
@@ -25,7 +27,11 @@ class Animation {
 		if(activePages('contextual-pages')){
 			this.ContextualAnimation.description();
 		}
+		if(activePages('design-pages')){
+			this.DesignPagesAnimation.description();
+		}
 	}
+	
 	
 	play(){
 		//	Запуск анимация
@@ -38,41 +44,37 @@ class Animation {
 		if(activePages('contextual-pages')){
 			this.ContextualAnimation.start();
 		}
+		if(activePages('design-pages')){
+			this.DesignPagesAnimation.start();
+		}
 	}
 }
 
-
 function hovers(){
-
-
+	
 	TweenMax.set('.who_are_we_item_text', {scaleX:0});
 	TweenMax.set('.who_are_we_item_img img', {scaleX:1});
 	$('.who_are_we_item').hover(function() {
-
-
+		
 		let image = $(this).find('.who_are_we_item_img img');
 		let text = $(this).find('.who_are_we_item_text');
-
+		
 		let inM =  new TimelineMax();
-
-
+		
 		inM.to(image, 0.3, {
 			scaleX: 0
 		});
 		inM.to(text, 0.3, {
 			scaleX: 1
 		},"-=0.1")
-
-
+		
 	}, function() {
-
-
+		
 		let image = $(this).find('.who_are_we_item_img img');
 		let text = $(this).find('.who_are_we_item_text');
-
+		
 		let outM =  new TimelineMax();
-
-
+		
 		outM.add('lable','+=0.20').to(text, 0.3, {
 			scaleX: 0
 		},"lable");
