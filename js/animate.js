@@ -17,7 +17,11 @@ class Animation {
 		this.ContextualAnimation = new ContextualAnimation();
 		this.DesignPagesAnimation = new DesignPagesAnimation();
 
-		// Инициализация настроек анимаций
+
+	}
+
+	inisialization(){
+// Инициализация настроек анимаций
 		if(activePages('main-pages')){
 			this.IndexPageAnimation.description();
 		}
@@ -31,8 +35,6 @@ class Animation {
 			this.DesignPagesAnimation.description();
 		}
 	}
-	
-	
 	play(){
 		//	Запуск анимация
 		if(activePages('main-pages')){
@@ -100,6 +102,7 @@ $(window).ready(function() {
 	
 	if (document.documentElement.clientWidth >= 1200) {
 		anim.play();
+		anim.inisialization();
 	}
 
 
