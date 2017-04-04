@@ -255,69 +255,69 @@ p
 		&:focus
 			@extend %main_btn2_focus
 			outline: 0
-	.select
-		position: relative
-		text-align: left
-		.drop
-			width: 100%	
-			max-height: 200px
-			overflow: auto
-			margin: 0 auto
-			padding: 0
+.select
+	position: relative
+	text-align: left
+	.drop
+		width: 100%
+		max-height: 200px
+		overflow: auto
+		margin: 0 auto
+		padding: 0
+		border-top: none
+		display: none
+		position: absolute
+		background-color: #F4F4F4
+		top: 50px
+		left: 0
+		right: 0
+		z-index: 10
+		li
+			list-style: none
+			border-bottom: none
 			border-top: none
-			display: none
-			position: absolute
-			background-color: #F4F4F4
-			top: 50px
-			left: 0
-			right: 0
-			z-index: 10
-			li
-				list-style: none
-				border-bottom: none
-				border-top: none
-				cursor: pointer
-				display: block
-				@include font($auxiliary_txt_color, 18px,  $font_SFUIDisplay-Bold, 1.2)
-				padding: 7px 15px 7px 25px
-				&:hover
-					background-color: rgba(0,0,0,0.2)							
-					outline: 0
-				a
-					text-decoration: none
-		.slct
-			width: 100%
-			height: 40px
-			padding-left: 25px
-			margin-bottom: 30px
+			cursor: pointer
 			display: block
-			@include font(#000, 18px,  $font_SFUIDisplay-Bold, 1.2)
-			background-color: #F4F4F4	
-			line-height: 40px
-			box-shadow: 0 1px 0 rgba(0,0,2,.28)	
-			overflow: hidden
-			white-space: nowrap
-			text-overflow: ellipsis
-			-o-text-overflow: ellipsis
-			text-decoration: none
+			@include font($auxiliary_txt_color, 18px,  $font_SFUIDisplay-Bold, 1.2)
+			padding: 7px 15px 7px 25px
+			&:hover
+				background-color: rgba(0,0,0,0.2)
+				outline: 0
+			a
+				text-decoration: none
+	.slct
+		width: 100%
+		height: 40px
+		padding-left: 25px
+		margin-bottom: 30px
+		display: block
+		@include font(#000, 18px,  $font_SFUIDisplay-Bold, 1.2)
+		background-color: #F4F4F4
+		line-height: 40px
+		box-shadow: 0 1px 0 rgba(0,0,2,.28)
+		overflow: hidden
+		white-space: nowrap
+		text-overflow: ellipsis
+		-o-text-overflow: ellipsis
+		text-decoration: none
+		position: relative
+		transition: color 1s
+		&.active
+			color: #000
+			background-color: #F4F4F4
+
+	.slct_arrow
+		position: absolute
+		top: 5px
+		right: 10px
+		.fa
+			font-size: 24px
+			color: #000
 			position: relative
-			transition: color 1s
-			&.active
-				color: #000
-				background-color: #F4F4F4
-				
-		.slct_arrow
-			position: absolute
-			top: 5px
-			right: 10px
-			.fa
-				font-size: 24px
-				color: #000
-				position: relative
-				z-index: 10
-				transition: 0.3s		
-			&.active .fa
-				transform: rotate(180deg)
+			z-index: 10
+			transition: 0.3s
+		&.active .fa
+			transform: rotate(180deg)
 .close
 	position: absolute
 	right: 0px
@@ -383,6 +383,9 @@ p
 	position: relative
 	background-color: #fff
 	//background: #fff url(../img/header_video.gif) center top no-repeat
+	&.blog-detalis-page
+		min-height: 0px
+		height: auto
 	.video-container
 		bottom: 0
 		right: 0
@@ -630,7 +633,6 @@ p
 		text-align: center
 	a
 		display: inline-block
-		vertical-align: super
 		font-size: 18px
 		color: $main_txt_color
 		&:hover
