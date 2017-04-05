@@ -803,6 +803,7 @@ nav[canvas]
 		margin-bottom: 35px
 	.why_effective_item
 		margin-bottom: 85px
+		min-height: 272px
 		p
 			margin-top: 12px
 			margin-bottom: 15px
@@ -3149,6 +3150,51 @@ nav[canvas]
 				&:focus
 					text-decoration: none
 		.content
+			.recomendation-article
+				h3
+					margin: 23px 0 16px
+				.item
+					display: block
+					font-size: 0
+					margin-bottom: 20px
+					color: $main_txt_color
+					&:hover
+						color: $main_txt_color
+						text-decoration: none
+						h4
+							color: $main_color
+					&:active
+						color: $main_txt_color
+						text-decoration: none
+					&:focus
+						color: $main_txt_color
+						text-decoration: none
+					
+				.img-wrap
+					width: 100px
+					display: inline-block
+					vertical-align: top
+					margin-right: 20px
+					img
+						width: 100%
+				.text
+					font-size: 18px
+					display: inline-block
+					vertical-align: top
+					width: 250px
+					p
+						font-size: 13px
+						line-height: 1.35
+					h4
+						transition: .3s
+						font-size: 19px
+						line-height: 0.9
+						margin: 0 0 5px
+			.widget
+				img
+					width: 100%
+			.widget-vk
+				margin-bottom: 30px
 			.link-for-article
 				background: url("../img/decor-cub1.jpg") no-repeat
 				padding: 5px
@@ -3279,7 +3325,7 @@ nav[canvas]
 					.fa
 						color: $main_color
 				.drop
-					background: transparent
+					background: #f8f8fa
 					display: none
 					border: 1px solid $main_color
 					border-radius: 10px
@@ -3288,12 +3334,16 @@ nav[canvas]
 						color: $main_color
 						font-size: 13px
 			.search-wrap
+				margin-bottom: 30px
 				position: relative
 				input[type=text]
+					background: transparent
 					width: 100%
 					border: 1px solid $main_color
 					height: 36px
 					border-radius: 10px
+					padding-left: 18px
+					font-size: 15px
 					&::-webkit-input-placeholder
 						color: $main_color
 					&:-moz-placeholder
@@ -3302,14 +3352,31 @@ nav[canvas]
 						color: $main_color
 					&:-ms-input-placeholder
 						color: $main_color
+					&:hover
+						text-decoration: none
+					&:active
+						outline: none
+						text-decoration: none
+					&:focus
+						outline: none
+						text-decoration: none
 				button
 					position: absolute
 					top: 0px
 					right: 0px
+					height: 36px
+					width: 70px
+					color: #fff
 					background: $main_color
 					border-radius: 10px
-					font-size: 24px
+					font-size: 20px
 					border: 0
+					transition: .3s
+					border: 1px solid transparent
+					&:hover
+						background: transparent
+						color: $main_color
+						border: 1px solid
 
 // Секия footer 
 .footer

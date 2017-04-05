@@ -15,7 +15,17 @@ class IndexPageAnimation{
 		//time line статический
 		this.tl1 = new TimelineMax();
 		this.tl2 = new TimelineMax();
+
 		this.tl3 = new TimelineMax();
+		this.tl31 = new TimelineMax();
+		this.tl32 = new TimelineMax();
+		this.tl33 = new TimelineMax();
+		this.tl34 = new TimelineMax();
+		this.tl35 = new TimelineMax();
+		this.tl36 = new TimelineMax();
+		this.tl37 = new TimelineMax();
+		this.tl38 = new TimelineMax();
+
 		this.tl4 = new TimelineMax();
 		this.tl5 = new TimelineMax();
 		this.tl6 = new TimelineMax();
@@ -32,7 +42,17 @@ class IndexPageAnimation{
 
 		this.tl1.pause();
 		this.tl2.pause();
+
 		this.tl3.pause();
+		this.tl31.pause();
+		this.tl32.pause();
+		this.tl33.pause();
+		this.tl34.pause();
+		this.tl35.pause();
+		this.tl36.pause();
+		this.tl37.pause();
+		this.tl38.pause();
+
 		this.tl4.pause();
 		this.tl5.pause();
 		this.tl6.pause();
@@ -113,7 +133,70 @@ class IndexPageAnimation{
 			},'-=1.5');
 
 		//section 3
-		this.tl3.add('section-3',"+=0.5")
+
+		this.tl31
+			.from("#g6204", 1, {
+				y: 10,
+				ease: Bounce.easeOut
+			})
+			.from("#g6046", 1, {
+				y: 10,
+				ease: Bounce.easeOut
+			},'-=0.8')
+			.from("#g6414", 1, {
+				x: 10,
+				ease: Bounce.easeOut
+			},'-=0.8')
+			.from("#g6182", 1, {
+				scale: 0,
+				ease: Bounce.easeOut
+			},'-=0.8')
+			.from("#g6472", 1, {
+				y: -10,
+				ease: Bounce.easeOut
+			},'-=0.8')
+			.from("#g6482", 1, {
+				scale: 0,
+				ease: Bounce.easeOut
+			},'-=0.8')
+			.from("#g6197", 1, {
+				x: 50,
+				ease: Bounce.easeOut
+			},'-=0.8')
+			.from("#g6189", 1, {
+				y: -10,
+				ease: Bounce.easeOut
+			},'-=0.8')
+			.from("#g6487", 1, {
+				y: -10,
+				ease: Bounce.easeOut
+			},'-=0.8');
+
+		this.tl32
+			.add('label')
+			.from("#g7872", 0.7, {
+				y: 200,
+				ease: Bounce.easeOut
+			})
+			.from("#g7937", 0.7, {
+				scaleY: 0,
+				ease: Bounce.easeOut
+			},'-=0.5')
+			.from("#path7415", 0.7, {
+				y: -50,
+				ease: Bounce.easeOut
+			},'-=0.5')
+			.from("#g8100", 0.7, {
+				y: 50,
+				ease: Bounce.easeOut
+			},'-=0.5')
+			.from("#rect7261", 0.7, {
+				y: 50,
+				ease: Bounce.easeOut
+			},'-=0.5')
+
+		this.tl3
+			.add('section-3',"+=0.5")
 			.from('.section-3 .title-wrap', 1,{
 			y: -30,
 			opacity: 0,
@@ -128,7 +211,24 @@ class IndexPageAnimation{
 			y: -30,
 			opacity: 0,
 			ease: Power3.easeOut
-		},0.01,'-=0.5');
+		},0.01,'-=0.5')
+			.from("#Layer_1", 1, {
+				scale: 0,
+				ease: Bounce.easeOut,
+				onComplete: ()=>{
+					this.tl31.play();
+				}
+			})
+			.from("#Layer_2", 1, {
+				scale: 0,
+				ease: Bounce.easeOut,
+				onComplete: ()=>{
+					this.tl32.play();
+				}
+			})
+
+
+
 
 
 		//section 4
@@ -243,6 +343,7 @@ class IndexPageAnimation{
 		}
 		if (activeSection('section-3' , 300, 400)) {
 			this.tl3.resume();
+
 		}
 		if (activeSection('section-4' , 500, 400)) {
 			this.tl4.resume();
