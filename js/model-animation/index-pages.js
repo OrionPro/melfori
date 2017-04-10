@@ -148,7 +148,7 @@ class IndexPageAnimation{
 				ease: Bounce.easeOut
 			},'-=0.8')
 			.from("#g6182", 1, {
-				scale: 0,
+				scaleX: 0,
 				ease: Bounce.easeOut
 			},'-=0.8')
 			.from("#g6472", 1, {
@@ -160,15 +160,15 @@ class IndexPageAnimation{
 				ease: Bounce.easeOut
 			},'-=0.8')
 			.from("#g6197", 1, {
-				x: 50,
+				y: -50,
 				ease: Bounce.easeOut
 			},'-=0.8')
 			.from("#g6189", 1, {
-				y: -10,
+				y: -100,
 				ease: Bounce.easeOut
 			},'-=0.8')
 			.from("#g6487", 1, {
-				y: -10,
+				y: -100,
 				ease: Bounce.easeOut
 			},'-=0.8');
 
@@ -181,19 +181,580 @@ class IndexPageAnimation{
 			.from("#g7937", 0.7, {
 				scaleY: 0,
 				ease: Bounce.easeOut
+			},'-=2')
+			.from("#path7405", 0.7, {
+				x: -400,
+				ease: Bounce.easeOut
+			},'-=0.5')
+			.from("#rect7407", 0.7, {
+				scaleY: 0,
+				ease: Bounce.easeOut
 			},'-=0.5')
 			.from("#path7415", 0.7, {
-				y: -50,
+				scaleX: 0,
 				ease: Bounce.easeOut
 			},'-=0.5')
 			.from("#g8100", 0.7, {
-				y: 50,
+				scaleY: 0,
 				ease: Bounce.easeOut
 			},'-=0.5')
-			.from("#rect7261", 0.7, {
-				y: 50,
+			.from("#g7423", 0.7, {
+				opacity: 0,
+				ease: Power3.easeOut
+			},'-=0.5')
+			.from("#path7403", 0.7, {
+				scaleY: 0,
+				ease: Power3.easeOut
+			},'-=0.5')
+			.from("#polygon7413", 0.7, {
+				y: 150,
+				opacity: 0,
+				ease: Power3.easeOut
+			},'-=0.5')
+			.from("#polygon7409", 0.7, {
+				y: 150,
+				opacity: 0,
+				ease: Power3.easeOut
+			},'-=1')
+			.from("#g8092", 0.7, {
+				y: -300,
 				ease: Bounce.easeOut
 			},'-=0.5')
+			.from("#g7937", 0.7, {
+				scaleY: 0,
+				ease: Bounce.easeOut
+			},'-=0.5')
+			.from("#g8019", 0.7, {
+				x: 150,
+				ease: Bounce.easeOut
+			},'-=0.5')
+			.from("#path7419", 0.7, {
+				scaleY: 0,
+				ease: Bounce.easeOut
+			},'-=0.5')
+			.from("#path7411", 0.7, {
+				scaleY: 0,
+				ease: Bounce.easeOut
+			},'-=0.5')
+			.from("#path7421", 0.7, {
+				scaleY: 0,
+				ease: Bounce.easeOut
+			},'-=0.5');
+
+		this.tl33
+			.add('label3')
+			.from("#g5163", 0.7, {
+				opacity: 0,
+				ease: Power3.easeOut
+			})
+			.from("#g5029", 0.7, {
+				y: -150,
+				ease: Bounce.easeOut
+			},'-=0.5')
+			.from("#path4437", 0.7, {
+				x: -150,
+				ease: Bounce.easeOut
+			},'-=0.5')
+			.from("#rect4439", 0.7, {
+				scaleY: 0,
+				ease: Bounce.easeOut
+			},'-=0.5')
+			.from("#g5054asad", 0.7, {
+				scaleY: 0,
+				ease: Bounce.easeOut
+			},'-=0.5')
+			.from("#polygon4503", 0.7, {
+				opacity: 0,
+				y: 10,
+				ease: Power3.easeOut
+			},'-=0.5')
+			.from("#rect4507", 0.7, {
+				opacity: 0,
+				y: 10,
+				ease: Power3.easeOut
+			},'-=1')
+			.from("#polygon4619", 0.7, {
+				opacity: 0,
+				y: 10,
+				ease: Power3.easeOut
+			},'-=1')
+			.from("#polygon4621", 0.7, {
+				opacity: 0,
+				y: 10,
+				ease: Power3.easeOut
+			},'-=1')
+			.from("#path4435", 0.7, {
+				opacity: 0,
+				y: -10,
+				ease: Power3.easeOut
+			},'-=1')
+			.from("#polygon4429", 0.7, {
+				opacity: 0,
+				x: -10,
+				ease: Power3.easeOut
+			},'-=1')
+			.from("#g4431", 0.7, {
+				opacity: 0,
+				y: -10,
+				ease: Power3.easeOut
+			},'-=1')
+			.from("#path4613", 0.7, {
+				opacity: 0,
+				y: -10,
+				ease: Power3.easeOut
+			},'-=1')
+			.from("#polygon4615", 0.7, {
+				opacity: 0,
+				y: -10,
+				ease: Power3.easeOut
+			},'-=1')
+			.staggerFrom("#g5054asad rect", 0.7, {
+				opacity: 0,
+				y: -10,
+				ease: Power3.easeOut
+			},0.1,'-=1')
+
+			.from("#g5109", 0.7, {
+				x: 150,
+				ease: Bounce.easeOut
+			},'-=1')
+			.from("#path4629", 0.7, {
+				x: 150,
+				ease: Bounce.easeOut
+			},'-=1')
+			.from("#path4611", 0.7, {
+				opacity: 0,
+				ease: Power3.easeOut
+			},'-=0.1')
+			.from("#circle4505", 0.7, {
+				opacity: 0,
+				y: 10,
+				ease: Power3.easeOut
+			},'-=1')
+			.from("#rect4487", 0.7, {
+				opacity: 0,
+				y: 10,
+				ease: Power3.easeOut
+			},'-=1')
+			.from("#rect4491", 0.7, {
+				opacity: 0,
+				y: 10,
+				ease: Power3.easeOut
+			},'-=1')
+			.from("#rect4489", 0.7, {
+				opacity: 0,
+				y: 10,
+				ease: Power3.easeOut
+			},'-=1')
+			.from("#path4509", 0.7, {
+				opacity: 0,
+				y: 10,
+				ease: Power3.easeOut
+			},'-=1')
+			.from("#rect4485", 0.7, {
+				opacity: 0,
+				y: 10,
+				ease: Power3.easeOut
+			},'-=1')
+			.staggerFrom("#g5015 path", 0.7, {
+				opacity: 0,
+				y: 10,
+				ease: Power3.easeOut
+			},'-=1')
+			.from("#g4999", 0.7, {
+				x: -100,
+				ease: Bounce.easeOut
+			},'-=1')
+			.from("#g5011", 0.7, {
+				scaleX: 0,
+				ease: Bounce.easeOut
+			},'-=1')
+			.from("#g5096", 0.7, {
+				opacity: 0,
+				y: 50,
+				ease: Power3.easeOut
+			},'-=1')
+			.from("#path4617", 0.7, {
+				opacity: 0,
+				y: 50,
+				ease: Power3.easeOut
+			},'-=1')
+			.from("#g5144", 0.7, {
+				y: 150,
+				ease: Bounce.easeOut
+			},'-=1');
+
+		
+		
+		this.tl34
+			.add('label4')
+			.from("#g6523", 0.7, {
+				y: -150,
+				ease: Bounce.easeOut
+			})
+			.from("#g6536", 0.7, {
+				x: -450,
+				ease: Bounce.easeOut
+			},'-=0.5')
+			.from("#g7104", 0.7, {
+				scaleX: 0,
+				ease: Bounce.easeOut
+			},'-=0.5')
+			.from("#g7133", 0.7, {
+				scaleY: 0,
+				ease: Bounce.easeOut
+			},'-=0.5')
+			.from("#path5649", 0.7, {
+				scaleY: 0,
+				ease: Bounce.easeOut
+			},'-=0.5')
+			.from("#g7156", 0.7, {
+				y: -250,
+				ease: Bounce.easeOut
+			},'-=0.5')
+			.from("#path5661", 0.7, {
+				y: -250,
+				ease: Bounce.easeOut
+			},'-=0.5')
+			.from("#path5663", 0.7, {
+				y: -250,
+				ease: Bounce.easeOut
+			},'-=0.5')
+			.from("#path5665", 0.7, {
+				y: -250,
+				ease: Bounce.easeOut
+			},'-=0.5')
+			.staggerFrom("#g7133 g", 0.7, {
+				scaleY: 0,
+				ease: Bounce.easeOut
+			},0.1,'-=1.5')
+			.staggerFrom("#g7133 rect", 0.7, {
+				scaleY: 0,
+				ease: Bounce.easeOut
+			},0.1,'-=1.5')
+			.staggerFrom("#g7190 g", 0.7, {
+				y: 100,
+				ease: Bounce.easeOut
+			},0.1,'-=1.5')
+			.staggerFrom("#g7056 path", 0.7, {
+				x: 250,
+				ease: Bounce.easeOut
+			},0.1,'-=1.5')
+			.staggerFrom("#g7056 g", 0.7, {
+				x: 7,
+				ease: Bounce.easeOut
+			},0.1,'-=1.5')
+			.staggerFrom("#g7056 rect", 0.7, {
+				x: 200,
+				ease: Bounce.easeOut
+			},0.1,'-=1.5')
+			.from("#g7116", 1.5, {
+				y: -350,
+				rotation: 180,
+				ease: Bounce.easeOut
+			},0.1,'-=0.5')
+			.from("#g7005", 1.5, {
+				y: 150,
+				ease: Bounce.easeOut
+			},0.1,'-=0.5')
+			.staggerFrom("#g7005 g", 1.5, {
+				y: 10,
+				ease: Bounce.easeOut
+			},0.1,'-=1.5');
+
+
+		this.tl35
+			.add('label5')
+			.staggerFrom("#g8094 g", 0.7, {
+				y: -150,
+				ease: Bounce.easeOut
+			},0.1)
+			.staggerFrom("#g8094 path", 0.7, {
+				y: -150,
+				ease: Bounce.easeOut
+			},0.1,'-=1')
+			.staggerFrom("#g8094 rect", 0.7, {
+				y: -150,
+				ease: Bounce.easeOut
+			},0.1,'-=1')
+			.staggerFrom("#g8219 g", 0.7, {
+				y: -200,
+				ease: Bounce.easeOut
+			},0.1,'-=1.5')
+			.staggerFrom("#g8219 rect", 0.7, {
+				y: -200,
+				ease: Bounce.easeOut
+			},0.1,'-=1.5')
+			.staggerFrom("#g8219 path", 0.7, {
+				y: -200,
+				ease: Bounce.easeOut
+			},0.1,'-=1.5')
+			.staggerFrom("#g8219 circle", 0.7, {
+				y: -300,
+				ease: Bounce.easeOut
+			},0.1,'-=2')
+			.staggerFrom("#g8243 rect", 1, {
+				y: 350,
+				ease: Bounce.easeOut
+			},0.1,'-=2')
+			.staggerFrom("#g8243 g", 1, {
+				y: 370,
+				ease: Bounce.easeOut
+			},0.1,'-=2')
+			.staggerFrom("#g8243 path", 1, {
+				y: 370,
+				ease: Bounce.easeOut
+			},0.1,'-=2')
+			.staggerFrom("#g8243 polygon", 1, {
+				y: 270,
+				ease: Bounce.easeOut
+			},0.1,'-=2')
+			.staggerFrom("#g8184 path", 1, {
+				x: -150,
+				ease: Bounce.easeOut
+			},0.1,'-=2.5')
+			.staggerFrom("#g8184 rect", 1, {
+				x: -150,
+				ease: Bounce.easeOut
+			},0.1,'-=2.5')
+			.staggerFrom("#g8184 g", 1, {
+				x: -150,
+				ease: Bounce.easeOut
+			},0.1,'-=2.5')
+			.staggerFrom("#g8210 path", 1, {
+				x: 150,
+				ease: Bounce.easeOut
+			},0.1,'-=3')
+			.staggerFrom("#g8210 rect", 1, {
+				x: 150,
+				ease: Bounce.easeOut
+			},0.1,'-=3')
+			.staggerFrom("#g8137 rect", 1, {
+				x: 250,
+				ease: Bounce.easeOut
+			},0.1,'-=3')
+			.staggerFrom("#g8137 path", 1, {
+				scaleX: 0,
+				ease: Bounce.easeOut
+			},0.1,'-=3')
+			.staggerFrom("#g8137 circle", 1, {
+				y: 250,
+				ease: Bounce.easeOut
+			},0.1,'-=3')
+			.staggerFrom("#g8125 rect", 1, {
+				x: 500,
+				ease: Bounce.easeOut
+			},0.1,'-=2')
+			.staggerFrom("#g8125 polygon", 1, {
+				x: -500,
+				ease: Bounce.easeOut
+			},0.1,'-=2')
+			.staggerFrom("#g8125 path", 1, {
+				x: 200,
+				ease: Bounce.easeOut
+			},0.1,'-=2')
+			.staggerFrom("#g8162", 1, {
+				y: 350,
+				ease: Bounce.easeOut
+			},0.1,'-=2.5')
+			.staggerFrom("#g7675 path", 1, {
+				y: 350,
+				ease: Bounce.easeOut
+			},0.1,'-=2.5')
+			.staggerFrom("#g7675 g", 1, {
+				y: 350,
+				ease: Bounce.easeOut
+			},0.1,'-=2.5')
+
+
+		this.tl36
+			.add('label6')
+			.staggerFrom("#g9659", 0.7, {
+				scaleY: 0,
+				ease: Bounce.easeOut
+			},0.1)
+			.staggerFrom("#polygon8714", 0.7, {
+				scaleY: 0,
+				ease: Bounce.easeOut
+			},0.1)
+			.staggerFrom("#g9659 path", 0.7, {
+				scaleY: 0,
+				ease: Bounce.easeOut
+			},0.1)
+			.staggerFrom("#g9659 rect", 0.7, {
+				scaleY: 0,
+				ease: Bounce.easeOut
+			},0.1,'-=0.5')
+			.staggerFrom("#g9659 polygon", 0.7, {
+				y: 100,
+				ease: Bounce.easeOut
+			},0.1,'-=0.5')
+			.from("#g9667", 1.5, {
+				x: -520,
+				ease: Elastic.easeOut.config(1, 0.3)
+			},'-=0.5')
+			.from("#g9732", 1.5, {
+				x: 520,
+				ease: Elastic.easeOut.config(1, 0.3)
+			},'-=1.5')
+			.staggerFrom("#g9172 rect", 0.7, {
+				y: -400,
+				ease: Bounce.easeOut
+			},0.01,'-=2')
+			.staggerFrom("#g9172 polygon", 0.7, {
+				y: -400,
+				ease: Bounce.easeOut
+			},0.01,'-=2.5');
+
+
+		this.tl37
+			.add('label7')
+			.staggerFrom("#g10693 path", 0.7, {
+				y: -150,
+				ease: Bounce.easeOut
+			},0.1)
+			.staggerFrom("#g10659 path", 1, {
+				y: -150,
+				ease: Bounce.easeOut
+			},0.1,'-=0.5')
+			.staggerFrom("#g10659 rect", 1, {
+				y: -150,
+				ease: Bounce.easeOut
+			},0.1,'-=0.5')
+			.staggerFrom("#g10659 polygon", 1, {
+				y: -150,
+				ease: Bounce.easeOut
+			},0.1,'-=0.5')
+			.from("#g10789", 1, {
+				y: -250,
+				ease: Bounce.easeOut
+			},'-=1')
+			.staggerFrom("#g11072 path", 1, {
+				x: -350,
+				ease: Bounce.easeOut
+			},0.1,'-=3')
+			.staggerFrom("#g10891 polygon", 1, {
+				y: -350,
+				ease: Bounce.easeOut
+			},0.1,'-=3')
+			.staggerFrom("#g11072 rect", 1, {
+				x: -350,
+				ease: Bounce.easeOut
+			},0.1,'-=3')
+			.staggerFrom("#g11072 polygon", 1, {
+				x: -350,
+				ease: Bounce.easeOut
+			},0.1,'-=3')
+			.staggerFrom("#g10807 polygon", 1, {
+				x: 500,
+				ease: Bounce.easeOut
+			},0.1,'-=3')
+			.staggerFrom("#g10807 rect", 1, {
+				x: 500,
+				ease: Bounce.easeOut
+			},0.1,'-=3')
+			.staggerFrom("#g10807 path", 1, {
+				x: 500,
+				ease: Bounce.easeOut
+			},0.1,'-=3')
+			.staggerFrom("#g10795 path", 1, {
+				scaleY: 0,
+				ease: Bounce.easeOut
+			},0.1,'-=3')
+			.staggerFrom("#g10795 rect", 1, {
+				scaleY: 0,
+				ease: Bounce.easeOut
+			},0.1,'-=3')
+			.staggerFrom("#g10819 rect", 1, {
+				scaleY: 0,
+				ease: Bounce.easeOut
+			},0.05,'-=3')
+			.staggerFrom("#g10819 path", 1, {
+				scaleY: 0,
+				ease: Bounce.easeOut
+			},0.05,'-=3')
+			.staggerFrom("#g10819 polygon", 1, {
+				scaleY: 0,
+				ease: Bounce.easeOut
+			},0.05,'-=3')
+			.staggerFrom("#path10380", 1, {
+				scaleY: 0,
+				ease: Bounce.easeOut
+			},'-=3')
+
+
+		this.tl38
+			.add('label8')
+			.from("#g12549", 1, {
+				x: 450,
+				ease: Bounce.easeOut
+			})
+			.staggerFrom("#g12652 polygon",1, {
+				y: -250,
+				ease: Bounce.easeOut
+			},0.1,'-=0.5')
+			.staggerFrom("#g12652 rect", 1, {
+				x: -250,
+				ease: Bounce.easeOut
+			},0.1,'-=0.5')
+			.staggerFrom("#g12652 path", 1, {
+				y: 250,
+				ease: Bounce.easeOut
+			},0.1,'-=1')
+			.staggerFrom("#g12735 rect", 2, {
+				y: 550,
+				ease: Bounce.easeOut
+			},0.1,'-=1.5')
+			.staggerFrom("#g12735 circle", 2, {
+				y: 550,
+				ease: Bounce.easeOut
+			},0.1,'-=1.5')
+			.staggerFrom("#g12672 rect", 1, {
+				x: -250,
+				ease: Elastic.easeOut.config(1, 0.3)
+			},0.1,'-=1.5')
+			.staggerFrom("#g12672 path", 1, {
+				x: -250,
+				ease: Elastic.easeOut.config(1, 0.3)
+			},0.1,'-=1.5')
+			.staggerFrom("#g12515 rect", 1, {
+				scaleY: 0,
+				ease: Elastic.easeOut.config(1, 0.3)
+			},0.1,'-=1.5')
+			.staggerFrom("#g12515 path", 1, {
+				scaleX: 0,
+				ease: Elastic.easeOut.config(1, 0.3)
+			},0.1,'-=1.5')
+			.staggerFrom("#g12689 path", 1, {
+				scaleX: 0,
+				ease: Elastic.easeOut.config(1, 0.3)
+			},0.1,'-=1.5')
+			.from("#g12685", 1, {
+				y: 200,
+				ease: Bounce.easeOut
+			},'-=1.5')
+			.from("#g11514", 1, {
+				y: -250,
+				ease: Bounce.easeOut
+			},'-=1.5')
+			.from("#g12529", 1, {
+				rotation: 360,
+				opacity: 0,
+				ease: Bounce.easeOut
+			},'-=1.5')
+			.from("#g12707", 1, {
+				x: -250,
+				ease: Bounce.easeOut
+			},'-=1.5')
+			.from("#g12722", 1, {
+				x: -250,
+				ease: Bounce.easeOut
+			},'-=1.5')
+			.from("#path11586", 1, {
+				x: -350,
+				ease: Bounce.easeOut
+			},'-=1.5')
+
 
 		this.tl3
 			.add('section-3',"+=0.5")
@@ -218,14 +779,56 @@ class IndexPageAnimation{
 				onComplete: ()=>{
 					this.tl31.play();
 				}
-			})
+			},'-=1.5')
 			.from("#Layer_2", 1, {
 				scale: 0,
 				ease: Bounce.easeOut,
 				onComplete: ()=>{
 					this.tl32.play();
 				}
-			})
+			},'-=1.5')
+			.from("#Layer_3", 1, {
+				scale: 0,
+				ease: Bounce.easeOut,
+				onComplete: ()=>{
+					this.tl33.play();
+				}
+			},'-=1.5')
+			.from("#Layer_4", 1, {
+				scale: 0,
+				ease: Bounce.easeOut,
+				onComplete: ()=>{
+					this.tl34.play();
+				}
+			},'-=1.5')
+			.from("#Layer_5", 1, {
+				scale: 0,
+				ease: Bounce.easeOut,
+				onComplete: ()=>{
+					this.tl35.play();
+				}
+			},'-=1.5')
+			.from("#Layer_6", 1, {
+				scale: 0,
+				ease: Bounce.easeOut,
+				onComplete: ()=>{
+					this.tl36.play();
+				}
+			},'-=1.5')
+			.from("#Layer_7", 1, {
+				scale: 0,
+				ease: Bounce.easeOut,
+				onComplete: ()=>{
+					this.tl37.play();
+				}
+			},'-=1.5')
+			.from("#Layer_8", 1, {
+				scale: 0,
+				ease: Bounce.easeOut,
+				onComplete: ()=>{
+					this.tl38.play();
+				}
+			},'-=1.5');
 
 
 
