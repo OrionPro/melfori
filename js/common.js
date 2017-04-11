@@ -185,6 +185,7 @@ $(document).ready(function () {
 	// отслеживаем изменение инпута file
 	$('#file').change(function(){
 		// Если файл прикрепили то заносим значение value в переменную
+		// Если файл прикрепили то заносим значение value в переменную
 		var fileResult = $(this).val();
 		// И дальше передаем значение в инпут который под загрузчиком
 		$(this).parent().find('.fileLoad').find('input').val(fileResult);

@@ -753,7 +753,7 @@ class IndexPageAnimation{
 			.from("#path11586", 1, {
 				x: -350,
 				ease: Bounce.easeOut
-			},'-=1.5')
+			},'-=1.5');
 
 
 		this.tl3
@@ -777,63 +777,86 @@ class IndexPageAnimation{
 				scale: 0,
 				ease: Bounce.easeOut,
 				onComplete: ()=>{
-					this.tl31.play();
+					$('#Layer_1').parent().siblings('a').hover((e)=>{
+						e.preventDefault();
+						this.tl31.play();
+					})
 				}
 			},'-=1.5')
 			.from("#Layer_2", 1, {
 				scale: 0,
 				ease: Bounce.easeOut,
 				onComplete: ()=>{
-					this.tl32.play();
+					$('#Layer_2').parent().siblings('a').hover((e)=>{
+						e.preventDefault();
+						this.tl32.play();
+					})
+
 				}
 			},'-=1.5')
 			.from("#Layer_3", 1, {
 				scale: 0,
 				ease: Bounce.easeOut,
 				onComplete: ()=>{
-					this.tl33.play();
+					$('#Layer_3').parent().siblings('a').hover((e)=>{
+						e.preventDefault();
+						this.tl33.play();
+					})
 				}
 			},'-=1.5')
 			.from("#Layer_4", 1, {
 				scale: 0,
 				ease: Bounce.easeOut,
 				onComplete: ()=>{
-					this.tl34.play();
+					$('#Layer_4').parent().siblings('a').hover((e)=>{
+						e.preventDefault();
+						this.tl34.play();
+					})
 				}
 			},'-=1.5')
 			.from("#Layer_5", 1, {
 				scale: 0,
 				ease: Bounce.easeOut,
 				onComplete: ()=>{
-					this.tl35.play();
+					$('#Layer_5').parent().siblings('a').hover((e)=>{
+						e.preventDefault();
+						this.tl35.play();
+					})
 				}
 			},'-=1.5')
 			.from("#Layer_6", 1, {
 				scale: 0,
 				ease: Bounce.easeOut,
 				onComplete: ()=>{
-					this.tl36.play();
+					$('#Layer_6').parent().siblings('a').hover((e)=>{
+						e.preventDefault();
+						this.tl36.play();
+					})
 				}
 			},'-=1.5')
 			.from("#Layer_7", 1, {
 				scale: 0,
 				ease: Bounce.easeOut,
 				onComplete: ()=>{
-					this.tl37.play();
+					$('#Layer_7').parent().siblings('a').hover((e)=>{
+						e.preventDefault();
+						this.tl37.play();
+					})
 				}
 			},'-=1.5')
 			.from("#Layer_8", 1, {
 				scale: 0,
 				ease: Bounce.easeOut,
 				onComplete: ()=>{
-					this.tl38.play();
+					$('#Layer_8').parent().siblings('a').hover((e)=>{
+						e.preventDefault();
+						this.tl38.play();
+					})
 				}
 			},'-=1.5');
 
 
-
-
-
+		
 		//section 4
 		this.tl4
 			.from('.section-4 .row', 1,{
