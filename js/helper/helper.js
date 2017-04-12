@@ -39,6 +39,7 @@ export function rotationGear(elements, direction = 1){
 	gearSmall
 		.from(elements, 2,{
 			rotation: 360 * direction,
+			force3D:false,
 			ease: Power0.easeNone
 		});
 	gearSmall.repeat(Infinity);

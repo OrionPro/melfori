@@ -1522,8 +1522,6 @@ nav[canvas]
 			margin-left: 15px
 		&:nth-of-type(2n+2)
 			margin-right: 0
-		&:hover .how_good_item_txt
-			opacity: 1
 		&:hover .how_good_item_mask
 			opacity: 1
 		a
@@ -1534,8 +1532,15 @@ nav[canvas]
 			right: 0
 			left: 0
 			z-index: 2
-			&:hover .how_good_item .how_good_item_txt
+			&:hover .how_good_item_mask
 				opacity: 1
+			.mask
+				top: 5px
+				left: 5px
+				width: calc(100% - 10px)
+				height: calc(100% - 10px)
+				position: absolute
+				background: rgba(255,255,255,0.7)
 	.how_good_item_img
 		width: 570px
 		height: 415px
@@ -1543,7 +1548,7 @@ nav[canvas]
 		background: url(../img/how_good_item_bg.jpg) center top no-repeat
 	.how_good_item_txt
 		position: absolute
-		opacity: 0
+		//opacity: 0
 		bottom: 40px
 		left: 40px
 		transition: 0.5s
@@ -1557,7 +1562,6 @@ nav[canvas]
 		top: 5px
 		right: 0
 		left: 5px
-		opacity: 0
 		transition: 0.5s
 		background-color: rgba(255, 255, 255, 0.7)
 	a
@@ -3384,10 +3388,28 @@ nav[canvas]
 	padding: 127px  0 100px 0
 	.select
 		.slct
+			padding-left: 18px
 			box-shadow: none
 			background: transparent
 			border: 1px solid $main_color
 			border-radius: 10px
+			color: $main_color
+			font-size: 15px
+			margin-bottom: 23px
+		.drop
+			border: 1px solid $main_color
+			border-radius: 10px
+			background: #fff
+			li
+				color: $main_color
+				padding-left: 18px
+				font-size: 15px
+		.slct_arrow
+			top: 9px
+			right: 21px
+			.fa
+				color: $main_color
+				font-size: 20px
 	.footer-logo
 		text-align: center
 		font-family: $font_SFUIDisplay-Regular
@@ -3397,8 +3419,87 @@ nav[canvas]
 		img
 			margin-bottom: 15px
 			width: 118px
+	.flag
+		vertical-align: inherit
+		margin-right: 9px
+		display: inline-block
+		&.ru
+			@include sprite($ru)
+	.social-link
+		text-align: center
+		.item
+			display: inline-block
+			vertical-align: top
+			margin: 0 16px
+			&:last-child
+				margin-right: 0px
+			&:first-child
+				margin-left: 0px
+		a
+			display: table
+			width: 40px
+			height: 40px
+			border: 1px solid $main_color
+			border-radius: 50%
+			text-align: center
+			background: $main_color
+			color: #fff
+			transition: .3s
+			&:hover
+				color: $main_color
+				background: transparent
+				text-decoration: none
+			&:active
+				text-decoration: none
+			&:focus
+				text-decoration: none
+			.fa
+				vertical-align: middle
+				display: table-cell
+	.contacts-container
+		br
+			display: block
+		ul
+			margin: 0px
+			padding: 0px
+			li
+				margin-bottom: 8px
+				font-size: 18px
+				list-style-type: none
+				a
+					color: $main_txt_color
+					transition: .3s
+					display: inline-block
+					position: relative
+					padding-left: 27px
+					&:hover
+						color: $main_color
+						text-decoration: none
+						.fa
+							color: $main_txt_color
+					&:active
+						text-decoration: none
+					&:focus
+						text-decoration: none
 
-
+		.fa
+			margin-right: 7px
+			font-size: 16px
+			position: absolute
+			top: 4px
+			left: 1px
+			color: $main_txt_color
+			&.email
+				font-size: 16px
+			&.phone
+				font-size: 26px
+			&.home
+				font-size: 18px
+		p
+			margin-bottom: 7px
+			margin-top: -10px
+			font-size: 24px
+			margin-left: -3px
 
 //ALWAYS END
 @import "media"

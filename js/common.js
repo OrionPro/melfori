@@ -101,14 +101,12 @@ class CheckboxesInoputs{
 
 var burgerEff = new BurgerEff;
 
-$(document).ready(function () {
 
+$(document).ready(function () {
 
 	//  Инициальзация маски в форме
 	burgerEff.description();
 	burgerEff.mobileMenuBg();
-
-
 
 	chechBoxes();
 	
