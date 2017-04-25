@@ -339,18 +339,26 @@ nav[canvas]
 			line-height: 1.1
 			margin: 0
 			margin-bottom: 23px
-		lable
+		label
 			margin-bottom: 4px
 			display: inline-block
 			font-size: 18px
-		button
+			font-weight: normal
+		.button
 			@extend %main_btn
 			width: 370px
+			display: block
+			line-height: 50px
+			padding: 0 5px
+			margin: auto
 			&:hover
 				@extend %main_btn_hover
+				text-decoration: none
 			&:active
+				text-decoration: none
 				@extend %main_btn_active
 			&:focus
+				text-decoration: none
 				@extend %main_btn_focus
 
 
@@ -653,8 +661,17 @@ nav[canvas]
 					@extend %main_btn
 					width: 370px
 					margin: 16px 12px 0 0
+					padding: 0 5px
+					text-align: center
+					line-height: 50px
 					&:hover
 						@extend %main_btn_hover
+						text-decoration: none
+					&:active
+						text-decoration: none
+					&:focus
+						text-decoration: none
+
 				.input-wrap
 					float: right
 					position: relative
