@@ -497,6 +497,7 @@
 						width: auto
 					.button
 						float: none
+						display: block
 		&.company-site
 			.content
 				ul
@@ -1251,7 +1252,7 @@
 			padding: 0 15px
 		.how_good_item
 			width: 100%
-			height: 100%
+
 		.how_good_item_img
 			width: 100%
 			height: auto
@@ -1549,7 +1550,7 @@
 					width: 95%
 	.langing-page-understanding
 		.more-content
-			button
+			.button
 				width: 95%
 
 	.header.langing-pages-header
@@ -1623,6 +1624,15 @@
 				width: 330px
 	.popup.pop4 .dm-modal
 		width: 100%
+@media only screen and (max-width: 740px) and (orientation: landscape)
+	.header
+		&.header_page_404
+			min-height: 450px
+			.page_404
+				.page_404_img
+					margin-bottom: 20px
+
+
 @media only screen and (max-width : 460px)
 	.blog-section
 		.blog-content-container
@@ -1640,6 +1650,15 @@
 						width: calc(100% - 10px)
 						br
 							display: none
+	.page_404
+		top: calc(50% - 130px)
+		.page_404_img
+			margin-bottom: 20px
+		p
+			line-height: 1.2
+			font-size: 18px
+		button
+			width: 90%
 @media only screen and (max-width : 400px)
 
 	.header
