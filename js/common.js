@@ -15,7 +15,7 @@ class BurgerEff {
 	}
 	mobileMenuBg(){
 		var menu = $('div[off-canvas]');
-		
+
 	}
 	description() {
 
@@ -53,7 +53,7 @@ function chechBoxes() {
 		checkbox.each(function () {
 			if($(this).hasClass('active')){
 				arrVal.push(' ' + $(this).parent('.check').siblings('.text').find('b').text() )
-					$('.setting-check-hidden').val(arrVal)
+				$('.setting-check-hidden').val(arrVal)
 			}
 		})
 	})
@@ -79,13 +79,13 @@ class CheckboxesInoputs{
 
 		$('[data-sync='+ value +']').click(function () {
 			var nowVal = hidden.val();
-			
+
 			if($(this).attr('type') === 'checkbox'){
 				var checkbox = $('[data-sync='+ value +'][type=checkbox]');
 
 				checkbox.each(function () {
 					if($(this).hasClass('active')){
-					
+
 						console.log(valueText)
 
 					}
@@ -103,13 +103,41 @@ var burgerEff = new BurgerEff;
 
 
 $(document).ready(function () {
+// подключение нового хедера vadjs
 
+	var service = document.querySelectorAll('.header_nav ul li'),
+		hoverDiv = document.querySelector('.hoverDivMenu'),
+		hoverTop = document.querySelector('.header_top'),
+		caret = document.querySelector('.caretup');
+	function hideHeaderService() {
+		hoverDiv.style.opacity = '0';
+		hoverTop.style.borderRadius = "";
+		hoverTop.style.boxShadow = "";
+		caret.style.transform = 'rotate(0deg)';
+		hoverTop.style.background = 'transparent';
+	}
+	service[1].onmouseover = function () {
+		hoverDiv.style.opacity = '1';
+		hoverTop.style.borderRadius = "0px 0px 10px 10px";
+		hoverTop.style.boxShadow = "0 0 10px 2px rgba(51, 55, 57, 0.08)";
+		hoverTop.style.background = '#fff';
+		caret.style.transform = 'rotate(180deg)';
+
+	}
+	for(var i = service.length;i--;){
+		if(i === 1) continue;
+		service[i].onmouseover = hideHeaderService;
+	}
+	document.querySelector(".section-1").onmouseover = function (e) {
+		if(e.clientY > 325)hideHeaderService()
+	}
+	hideHeaderService;
 	//  Инициальзация маски в форме
 	burgerEff.description();
 	burgerEff.mobileMenuBg();
 
 	chechBoxes();
-	
+
 	//  Стилизация скролла
 	$(".couple_of_words_txt").mCustomScrollbar({
 		theme: "my-theme"
@@ -161,8 +189,8 @@ $(document).ready(function () {
 
 	//  Активация слайдера
 	$(".owl-carousel").owlCarousel({
-	    loop: true,
-	    items: 1,
+		loop: true,
+		items: 1,
 		margin: 10
 	});
 
@@ -171,13 +199,13 @@ $(document).ready(function () {
 	owl.owlCarousel();
 	// Go to the next item
 	$('.customNextBtn').click(function() {
-	    owl.trigger('next.owl.carousel', [700]);
+		owl.trigger('next.owl.carousel', [700]);
 	});
 	// Go to the previous item
 	$('.customPrevBtn').click(function() {
-	    // With optional speed parameter
-	    // Parameters has to be in square bracket '[]'
-	    owl.trigger('prev.owl.carousel', [700]);
+		// With optional speed parameter
+		// Parameters has to be in square bracket '[]'
+		owl.trigger('prev.owl.carousel', [700]);
 	});
 
 	// отслеживаем изменение инпута file

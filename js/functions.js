@@ -57,7 +57,7 @@ if ( 'addEventListener' in document ) {
 	});
 
 	// Close Slidebar links
-	$('[off-canvas] a').on('click', function(event) {
+	$('[off-canvas] a:not("[off-canvas] a.slct")').on('click', function(event) {
 		event.preventDefault();
 		event.stopPropagation();
 
@@ -77,9 +77,9 @@ if ( 'addEventListener' in document ) {
 		$('[canvas]').addClass('js-close-any');
 	});
 	// Add close class to canvas container when Slidebar is opened
-		$( controller.events ).on( 'closing', function ( event ) {
-			$( '[canvas]' ).removeClass( 'js-close-any' );
-		} );
+	$( controller.events ).on( 'closing', function ( event ) {
+		$( '[canvas]' ).removeClass( 'js-close-any' );
+	} );
 	// Close any
 	$(document).on('click', '.js-close-any', function(event) {
 		if (controller.getActiveSlidebar()) {
@@ -96,13 +96,13 @@ if ( 'addEventListener' in document ) {
 
 
 $(document).ready(function() {
-   
+
 	var md = new MobileDetect(window.navigator.userAgent);
 
 	if (md.userAgent() == "Safari" && md.mobile() == "iPhone" || md.mobile() == "iPad" ) {
 		$("html,body").css("overflow", "hidden !important");
 	}
-   
+
 
 	// Select в модальном окне
 	$(document).click(function() {
@@ -129,15 +129,15 @@ $(document).ready(function() {
 			$('.drop').find('li').click(function() {
 
 				/* Заносим в переменную HTML код элемента
-				списка по которому кликнули */
+				 списка по которому кликнули */
 				var selectResult = $(this).html();
 
 				/* Находим наш скрытый инпут и передаем в него
-				значение из переменной selectResult */
+				 значение из переменной selectResult */
 				$(this).parent().parent().find('input').val(selectResult);
 
 				/* Передаем значение переменной selectResult в ссылку которая
-				открывает наш выпадающий список и удаляем активность */
+				 открывает наш выпадающий список и удаляем активность */
 				$(this).parent().parent().find(".slct").removeClass('active').html(selectResult);
 				$(".slct_arrow").removeClass('active');
 
@@ -155,6 +155,7 @@ $(document).ready(function() {
 		/* Предотвращаем обычное поведение ссылки при клике */
 		return false;
 	});
+
 	// Открываем модальное окно
 	$(".modal").click(function(e) {
 		e.preventDefault();
@@ -170,7 +171,7 @@ $(document).ready(function() {
 		}
 		if (window.matchMedia("(max-width: 992px)").matches){
 
-		   $("body").css({ "overflow": "hidden", "padding-right": "0px" });
+			$("body").css({ "overflow": "hidden", "padding-right": "0px" });
 		}
 	});
 	// overlay для закрытия
@@ -204,6 +205,7 @@ $(document).ready(function() {
 		event.stopPropagation();
 
 	});
+
 	//  Отправка форм
 	$('.dm-modal form .drop li').on('click', function() {
 		var slcVal = $(this).text();
@@ -306,7 +308,7 @@ $(document).ready(function() {
 				data: data, // данные для отправки
 				beforeSend: function(data) { // событие до отправки
 					form.find('input[type="submit"]').attr('disabled', 'disabled'); // например, отключим кнопку, чтобы не жали по 100 раз
-					
+
 
 				},
 				success: function(data) { // событие после удачного обращения к серверу и получения ответа
@@ -371,7 +373,7 @@ $(document).ready(function() {
 			$name = $("#form3").find('input[name=name]'),
 			$textarea = $("#form3").find('textarea');
 
-		
+
 		$.each(files, function(key, value) {
 			if (!this.name.match(/(.txt)|(.pdf)|(.docx)|(.doc)|(.xlsx)$/i)) {
 				alert("Неправильный формат тектового файла.");
@@ -499,7 +501,7 @@ $(document).ready(function() {
 							$('.popup2 .close').show();
 							$('.fileLoad input').val('Выберите файл');
 							files = undefined;
-					
+
 						}
 					);
 				}

@@ -28,11 +28,14 @@
 					.img-wrap
 						margin-right: 10px
 						width: 90px
+	.header_top
+		padding-left: 9px
+		padding-right: 9px
 	.header_modal
 		margin-top: 14px
-		margin-left: 19px
+		margin-left: 5px
 		button
-			width: 210px
+			width: 130px
 			font-size: 14px
 		a
 			font-size: 14px
@@ -65,13 +68,26 @@
 		ul
 			margin: 0
 			margin-top: 13px
-			padding-left: 20px
+			padding-left: 10px
 			li
+				margin-right: 5px
+				&:first-child
+					margin-left: 5px
 				&:last-child
 					a
 						margin-right: 0
 				a
-					margin-right: 20px
+					margin-right: 10px
+					font-size: 15px
+	.hoverDivMenu
+		ul
+			margin-left: 5px
+			&:first-child
+				margin-left: 0
+				padding-left: 0
+			li
+				font-size: 14px
+
 	.vacancies-developers
 		&.vacancies
 			.vacancies-item
@@ -148,11 +164,22 @@
 				background-size: contain
 				width: auto
 				display: inline-block
-				.main-img
-					height: 280px
-				.img-item
+				.imgHoverWrap
+					width: 730px
+					height: 100%
 					img
-						height: 138px
+						height: 100%
+
+				.imgHoverWrapSmall
+					width: 100%
+					height: 100%
+				img
+					max-width: 100%
+					height: auto
+					display: block
+					margin-bottom: 5px
+					&:last-child
+						margin-bottom: 0
 	//секция about-us-form
 	.unique_challenge
 		&.about-us-form
@@ -378,6 +405,31 @@
 			.item
 				margin-bottom: 50px
 
+
+
+.us-office-section
+	&.about-us-office
+		.img-container
+			.iconPlus
+				width: 50px
+				height: 50px
+			.img-item
+				display: inline-block
+				vertical-align: middle
+				.imgHoverWrapSmall
+					width: 195px
+					margin-bottom: 4px
+					margin-left: 4px
+				img
+					display: block
+					margin-bottom: 5px
+					&:last-child
+						margin-bottom: 0
+
+				.imgWrapper
+					float: left
+
+
 	.blog-detalis-content-section
 		.widget
 			text-align: center
@@ -461,6 +513,18 @@
 				display: inline-block
 			input[type=submit]
 				margin-bottom: 50px
+
+	.us-office-section
+		&.about-us-office
+			.img-container
+				.imgHoverWrap
+					display: block
+					width: 100%
+					margin-bottom: 4px
+				.img-item
+					display: none
+					.imgHoverWrapSmall
+						display: none
 
 
 	//секция about-us-form
@@ -865,18 +929,7 @@
 			.content
 				text-align: left
 	// секция about-us-office
-	.us-office-section
-		&.about-us-office
-			min-height: 680px
-			.img-container
-				background-size: contain
-				width: auto
-				display: inline-block
-				.main-img
-					height: 220px
-				.img-item
-					img
-						height: 107px
+
 
 	.our_advantages
 		&.langing-page-doing
@@ -963,7 +1016,7 @@
 						width: 56px
 						height: 55px
 						span
-								font-size: 30px
+							font-size: 30px
 		.context-prise-wrap
 			padding: 0 15px
 			h3
@@ -1077,7 +1130,7 @@
 		-o-animation: none !important
 		-ms-animation: none !important
 		animation: none !important
-	
+
 	.header_title
 		h1
 			font-size: 35px
@@ -1197,6 +1250,10 @@
 				& + p
 					font-size: 18px
 					padding: 0 15px
+	.header_modal
+		margin-left: 30%
+		.select
+			display: none
 	.vacancies-developers
 		.title-wrap
 			h2
@@ -1222,24 +1279,6 @@
 					width: 255px
 			.requirements
 				padding-left: 30px
-	.us-office-section
-		&.about-us-office
-			.img-container
-				.main-img
-					margin-right: 0
-					margin-bottom: 5px
-					height: 223px
-				.img-item
-					display: block
-					img
-						display: inline-block
-						height: 212px
-						vertical-align: text-top
-						margin-bottom: 0
-						margin-right: 5px
-						&:last-child
-							margin-right: 0
-
 
 	.why_effective
 		&.why_profitably
@@ -1497,8 +1536,6 @@
 	.us-office-section
 		&.about-us-office
 			.img-container
-				.main-img
-					height: 157px
 				.img-item
 					img
 						height: 148px
@@ -1591,19 +1628,19 @@
 				margin-bottom: 30px
 
 	.internet-shop-instruction
-			.content
-				ul
-					li
-						.button
-							width: 95%
-						.input-wrap
+		.content
+			ul
+				li
+					.button
+						width: 95%
+					.input-wrap
+						float: none
+						width: 95%
+						input[type=submit]
+							width: 100%
+					aside
+						&.center-text
 							float: none
-							width: 95%
-							input[type=submit]
-								width: 100%
-						aside
-							&.center-text
-								float: none
 	.unique_challenge
 		form
 			.modal_form_input_wrap
@@ -1650,6 +1687,12 @@
 						width: calc(100% - 10px)
 						br
 							display: none
+	.header_modal
+		margin-left: 0
+		a
+			font-size: 14px
+		button
+			width: 134px
 	.page_404
 		top: calc(50% - 130px)
 		.page_404_img
@@ -1702,16 +1745,12 @@
 
 	h2
 		font-size: 30px
-	.header_modal
-		button
-			width: 160px
+
 
 	//секция about-us-office
 	.us-office-section
 		&.about-us-office
 			.img-container
-				.main-img
-					height: 150px
 				.img-item
 					img
 						height: 142px
@@ -1740,29 +1779,29 @@
 				max-width: 100%
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
-	/**/
+/**/
 
 
 /*==========  Mobile First Method  ==========*/
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px)
-	/**/
-
+/**/
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px)
-	/**/
+/**/
+
 
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
-	/**/
+/**/
 
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
-	/**/
+/**/
 
 
 /* Large Devices, Wide Screens */
