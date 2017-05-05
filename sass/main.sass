@@ -1826,7 +1826,7 @@ nav[canvas]
 
 //секция us-office-section
 .us-office-section
-	min-height: 780px
+	padding-bottom: 50px
 	background-color: #fff
 	text-align: center
 	.title-wrap
@@ -1846,16 +1846,73 @@ nav[canvas]
 			width: 970px
 			margin: auto
 			font-size: 0
-			.main-img
-				margin-right: 5px
+			.imgHoverWrap
+				display: inline-block
+				float: left
+				width: 754px
+				position: relative
+				cursor: pointer
+				img
+					display: block
+					max-width: 100%
+				&:hover .imgHover
+					opacity: 1
+				&:hover .imgHover .wraperIconPlus
+					top: 50%
+					transform: translate(-50%, -50%)
+
+
 			.img-item
 				display: inline-block
 				vertical-align: middle
-				img
+				.imgHoverWrapSmall
 					display: block
+					width: 100%
+					position: relative
+					cursor: pointer
 					margin-bottom: 5px
+					&:last-of-type
+						margin-bottom: 0
+					&:hover .imgHover
+						opacity: 1
+					&:hover .imgHover .wraperIconPlus
+						top: 50%
+						transform: translate(-50%, -50%)
+				img
+					max-width: 100%
+					height: 100%
+					display: block
 					&:last-child
 						margin-bottom: 0
+
+				.imgWrapper
+					float: left
+
+		.imgHover
+			opacity: 0
+			width: 100%
+			height: 100%
+			background: rgba(52,52,52,0.6)
+			z-index: 99
+			position: absolute
+			top: 0
+			left: 0
+			margin: 0
+			transition: .5s ease
+			.wraperIconPlus
+				position: absolute
+				top: 0
+				left: 50%
+				transition: .5s ease
+			.iconPlus
+				background: url(../img/lupa.png) center top no-repeat
+				background-size: cover
+				width: 50px
+				height: 50px
+				display: block
+				transition: .5s ease
+				&:hover
+					transform: scale(1.5,1.5)
 //секция contacts-map-section
 .contacts-map-section
 	min-height: 580px

@@ -17,8 +17,8 @@ body
 	overflow-x: hidden
 	color: $main_txt_color
 	-webkit-tap-highlight-color: transparent
-	//внешний вид скроллбара
-	scrollbar-base-color: $main_color   //для IE
+	//внешний вид скроллбара 
+	scrollbar-base-color: $main_color   //для IE 
 	scrollbar-arrow-color: $main_color	//для IE
 	//внешний вид скроллбара для -webkit- остальное тут https://poselab.com/en/blog/custom-scrollbars-in-webkit/
 	//background: url(../Melfori.jpg) center top no-repeat
@@ -30,8 +30,8 @@ body
 			background-color: darken($main_color, 10%)
 	&::-webkit-scrollbar-track-piece
 		background-color: transparent
-//-webkit-font-smoothing: antialiased
-//-moz-osx-font-smoothing: grayscale
+	//-webkit-font-smoothing: antialiased
+	//-moz-osx-font-smoothing: grayscale
 
 h1
 	@include font($main_txt_color, 57px, $font_SFUIDisplay-Thin, 1.2)
@@ -86,12 +86,12 @@ p
 .popup
 	width: 100%
 	height: 100%
-	background: rgba(0, 0, 0, 0.65)
+	background: rgba(0, 0, 0, 0.65)	
 	position: fixed
 	top: 0
 	left: 0
 	display: none
-	overflow: auto
+	overflow: auto	
 	z-index: 1000
 	&.pop3
 		.dm-modal
@@ -153,7 +153,7 @@ p
 	height: 100%
 	position: fixed
 	top: 0
-	left: 0
+	left: 0	
 	z-index: 1001
 .dm-cell
 	display: table-cell
@@ -234,7 +234,7 @@ p
 		background-color: transparent
 		border-radius: 10px
 		transition: 1s
-		&:focus
+		&:focus		
 			outline: 0
 	.success_mail
 		display: none
@@ -371,8 +371,8 @@ p
 		height: 9px
 	.modal_error_triangle
 		top: -43px
-		left: 10px
-		height: 8px
+		left: 10px				
+		height: 8px			
 
 
 // Header
@@ -638,11 +638,11 @@ p
 					color: $main_color
 .caretup
 	transition: 0.5s ease
-.header_nav
+.header_nav		
 	display: inline-block
 	position: relative
 	ul
-		li
+		li		
 			list-style: none
 			display: inline-block
 			margin-right: 20px
@@ -715,88 +715,88 @@ p
 			@extend %main_btn_focus
 
 	.select
-		@extend %main_btn
-		float: right
-		box-sizing: border-box
-		width: 50px
-		text-align: center
-		line-height: 50px
-		margin-left: 10px
-		.slct
-			z-index: 9999
-			width: 100%
-			height: 100%
-			padding-left: 3px
-			margin-bottom: 0px
-			display: block
-			@include font(#000, 18px,  $font_SFUIDisplay-Bold, 1.2)
-			overflow: hidden
-			white-space: nowrap
-			text-overflow: ellipsis
-			-o-text-overflow: ellipsis
-			text-decoration: none
-			transition: color 1s
-			background: transparent
-			text-align: left
+			@extend %main_btn
+			float: right
+			box-sizing: border-box
+			width: 50px
+			text-align: center
 			line-height: 50px
-			border-bottom: none
-			box-shadow: none
-			color: #fff
-			font-weight: light;
-			font-size: 16px
-			&.active
-				color: #fff
-				background-color: transparent
-		.slct_arrow
-			position: absolute
-			top: -1px
-			right: 3px
-			cursor: pointer
-			.fa
-				font-size: 16px
-				color: #fff
-				transform-origin: 50% 50% 0px
-				transition: 0.5s
-			&.active
-				.fa
-					color: #fff
-					transform: rotate(180deg)
-
-		.drop
-			width: 100%
-			max-height: 200px
-			border-radius: 5px
-			overflow: auto
-			margin: 0 auto
-			padding: 0
-			border-top: none
-			display: none
-			position: absolute
-			background-color: $main_color
-			top: 50px
-			left: 0
-			right: 0
-			z-index: 10
-			li
-				list-style: none
-				border-bottom: none
-				border-top: none
-				cursor: pointer
+			margin-left: 10px
+			.slct
+				z-index: 9999
+				width: 100%
+				height: 100%
+				padding-left: 3px
+				margin-bottom: 0px
 				display: block
-				font-size: 10px
-				@include font($auxiliary_txt_color, 18px,  $font_SFUIDisplay-Bold, 1.2)
+				@include font(#000, 18px,  $font_SFUIDisplay-Bold, 1.2)
+				overflow: hidden
+				white-space: nowrap
+				text-overflow: ellipsis
+				-o-text-overflow: ellipsis
+				text-decoration: none
+				transition: color 1s
+				background: transparent
+				text-align: left
+				line-height: 50px
+				border-bottom: none
+				box-shadow: none
 				color: #fff
-				padding: 7px
-				border-radius: 3px 3px 0px 0px
-				transition: .5s, ease
-				&:last-child
-					border-radius: 0px 0px 3px 3px
-				&:hover
-					background-color: #fff
-					color: $main_color
-					outline: 0
-				a
-					text-decoration: none
+				font-weight: light;
+				font-size: 16px
+				&.active
+					color: #fff
+					background-color: transparent
+			.slct_arrow
+				position: absolute
+				top: -1px
+				right: 3px
+				cursor: pointer
+				.fa
+					font-size: 16px
+					color: #fff
+					transform-origin: 50% 50% 0px
+					transition: 0.5s
+				&.active
+					.fa
+						color: #fff
+						transform: rotate(180deg)
+
+			.drop
+				width: 100%
+				max-height: 200px
+				border-radius: 5px
+				overflow: auto
+				margin: 0 auto
+				padding: 0
+				border-top: none
+				display: none
+				position: absolute
+				background-color: $main_color
+				top: 50px
+				left: 0
+				right: 0
+				z-index: 10
+				li
+					list-style: none
+					border-bottom: none
+					border-top: none
+					cursor: pointer
+					display: block
+					font-size: 10px
+					@include font($auxiliary_txt_color, 18px,  $font_SFUIDisplay-Bold, 1.2)
+					color: #fff
+					padding: 7px
+					border-radius: 3px 3px 0px 0px
+					transition: .5s, ease
+					&:last-child
+						border-radius: 0px 0px 3px 3px
+					&:hover
+						background-color: #fff
+						color: $main_color
+						outline: 0
+					a
+						text-decoration: none
 
 
 
@@ -855,12 +855,12 @@ p
 	width: 50px
 	transition: .4s
 	margin-top: 6px
-	cursor: pointer
+	cursor: pointer	
 	position: relative
-	z-index: 1002
+	z-index: 1002	
 	pointer-events: all
 
-
+	
 //.nav-on .nav-line:first-child,
 //.nav-on .nav-line:last-child
 //	transition: 1s
@@ -868,27 +868,27 @@ p
 //	opacity: 0
 //	left: 50%
 //	top: 11px
-.nav-on
+.nav-on	
 	#nav-button-label
 		.nav-line
 			margin: 0
-//.nav-line
-//	&:nth-child(2)
-//		-webkit-transition: 1s
-//		-o-transition: 1s
-//		transition: 1s
-//		-webkit-transform: rotate(45deg)
-//		-ms-transform: rotate(45deg)
-//		-o-transform: rotate(45deg)
-//		transform: rotate(45deg)
-//	&:nth-child(3)
-//		-webkit-transition: 1s
-//		-o-transition: 1s
-//		transition: 1s
-//		-webkit-transform: rotate(-45deg)
-//		-ms-transform: rotate(-45deg)
-//		-o-transform: rotate(-45deg)
-//		transform: rotate(-45deg)
+	//.nav-line
+	//	&:nth-child(2)
+	//		-webkit-transition: 1s
+	//		-o-transition: 1s
+	//		transition: 1s
+	//		-webkit-transform: rotate(45deg)
+	//		-ms-transform: rotate(45deg)
+	//		-o-transform: rotate(45deg)
+	//		transform: rotate(45deg)
+	//	&:nth-child(3)
+	//		-webkit-transition: 1s
+	//		-o-transition: 1s
+	//		transition: 1s
+	//		-webkit-transform: rotate(-45deg)
+	//		-ms-transform: rotate(-45deg)
+	//		-o-transform: rotate(-45deg)
+	//		transform: rotate(-45deg)
 label
 	display: inline-block
 	max-width: 100%
@@ -924,7 +924,7 @@ label
 		top: 14px
 
 
-// Секция
-// Секция
+// Секция 
+// Секция 
 // Секция
 //
