@@ -116,34 +116,38 @@ var burgerEff = new BurgerEff;
 
 $(document).ready(function () {
 // подключение нового хедера vadjs
+  if(document.querySelector(".section-1") !== null) {
+	  var service = document.querySelectorAll('.header_nav ul li'),
+		  hoverDiv = document.querySelector('.hoverDivMenu'),
+		  hoverTop = document.querySelector('.header_top'),
+		  caret = document.querySelector('.caretup'),
+		  section = document.querySelector(".section-1");
 
-	var service = document.querySelectorAll('.header_nav ul li'),
-		hoverDiv = document.querySelector('.hoverDivMenu'),
-		hoverTop = document.querySelector('.header_top'),
-		caret = document.querySelector('.caretup');
-	function hideHeaderService() {
-		hoverDiv.style.opacity = '0';
-		hoverTop.style.borderRadius = "";
-		hoverTop.style.boxShadow = "";
-		caret.style.transform = 'rotate(0deg)';
-		hoverTop.style.background = 'transparent';
-	}
-	service[1].onmouseover = function () {
-		hoverDiv.style.opacity = '1';
-		hoverTop.style.borderRadius = "0px 0px 10px 10px";
-		hoverTop.style.boxShadow = "0 0 10px 2px rgba(51, 55, 57, 0.08)";
-		hoverTop.style.background = '#fff';
-		caret.style.transform = 'rotate(180deg)';
+	  function hideHeaderService() {
+		  hoverDiv.style.opacity = '0';
+		  hoverTop.style.borderRadius = "";
+		  hoverTop.style.boxShadow = "";
+		  caret.style.transform = 'rotate(0deg)';
+		  hoverTop.style.background = 'transparent';
+	  }
 
-	}
-	for(var i = service.length;i--;){
-		if(i === 1) continue;
-		service[i].onmouseover = hideHeaderService;
-	}
-	document.querySelector(".section-1").onmouseover = function (e) {
-		if(e.clientY > 325)hideHeaderService()
-	}
-	
+	  service[1].onmouseover = function () {
+		  hoverDiv.style.opacity = '1';
+		  hoverTop.style.borderRadius = "0px 0px 10px 10px";
+		  hoverTop.style.boxShadow = "0 0 10px 2px rgba(51, 55, 57, 0.08)";
+		  hoverTop.style.background = '#fff';
+		  caret.style.transform = 'rotate(180deg)';
+
+	  }
+	  for (var i = service.length; i--;) {
+		  if (i === 1) continue;
+		  service[i].onmouseover = hideHeaderService;
+	  }
+
+	  section.onmouseover = function (e) {
+		  if (e.clientY > 325)hideHeaderService()
+	  }
+  }
 
 	//подклбчение LIGHTGALLERY
 	function lightgallery(main, child){

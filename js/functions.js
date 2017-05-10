@@ -303,7 +303,7 @@ $(document).ready(function() {
 
 			$.ajax({ // инициализируем ajax запрос
 				type: 'POST', // отправляем в POST формате, можно GET
-				url: 'mail.php', // путь до обработчика, у нас он лежит в той же папке
+				url: '../../site/mail', // путь до обработчика, у нас он лежит в той же папке
 				dataType: 'json', // ответ ждем в json формате
 				data: data, // данные для отправки
 				beforeSend: function(data) { // событие до отправки
@@ -312,6 +312,53 @@ $(document).ready(function() {
 
 				},
 				success: function(data) { // событие после удачного обращения к серверу и получения ответа
+					//-----------------------------для страницы contextual---------------------------
+					if( form.find('input[name="form_type_download_contextual"]').val() == 'download') {
+						console.log(form.find('input[name="form_type_download"]').val());
+						$.getJSON("http://ip-api.com/json/?callback=?", function (data_country) {
+							if (data_country.country == "Ukraine") {
+								location.href = '/doc/Dogovor-kontekst.docx';
+							}
+							if (data_country.country == "Russia") {
+								location.href = '/doc/Dogovor-kontekst.docx';
+							}
+							else {
+								location.href = '/doc/Dogovor-kontekst.docx';
+							}
+						});
+					}
+//-----------------------------для страницы internetshops---------------------------
+					if( form.find('input[name="form_type_download_internetshops"]').val() == 'download') {
+						console.log(form.find('input[name="form_type_download"]').val());
+						$.getJSON("http://ip-api.com/json/?callback=?", function (data_country) {
+							if (data_country.country == "Ukraine") {
+								location.href = '/doc/Dogovor_na_razrabotku_veb-sayta.docx';
+							}
+							if (data_country.country == "Russia") {
+								location.href = '/doc/Dogovor_na_razrabotku_veb-sayta.docx';
+							}
+							else {
+								location.href = '/doc/Dogovor_na_razrabotku_veb-sayta.docx';
+							}
+						});
+					}
+
+
+					if( form.find('input[name="form_type_download"]').val() == 'download') {
+						console.log(form.find('input[name="form_type_download"]').val());
+						$.getJSON("http://ip-api.com/json/?callback=?", function (data_country) {
+							if (data_country.country == "Ukraine") {
+								location.href = '/img/file/Poryadok_raboty_frontend_razrabotchika.pdf';
+							}
+							if (data_country.country == "Russia") {
+								location.href = '/img/file/Poryadok_raboty_frontend_razrabotchika.pdf';
+							}
+							else {
+								location.href = '/img/file/Poryadok_raboty_frontend_razrabotchika.pdf';
+							}
+						});
+
+					}
 					if (data['error']) { // если обработчик вернул ошибку
 						alert(data['error']); // покажем её текст
 					} else { // если все прошло ок
@@ -475,7 +522,7 @@ $(document).ready(function() {
 		var size = error.length - 1;
 		if (erorr_finish > size) {
 			$.ajax({
-				url: 'mail.php',
+				url: '../../site/mail',
 				type: 'POST',
 				contentType: false,
 				processData: false,

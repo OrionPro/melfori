@@ -5,10 +5,11 @@
 // loads Libs SASS
 @import "app/libs/animate/animate.sass"
 @import "app/libs/owl.carousel/assets/owl.carousel.sass"
+@import "../app/libs/lightGallery/lightgallery"
 @import "../app/libs/FontAwesome/font-awesome.min"
 @import "../app/libs/slidebars/slidebars.min"
 @import "../app/libs/mCustomScrollbar/jquery.mCustomScrollbar.min"
-s
+
 
 *::-webkit-input-placeholder
 	color: #fff
@@ -1757,18 +1758,27 @@ nav[canvas]
 					width: calc(100% - 10px)
 					bottom: 200px
 					opacity: 0
-					background: rgba(255,255,255,0.7)
+					background: rgba(48,60,72, 0.9)
 					transition: .3s
+					text-align: center
+					padding: 20px
 					p
-						margin: 0px
 						font-size: 18px
-						color: $main_txt_color
-						position: absolute
-						bottom: 15px
 						font-weight: bold
-						left: 15px
-						opacity: 0
+						color: #fff
+						opacity: 1
 						transition: .3s
+						text-align: center
+						max-height: 60%
+						display: block
+					h4
+						color: #fff
+						margin: 120px 0 10px
+						font-size: 24px
+					h5
+						font-size: 25px
+						margin: 50px 0 10px
+						color: #fff
 				&:hover
 					.hover-eff
 						opacity: 1
@@ -1776,10 +1786,12 @@ nav[canvas]
 						height: calc(100% - 10px)
 						p
 							opacity: 1
+
 			.for-why
 				font-size: 18px
 				margin-top: 26px
 				margin-bottom: 46px
+				opacity: 0
 			.list-wrap
 				padding: 0
 				margin: 0px
@@ -3808,7 +3820,7 @@ nav[canvas]
 		.item
 			display: inline-block
 			vertical-align: top
-			margin: 0 16px
+			margin: 0 6px
 			&:last-child
 				margin-right: 0px
 			&:first-child
@@ -3859,6 +3871,12 @@ nav[canvas]
 						text-decoration: none
 					&:focus
 						text-decoration: none
+					&:last-of-type
+						span
+							display: block
+							& + span
+								position: relative
+								left: -20px
 
 		.fa
 			margin-right: 7px
