@@ -131,13 +131,37 @@ $(document).ready(function () {
 	document.querySelector(".section-1").onmouseover = function (e) {
 		if(e.clientY > 325)hideHeaderService()
 	}
-		hideHeaderService;
+	
+
+	//подклбчение LIGHTGALLERY
+	function lightgallery(main, child){
+		$(main).lightGallery({
+				selector: child,
+				zoom: true
+			}
+		)
+
+	}
+	lightgallery('#lightGallery', '.iconPlus');
+	lightgallery(".lightGallery", '.openLetter');
+	// lightgallery('.about-us-office',".iconPlus");
+	// $('.about-us-office').lightGallery({
+	// 		selector: '.iconPlus',
+	// 		zoom: true
+	// 	}
+	// );
+	//
+	// $('.img-container').lightGallery({
+	// 	selector: '.imgHover'
+	// 	zoom: true
+	// });
+
 	//  Инициальзация маски в форме
 	burgerEff.description();
 	burgerEff.mobileMenuBg();
 
 	chechBoxes();
-	
+
 	//  Стилизация скролла
 	$(".couple_of_words_txt").mCustomScrollbar({
 		theme: "my-theme"

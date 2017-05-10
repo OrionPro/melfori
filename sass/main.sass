@@ -8,7 +8,7 @@
 @import "../app/libs/FontAwesome/font-awesome.min"
 @import "../app/libs/slidebars/slidebars.min"
 @import "../app/libs/mCustomScrollbar/jquery.mCustomScrollbar.min"
-
+s
 
 *::-webkit-input-placeholder
 	color: #fff
@@ -3546,6 +3546,160 @@ nav[canvas]
 						background: transparent
 						color: $main_color
 						border: 1px solid
+.beginRevievs
+	background-color: #f8f8fa
+
+.reviews
+	padding: 120px
+	.moreReviews
+		@extend %main_btn
+		text-align: center
+		margin-left: 30%
+		outline: none
+		&:hover
+			@extend %main_btn_hover
+	
+	h1
+		text-align: center
+		color: #00ccff
+		font-size: 56px
+		font-weight: 100
+		margin-bottom: 37px
+	.insideApear
+		position: relative
+		margin-bottom:	40px
+		.companySide
+			position: absolute
+			top: 185px
+			left: -225px
+			transform: rotate(-90deg)
+			z-index: 99
+			width: 320px
+			text-align: center
+	.boss
+		margin-left: 142px
+	.position
+		margin-left: 53px
+	.reviewApear
+		border: 1px solid  #00ccff
+		background: #ffffff
+		padding: 20px
+		margin:	37px auto
+		position: relative
+		width: 1100px
+		height: 320px
+		.rewblock
+			display: inline-block
+			vertical-align: top
+		.imgApear
+			width: 270px
+			position: relative
+			.bluLinesPhoto
+				position: absolute
+				border: 1px dashed #00ccff
+				width: 100px
+				height: 100px
+				&:after
+					content: ""
+					position: absolute
+					width: 10px
+					height: 10px
+					border: 1px dashed #00ccff
+					border-radius: 50%
+					/* style */
+			img
+				float: left
+				max-width: 100%
+				display: block
+				margin-top: 23px
+
+		.appearText
+			width: 530px
+			color: #1d1d1f
+			overflow: hidden
+			p
+				font-size: 18px
+				font-weight: 300
+				font-family: "SFUIDisplay"
+				max-height:	80%
+				overflow: hidden
+				margin-bottom: 10px
+			i span
+				display: inline-block
+				vertical-align: bottom
+		.clientLetter
+			width: 250px
+			float: right
+			position: relative
+			.letter
+				width: 205px
+				height: 288px
+				position: absolute
+				top: -75px
+				left: 25px
+				border: 1px solid #00ccff
+				padding: 25px 15px
+				background: #fff
+				border-radius: 10px
+				z-index: 9
+				img
+					max-width: 100%
+			.shadowletter
+				width: 100%
+				height: 13px
+				border-radius: 50%
+				background: #f2f1f1
+				position: absolute
+				top: 207px
+			button
+				@extend %main_btn
+				margin-top: 230px
+				width: 100%
+				outline: none
+				&:hover
+					@extend %main_btn_hover
+	.topLine
+		top: -45px
+		left: 70px
+		border-right: none !important
+		border-bottom: none !important
+		&:after
+			content: ""
+			top: -5px
+			left: 100px
+	.middleLine
+		width: 72px !important
+		height: 1px !important
+		top: 120px !important
+		left: -50px
+		&:after
+			content: ""
+			left: -10px
+			top: -5px
+	.bottomLine
+		top: 225px
+		left: 70px
+		border-top: none !important
+		border-left: none !important
+		&:after
+			content: ""
+			top: 95px
+			left: -10px
+.webSiteCard
+		padding: 50px 0
+		h1
+			margin: 50px auto
+			text-align: center
+			font-size: 56px
+			color: #00ccff
+		p
+			font-size: 18px
+			&:last-of-type
+				margin-top: 30px
+
+
+
+
 // Скеция page_404
 .page_404
 	position: absolute
@@ -3564,7 +3718,7 @@ nav[canvas]
 	button
 		@extend %main_btn
 		width: 370px
-// Секия footer 
+// Секия footer
 .footer
 	background-color: #fff
 	padding: 127px  0 100px 0

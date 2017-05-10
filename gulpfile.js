@@ -84,6 +84,7 @@ gulp.task('libs', function() {
 		//'app/libs/owl.carousel/jquery.mousewheel.min.js',
 		'app/libs/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js',
 		'app/libs/matchMedia/matchMedia.js',
+		'app/libs/lightGallery/lightgallery.js',
 		'app/libs/matchMedia/matchMedia.addListener.js'
 		])
 		.pipe(concat('libs.js'))
