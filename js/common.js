@@ -38,7 +38,19 @@ class BurgerEff {
 	}
 }
 
+// TABS
+$(".tabs-items-wrap .tabs-item").on('click', function (event) {
+	//ссылки которые будут переключать табы
+	event.preventDefault();
 
+	$(".tabs-items-wrap .tabs-item").removeClass('active'); //убираем активные состояния у ссылок
+
+	$(this).addClass('active'); //Добавляем активное состояние у той что нажали
+
+	var data = $(this).data('tab'); //создаём переменную с датой
+	$('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
+	$('.tabs-wrap[data-tab=' + data + ']').addClass('active'); //если таб соответствует тому, какой data
+});
 
 function chechBoxes() {
 	var container = $('.checkbox-container .item'),
@@ -192,14 +204,14 @@ $(document).ready(function () {
 	// });
 
 	// скролл по ссылке с атрибутом href
-	// $(".header_nav a[href*='#']").on("click", function(e) {
-	//     e.preventDefault();
-	//     var anchor = $(this);
-	//     $('html, body').stop().animate({
-	//         scrollTop: $(anchor.attr('href')).offset().top
-	//     }, 500);
-	//     return false;
-	// });
+	$(".header_nav a[href*='#']").on("click", function(e) {
+	    e.preventDefault();
+	    var anchor = $(this);
+	    $('html, body').stop().animate({
+	        scrollTop: $(anchor.attr('href')).offset().top
+	    }, 500);
+	    return false;
+	});
 
 	// Скролл по классу .scroll_to и атрибуту data-scroll у кнопки к примеру (data-scroll="куда скроллим" в элементе куда скроллим ставим id потом впишем в куда скроллим)
 	$(".scroll_to").on("click", function (e) {
@@ -231,7 +243,10 @@ $(document).ready(function () {
 	    // Parameters has to be in square bracket '[]'
 	    owl.trigger('prev.owl.carousel', [700]);
 	});
-
+	$('.owl-carousel').lightGallery({
+		selector: '.carousel_main_img',
+		zoom: true
+	});
 	// отслеживаем изменение инпута file
 	$('#file').change(function(){
 		// Если файл прикрепили то заносим значение value в переменную
