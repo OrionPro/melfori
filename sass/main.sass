@@ -1139,7 +1139,6 @@ nav[canvas]
 			margin-top: 9px
 
 .langing-page-form-section
-	min-height: 560px
 	text-align: center
 	background-color: $main_color
 	h2
@@ -1150,6 +1149,30 @@ nav[canvas]
 			font-size: inherit
 	p
 		font-size: 18px
+	.center-block
+		float: none
+		overflow: hidden
+	.form_frame
+		border: 3px solid #fff
+		color: #fff
+		text-align: left
+		margin-bottom: 120px
+		h3
+			color: #fff
+			font: 36px $font_SFUIDisplay-Regular
+			margin-left: 50px
+			span
+				font-weight: bold
+		ul
+			margin: 0
+			padding: 50px 0 0 30px
+			list-style-type: none
+			li
+				font-size: 18px
+				i
+					font-size: 22px
+					padding-right: 15px
+					margin-left: -30px
 	.form-wrap
 		margin-bottom: 46px
 		aside
@@ -1253,20 +1276,30 @@ nav[canvas]
 			width: 460px
 			float: left
 			ul
-				margin: 0px
+				margin: 0
 				padding: 30px 0 0 50px
 				li
 					padding-left: 90px
 					list-style-type: none
 					position: relative
-					margin-bottom: 41px
+					margin-bottom: 35px
 					font-size: 18px
+					&:nth-of-type(4)
+						margin-bottom: 30px
+					&:nth-of-type(3)
+						margin-bottom: 40px
+					a
+						text-decoration: none
+						color: #1d1d1f
+						transition: 0.3s
+						&.active
+							color: $main_color
 					aside
 						display: inline-block
 					.arrow
 						position: absolute
 						left: -30px
-						top: 53px
+						top: 45px
 						height: 130%
 						width: 17px
 						border: 2px dashed #acb0bc
@@ -1318,18 +1351,22 @@ nav[canvas]
 		text-align: center
 		font-size: 18px
 		.video-item
-			display: inline-block
+			display: none
 			font-size: 0
-			background: url("../img/decor-cub1.jpg") no-repeat
+			//background: url("../img/decor-cub1.jpg") no-repeat
 			background-size: cover
 			padding: 5px
 			width: 100%
 			margin-bottom: 20px
+			&.active
+				display: inline-block
+				outline: none
+			img
+				width: 100%
 	.form-container
 		margin-bottom: 120px
 		h3
-			margin: 0px
-			margin-bottom: 28px
+			margin: 0 0 28px 0
 		#form
 			margin: 20px 0
 			& > div
@@ -1711,13 +1748,14 @@ nav[canvas]
 				background-size: contain
 				padding: 5px
 				position: relative
+				overflow: hidden
 				img
 					width: 100%
 				.hover-eff
 					position: absolute
-					height: calc(100% - 10px)
+					height: 0
 					width: calc(100% - 10px)
-					top: 5px
+					bottom: 200px
 					opacity: 0
 					background: rgba(255,255,255,0.7)
 					transition: .3s
@@ -1727,12 +1765,15 @@ nav[canvas]
 						color: $main_txt_color
 						position: absolute
 						bottom: 15px
+						font-weight: bold
 						left: 15px
 						opacity: 0
 						transition: .3s
 				&:hover
 					.hover-eff
 						opacity: 1
+						bottom: 5px
+						height: calc(100% - 10px)
 						p
 							opacity: 1
 			.for-why
@@ -1826,7 +1867,7 @@ nav[canvas]
 
 //секция us-office-section
 .us-office-section
-	min-height: 780px
+	padding-bottom: 50px
 	background-color: #fff
 	text-align: center
 	.title-wrap
@@ -1846,16 +1887,73 @@ nav[canvas]
 			width: 970px
 			margin: auto
 			font-size: 0
-			.main-img
-				margin-right: 5px
+			.imgHoverWrap
+				display: inline-block
+				float: left
+				width: 754px
+				position: relative
+				cursor: pointer
+				img
+					display: block
+					max-width: 100%
+				&:hover .imgHover
+					opacity: 1
+				&:hover .imgHover .wraperIconPlus
+					top: 50%
+					transform: translate(-50%, -50%)
+
+
 			.img-item
 				display: inline-block
 				vertical-align: middle
-				img
+				.imgHoverWrapSmall
 					display: block
+					width: 100%
+					position: relative
+					cursor: pointer
 					margin-bottom: 5px
+					&:last-of-type
+						margin-bottom: 0
+					&:hover .imgHover
+						opacity: 1
+					&:hover .imgHover .wraperIconPlus
+						top: 50%
+						transform: translate(-50%, -50%)
+				img
+					max-width: 100%
+					height: 100%
+					display: block
 					&:last-child
 						margin-bottom: 0
+
+				.imgWrapper
+					float: left
+
+		.imgHover
+			opacity: 0
+			width: 100%
+			height: 100%
+			background: rgba(52,52,52,0.6)
+			z-index: 99
+			position: absolute
+			top: 0
+			left: 0
+			margin: 0
+			transition: .5s ease
+			.wraperIconPlus
+				position: absolute
+				top: 0
+				left: 50%
+				transition: .5s ease
+			.iconPlus
+				background: url(../img/lupa.png) center top no-repeat
+				background-size: cover
+				width: 50px
+				height: 50px
+				display: block
+				transition: .5s ease
+				&:hover
+					transform: scale(1.5,1.5)
 //секция contacts-map-section
 .contacts-map-section
 	min-height: 580px
@@ -2134,6 +2232,7 @@ nav[canvas]
 			z-index: 0
 		.carousel_main_img
 			padding: 5px
+			cursor: pointer
 			background: url(../img/slider_border.jpg) center top no-repeat
 		img
 			width: 960px

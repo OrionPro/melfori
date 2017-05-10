@@ -28,11 +28,14 @@
 					.img-wrap
 						margin-right: 10px
 						width: 90px
+	.header_top
+		padding-left: 9px
+		padding-right: 9px
 	.header_modal
 		margin-top: 14px
-		margin-left: 19px
+		margin-left: 5px
 		button
-			width: 210px
+			width: 130px
 			font-size: 14px
 		a
 			font-size: 14px
@@ -65,13 +68,26 @@
 		ul
 			margin: 0
 			margin-top: 13px
-			padding-left: 20px
+			padding-left: 10px
 			li
+				margin-right: 5px
+				&:first-child
+					margin-left: 5px
 				&:last-child
 					a
 						margin-right: 0
 				a
-					margin-right: 20px
+					margin-right: 10px
+					font-size: 15px
+	.hoverDivMenu
+		ul
+			margin-left: 5px
+			&:first-child
+				margin-left: 0
+				padding-left: 0
+			li
+				font-size: 14px
+
 	.vacancies-developers
 		&.vacancies
 			.vacancies-item
@@ -148,11 +164,22 @@
 				background-size: contain
 				width: auto
 				display: inline-block
-				.main-img
-					height: 280px
-				.img-item
+				.imgHoverWrap
+					width: 730px
+					height: 100%
 					img
-						height: 138px
+						height: 100%
+
+				.imgHoverWrapSmall
+					width: 100%
+					height: 100%
+				img
+					max-width: 100%
+					height: auto
+					display: block
+					margin-bottom: 5px
+					&:last-child
+						margin-bottom: 0
 	//секция about-us-form
 	.unique_challenge
 		&.about-us-form
@@ -378,6 +405,31 @@
 			.item
 				margin-bottom: 50px
 
+
+
+.us-office-section
+	&.about-us-office
+		.img-container
+			.iconPlus
+				width: 50px
+				height: 50px
+			.img-item
+				display: inline-block
+				vertical-align: middle
+				.imgHoverWrapSmall
+					width: 195px
+					margin-bottom: 4px
+					margin-left: 4px
+				img
+					display: block
+					margin-bottom: 5px
+					&:last-child
+						margin-bottom: 0
+
+				.imgWrapper
+					float: left
+
+
 	.blog-detalis-content-section
 		.widget
 			text-align: center
@@ -462,6 +514,18 @@
 			input[type=submit]
 				margin-bottom: 50px
 
+	.us-office-section
+		&.about-us-office
+			.img-container
+				.imgHoverWrap
+					display: block
+					width: 100%
+					margin-bottom: 4px
+				.img-item
+					display: none
+					.imgHoverWrapSmall
+						display: none
+
 
 	//секция about-us-form
 	.unique_challenge
@@ -536,6 +600,14 @@
 				margin-bottom: 50px
 
 	.langing-page-form-section
+		.form_frame
+			h3
+				margin-left: 0
+				font-size: 34px
+			ul
+				padding-top: 44px
+				li
+					font-size: 15px
 		form
 			& > div
 				display: block
@@ -865,18 +937,7 @@
 			.content
 				text-align: left
 	// секция about-us-office
-	.us-office-section
-		&.about-us-office
-			min-height: 680px
-			.img-container
-				background-size: contain
-				width: auto
-				display: inline-block
-				.main-img
-					height: 220px
-				.img-item
-					img
-						height: 107px
+
 
 	.our_advantages
 		&.langing-page-doing
@@ -892,6 +953,19 @@
 				margin-bottom: 30px
 			.list
 				width: auto
+	.langing-page-form-section
+		.form_frame
+			h3
+				text-align: center
+				br
+					display: block
+			ul
+				padding-top: 30px
+				display: block
+				width: 320px
+				margin: 0 auto
+				li
+					font-size: 15px
 
 	.landing-development-steps
 		.video-wrap
@@ -1197,6 +1271,10 @@
 				& + p
 					font-size: 18px
 					padding: 0 15px
+	.header_modal
+		margin-left: 30%
+		.select
+			display: none
 	.vacancies-developers
 		.title-wrap
 			h2
@@ -1222,24 +1300,6 @@
 					width: 255px
 			.requirements
 				padding-left: 30px
-	.us-office-section
-		&.about-us-office
-			.img-container
-				.main-img
-					margin-right: 0
-					margin-bottom: 5px
-					height: 223px
-				.img-item
-					display: block
-					img
-						display: inline-block
-						height: 212px
-						vertical-align: text-top
-						margin-bottom: 0
-						margin-right: 5px
-						&:last-child
-							margin-right: 0
-
 
 	.why_effective
 		&.why_profitably
@@ -1492,13 +1552,15 @@
 			width: 310px
 		a
 			padding: 11.5px 40.6px
+	.langing-page-form-section
+		.form_frame
+			h3
+				font-size: 28px
 
 	//секция about-us-office
 	.us-office-section
 		&.about-us-office
 			.img-container
-				.main-img
-					height: 157px
 				.img-item
 					img
 						height: 148px
@@ -1650,6 +1712,12 @@
 						width: calc(100% - 10px)
 						br
 							display: none
+	.header_modal
+		margin-left: 0
+		a
+			font-size: 14px
+		button
+			width: 134px
 	.page_404
 		top: calc(50% - 130px)
 		.page_404_img
@@ -1702,16 +1770,12 @@
 
 	h2
 		font-size: 30px
-	.header_modal
-		button
-			width: 160px
+
 
 	//секция about-us-office
 	.us-office-section
 		&.about-us-office
 			.img-container
-				.main-img
-					height: 150px
 				.img-item
 					img
 						height: 142px
@@ -1741,7 +1805,16 @@
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
-
+	.langing-page-form-section
+		.form_frame
+			h3
+				font-size: 23px
+			ul
+				width: 100%
+				padding-left: 20px
+				li
+					i
+						margin-left: -34px
 
 /*==========  Mobile First Method  ==========*/
 
@@ -1749,10 +1822,10 @@
 @media only screen and (min-width : 320px)
 	/**/
 
-
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px)
 	/**/
+
 
 
 /* Small Devices, Tablets */

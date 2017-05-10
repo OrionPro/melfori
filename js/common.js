@@ -38,7 +38,19 @@ class BurgerEff {
 	}
 }
 
+// TABS
+$(".tabs-items-wrap .tabs-item").on('click', function (event) {
+	//ссылки которые будут переключать табы
+	event.preventDefault();
 
+	$(".tabs-items-wrap .tabs-item").removeClass('active'); //убираем активные состояния у ссылок
+
+	$(this).addClass('active'); //Добавляем активное состояние у той что нажали
+
+	var data = $(this).data('tab'); //создаём переменную с датой
+	$('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
+	$('.tabs-wrap[data-tab=' + data + ']').addClass('active'); //если таб соответствует тому, какой data
+});
 
 function chechBoxes() {
 	var container = $('.checkbox-container .item'),
@@ -103,7 +115,35 @@ var burgerEff = new BurgerEff;
 
 
 $(document).ready(function () {
+// подключение нового хедера vadjs
 
+	var service = document.querySelectorAll('.header_nav ul li'),
+		hoverDiv = document.querySelector('.hoverDivMenu'),
+		hoverTop = document.querySelector('.header_top'),
+		caret = document.querySelector('.caretup');
+	function hideHeaderService() {
+		hoverDiv.style.opacity = '0';
+		hoverTop.style.borderRadius = "";
+		hoverTop.style.boxShadow = "";
+		caret.style.transform = 'rotate(0deg)';
+		hoverTop.style.background = 'transparent';
+	}
+	service[1].onmouseover = function () {
+		hoverDiv.style.opacity = '1';
+		hoverTop.style.borderRadius = "0px 0px 10px 10px";
+		hoverTop.style.boxShadow = "0 0 10px 2px rgba(51, 55, 57, 0.08)";
+		hoverTop.style.background = '#fff';
+		caret.style.transform = 'rotate(180deg)';
+
+	}
+	for(var i = service.length;i--;){
+		if(i === 1) continue;
+		service[i].onmouseover = hideHeaderService;
+	}
+	document.querySelector(".section-1").onmouseover = function (e) {
+		if(e.clientY > 325)hideHeaderService()
+	}
+		hideHeaderService;
 	//  Инициальзация маски в форме
 	burgerEff.description();
 	burgerEff.mobileMenuBg();
@@ -140,14 +180,14 @@ $(document).ready(function () {
 	// });
 
 	// скролл по ссылке с атрибутом href
-	// $(".header_nav a[href*='#']").on("click", function(e) {
-	//     e.preventDefault();
-	//     var anchor = $(this);
-	//     $('html, body').stop().animate({
-	//         scrollTop: $(anchor.attr('href')).offset().top
-	//     }, 500);
-	//     return false;
-	// });
+	$(".header_nav a[href*='#']").on("click", function(e) {
+	    e.preventDefault();
+	    var anchor = $(this);
+	    $('html, body').stop().animate({
+	        scrollTop: $(anchor.attr('href')).offset().top
+	    }, 500);
+	    return false;
+	});
 
 	// Скролл по классу .scroll_to и атрибуту data-scroll у кнопки к примеру (data-scroll="куда скроллим" в элементе куда скроллим ставим id потом впишем в куда скроллим)
 	$(".scroll_to").on("click", function (e) {
@@ -179,7 +219,10 @@ $(document).ready(function () {
 	    // Parameters has to be in square bracket '[]'
 	    owl.trigger('prev.owl.carousel', [700]);
 	});
-
+	$('.owl-carousel').lightGallery({
+		selector: '.carousel_main_img',
+		zoom: true
+	});
 	// отслеживаем изменение инпута file
 	$('#file').change(function(){
 		// Если файл прикрепили то заносим значение value в переменную
