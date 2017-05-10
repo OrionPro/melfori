@@ -57,7 +57,7 @@ if ( 'addEventListener' in document ) {
 	});
 
 	// Close Slidebar links
-	$('[off-canvas] a').on('click', function(event) {
+	$('[off-canvas] a:not("[off-canvas] a.slct")').on('click', function(event) {
 		event.preventDefault();
 		event.stopPropagation();
 
@@ -155,6 +155,7 @@ $(document).ready(function() {
 		/* Предотвращаем обычное поведение ссылки при клике */
 		return false;
 	});
+
 	// Открываем модальное окно
 	$(".modal").click(function(e) {
 		e.preventDefault();
@@ -204,6 +205,7 @@ $(document).ready(function() {
 		event.stopPropagation();
 
 	});
+
 	//  Отправка форм
 	$('.dm-modal form .drop li').on('click', function() {
 		var slcVal = $(this).text();
