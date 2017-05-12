@@ -116,7 +116,7 @@ var burgerEff = new BurgerEff;
 
 $(document).ready(function () {
 // подключение нового хедера vadjs
-  if(document.querySelector(".section-1") !== null) {
+  if(document.querySelector(".hoverDivMenu") !== null) {
 	  var service = document.querySelectorAll('.header_nav ul li'),
 		  hoverDiv = document.querySelector('.hoverDivMenu'),
 		  hoverTop = document.querySelector('.header_top'),
@@ -129,6 +129,7 @@ $(document).ready(function () {
 		  hoverTop.style.boxShadow = "";
 		  caret.style.transform = 'rotate(0deg)';
 		  hoverTop.style.background = 'transparent';
+
 	  }
 
 	  service[1].onmouseover = function () {
@@ -137,6 +138,7 @@ $(document).ready(function () {
 		  hoverTop.style.boxShadow = "0 0 10px 2px rgba(51, 55, 57, 0.08)";
 		  hoverTop.style.background = '#fff';
 		  caret.style.transform = 'rotate(180deg)';
+
 
 	  }
 	  for (var i = service.length; i--;) {
@@ -148,7 +150,6 @@ $(document).ready(function () {
 		  if (e.clientY > 325)hideHeaderService()
 	  }
   }
-
 	//подклбчение LIGHTGALLERY
 	function lightgallery(main, child){
 		$(main).lightGallery({
