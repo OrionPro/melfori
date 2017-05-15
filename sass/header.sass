@@ -174,9 +174,14 @@ p
 	z-index: 1002
 	animation: fade .8s
 	color: #fff
+	h4
+		color:	#fff
+		font-size: 22px
+		margin-top: 5px
 	.modal_form_input_wrap
 		position: relative
 		display: block
+		margin-bottom: 20px
 		.modal_input_error
 			width: 141px
 			height: 35px
@@ -256,6 +261,7 @@ p
 		&:focus
 			@extend %main_btn2_focus
 			outline: 0
+	input[placeholder]
 .select
 	position: relative
 	text-align: left
@@ -568,7 +574,7 @@ p
 			&:focus
 				@extend %main_btn_focus
 		h3
-			font-family: $font_SFUIDisplay-Regular
+			//font-family: $font_SFUIDisplay-Regular
 			margin: 120px 0 30px
 .lineH-1
 	line-height: 1
@@ -595,6 +601,8 @@ p
 	padding-top: 8px !important
 	padding-left: 18px
 	display: inline-block
+	z-index: 99999
+	position: relative
 .header_logo
 	display: inline-block
 	margin-top: 20px
@@ -617,6 +625,8 @@ p
 	padding: 35px 15px
 	opacity: 0
 	transition: .5s ease
+	background: #ffffff
+	z-index: 999
 	ul
 		display: inline-block
 		vertical-align: top
@@ -643,6 +653,7 @@ p
 .header_nav		
 	display: inline-block
 	position: relative
+	top: 7px
 	ul
 		li		
 			list-style: none
@@ -808,6 +819,7 @@ p
 	left: 0
 	right: 0
 	top: calc(50% - 200px)
+	z-index: 0
 	&.unique_portal
 		h1
 			line-height: 1.1

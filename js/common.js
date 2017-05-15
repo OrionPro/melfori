@@ -150,7 +150,8 @@ $(document).ready(function () {
 		  if (e.clientY > 325)hideHeaderService()
 	  }
   }
-	//подклбчение LIGHTGALLERY
+
+	//подклбчение LIGHTGALLERY отсюда vadjs
 	function lightgallery(main, child){
 		$(main).lightGallery({
 				selector: child,
@@ -159,19 +160,27 @@ $(document).ready(function () {
 		)
 
 	}
-	lightgallery('#lightGallery', '.iconPlus');
-	lightgallery(".lightGallery", '.openLetter');
-	// lightgallery('.about-us-office',".iconPlus");
-	// $('.about-us-office').lightGallery({
-	// 		selector: '.iconPlus',
-	// 		zoom: true
-	// 	}
-	// );
-	//
-	// $('.img-container').lightGallery({
-	// 	selector: '.imgHover'
-	// 	zoom: true
-	// });
+	function currBody(bodyClassName) {
+	 var body = document.getElementsByTagName('body')[0];
+		
+	if(body.className === bodyClassName) {
+		return true;
+	}else{
+		return false;
+	}
+
+	}
+	if(currBody("design-pages")){
+		lightgallery('.lightGallery', '.clickGal');
+	}
+	if(currBody("review")){
+		lightgallery(".lightGallery", '.openLetter');
+	}
+	if(currBody('about-us-pages')){
+		lightgallery("#lightGallery", '.iconPlus');
+	}
+
+	//до сюда vadjs
 
 	//  Инициальзация маски в форме
 	burgerEff.description();

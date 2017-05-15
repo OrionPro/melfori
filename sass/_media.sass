@@ -155,7 +155,7 @@
 				margin: auto
 	.how_good
 		.how_good_item
-			margin: 0 auto 30px
+			margin: 30px auto 30px
 			float: none
 			&:nth-of-type(2n+1)
 				margin: 0 auto 30px
@@ -180,7 +180,6 @@
 					height: 100%
 					img
 						height: 100%
-
 				.imgHoverWrapSmall
 					width: 100%
 					height: 100%
@@ -1336,7 +1335,10 @@
 			padding: 0 15px
 		.how_good_item
 			width: 100%
-
+			margin-top: 30px
+			.mask
+				.logo-title
+					display: none
 		.how_good_item_img
 			width: 100%
 			height: auto
@@ -1350,6 +1352,7 @@
 		.how_good_item_mask
 			width: 97.8%;
 			height: 96.8%;
+
 	//Секция services
 	.services
 		.services_item_img
@@ -1451,6 +1454,16 @@
 				.select
 					width: 100%
 					margin: 10px 0
+	.how_good
+		.how_good_item
+			.mask
+				.content
+					.company-title
+						font-size: 19px
+					.description
+						font-size: 16px
+				.logo-title
+					display: none
 @media only screen and (max-width : 520px)
 	/**/
 	.header_modal
@@ -1480,6 +1493,12 @@
 				display: block
 			.modal_form_input_wrap
 				display: block
+
+	.how_good
+		.how_good_item
+			.mask-link
+			//height: calc(100% - 95px)
+			.mask
 
 	.langing-page-whe-call-section
 		.content
@@ -1536,6 +1555,7 @@
 				.right
 					float: none
 					margin: 5px 0
+
 @media only screen and (max-width : 495px)
 	.develop-site-problem-section
 		.item
@@ -1546,6 +1566,13 @@
 				display: block
 				text-align: center
 				margin: auto
+
+		.how_good
+			.how_good_item
+				.mask-link
+					//height: calc(100% - 95px)
+				.mask
+					//height: calc(100% - 155px)
 
 @media only screen and (max-width : 480px)
 	/**/
@@ -1751,6 +1778,17 @@
 			font-size: 18px
 		button
 			width: 90%
+
+	.how_good
+		.how_good_item
+			.mask
+				.content
+					.about-project
+						width: 300px
+					.company-title
+						font-size: 16px
+					.description
+						font-size: 14px
 @media only screen and (max-width : 400px)
 
 	.header
@@ -1790,6 +1828,19 @@
 							font-size: 12px
 							height: 30px
 							width: 165px
+	.how_good
+		.how_good_item
+			.mask
+				.content
+					.about-project
+						width: 240px
+						height: 30px
+					.link-to-project
+						display: none
+					.company-title
+						font-size: 14px
+					.description
+						font-size: 12px
 @media only screen and (max-width : 380px)
 
 	h2
