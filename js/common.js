@@ -51,6 +51,17 @@ $(".tabs-items-wrap .tabs-item").on('click', function (event) {
 	$('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
 	$('.tabs-wrap[data-tab=' + data + ']').addClass('active'); //если таб соответствует тому, какой data
 });
+$(".tabs-items").on('click', function (event) {
+	//ссылки которые будут переключать табы
+	event.preventDefault();
+
+	$(".tabs-items").removeClass('active_class_tabs'); //убираем активные состояния у ссылок
+	$(this).addClass('active_class_tabs'); //Добавляем активное состояние у той что нажали
+	var data = $(this).data('tab'); //создаём переменную с датой
+	$('.tabPortfolioContent').hide().removeClass("activeTabState"); //убираем активные состояния у табов
+	$('.tabPortfolioContent[data-tab=' + data + ']').show("fade", 500).addClass('activeTabState'); //если таб соответствует тому, какой data
+
+});
 
 function chechBoxes() {
 	var container = $('.checkbox-container .item'),
@@ -160,6 +171,7 @@ $(document).ready(function () {
 		)
 
 	}
+
 	function currBody(bodyClassName) {
 	 var body = document.getElementsByTagName('body')[0];
 		
@@ -174,7 +186,10 @@ $(document).ready(function () {
 		lightgallery('.lightGallery', '.clickGal');
 	}
 	if(currBody("review")){
-		lightgallery(".lightGallery", '.openLetter');
+	
+			lightgallery(".lightGallery", '.openLetter');
+
+
 	}
 	if(currBody('about-us-pages')){
 		lightgallery("#lightGallery", '.iconPlus');
@@ -281,6 +296,7 @@ $(document).ready(function () {
 });
 
 $(window).resize(function () {
+
 
 });
 

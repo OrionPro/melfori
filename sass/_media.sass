@@ -167,6 +167,8 @@
 			.title_block_left_decor
 				p
 					width: 100%
+	// портфолио секция
+
 
 	// секция about-us-office
 	.us-office-section
@@ -211,6 +213,8 @@
 							display: inline
 	.couple_of_words
 		background: none
+		.ourFasesFoto
+			display: none
 		.couple_of_words_txt
 			margin: 0 auto 100px
 			float: none
@@ -415,6 +419,52 @@
 			.item
 				margin-bottom: 50px
 
+	.reviews
+		.reviewContainer
+			.bossName
+				margin-left: 126px
+			.companyName
+				top: 162px
+				left: -45px
+			.positionBoss
+				top: 313px
+				left: 104px
+			.reviewWraper
+				.imgContainer
+					.blueString
+						width: 75px
+						height: 75px
+					.bottom
+						top: 151px
+						left: 82px
+						&:after
+							content: ""
+							/* style */
+							top: 70px
+					.top
+						top: -49px
+						left: 77px
+						&:after
+							content: ""
+							/* style */
+							left: 75px
+					.middle
+						height: 1px
+						top: 99px
+						left: -25px
+					.forImageCompany
+						margin-top: 0
+			.textContainer
+				.mailsData
+					.wraperDataCalendar
+						float: left
+
+					a
+						display: block
+
+			.letterContainer
+				display: none
+
 
 
 .us-office-section
@@ -549,7 +599,41 @@
 					.imgHoverWrapSmall
 						display: none
 
+	.reviewClient
+		display: none
 
+	.reviews
+		.reviewContainer
+			.reviewWraper
+				.imgContainer
+					.forImageCompany
+						width: 50%
+						text-align: center
+						img
+
+					.imgContainerList
+						display: inline-block
+						padding: 10px
+						li
+							margin-top: 20px
+							margin-left: 10px
+							position: relative
+							left: 20px
+							&:after
+								content: ""
+								/* style */
+								width: 15px
+								height: 15px
+								border-radius: 50%
+								border: 1px dashed #0cf;
+								display: block
+								position: absolute
+								top: 5px
+								left: -30px
+					.blueString
+						display: none
+				.textContainer
+					margin-top: 10px
 	//секция about-us-form
 	.unique_challenge
 		&.about-us-form
@@ -734,7 +818,11 @@
 	.unique_challenge
 		&.services
 			min-height: 100%
-
+	.main_section_portfolio
+		.tab_working_div
+		.tabwraper
+			.tabs-items
+				width: 150px
 	.footer
 		.footer-logo
 			margin-bottom: 30px
@@ -901,6 +989,11 @@
 			margin: 0 15px
 		.widget-fb
 			margin: 0
+	footer
+		//bottom: -39px
+		.logoMelforiWrap
+			top: -24px
+			left: 0
 /* Small Devices, Tablets */
 
 @media only screen and (max-width : 768px)
@@ -1239,6 +1332,26 @@
 				margin-right: 0
 			p.title
 				font-size: 20px
+
+	.main_section_portfolio
+		.tabwraper
+			padding: 10px 10px 0
+			.tabs-items
+				margin: 0 0 15px 0
+				width: 380px
+	footer
+		.footerColumn
+			ul
+				max-width: 200px
+				margin: 20px auto
+				li
+					&:first-of-type
+						/* style */
+						margin-left: 10px
+
+
+
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 767px)
 	.footer
@@ -1445,6 +1558,22 @@
 			.article-img
 				.article-title
 					bottom: 10px
+
+	.reviews
+		.reviewContainer
+			.reviewWraper
+				.imgContainer
+					.forImageCompany
+						width: 100%
+
+				.textContainer
+					.mailsData
+						.wraperDataCalendar
+							float: none
+						a
+							margin:  5px auto
+
+
 @media only screen and (max-width : 565px)
 	.blog-section
 		.blog-content-container
@@ -1574,6 +1703,7 @@
 				.mask
 					//height: calc(100% - 155px)
 
+
 @media only screen and (max-width : 480px)
 	/**/
 	.why_effective
@@ -1693,6 +1823,13 @@
 		button
 			width: 90%
 
+	.main_section_portfolio
+
+				.tabwraper
+					.tabs-items
+						width: 300px
+
+
 	.components-company-sites-section
 		padding: 0 15px
 		.checkbox-container
@@ -1737,6 +1874,14 @@
 				width: 330px
 	.popup.pop4 .dm-modal
 		width: 100%
+	.reviews
+		.reviewContainer
+			.reviewWraper
+				a
+					float: none
+					margin-top: 10px
+					width: 90%
+
 @media only screen and (max-width: 740px) and (orientation: landscape)
 	.header
 		&.header_page_404
@@ -1841,6 +1986,7 @@
 						font-size: 14px
 					.description
 						font-size: 12px
+
 @media only screen and (max-width : 380px)
 
 	h2
@@ -1877,6 +2023,10 @@
 		.item
 			.content
 				max-width: 100%
+	.reviews
+		.moreReviewsView
+			.moreReviews
+				padding: 25px 40px
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/

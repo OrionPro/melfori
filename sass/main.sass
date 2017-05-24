@@ -283,6 +283,124 @@ nav[canvas]
 					right: 0px
 					color: #f4f4f4
 					z-index: -1
+
+.main_section_portfolio
+	background-color: #f8f8fa
+	padding-bottom: 0 !important
+	.container
+		padding-top: 120px
+		padding-bottom: 120px
+	h2
+		color: $main_color
+		text-align: center
+		font-size: 56px
+	.tabwraper
+		color: black
+		border-bottom: none
+		text-align: center
+		margin-bottom: 50px
+		ul
+			list-style: none
+			overflow: hidden
+			padding: 0
+			background: transparent
+			margin: 0
+			li
+				display: inline-block
+				width: 222px
+				text-align: center
+				outline: none
+				margin-left: 10px
+				&:first-child a
+					z-index: 4
+					&:after
+						content: ""
+						background: #00ccff
+				&:nth-child(2) a
+					z-index: 3
+					&:after
+						content: ""
+						background: #ff6600
+				&:nth-child(3) a
+					z-index: 2
+					&:after
+						content: ""
+						background: #990099
+				&:last-child a
+					z-index: 1
+					&:after
+						content: ""
+						background: #ff0033
+				a
+					text-decoration: none
+					color: #000
+					position: relative
+					display: block
+					height: 65px
+					border-radius: 5px
+					//box-shadow: 5px 8px 10px 2px rgba(0,0,0,0.3)
+					//border-top-right-radius: 5px
+					//border-top-left-radius: 5px
+					//background: rgba(255,255,255, 0.6)
+					background: #fff
+					padding-top: 20px
+					transition: all 1000ms linear
+					&:after
+						content: ""
+						width: 100%
+						height: 5px
+						position: absolute
+						top: 0
+						left: 0
+						border-radius: 10px 10px 0 0
+						opacity: 0
+						transition: all 500ms linear
+					&:hover
+						background: #ffffff
+						&:after
+							content: ""
+							opacity: 1
+		.active_class_tabs
+			z-index: 10 !important
+			background: #fff
+			border-radius: 5px
+			a
+				&:after
+					content: ""
+					opacity: 1
+	.active_tabs_content
+		display: block !important
+	.tabscontent
+		display: none
+		width: 100%
+		height: 88px
+		background: #fff
+		.forAdvancement, .forDesigns, .forSMM, .forSites
+			display: none
+		.forSites, .forDesigns, .forAdvancement, .forSMM
+			ul
+				list-style-type: none
+				margin: 0
+				padding-left: 0
+				border-top-right-radius: 5px
+				li
+					display: inline-block
+					text-align: center
+					width: 280px
+					height: 83px
+					cursor: pointer
+					padding-top: 30px
+					a
+						border-bottom: 1px dashed black
+						text-decoration: none
+						color: #000000
+						transition: 500ms
+						&:hover
+							/* style */
+							color: $main_color
+							border-bottom-color: $main_color
+
+
 .internet-shop-goods-item
 	height: 150px
 	background: #fff
@@ -598,6 +716,17 @@ nav[canvas]
 			h3
 				margin: 13px 0 3px
 				font-weight: 900
+
+.website_card
+	padding-top: 120px
+	h1
+		text-align: center
+		font-size: 56px
+		margin-bottom: 53px
+		color: $main_color
+	p
+		margin-bottom: 34px
+		font-size: 18px
 
 
 .internet-shop-instruction
@@ -975,6 +1104,9 @@ nav[canvas]
 			font-weight: 100
 	&.you_always_know_what_you_pay
 		min-height: 430px
+		.just_for_size
+			font-size: 18px
+			margin-top: 30px
 		p
 			font-size: 24px
 			line-height: 1.2
@@ -1099,7 +1231,7 @@ nav[canvas]
 				li
 					list-style-type: none
 					display: inline-block
-					margin-right: 19px
+					margin-right: 7px
 					a
 						display: table
 						border: 1px solid #fff
@@ -1566,7 +1698,7 @@ nav[canvas]
 //	Секция
 
 //	Секция how_good
-.how_good
+.how_good, .how_good_items
 	background-color: #f8f8fa
 	.how_good_item
 		width: 570px
@@ -1729,11 +1861,21 @@ nav[canvas]
 				@extend %main_btn_focus
 
 
-.why_effective
+.main_section_portfolio
+	.tab_working_div
+		.forSMM, .forAdvancement, .forDesign, .forSites
+			display: none !important
+			transition:	all 500ms linear
+			&.activeTabState
+				display: block !important
+
+.why_effective, .main_section_portfolio
+	padding-bottom: 100px
 	&.gray-bg
 		background: #f8f8fa
 
-	&.us-internet-shop-section
+	&.us-internet-shop-section, .tab_working_div
+
 		h2
 			margin-bottom: 3px
 		.items-wrap
@@ -1841,16 +1983,29 @@ nav[canvas]
 //	Секция couple_of_words
 .couple_of_words
 	text-align: center
-	background: #fff url(../img/couple_of_words_bg.jpg) center top no-repeat
+	background: #fff
+	overflow-x: hidden
+
+	//padding-right: 80px
+	//background: #fff url(../img/couple_of_words_bg.jpg) center top no-repeat
 	h2
 		color: $main_color
 		line-height: 1.2
+	.ourFasesFoto
+		width: 45%
+		float: left
+		display: inline-block
+		vertical-align: bottom
+		background: url(../img/couple_of_words_bg_new.jpg) center bottom no-repeat
+		background-size: contain
+		height: 510px
 	.couple_of_words_txt
-		width: 570px
+		display: inline-block
+		vertical-align: top
+		width: 510px
 		height: 400px
-		margin-bottom: 60px
-		margin-right: 10px
-		float: right
+		margin-left: 80px
+		float: left
 		overflow: auto
 		p
 			text-align: left
@@ -1858,6 +2013,7 @@ nav[canvas]
 			margin-bottom: 20px
 // Стилизация скролла
 .mCS-my-theme
+
 	&.mCSB_scrollTools
 		right: 5px
 		.mCSB_draggerRail
@@ -1882,6 +2038,7 @@ nav[canvas]
 	padding-bottom: 50px
 	background-color: #fff
 	text-align: center
+	display: none
 	.title-wrap
 		margin-top: 107px
 		margin-bottom: 44px
@@ -1969,7 +2126,7 @@ nav[canvas]
 //секция contacts-map-section
 .contacts-map-section
 	min-height: 580px
-	background-color: #f8f8fa
+	background-color: #fff
 	text-align: center
 	.title-wrap
 		margin-top: 107px
@@ -3604,18 +3761,23 @@ nav[canvas]
 						background: transparent
 						color: $main_color
 						border: 1px solid
-.beginRevievs
-	background-color: #f8f8fa
 
+
+.MainReview
+	margin-bottom: 65px
 .reviews
-	padding: 120px
-	.moreReviews
-		@extend %main_btn
+	background-color: #f8f8fa
+	.moreReviewsView
 		text-align: center
-		margin-left: 30%
-		outline: none
-		&:hover
-			@extend %main_btn_hover
+		padding: 70px 0 110px
+		.moreReviews
+			@extend %main_btn
+			text-align: center
+			outline: none
+			padding: 24px 60px
+			margin-top: 30px
+			&:hover
+				@extend %main_btn_hover
 	
 	h1
 		text-align: center
@@ -3623,137 +3785,159 @@ nav[canvas]
 		font-size: 56px
 		font-weight: 100
 		margin-bottom: 37px
-	.insideApear
+	.reviewContainer
 		position: relative
-		margin-bottom:	40px
-		.companySide
-			position: absolute
-			top: 185px
-			left: -225px
-			transform: rotate(-90deg)
-			z-index: 99
-			width: 320px
+		.reviewClient
+			max-width: 186px
 			text-align: center
-	.boss
-		margin-left: 142px
-	.position
-		margin-left: 53px
-	.reviewApear
-		border: 1px solid  #00ccff
-		background: #ffffff
-		padding: 20px
-		margin:	37px auto
-		position: relative
-		width: 1100px
-		height: 320px
-		.rewblock
-			display: inline-block
-			vertical-align: top
-		.imgApear
-			width: 270px
-			position: relative
-			.bluLinesPhoto
-				position: absolute
-				border: 1px dashed #00ccff
-				width: 100px
-				height: 100px
-				&:after
-					content: ""
-					position: absolute
-					width: 10px
-					height: 10px
-					border: 1px dashed #00ccff
-					border-radius: 50%
-					/* style */
-			img
-				float: left
-				max-width: 100%
-				display: block
-				margin-top: 23px
+		.companyName
+			position: absolute
+			top: 210px
+			left: -40px
+			transform: rotate(270deg)
+		.bossName
+			margin-left: 210px
+			margin-bottom: 35px
+		.positionBoss
+			position: absolute
+			top: 420px
+			left: 135px
 
-		.appearText
-			width: 530px
-			color: #1d1d1f
-			overflow: hidden
-			p
-				font-size: 18px
-				font-weight: 300
-				font-family: "SFUIDisplay"
-				max-height:	80%
-				overflow: hidden
-				margin-bottom: 10px
-			i span
-				display: inline-block
-				vertical-align: bottom
-		.clientLetter
-			width: 250px
+		.reviewWraper
+			border: 1px solid #00ccff
+			background: #ffffff
 			float: right
+			padding: 20px 5px
+			.imgContainer
+				position: relative
+				.blueString
+					position: absolute
+					width: 100px
+					height: 100px
+					border: 1px dashed #00ccff
+					&:after
+						content: ""
+						/* style */
+						position: absolute
+						width: 10px
+						height: 10px
+						border-radius: 50%
+						border:	1px dashed #00ccff
+				.top
+					border-right: none
+					border-bottom: none
+					top: -40px
+					left: 60px
+					&:after
+						content: ""
+						/* style */
+						top: -5px
+						left: 97px
+				.middle
+					width: 80px
+					height: 1px
+					top: 145px
+					left: -30px
+					&:after
+						content: ""
+						/* style */
+						top: -5px
+						left: -10px
+				.bottom
+					border-left: none
+					border-top: none
+					top: 231px
+					left: 71px
+					&:after
+						content: ""
+						/* style */
+						top: 94px
+						left: -10px
+
+				.forImageCompany
+					margin-top: 10%
+					float: left
+					width: 100%
+					height: 100%
+					img
+						max-width: 100%
+				.imgContainerList
+					display: none
+					list-style-type: none
+			.textContainer
+				p
+					oveflow: hidden
+					margin-bottom: 10px
+			a
+				@extend %main_btn
+				display: none
+				float: right
+				vertical-align: bottom
+				z-index: 99
+				text-align: center
+				padding-top: 10px
+				&:hover
+					text-decoration: none
+					@extend %main_btn_hover
+				&:active
+					text-decoration: none
+					@extend %main_btn_active
+				&:focus
+					text-decoration: none
+					@extend %main_btn_focus
+		.letterContainer
 			position: relative
-			.letter
-				width: 205px
-				height: 288px
+			.reviewMail
 				position: absolute
-				top: -75px
-				left: 25px
+				width: 200px
+				height: 290px
+				top: -70px
+				left: 35px
 				border: 1px solid #00ccff
-				padding: 25px 15px
+				border-radius: 5px
+				padding: 25px 17px
 				background: #fff
-				border-radius: 10px
-				z-index: 9
-				img
-					max-width: 100%
-			.shadowletter
+				z-index: 99
+				.imgwraper
+					img
+						max-width: 100%
+			.shadowLetter
 				width: 100%
 				height: 13px
 				border-radius: 50%
-				background: #f2f1f1
+				background-color: #f2f1f1
 				position: absolute
-				top: 207px
-			button
+				top: 213px
+				left: 0
+
+
+			a
 				@extend %main_btn
-				margin-top: 230px
 				width: 100%
-				outline: none
+				display: inline-block
+				cursor: pointer
+				text-align: center
+				padding-top: 10px
+				vertical-align: bottom
+				margin-top: 240px
+				color: #ffffff
 				&:hover
+					text-decoration: none
 					@extend %main_btn_hover
-	.topLine
-		top: -45px
-		left: 70px
-		border-right: none !important
-		border-bottom: none !important
-		&:after
-			content: ""
-			top: -5px
-			left: 100px
-	.middleLine
-		width: 72px !important
-		height: 1px !important
-		top: 120px !important
-		left: -50px
-		&:after
-			content: ""
-			left: -10px
-			top: -5px
-	.bottomLine
-		top: 225px
-		left: 70px
-		border-top: none !important
-		border-left: none !important
-		&:after
-			content: ""
-			top: 95px
-			left: -10px
+				&:active
+					text-decoration: none
+					@extend %main_btn_active
+				&:focus
+					text-decoration: none
+					@extend %main_btn_focus
 .webSiteCard
-		padding: 50px 0
-		h1
-			margin: 50px auto
-			text-align: center
-			font-size: 56px
-			color: #00ccff
-		p
-			font-size: 18px
-			&:last-of-type
-				margin-top: 30px
+	h1
+		text-align: center
+		color: #00ccff
+		margin: 100px 0px 52px
+	p
+		text-align: left
+		margin-bottom: 20px
 
 
 
@@ -3777,129 +3961,73 @@ nav[canvas]
 		@extend %main_btn
 		width: 370px
 // Секия footer
-.footer
-	background-color: #fff
-	padding: 127px  0 100px 0
-	.select
-		.slct
-			padding-left: 18px
-			box-shadow: none
-			background: transparent
-			border: 1px solid $main_color
-			border-radius: 10px
-			color: $main_color
-			font-size: 15px
-			margin-bottom: 23px
-		.drop
-			border: 1px solid $main_color
-			border-radius: 10px
-			background: #fff
-			li
-				color: $main_color
-				padding-left: 18px
-				font-size: 15px
-		.slct_arrow
-			top: 9px
-			right: 21px
-			.fa
-				color: $main_color
-				font-size: 20px
-	.footer-logo
-		text-align: center
-		font-family: $font_SFUIDisplay-Regular
-		p
-			line-height: 1.3
-			font-size: 18px
-		img
-			margin-bottom: 15px
-			width: 118px
-	.flag
-		vertical-align: inherit
-		margin-right: 9px
-		display: inline-block
-		&.ru
-			@include sprite($ru)
-	.social-link
-		text-align: center
-		.item
-			display: inline-block
-			vertical-align: top
-			margin: 0 6px
-			&:last-child
-				margin-right: 0px
-			&:first-child
-				margin-left: 0px
-		a
-			display: table
-			width: 40px
-			height: 40px
-			border: 1px solid $main_color
-			border-radius: 50%
-			text-align: center
-			background: $main_color
-			color: #fff
-			transition: .3s
-			&:hover
-				color: $main_color
-				background: transparent
-				text-decoration: none
-			&:active
-				text-decoration: none
-			&:focus
-				text-decoration: none
-			.fa
-				vertical-align: middle
-				display: table-cell
-	.contacts-container
-		br
-			display: block
-		ul
-			margin: 0px
-			padding: 0px
-			li
-				margin-bottom: 8px
-				font-size: 18px
-				list-style-type: none
-				a
-					color: $main_txt_color
-					transition: .3s
-					display: inline-block
-					position: relative
-					padding-left: 27px
-					&:hover
-						color: $main_color
-						text-decoration: none
-						.fa
-							color: $main_txt_color
-					&:active
-						text-decoration: none
-					&:focus
-						text-decoration: none
-					&:last-of-type
-						span
-							display: block
-							& + span
-								position: relative
-								left: -20px
+footer
+	border-bottom: 3px solid #00ccff
 
-		.fa
-			margin-right: 7px
-			font-size: 16px
-			position: absolute
-			top: 4px
-			left: 1px
-			color: $main_txt_color
-			&.email
-				font-size: 16px
-			&.phone
-				font-size: 26px
-			&.home
-				font-size: 18px
-		p
-			margin-bottom: 7px
-			margin-top: -10px
-			font-size: 24px
-			margin-left: -3px
+	padding-top: 80px
+	background: #ffffff
+	background-image: url(../img/footerBackground.png) bottom no-repeat
+	.logoMelforiWrap
+		position: relative
+		top: -75px
+		left: 13px
+		width: 168px
+		height: 43px
+		.logoMelfori
+			display: inline-block
+			height: 70%
+			margin-right: 2px
+			width: 20%
+			vertical-align: bottom
+			img
+				max-width: 100%
+
+		.wrapText
+			width: 75%
+			display: inline-block
+			vertical-align: bottom
+			font-size: 10px
+			i
+				height: 20%
+
+	.footerColumn
+		ul
+			list-style-type: none
+			padding: 0
+			li
+				margin-bottom: 12px
+				&:first-of-type
+					/* style */
+					color: #00ccff
+					font-size: 24px
+					margin-bottom: 25px
+				a
+					color: black
+					text-decoration: none
+					font-size: 18px
+					&:hover
+						/* style */
+						color: #00ccff
+					&:hover i
+						/* style */
+						color: #000000
+					i
+						margin-right: 10px
+						width: 15px
+
+
+	.ourContacts
+		ul
+			li
+				&:last-of-type
+					/* style */
+				max-width: 270px
+				i
+					width: 15px
+					margin-right: 10px
+				p
+					a
+						font-size: 14px !important
 
 //ALWAYS END
 @import "media"
