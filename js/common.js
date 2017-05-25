@@ -204,9 +204,9 @@ $(document).ready(function () {
 	chechBoxes();
 
 	//  Стилизация скролла
-	$(".couple_of_words_txt").mCustomScrollbar({
-		theme: "my-theme"
-	});
+	// $(".couple_of_words_txt").mCustomScrollbar({
+	// 	theme: "my-theme"
+	// });
 
 	$(".modal_form_phone").each(function () {
 		var className = $(this).attr('class').split(' ');
@@ -248,7 +248,7 @@ $(document).ready(function () {
 		var anchor = $(this);
 		$('html, body').stop().animate({
 			scrollTop: $("#" + anchor.data('scroll')).offset().top
-		}, 500);
+		}, 500);s
 		return false;
 	});
 
