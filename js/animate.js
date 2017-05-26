@@ -7,6 +7,7 @@ import IndexPageAnimation  from './model-animation/index-pages.js';
 import AboutUsAnimation  from './model-animation/about-us-pages.js';
 import ContextualAnimation  from './model-animation/contextual-pages.js';
 import DesignPagesAnimation  from './model-animation/design-pages.js';
+import SeoPageAnimation from './model-animation/seo-page.js';
 
 // Запуск необходимой анимации
 class Animation {
@@ -16,23 +17,29 @@ class Animation {
 		this.AboutUsAnimation = new AboutUsAnimation();
 		this.ContextualAnimation = new ContextualAnimation();
 		this.DesignPagesAnimation = new DesignPagesAnimation();
-
+		this.SeoPageAnimation = new SeoPageAnimation();
 
 	}
 
-	inisialization(){
+	initialization(){
 // Инициализация настроек анимаций
 		if(activePages('main-pages')){
 			this.IndexPageAnimation.description();
 		}
 		if(activePages('about-us-pages')){
 			this.AboutUsAnimation.description();
+
 		}
 		if(activePages('contextual-pages')){
 			this.ContextualAnimation.description();
+
 		}
 		if(activePages('design-pages')){
 			this.DesignPagesAnimation.description();
+		}
+		if(activePages('main-seo-pages')){
+			this.SeoPageAnimation.description();
+
 		}
 	}
 	play(){
@@ -48,6 +55,9 @@ class Animation {
 		}
 		if(activePages('design-pages')){
 			this.DesignPagesAnimation.start();
+		}
+		if(activePages('main-seo-pages')){
+			this.SeoPageAnimation.start();
 		}
 	}
 }
@@ -91,6 +101,7 @@ function hovers(){
 }
 
 
+
 var anim = new Animation;
 
 $(window).scroll(function () {
@@ -105,7 +116,7 @@ $(window).ready(function() {
 	
 	if (document.documentElement.clientWidth >= 1200) {
 		anim.play();
-		anim.inisialization();
+		anim.initialization();
 	}
 
 

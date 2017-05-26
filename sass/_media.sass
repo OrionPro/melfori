@@ -28,11 +28,16 @@
 					.img-wrap
 						margin-right: 10px
 						width: 90px
+	.header_top
+		padding-left: 9px
+		padding-right: 9px
+	.header_nav
+		top: 4px
 	.header_modal
 		margin-top: 14px
-		margin-left: 19px
+		margin-left: 5px
 		button
-			width: 210px
+			width: 130px
 			font-size: 14px
 		a
 			font-size: 14px
@@ -65,13 +70,26 @@
 		ul
 			margin: 0
 			margin-top: 13px
-			padding-left: 20px
+			padding-left: 10px
 			li
+				margin-right: 5px
+				&:first-child
+					margin-left: 5px
 				&:last-child
 					a
 						margin-right: 0
 				a
-					margin-right: 20px
+					margin-right: 10px
+					font-size: 15px
+	.hoverDivMenu
+		ul
+			margin-left: 5px
+			&:first-child
+				margin-left: 0
+				padding-left: 0
+			li
+				font-size: 14px
+
 	.vacancies-developers
 		&.vacancies
 			.vacancies-item
@@ -110,6 +128,15 @@
 		a
 			margin-bottom: 50px
 	.why_effective
+		&.us-internet-shop-section
+			.item-wrap
+				.img-wrap
+					.hover-eff
+						h4
+							margin: 60px 0 10px
+						h5
+							margin: 35px 0 5px
+
 		&.why_profitably
 			.why_profitably_items
 				text-align: center
@@ -128,7 +155,7 @@
 				margin: auto
 	.how_good
 		.how_good_item
-			margin: 0 auto 30px
+			margin: 30px auto 30px
 			float: none
 			&:nth-of-type(2n+1)
 				margin: 0 auto 30px
@@ -140,6 +167,8 @@
 			.title_block_left_decor
 				p
 					width: 100%
+	// портфолио секция
+
 
 	// секция about-us-office
 	.us-office-section
@@ -148,11 +177,21 @@
 				background-size: contain
 				width: auto
 				display: inline-block
-				.main-img
-					height: 280px
-				.img-item
+				.imgHoverWrap
+					width: 730px
+					height: 100%
 					img
-						height: 138px
+						height: 100%
+				.imgHoverWrapSmall
+					width: 100%
+					height: 100%
+				img
+					max-width: 100%
+					height: auto
+					display: block
+					margin-bottom: 5px
+					&:last-child
+						margin-bottom: 0
 	//секция about-us-form
 	.unique_challenge
 		&.about-us-form
@@ -174,9 +213,12 @@
 							display: inline
 	.couple_of_words
 		background: none
+		.ourFasesFoto
+			display: none
 		.couple_of_words_txt
 			margin: 0 auto 100px
-			float: none
+			width: 60%
+			height: 90%
 	//Секция  services
 	.services
 		.services_items
@@ -378,6 +420,77 @@
 			.item
 				margin-bottom: 50px
 
+	.reviews
+		.reviewContainer
+			.bossName
+				margin-left: 126px
+			.companyName
+				top: 162px
+				left: -45px
+			.positionBoss
+				top: 313px
+				left: 104px
+			.reviewWraper
+				.imgContainer
+					.blueString
+						width: 75px
+						height: 75px
+					.bottom
+						top: 151px
+						left: 82px
+						&:after
+							content: ""
+							/* style */
+							top: 70px
+					.top
+						top: -49px
+						left: 77px
+						&:after
+							content: ""
+							/* style */
+							left: 75px
+					.middle
+						height: 1px
+						top: 99px
+						left: -25px
+					.forImageCompany
+						margin-top: 0
+			.textContainer
+				.mailsData
+					.wraperDataCalendar
+						float: left
+
+					a
+						display: block
+
+			.letterContainer
+				display: none
+
+
+
+.us-office-section
+	&.about-us-office
+		.img-container
+			.iconPlus
+				width: 50px
+				height: 50px
+			.img-item
+				display: inline-block
+				vertical-align: middle
+				.imgHoverWrapSmall
+					width: 195px
+					margin-bottom: 4px
+					margin-left: 4px
+				img
+					display: block
+					margin-bottom: 5px
+					&:last-child
+						margin-bottom: 0
+
+				.imgWrapper
+					float: left
+
+
 	.blog-detalis-content-section
 		.widget
 			text-align: center
@@ -395,6 +508,11 @@
 			.item
 				margin: 0 6px
 @media only screen and (max-width : 1030px)
+	.header_title
+		position: absolute
+		left: 0
+		right: 0
+		top: calc(50% - 200px)
 	.internet-shop-instruction
 		.content
 			.gear-wrap
@@ -403,6 +521,14 @@
 				li
 					.arrow
 						display: none
+
+	.why_effective
+		&.us-internet-shop-section
+			.item-wrap
+				.img-wrap
+					.hover-eff
+						h4
+							margin: 20px 0 10px
 
 
 
@@ -462,7 +588,53 @@
 			input[type=submit]
 				margin-bottom: 50px
 
+	.us-office-section
+		&.about-us-office
+			.img-container
+				.imgHoverWrap
+					display: block
+					width: 100%
+					margin-bottom: 4px
+				.img-item
+					display: none
+					.imgHoverWrapSmall
+						display: none
 
+	.reviewClient
+		display: none
+
+	.reviews
+		.reviewContainer
+			.reviewWraper
+				.imgContainer
+					.forImageCompany
+						width: 50%
+						text-align: center
+						img
+
+					.imgContainerList
+						display: inline-block
+						padding: 10px
+						li
+							margin-top: 20px
+							margin-left: 10px
+							position: relative
+							left: 20px
+							&:after
+								content: ""
+								/* style */
+								width: 15px
+								height: 15px
+								border-radius: 50%
+								border: 1px dashed #0cf;
+								display: block
+								position: absolute
+								top: 5px
+								left: -30px
+					.blueString
+						display: none
+				.textContainer
+					margin-top: 10px
 	//секция about-us-form
 	.unique_challenge
 		&.about-us-form
@@ -497,6 +669,7 @@
 						width: auto
 					.button
 						float: none
+						display: block
 		&.company-site
 			.content
 				ul
@@ -535,6 +708,14 @@
 				margin-bottom: 50px
 
 	.langing-page-form-section
+		.form_frame
+			h3
+				margin-left: 0
+				font-size: 34px
+			ul
+				padding-top: 44px
+				li
+					font-size: 15px
 		form
 			& > div
 				display: block
@@ -638,7 +819,11 @@
 	.unique_challenge
 		&.services
 			min-height: 100%
-
+	.main_section_portfolio
+		.tab_working_div
+		.tabwraper
+			.tabs-items
+				width: 150px
 	.footer
 		.footer-logo
 			margin-bottom: 30px
@@ -805,6 +990,11 @@
 			margin: 0 15px
 		.widget-fb
 			margin: 0
+	footer
+		//bottom: -39px
+		.logoMelforiWrap
+			top: -24px
+			left: 0
 /* Small Devices, Tablets */
 
 @media only screen and (max-width : 768px)
@@ -864,18 +1054,7 @@
 			.content
 				text-align: left
 	// секция about-us-office
-	.us-office-section
-		&.about-us-office
-			min-height: 680px
-			.img-container
-				background-size: contain
-				width: auto
-				display: inline-block
-				.main-img
-					height: 220px
-				.img-item
-					img
-						height: 107px
+
 
 	.our_advantages
 		&.langing-page-doing
@@ -891,6 +1070,19 @@
 				margin-bottom: 30px
 			.list
 				width: auto
+	.langing-page-form-section
+		.form_frame
+			h3
+				text-align: center
+				br
+					display: block
+			ul
+				padding-top: 30px
+				display: block
+				width: 320px
+				margin: 0 auto
+				li
+					font-size: 15px
 
 	.landing-development-steps
 		.video-wrap
@@ -1141,6 +1333,26 @@
 				margin-right: 0
 			p.title
 				font-size: 20px
+
+	.main_section_portfolio
+		.tabwraper
+			padding: 10px 10px 0
+			.tabs-items
+				margin: 0 0 15px 0
+				width: 380px
+	footer
+		.footerColumn
+			ul
+				max-width: 200px
+				margin: 20px auto
+				li
+					&:first-of-type
+						/* style */
+						margin-left: 10px
+
+
+
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 767px)
 	.footer
@@ -1196,6 +1408,10 @@
 				& + p
 					font-size: 18px
 					padding: 0 15px
+	.header_modal
+		margin-left: 30%
+		.select
+			display: none
 	.vacancies-developers
 		.title-wrap
 			h2
@@ -1221,24 +1437,6 @@
 					width: 255px
 			.requirements
 				padding-left: 30px
-	.us-office-section
-		&.about-us-office
-			.img-container
-				.main-img
-					margin-right: 0
-					margin-bottom: 5px
-					height: 223px
-				.img-item
-					display: block
-					img
-						display: inline-block
-						height: 212px
-						vertical-align: text-top
-						margin-bottom: 0
-						margin-right: 5px
-						&:last-child
-							margin-right: 0
-
 
 	.why_effective
 		&.why_profitably
@@ -1251,7 +1449,10 @@
 			padding: 0 15px
 		.how_good_item
 			width: 100%
-			height: 100%
+			margin-top: 30px
+			.mask
+				.logo-title
+					display: none
 		.how_good_item_img
 			width: 100%
 			height: auto
@@ -1265,6 +1466,7 @@
 		.how_good_item_mask
 			width: 97.8%;
 			height: 96.8%;
+
 	//Секция services
 	.services
 		.services_item_img
@@ -1357,6 +1559,22 @@
 			.article-img
 				.article-title
 					bottom: 10px
+
+	.reviews
+		.reviewContainer
+			.reviewWraper
+				.imgContainer
+					.forImageCompany
+						width: 100%
+
+				.textContainer
+					.mailsData
+						.wraperDataCalendar
+							float: none
+						a
+							margin:  5px auto
+
+
 @media only screen and (max-width : 565px)
 	.blog-section
 		.blog-content-container
@@ -1366,6 +1584,16 @@
 				.select
 					width: 100%
 					margin: 10px 0
+	.how_good
+		.how_good_item
+			.mask
+				.content
+					.company-title
+						font-size: 19px
+					.description
+						font-size: 16px
+				.logo-title
+					display: none
 @media only screen and (max-width : 520px)
 	/**/
 	.header_modal
@@ -1395,6 +1623,12 @@
 				display: block
 			.modal_form_input_wrap
 				display: block
+
+	.how_good
+		.how_good_item
+			.mask-link
+			//height: calc(100% - 95px)
+			.mask
 
 	.langing-page-whe-call-section
 		.content
@@ -1451,6 +1685,7 @@
 				.right
 					float: none
 					margin: 5px 0
+
 @media only screen and (max-width : 495px)
 	.develop-site-problem-section
 		.item
@@ -1461,6 +1696,14 @@
 				display: block
 				text-align: center
 				margin: auto
+
+		.how_good
+			.how_good_item
+				.mask-link
+					//height: calc(100% - 95px)
+				.mask
+					//height: calc(100% - 155px)
+
 
 @media only screen and (max-width : 480px)
 	/**/
@@ -1491,13 +1734,15 @@
 			width: 310px
 		a
 			padding: 11.5px 40.6px
+	.langing-page-form-section
+		.form_frame
+			h3
+				font-size: 28px
 
 	//секция about-us-office
 	.us-office-section
 		&.about-us-office
 			.img-container
-				.main-img
-					height: 157px
 				.img-item
 					img
 						height: 148px
@@ -1549,7 +1794,7 @@
 					width: 95%
 	.langing-page-understanding
 		.more-content
-			button
+			.button
 				width: 95%
 
 	.header.langing-pages-header
@@ -1578,6 +1823,13 @@
 	.SEO-audit_will_be_useful
 		button
 			width: 90%
+
+	.main_section_portfolio
+
+				.tabwraper
+					.tabs-items
+						width: 300px
+
 
 	.components-company-sites-section
 		padding: 0 15px
@@ -1623,6 +1875,23 @@
 				width: 330px
 	.popup.pop4 .dm-modal
 		width: 100%
+	.reviews
+		.reviewContainer
+			.reviewWraper
+				a
+					float: none
+					margin-top: 10px
+					width: 90%
+
+@media only screen and (max-width: 740px) and (orientation: landscape)
+	.header
+		&.header_page_404
+			min-height: 450px
+			.page_404
+				.page_404_img
+					margin-bottom: 20px
+
+
 @media only screen and (max-width : 460px)
 	.blog-section
 		.blog-content-container
@@ -1640,6 +1909,32 @@
 						width: calc(100% - 10px)
 						br
 							display: none
+	.header_modal
+		margin-left: 0
+		a
+			font-size: 14px
+		button
+			width: 134px
+	.page_404
+		top: calc(50% - 130px)
+		.page_404_img
+			margin-bottom: 20px
+		p
+			line-height: 1.2
+			font-size: 18px
+		button
+			width: 90%
+
+	.how_good
+		.how_good_item
+			.mask
+				.content
+					.about-project
+						width: 300px
+					.company-title
+						font-size: 16px
+					.description
+						font-size: 14px
 @media only screen and (max-width : 400px)
 
 	.header
@@ -1679,20 +1974,30 @@
 							font-size: 12px
 							height: 30px
 							width: 165px
+	.how_good
+		.how_good_item
+			.mask
+				.content
+					.about-project
+						width: 240px
+						height: 30px
+					.link-to-project
+						display: none
+					.company-title
+						font-size: 14px
+					.description
+						font-size: 12px
+
 @media only screen and (max-width : 380px)
 
 	h2
 		font-size: 30px
-	.header_modal
-		button
-			width: 160px
+
 
 	//секция about-us-office
 	.us-office-section
 		&.about-us-office
 			.img-container
-				.main-img
-					height: 150px
 				.img-item
 					img
 						height: 142px
@@ -1719,10 +2024,23 @@
 		.item
 			.content
 				max-width: 100%
+	.reviews
+		.moreReviewsView
+			.moreReviews
+				padding: 25px 40px
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
-
+	.langing-page-form-section
+		.form_frame
+			h3
+				font-size: 23px
+			ul
+				width: 100%
+				padding-left: 20px
+				li
+					i
+						margin-left: -34px
 
 /*==========  Mobile First Method  ==========*/
 
@@ -1730,10 +2048,10 @@
 @media only screen and (min-width : 320px)
 	/**/
 
-
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px)
 	/**/
+
 
 
 /* Small Devices, Tablets */

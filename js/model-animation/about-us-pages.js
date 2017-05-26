@@ -49,7 +49,6 @@ class AboutUsAnimation{
 			.from('.header_top', 3, {
 				y: 50,
 				opacity: 0,
-
 				ease: Power3.easeOut
 		},this.headerTime)
 			.from('.header_title', 3,{
