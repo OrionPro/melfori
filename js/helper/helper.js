@@ -1,7 +1,7 @@
 
 
 export function activeSection(section, startTop = 0, startBotton = 0){
-	
+
 	section = '.' + section;
 	if($(section).offset() !== undefined){
 		var topPosition = $(section).offset().top - startTop,

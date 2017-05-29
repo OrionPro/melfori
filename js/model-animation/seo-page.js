@@ -66,59 +66,65 @@ class SeoPageAnimation{
 
 
 		this.tl2
+			.from(".hot_clients",0.5,{
+				opacity: 0
+			},'-=1.5')
 			.from('.hotClients_per_hour', 1, {
 				y: 50,
 				opacity: 0,
 				ease: Power3.easeOut
-			},"-=0.5")
+			},"+=0.5")
 			.from(".about-wrap", 1,{
 				x: -100,
 				opacity: 0,
 				ease: Bounce.easeOut
-			},"-=0.1")
+			},'-=0.8')
 			.from(".img-wrap", 1,{
 				x: 100,
 				opacity: 0,
 				ease: Bounce.easeOut
-			},'+=0.1');
+			},'-=1');
 
 		this.tl3
-			.from('.difference_betwen', 3,{
+			.from('.difference_betwen', 1,{
 				y: 50,
 				opacity: 0,
-				ease: Power3.linear
-			}, '-=1')
-			.from(".context_wrap", 1,{
+				ease: Power3.easeOut
+			},'-=0.2')
+			.from(".context_wrap", 0.5,{
 				x: -300,
 				opacity: 0,
-				ease: Power3.linear
+				ease: Power3.easeOut
 
-			},'-=1')
-			.from('.seo_wrap', 1,{
+			},'-=0.5')
+			.from('.seo_wrap', 0.5,{
 				x: 300,
 				opacity: 0,
-				ease: Power3.linear
-			},'-=0.1')
+				ease: Power3.easeOut
+			},'-=0.5')
 			.from('.content-wrap', 1,{
 				scale: 1.2,
 				opacity: 0,
-				ease: Power3.linear
+				ease: Power3.easeOut
 			},'-=0.1')
 			.from('.content-wrap  h3', 1,{
 				scale: 0.8,
 				opacity: 0,
-				ease: Power3.linear
+				ease: Power3.easeOut
 			},'-=0.3');
 		this.tl4
-			.from('.ten_recommendations h2', 1,{
+			.from('.ten_recommendations',0.3,{
+				opacity: 0
+			},'-=0.3')
+			.from('.ten_recommendations > h2', 1,{
 				y: 50,
 				opacity: 0,
-				ease: Power3.linear
-				})
+				ease: Power3.easeOut
+				},'-=0.4')
 			.from('.ten_recommendations p', 1,{
 				y: 50,
 				opacity: 0,
-				ease: Power3.linear
+				ease: Power3.easeOut
 				}, '-=0.3')
 			.from('.animation_form_address', 1,{
 				x: 30,
@@ -126,27 +132,30 @@ class SeoPageAnimation{
 				scale: 0.95,
 				rotation: 5,
 				ease: Power3.easeOut
-			},'-=0.7')
+			},'-=0.5')
 			.from('.animation_form_email', 1,{
 				x: 30,
 				opacity: 0,
 				scale: 0.95,
 				rotation: 5,
 				ease: Power3.easeOut
-			}, '-=0.7')
+			}, '-=0.5')
 			.from('.animation_seo_class', 1,{
 				x: -50,
 				opacity: 0,
 				scale: 0.95,
 				rotation: 5,
 				ease: Power3.easeOut
-			},'-=0.7');
+			},'-=0.8');
 		this.tl5
-			.from('.contextual-steps-section .title-wrap h2',1,{
+			.from('.contextual-steps-section',0.5,{
+				backgroundColor: '#fff'
+			},"-=0.1")
+			.from('.whatIncludeinSeo',1,{
 				y: 50,
 				opacity: 0,
 				ease: Power3.easeOut
-		},	"-=0.5")
+				},"+=0.5")
 			.from('.decor-img',1,{
 				y: 50,
 				opacity: 0,
@@ -162,7 +171,7 @@ class SeoPageAnimation{
 				x: -100,
 				opacity: 0,
 				ease: Power3.easeOut
-			},'-=0.5')
+			},'-=0.8')
 			.from('.gear-1',1,{
 				y:	20,
 				opacity: 0,
@@ -172,7 +181,7 @@ class SeoPageAnimation{
 					rotationGear('.gear-1')
 
 				}
-			}, '-=0.5')
+			}, '-=1.5')
 			.from('.gear-2',1,{
 				y: -20,
 				opacity: 0,
@@ -181,14 +190,68 @@ class SeoPageAnimation{
 				onComplete: ()=>{
 					rotationGear('.gear-2', -1)
 				}
-			},'-=0.7');
+			},'-=1.5')
+			.from('.our_advantages ',1,{
+				backgroundColor: '#fff'
+			},"+=0.2");
 		
 		this.tl6
-			.from('.result_of_action',2,{
+			.from('.result_of_action',1,{
 				x: 50,
 				opacity: 0,
 				ease: Bounce.easeOut
-			}, '-=0.5');
+			}, '-=0.5')
+			.staggerFrom('.internet-shop-goods-item',1,{
+				y: 50,
+				opacity: 0,
+				rotate: 90,
+				ease: Power3.easeOut
+
+			},"+=0.1")
+			.from('.item-title > h3',1,{
+				y: 50,
+				opacity: 0,
+				scale: 0.5,
+				ease: Power3.easeOut
+			},"-=0.5")
+			.from('.item-title > p',1,{
+				y: 50,
+				opacity: 0,
+				scale: 0.5,
+				ease: Power3.easeOut
+			},"-=0.7")
+			.from('.modal',1,{
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut
+			},"-=0.7");
+		this.tl7
+			.from(".watchResults",1,{
+				y: -50,
+				opacity: 0,
+				ease: Power3.linear
+			},"-=1")
+			.from('.carousel_wrap',1,{
+				scale: 0.2,
+				opacity: 0,
+				x: -10,
+				y: 10,
+				ease: Power3.linear
+			},"+=0.3")
+			.from('.contextual-form-section',0.5,{
+				backgroundColor: '#fff'
+			},"-=0.5");
+		
+		this.tl8
+			.from('.lineH_min',4,{
+				opacity: 0,
+				y: 40,
+				ease: Power3.linear
+
+			},'-=0.5');
+
+
+				
 
 	}
 
@@ -196,21 +259,29 @@ class SeoPageAnimation{
 	if(activeSection("contextual-header")){
 		this.tl1.play();
 	}
-	if(activeSection('contextual-not-pay-section')){
+	if(activeSection('contextual-not-pay-section' ,400, 400)){
 		this.tl2.play();
 	}
-	if(activeSection('unlike_contextual_of_advertising')){
+	if(activeSection('unlike_contextual_of_advertising' ,300, 400)){
 		this.tl3.play();
 	}
-	if(activeSection('ten_recommendations')){
+	if(activeSection('ten_recommendations' ,300, 400)){
 		this.tl4.play();
 	}
-	if(activeSection('contextual-steps-section')){
+	if(activeSection('contextual-steps-section', 500, 300)){
 		this.tl5.play();
 	}
-	if(activeSection('internet-shop-goods')){
+	if(activeSection('our_advantages', 500, 400)){
 		this.tl6.play();
 	}
+	if(activeSection('several_cases', 500, 400)){
+		this.tl7.play();
+
+	}
+	if(activeSection('contextual-form-section', 700, 400)){
+			this.tl8.play();
+		}
+
 
 }
 

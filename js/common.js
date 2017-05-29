@@ -195,8 +195,13 @@ $(document).ready(function () {
 		lightgallery("#lightGallery", '.iconPlus');
 	}
 
-	//до сюда vadjs
+	//до сюда vadj
+		$('.serializeMethod').click(function(){
+			"use strict";
+			var ser = $('.formSerialize').serialize();
+			
 
+		});
 	//  Инициальзация маски в форме
 	burgerEff.description();
 	burgerEff.mobileMenuBg();

@@ -8,7 +8,7 @@ import AboutUsAnimation  from './model-animation/about-us-pages.js';
 import ContextualAnimation  from './model-animation/contextual-pages.js';
 import DesignPagesAnimation  from './model-animation/design-pages.js';
 import SeoPageAnimation from './model-animation/seo-page.js';
-
+import ReviewPageAnimation from './model-animation/reviews.js';
 // Запуск необходимой анимации
 class Animation {
 	
@@ -18,6 +18,7 @@ class Animation {
 		this.ContextualAnimation = new ContextualAnimation();
 		this.DesignPagesAnimation = new DesignPagesAnimation();
 		this.SeoPageAnimation = new SeoPageAnimation();
+		this.ReviewPageAnimation = new ReviewPageAnimation();
 
 	}
 
@@ -39,6 +40,9 @@ class Animation {
 		}
 		if(activePages('main-seo-pages')){
 			this.SeoPageAnimation.description();
+		if(activePages('reviews-page')){
+			this.ReviewPageAnimation.description()
+		}
 
 		}
 	}
@@ -58,6 +62,9 @@ class Animation {
 		}
 		if(activePages('main-seo-pages')){
 			this.SeoPageAnimation.start();
+		}
+		if(activePages('review')){
+			this.ReviewPageAnimation.start()
 		}
 	}
 }

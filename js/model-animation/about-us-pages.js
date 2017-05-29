@@ -124,12 +124,12 @@ class AboutUsAnimation{
 				scale: 0.95,
 				rotation: 5,
 				ease: Bounce.easeOut
-			},"-=0.5")
+			},"-=0.7")
 			.from('.section-4 .contacts ', 1,{
 				x: 50,
 				opacity: 0,
 				ease: Bounce.easeOut
-			},"-=0.7");
+			},"-=0.5");
 
 		// section 5
 		this.tl5
