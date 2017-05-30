@@ -127,43 +127,43 @@ var burgerEff = new BurgerEff;
 
 $(document).ready(function () {
 // подключение нового хедера vadjs
-  if(document.querySelector(".hoverDivMenu") !== null) {
-	  var service = document.querySelectorAll('.header_nav ul li'),
-		  hoverDiv = document.querySelector('.hoverDivMenu'),
-		  hoverTop = document.querySelector('.header_top'),
-		  caret = document.querySelector('.caretup'),
-		  section = document.querySelector(".section-1");
+	if (document.querySelector(".hoverDivMenu") !== null) {
+		var service = document.querySelectorAll('.header_nav ul li'),
+			hoverDiv = document.querySelector('.hoverDivMenu'),
+			hoverTop = document.querySelector('.header_top'),
+			caret = document.querySelector('.caretup'),
+			section = document.querySelector(".section-1");
 
-	  function hideHeaderService() {
-		  hoverDiv.style.opacity = '0';
-		  hoverTop.style.borderRadius = "";
-		  hoverTop.style.boxShadow = "";
-		  caret.style.transform = 'rotate(0deg)';
-		  hoverTop.style.background = 'transparent';
+		function hideHeaderService() {
+			hoverDiv.style.opacity = '0';
+			hoverTop.style.borderRadius = "";
+			hoverTop.style.boxShadow = "";
+			caret.style.transform = 'rotate(0deg)';
+			hoverTop.style.background = 'transparent';
 
-	  }
+		}
 
-	  service[1].onmouseover = function () {
-		  hoverDiv.style.opacity = '1';
-		  hoverTop.style.borderRadius = "0px 0px 10px 10px";
-		  hoverTop.style.boxShadow = "0 0 10px 2px rgba(51, 55, 57, 0.08)";
-		  hoverTop.style.background = '#fff';
-		  caret.style.transform = 'rotate(180deg)';
+		service[1].onmouseover = function () {
+			hoverDiv.style.opacity = '1';
+			hoverTop.style.borderRadius = "0px 0px 10px 10px";
+			hoverTop.style.boxShadow = "0 0 10px 2px rgba(51, 55, 57, 0.08)";
+			hoverTop.style.background = '#fff';
+			caret.style.transform = 'rotate(180deg)';
 
 
-	  }
-	  for (var i = service.length; i--;) {
-		  if (i === 1) continue;
-		  service[i].onmouseover = hideHeaderService;
-	  }
+		}
+		for (var i = service.length; i--;) {
+			if (i === 1) continue;
+			service[i].onmouseover = hideHeaderService;
+		}
 
-	  section.onmouseover = function (e) {
-		  if (e.clientY > 325)hideHeaderService()
-	  }
-  }
+		section.onmouseover = function (e) {
+			if (e.clientY > 325)hideHeaderService()
+		}
+	}
 
 	//подклбчение LIGHTGALLERY отсюда vadjs
-	function lightgallery(main, child){
+	function lightgallery(main, child) {
 		$(main).lightGallery({
 				selector: child,
 				zoom: true
@@ -173,35 +173,42 @@ $(document).ready(function () {
 	}
 
 	function currBody(bodyClassName) {
-	 var body = document.getElementsByTagName('body')[0];
-		
-	if(body.className === bodyClassName) {
-		return true;
-	}else{
-		return false;
-	}
+		var body = document.getElementsByTagName('body')[0];
+
+		if (body.className === bodyClassName) {
+			return true;
+		} else {
+			return false;
+		}
 
 	}
-	if(currBody("design-pages")){
+
+
+
+	if (currBody("design-pages")) {
 		lightgallery('.lightGallery', '.clickGal');
 	}
-	if(currBody("review")){
-	
-			lightgallery(".lightGallery", '.openLetter');
+	if (currBody("review")) {
+
+		lightgallery(".lightGallery", '.openLetter');
 
 
 	}
-	if(currBody('about-us-pages')){
+	if (currBody('about-us-pages')) {
 		lightgallery("#lightGallery", '.iconPlus');
 	}
+	if(currBody('VkAdvacment')){
+		lightgallery('.lightGallery','.open_gallery');
+	}
+	if(currBody('instagram_advacement')){
+		lightgallery('.lightGallery','.open_gallery');
+	}
+	if(currBody('facebook_advacement')){
+		lightgallery('.lightGallery','.open_gallery');
+	}
 
-	//до сюда vadj
-		$('.serializeMethod').click(function(){
-			"use strict";
-			var ser = $('.formSerialize').serialize();
-			
+	// //до сюда vadj
 
-		});
 	//  Инициальзация маски в форме
 	burgerEff.description();
 	burgerEff.mobileMenuBg();

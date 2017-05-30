@@ -465,30 +465,43 @@
 
 			.letterContainer
 				display: none
+	//section advancementVk
+	.advancementConductingVk
+		.iconSocial
+			.imgWraper
+				display: block
+				margin: 0 auto
+				width: 100%
+				text-align: center
+			p
+				display: block
+				font-size: 22px
+				margin: 10px auto
+				text-align: center
+				width: 100%
 
 
+	.us-office-section
+		&.about-us-office
+			.img-container
+				.iconPlus
+					width: 50px
+					height: 50px
+				.img-item
+					display: inline-block
+					vertical-align: middle
+					.imgHoverWrapSmall
+						width: 195px
+						margin-bottom: 4px
+						margin-left: 4px
+					img
+						display: block
+						margin-bottom: 5px
+						&:last-child
+							margin-bottom: 0
 
-.us-office-section
-	&.about-us-office
-		.img-container
-			.iconPlus
-				width: 50px
-				height: 50px
-			.img-item
-				display: inline-block
-				vertical-align: middle
-				.imgHoverWrapSmall
-					width: 195px
-					margin-bottom: 4px
-					margin-left: 4px
-				img
-					display: block
-					margin-bottom: 5px
-					&:last-child
-						margin-bottom: 0
-
-				.imgWrapper
-					float: left
+					.imgWrapper
+						float: left
 
 
 	.blog-detalis-content-section
@@ -542,10 +555,11 @@
 	.header_nav
 		display: none
 	.header_logo
-		display: block
-		margin-top: 37px
-		padding-left: 82px
+		display: inline-block
+		margin-top: 33px
+		padding: 0 20px 0 75px
 	.header_modal
+		display: inline-block
 		margin-top: 7px
 		float: right
 	nav[canvas]
@@ -851,6 +865,9 @@
 		.select
 			max-width: 300px
 			margin: auto
+
+
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 
@@ -995,6 +1012,60 @@
 		.logoMelforiWrap
 			top: -24px
 			left: 0
+
+	.advancementConductingVk
+		.iconSocial
+			.imgWraper
+				display: block
+				margin: 0 auto
+				width: 100%
+				text-align: center
+			p
+				display: block
+				font-size: 22px
+				margin: 10px auto
+				text-align: center
+				width: 100%
+
+	.examplesOfOurAchievements
+		.carousel_wrap
+			.owl-carousel
+				.imgWraper
+					width: 100%
+					display: block
+					margin: 0 auto
+					img
+						margin: 0 auto
+				.TextAfter800
+					display: block
+					.tasks
+						display: inline-block
+						width: 49%
+						vertical-align: top
+						h3
+							margin: 20px 41px
+					.results
+						display: inline-block
+						width: 47%
+						vertical-align: top
+						margin-left: 10px
+						h3
+							margin: 20px 20px
+				.carouselText
+					display: none
+	.rates_on_our_advancement
+		.rates
+			margin-bottom: 36px
+			ul
+				padding: 0 30px
+			a
+				width: 95%
+	.free_audit_your_instagram_page
+		padding-bottom: 100px
+		form
+			div
+				margin-bottom: 20px
+
 /* Small Devices, Tablets */
 
 @media only screen and (max-width : 768px)
@@ -1349,6 +1420,10 @@
 					&:first-of-type
 						/* style */
 						margin-left: 10px
+	.free_audit_your_instagram_page
+		form
+			div
+				margin-bottom: 30px
 
 
 
@@ -1359,12 +1434,32 @@
 		.contacts-container
 			max-width: 200px
 			margin: 30px auto
+	.examplesOfOurAchievements
+		.carousel_wrap
+			.owl-carousel
+				.TextAfter800
+					.tasks
+						display: block
+						width: 100%
+						h3
+							text-align: center
+						p
+							text-align: center
+
+					.results
+						display: block
+						width: 100%
+						h3
+							text-align: center
+						p
+							text-align: center
 @media only screen and (max-width: 760px) and (orientation: landscape)
 	.close
 		right: 20px
 		top: 10px
 		&:hover
 			color: #920182
+
 @media only screen and (max-width : 630px)
 	.unlike_contextual_of_advertising
 		.unlike_contextual_of_advertising_wrap
@@ -1408,8 +1503,6 @@
 				& + p
 					font-size: 18px
 					padding: 0 15px
-	.header_modal
-		margin-left: 30%
 		.select
 			display: none
 	.vacancies-developers
@@ -1573,7 +1666,14 @@
 							float: none
 						a
 							margin:  5px auto
-
+	.five_reasons_why_choose_us
+		.content
+			.gear-wrap
+				display: none
+			ul
+				li
+					.arrow
+						display: none
 
 @media only screen and (max-width : 565px)
 	.blog-section
@@ -1685,6 +1785,8 @@
 				.right
 					float: none
 					margin: 5px 0
+
+
 
 @media only screen and (max-width : 495px)
 	.develop-site-problem-section
@@ -1882,6 +1984,16 @@
 					float: none
 					margin-top: 10px
 					width: 90%
+	.rates_on_our_advancement
+		.rates
+			ul
+				padding: 0 20px
+				li
+					i
+						margin-right: 7px
+			a
+				width: 260px
+				margin: 0 auto
 
 @media only screen and (max-width: 740px) and (orientation: landscape)
 	.header

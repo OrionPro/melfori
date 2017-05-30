@@ -828,8 +828,8 @@ nav[canvas]
 							@include sprite($line)
 				.arrow
 					position: absolute
-					left: -30px
-					top: 61px
+					left: -35px
+					top: 55px
 					height: calc(130% - 10px)
 					width: 17px
 					border: 2px dashed #acb0bc
@@ -1991,23 +1991,25 @@ nav[canvas]
 	h2
 		color: $main_color
 		line-height: 1.2
+		margin-bottom: 15px
 	.ourFasesFoto
 		width: 45%
 		display: inline-block
 		vertical-align: bottom
-		background: url(../img/couple_of_words_bg_new.jpg) center bottom no-repeat
+		background: url(../img/couple_of_words_bg_new.jpg) bottom left  no-repeat
 		background-size: contain
-		height: 510px
+		height: 425px
 	.couple_of_words_txt
 		display: inline-block
 		vertical-align: middle
-		width: 45%
+		width: 35%
 		height: 400px
-		margin-left: 10px
+		overflow: hidden
 		p
 			text-align: left
 			@include font($main_txt_color, 16px, $font_SFUIDisplay-Light, 1.2)
-			margin-bottom: 20px
+			margin-bottom: 10px
+			font-size: 17px
 // Стилизация скролла
 .mCS-my-theme
 
@@ -2805,7 +2807,8 @@ nav[canvas]
 				&:focus
 					@extend %main_btn_focus
 
-.contextual-steps-section
+.contextual-steps-section, .five_reasons_why_choose_us
+
 	background: #fff
 	text-align: center
 	&.gray-bg
@@ -2953,6 +2956,107 @@ nav[canvas]
 				font-size: 18px
 				line-height: 1.3
 
+.rates_on_our_advancement
+	background: #fff
+	padding: 120px 0
+	h1
+		text-align: center
+		color: $main_color
+		margin-bottom: 45px
+	.rates
+		cursor: pointer
+		box-shadow:  0 3px 15px 0 rgba(50, 50, 50, 0.75)
+		padding-bottom: 30px
+		&:hover .hover_effect
+			/* style */
+			background: #00ccff
+		.hover_effect
+			width: 100%
+			height: 41px
+			border-radius: 0 0 20px 20px
+			background: #f8f8fa
+			transition: all 300ms linear
+			margin-bottom: 50px
+		.img_wrap
+			width: 100%
+			text-align: center
+			img
+				max-width: 100%
+				margin: 0 auto
+		p
+			text-align: center
+			margin: 30px 0
+		h3
+			color: #00ccff
+			font-size: 36px
+			margin: 0
+			text-align: center
+		ul
+			list-style-type: none
+			padding: 0 15px
+			li
+				margin-bottom: 24px
+				&:last-of-type
+					/* style */
+					margin: 0
+				p
+					display: inline-block
+					vertical-align: top
+					max-width: 85%
+					margin: 0
+					text-align: left
+					font-size: 18px
+				i
+					display: inline-block
+					vertical-align: top
+					max-width: 10%
+					color: #00cc66
+					font-size: 24px
+					margin-right: 15px
+		a
+			@extend %main_btn
+			display: block
+			margin: 0 15px
+			padding: 15px
+			text-align: center
+			text-decoration: none
+			width: 90%
+			&:hover
+				/* style */
+				@extend %main_btn_hover
+
+.free_audit_your_instagram_page
+	background:	#00ccff
+	color: #fff
+	padding: 120px 0
+	h1
+		text-align: center
+		color: #fff !important
+	p
+		text-align: center
+		width: 80%
+		font-size: 18px
+		margin: 0 auto 30px
+	form
+		input, button
+			background: transparent
+			display: block
+			width: 100%
+			height: 13px
+			border-radius: 10px
+			border: 1px solid #fff
+			outline: none
+			padding: 25px
+		button
+			padding: 0
+			height: 50px
+			transition: all 300ms linear
+			background: #ffffff
+			color: #00ccff
+			&:hover
+				/* style */
+				background: transparent
+				color: #fff
 
 //секция smm-steps-section
 .smm-steps-section
@@ -3936,8 +4040,7 @@ nav[canvas]
 		text-align: left
 		margin-bottom: 20px
 
-
-
+//удалить после
 
 // Скеция page_404
 .page_404
@@ -3957,13 +4060,81 @@ nav[canvas]
 	button
 		@extend %main_btn
 		width: 370px
+//страница раскрутка в ВК
+.advancementConductingVk
+	background: #f8f8fa
+	padding: 125px 0 70px
+	h1
+		font-size: 56px
+		color: $main_color
+		max-width: 770px
+		margin: 0 auto 60px
+		text-align: center
+	.iconSocial
+		margin-bottom: 45px
+		.imgWraper
+			display: inline-block
+			img
+				max-width: 100%
+
+		p
+			display: inline-block
+			vertical-align: middle
+			max-width: 67%
+			margin-left: 12px
+			font-size: 18px
+
+.examplesOfOurAchievements
+	padding: 100px 0
+	background: #fff
+	h1
+		color: $main_color
+		text-align: center
+		margin-bottom: 40px
+	.carousel_wrap
+		.owl-carousel
+			.carouselText
+				display: inline-block
+				max-width: 36%
+				margin: 0 12px
+				vertical-align: top
+				h3
+					font-size: 26px
+					margin: 0 0 7px
+				p
+					font-size: 17px
+					margin: 0 0 8px
+					&:last-of-type
+						/* style */
+						margin-bottom: 0
+			.TextAfter800
+				display: none
+			.imgWraper
+				display: inline-block
+				vertical-align: top
+				max-width: 58%
+				cursor: pointer
+				img
+					max-width: 100%
+.five_reasons_why_choose_us
+	padding: 120px 0
+	background: #f8f8fa
+	h1
+		color: $main_color
+		text-align: center
+		margin-bottom: 53px
+
+
 // Секия footer
 footer
 	border-bottom: 3px solid #00ccff
-
-	padding-top: 80px
+	padding-top: 10px
 	background: #ffffff
-	background-image: url(../img/footerBackground.png) bottom no-repeat
+	background-image: url(../img/footerBackground.png) bottom center no-repeat
+	background-size: 100%
+	&.rewFooter
+		position: relative
+		top: 24px
 	.logoMelforiWrap
 		position: relative
 		top: -75px
