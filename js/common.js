@@ -1,5 +1,15 @@
 // подключение common.js
-
+// import {rotationGear} from './helper/helper.js';
+function rotationGear(elements, direction = 1){
+	var gearSmall = new TimelineMax();
+	gearSmall
+		.from(elements, 2,{
+			rotation: 360 * direction,
+			force3D:false,
+			ease: Power0.easeNone
+		});
+	gearSmall.repeat(Infinity);
+}
 class BurgerEff {
 	constructor() {
 		this.line = $('#nav-lines').find('.nav-line');
@@ -171,40 +181,106 @@ $(document).ready(function () {
 		)
 
 	}
+	var timeline = new TimelineMax;
 
-	function currBody(bodyClassName) {
-		var body = document.getElementsByTagName('body')[0];
+		timeline.from('.gear-1', 1, {
+			ease: Bounce.easeOut,
+			rotation: -50,
+			onComplete: () => {
+				rotationGear('.gear-1')
 
-		if (body.className === bodyClassName) {
-			return true;
-		} else {
-			return false;
+			}
+		}, '-=1.5')
+		.from('.gear-2', 1, {
+			ease: Bounce.easeOut,
+			rotation: 50,
+			onComplete: () => {
+				rotationGear('.gear-2', -1)
+			}
+		}, '-=1.5');
+
+		timeline.play();
+
+	// function currBody(bodyClassName) {
+	// 	var body = document.getElementsByTagName('body')[0];
+	//
+	// 	if (body.className === bodyClassName) {
+	// 		return true;
+	// 	} else {
+	// 		return false;
+	// 	}
+	//
+	// }
+
+var arr = ['sdsdsd',2,null];
+
+var currBody = document.getElementsByTagName('body')[0];
+
+	// if (currBody("design-pages")) {
+	// 	lightgallery('.lightGallery', '.clickGal');
+	// }
+	// if (currBody("review")) {
+	//
+	// 	lightgallery(".lightGallery", '.openLetter');
+	//
+	//
+	// }
+	// if (currBody('about-us-pages')) {
+	// 	lightgallery("#lightGallery", '.iconPlus');
+	// }
+	// if(currBody('VkAdvacment')){
+	// 	lightgallery('.lightGallery','.open_gallery');
+	// }
+	// if(currBody('instagram_advacement')){
+	// 	lightgallery('.lightGallery','.open_gallery');
+	// }
+	// if(currBody('facebook_advacement')){
+	// 	lightgallery('.lightGallery','.open_gallery');
+	// }
+
+	switch(currBody.className){
+
+		case 'design-pages':
+			lightgallery('.lightGallery', '.clickGal');
+			break;
+		case "review":
+			lightgallery(".lightGallery", '.openLetter');
+			break;
+		case 'about-us-pages':
+			lightgallery("#lightGallery", '.iconPlus');
+			break;
+		case 'VkAdvacment':
+			lightgallery('.lightGallery','.open_gallery');
+			break;
+		case 'instagram_advacement':
+			lightgallery('.lightGallery','.open_gallery');
+			break;
+		case 'facebook_advacement':
+			lightgallery('.lightGallery','.open_gallery');
+			break;
+		default:
+			console.log("unanimated page");
+
+	}
+	//final-coutdown
+	function finalCountdown(date, count) {
+		var _DAYinMS = 86400000,
+			 dateNow = Date.now(),
+			 cur = count;
+		date = typeof date === 'number' ? date : Date.parse(date);
+		count -=  Math.floor((dateNow - date) / _DAYinMS);
+		if (count < 0) {
+
+			return finalCountdown(date + (_DAYinMS * cur), cur);
 		}
-
+		return count;
 	}
 
+	var d = new Date(2017, 5, 9);
+	var final = finalCountdown(d, 10);
 
-
-	if (currBody("design-pages")) {
-		lightgallery('.lightGallery', '.clickGal');
-	}
-	if (currBody("review")) {
-
-		lightgallery(".lightGallery", '.openLetter');
-
-
-	}
-	if (currBody('about-us-pages')) {
-		lightgallery("#lightGallery", '.iconPlus');
-	}
-	if(currBody('VkAdvacment')){
-		lightgallery('.lightGallery','.open_gallery');
-	}
-	if(currBody('instagram_advacement')){
-		lightgallery('.lightGallery','.open_gallery');
-	}
-	if(currBody('facebook_advacement')){
-		lightgallery('.lightGallery','.open_gallery');
+	if(document.querySelector('.final-coutdown-point')){
+	document.querySelector('.final-coutdown-point').innerHTML = final;
 	}
 
 	// //до сюда vadj
@@ -215,10 +291,10 @@ $(document).ready(function () {
 
 	chechBoxes();
 
-	//  Стилизация скролла
-	// $(".couple_of_words_txt").mCustomScrollbar({
-	// 	theme: "my-theme"
-	// });
+	 // Стилизация скролла
+	$(".couple_of_words_txt").mCustomScrollbar({
+		theme: "my-theme"
+	});
 
 	$(".modal_form_phone").each(function () {
 		var className = $(this).attr('class').split(' ');
