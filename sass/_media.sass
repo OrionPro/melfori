@@ -8,7 +8,18 @@
 	// для фиксированного сайта
 	// body
 	// 	width: 1200px
-
+	.header
+		&.internet-shop-header
+			.header_title
+				top: calc(50% - 300px )
+	.header-form
+		form
+			.label
+				text-align: center
+			& > div
+				display: block
+		.modal_form_input_wrap
+			margin: 0 0 20px
 	.blog-section
 		.blog-content-container
 			.content
@@ -548,6 +559,10 @@
 
 @media only screen and (max-width : 993px)
 	/**/
+	.header
+		&.internet-shop-header
+			.header_title
+				top: calc(50% - 300px )
 	h2
 		margin-top: 50px
 	.header_top
@@ -868,6 +883,18 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
+	.header-form
+		form
+			& > div
+				display: block
+				text-align: center
+		.modal_form_input_wrap
+			margin-right: 0
+			margin-bottom: 30px
+			input
+				margin: auto
+	.hoverDivMenu
+		display: none
 	.final-coutdown
 		h2
 			font-size: 30px
@@ -905,11 +932,14 @@
 					& > div
 						display: block
 						text-align: center
-				.modal_form_input_wrap
-					margin-right: 0
-					margin-bottom: 30px
-					input
-						margin: auto
+					.modal_form_input_wrap
+						margin-right: 0
+						margin-bottom: 30px
+						input
+							margin: auto
+							width: 90%
+					input[type=submit]
+						width: 95% !important
 
 	.our_advantages
 		&.langing-page-doing
@@ -1084,7 +1114,18 @@
 		padding: 0 15px
 	.header_logo
 		display: block
-
+	.header
+		&.header-mk
+			.header-form
+				top: calc(50% - 50px)
+		&.design-header
+			.header_title
+				top: calc(50% - 210px)
+			.header-form
+				top: calc(50% - 25px)
+		&.seo-header
+			.header-form
+				top: calc(50% - -50px)
 	.vacancies-developers
 		&.vacancies
 			.vacancies-item
@@ -1186,9 +1227,18 @@
 			h3
 				padding: 0
 	.header
+		&.header-SMM
+			.header-form
+				top: calc(50% - 25px)
+	.header
 		&.company-site-header
 			.header_title
 				position: static
+		&.header-vacancies
+			.header_title
+				top: calc(50% - 240px)
+			.header-form
+				top: calc(50% - 35px)
 	.company-site-agreement-section
 		.list-wrap
 			ul
@@ -1486,6 +1536,10 @@
 				font-size: 18px
 			.decore-img
 				display: none
+	.header
+		&.header-seo-audit
+			.header-form
+				top: calc(50% - 50px)
 @media only screen and (max-width : 580px)
 	h3
 		font-size: 24px
@@ -1627,6 +1681,15 @@
 
 
 @media only screen and (max-width : 570px)
+	.header
+		&.facebook-header
+			.header_title
+				top: calc(50% - 250px)
+		&.header-reviews
+			.header_title
+				top: calc(50% - 200px)
+			.header-form
+				top: calc(50% - 70px)
 	.header_logo
 		a
 			span
@@ -1814,8 +1877,10 @@
 			.item-wrap
 				.button
 					width: 95%
-	.header
-		min-height: 400px
+	.header-form
+		input,
+		input[type=submit]
+			width: 95%
 	.header_title
 		h1
 			font-size: 26px
@@ -1899,11 +1964,12 @@
 			.button
 				width: 95%
 
-	.header.langing-pages-header
-		.header-form
-			input,
-			input[type=submit]
-				width: 95%
+	.header
+		.langing-pages-header
+			.header-form
+				input,
+				input[type=submit]
+					width: 95%
 
 	.unique_challenge
 		&.vacancies-form

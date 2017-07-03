@@ -159,8 +159,6 @@ $(document).ready(function () {
 			hoverTop.style.boxShadow = "0 0 10px 2px rgba(51, 55, 57, 0.08)";
 			hoverTop.style.background = '#fff';
 			caret.style.transform = 'rotate(180deg)';
-
-
 		}
 		for (var i = service.length; i--;) {
 			if (i === 1) continue;
@@ -170,6 +168,33 @@ $(document).ready(function () {
 		section.onmouseover = function (e) {
 			if (e.clientY > 325)hideHeaderService()
 		}
+	}
+//секция who we are item замена фото при ховере
+	const allFaces = document.querySelectorAll('.item-faces');
+
+	for( let item of allFaces){
+		item.lastElementChild.style.display = 'none';
+		item.addEventListener('mouseenter',function (){
+			this.firstElementChild.classList.remove('active-image');
+			setTimeout(()=>{
+				this.firstElementChild.style.display = 'none';
+				this.lastElementChild.style.display = 'block';
+				},200);
+			setTimeout(()=>{
+				this.lastElementChild.classList.add('active-image');
+			},250);
+		},false);
+
+		item.addEventListener('mouseleave',function (){
+			this.lastElementChild.classList.remove('active-image');
+			// setTimeout(()=>{
+				this.lastElementChild.style.display = 'none';
+				this.firstElementChild.style.display = 'block';
+				// },200);
+			// setTimeout(()=>{
+				this.firstElementChild.classList.add('active-image');
+			// },250);
+		},false)
 	}
 
 	//подклбчение LIGHTGALLERY отсюда vadjs
@@ -336,7 +361,7 @@ var currBody = document.getElementsByTagName('body')[0];
 		var anchor = $(this);
 		$('html, body').stop().animate({
 			scrollTop: $("#" + anchor.data('scroll')).offset().top
-		}, 500);s
+		}, 500);
 		return false;
 	});
 
@@ -372,7 +397,7 @@ var currBody = document.getElementsByTagName('body')[0];
 		// И дальше передаем значение в инпут который под загрузчиком
 		$(this).parent().find('.fileLoad').find('input').val(fileResult);
 	});
-
+	var teamCarousel = $('.our-team-carousel .owl-carousel');
 	/* Добавляем новый класс кнопке если инпут файл получил фокус */
 	$('#file').hover(function(){
 		$(this).parent().find('span').addClass('button-hover');

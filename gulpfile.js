@@ -88,7 +88,7 @@ gulp.task('libs', function() {
 		'app/libs/matchMedia/matchMedia.addListener.js'
 		])
 		.pipe(concat('libs.js'))
-		// .pipe(uglify()) //Minify libs.js
+		.pipe(uglify()) //Minify libs.js
 		.pipe(gulp.dest('app/js/'));
 });
 
@@ -101,7 +101,7 @@ gulp.task('scripts', () => {
 			presets: ['es2015', 'react']
 		}))
 		.pipe(concat('main.js'))
-		// .pipe(uglify()) //Minify main.js
+		.pipe(uglify()) //Minify main.js
 		.pipe(gulp.dest('app/js/'))
 		.pipe(livereload());
 });
@@ -112,6 +112,7 @@ gulp.task('browserify', function () {
 		.transform(babelify, { presets: ['es2015']})
 		.bundle()
 		.pipe(source('animation.js'))
+		//.pipe(uglify())
 		.pipe(gulp.dest('app/js/'));
 });
 
@@ -123,7 +124,7 @@ gulp.task('html', () => {
 });
 
 gulp.task('watch', function () {
-	 var server = livereload({ start: true });	
+	 var server = livereload({ start: true });
 	gulp.watch('sass/*.sass', ['styles']);
 	gulp.watch('app/libs/**/*.js', ['libs']);
 	gulp.watch('js/*.js', ['scripts']);

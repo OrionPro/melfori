@@ -1826,7 +1826,7 @@
 	</div>
 </nav>
 <div canvas="container">
-	<header class="header">
+	<header class="header header-vacancies">
 		<div class="video-container">
 			<video id="Video" class="video" loop autoplay muted>
 				<source src="img/header_video.webm" type="video/webm">
@@ -1839,7 +1839,7 @@
 					<div class="header_logo">
 						<a href="/" class="logo">
 							<img src="img/top_logo.png" alt="">
-                            <span>Делаем маркетинг <br/>
+							<span>Делаем маркетинг <br/>
                             в интернете эффективным</span>
 						</a>
 					</div>
@@ -1875,6 +1875,31 @@
 					<h1>Ищем ответственные таланты</h1>
 					<b>Разбираетесь в интернет-маркетинге, хотите расти вместе?</b>
 					<p>У нас к вам предложение :)</p>
+					<div class="decor-bottom-border">
+						<span></span>
+					</div>
+				</div>
+				<div class="header-form">
+					<h3>Сэкономьте время</h3>
+					<p>Обсудить задачу по телефону – быстрее и информативнее.</p>
+					<form>
+						<div>
+							<div class="modal_form_input_wrap">
+
+								<div class="modal_input_error">Заполните поле
+									<div class="modal_error_triangle"></div>
+									<div class="modal_error_chest_img"></div>
+								</div>
+								<label>Напишите номер, мы перезвоним.</label>
+								<input name="phone" class="modal_form_phone ua" placeholder="+38(___) ___-__-__"
+									   type="text">
+							</div>
+						</div>
+						<input type="submit" value="Обсудить по телефон">
+						<input type="hidden" name="form_name" value="Обсудить по телефон (Лендинг)">
+						<input type="hidden" name="form_type" value="normal">
+					</form>
+
 				</div>
 				<div class="header_bot_txt">
 					<a href="#" class="scroll_to" data-scroll="vacancies-developers">
@@ -1929,7 +1954,7 @@
 						<div class="requirements">
 							<h4>
 								<p><span>Программиста</span> который легко разберётся
-								в чужом коде и сделает его лучше</p>
+									в чужом коде и сделает его лучше</p>
 							</h4>
 							<div class="list-wrap">
 								<p>Что нужно:</p>
@@ -2003,7 +2028,6 @@
 			</div>
 		</div>
 	</section>
-
 
 
 	<section class="unique_challenge vacancies-form">
@@ -2102,7 +2126,7 @@
 			if ("[object Array]" !== Object.prototype.toString.call(t)) return !1;
 			for (var r = 0; r < t.length; r++) {
 				var c = n.createElement("script"),
-						e = t[r];
+					e = t[r];
 				c.src = e.src, c.async = e.async, n.body.appendChild(c)
 			}
 			return !0

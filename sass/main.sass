@@ -1565,6 +1565,7 @@ nav[canvas]
 			@extend %main_btn
 			width: 230px
 			&:hover
+				/* style */
 				@extend %main_btn_hover
 			&:active
 				@extend %main_btn_active
@@ -1572,45 +1573,89 @@ nav[canvas]
 				@extend %main_btn_focus
 	.why_effective_item_img
 		min-height: 170px
-
-
 //	Секция who_are_we
-.who_are_we_items
-	margin-top: 60px
-	margin-bottom: 6px
-	.who_are_we_item
-		text-align: center
-		margin-bottom: 70px
-		&:last-of-type
-			margin-right: 0
-		.who_are_we_item_img
-			margin: auto
-			position: relative
-			padding: 5px
-			@extend %flex
-			@include sprite($who_are_we_item_img_back)
-			background-position: 0 0
-		.who_are_we_item_text
-			position: absolute
-			top: 0px
-			padding: 5px
-			font-size: 18px
-			left: 0px
-			right: 0px
-			height: 100%
-			width: 100%
-			display: table
-			span
+.who-we-are-new-option
+	padding: 55px 0
+	.who-we-are-body
+		.who-we-are-item
+			padding-bottom: 50px
+			.item-faces
+				cursor: pointer
+				height: 400px
+				display: flex
+				align-items: flex-end
+				justify-content: center
 				background: #fff
-				border-radius: 50%
-				display: table-cell
-				vertical-align: middle
-		p
-			margin-top: 6px
-			margin-bottom: 0
-			font-size: 24px
+				&.first-face
+					background: url(../img/item-background3.png) no-repeat top center
+				&.second-face
+					background: url(../img/item-backgroud2.png) no-repeat top center
+				&.third-face
+					background: url(../img/item-background3.png) no-repeat top center
+				&.fourth-face
+					background: url(../img/item-background4.png) no-repeat top center
+				img
+					transition: all 200ms linear
+					opacity: 0
+					&.active-image
+						/* style */
+						opacity: 1
+			.item-description
+				padding-top: 35px
+				h4
+					margin: 0
+					font-size: 24px
+	.look-whole-team
+		a
+			@extend %main_btn
+			color: #fff
+			width: 230px
+			display: flex
+			justify-content: center
+			align-items: center
+			margin: 0 auto
+			cursor: pointer
+			transition: all 500ms linear
+			text-decoration: none
+			&:hover
+				@extend %main_btn_hover
+
+
+//	Секция who_are_we перед переделкой//.who_are_we_items
+//	margin-top: 60px
+//	margin-bottom: 6px
+//	.who_are_we_item
+//		text-align: center
+//		margin-bottom: 70px
+//		&:last-of-type
+//			margin-right: 0
+//		.who_are_we_item_img
+//			margin: auto
+//			position: relative
+//			padding: 5px
+//			@extend %flex
+//			@include sprite($who_are_we_item_img_back)
+//			background-position: 0 0
+//		.who_are_we_item_text
+//			position: absolute
+//			top: 0px
+//			padding: 5px
+//			font-size: 18px
+//			left: 0px
+//			right: 0px
+//			height: 100%
+//			width: 100%
+//			display: table
+//			span
+//				background: #fff
+//				border-radius: 50%
+//				display: table-cell
+//				vertical-align: middle
+//		p
+//			margin-top: 6px
+//			margin-bottom: 0
+//			font-size: 24px
 .who_are_we_bottom_title
-	margin-bottom: 120px
 	p
 		font-size: 24px
 		margin-bottom: 0
@@ -3019,7 +3064,7 @@ nav[canvas]
 .rates_on_our_advancement
 	background: #fff
 	padding: 120px 0
-	h1
+	h2
 		text-align: center
 		color: $main_color
 		margin-bottom: 45px
@@ -3131,7 +3176,7 @@ nav[canvas]
 	background:	#00ccff
 	color: #fff
 	padding: 120px 0
-	h1
+	h2
 		text-align: center
 		color: #fff !important
 	p
@@ -4166,7 +4211,7 @@ nav[canvas]
 .advancementConductingVk
 	background: #f8f8fa
 	padding: 125px 0 70px
-	h1
+	h2
 		font-size: 56px
 		color: $main_color
 		max-width: 770px
@@ -4189,7 +4234,7 @@ nav[canvas]
 .examplesOfOurAchievements
 	padding: 100px 0
 	background: #fff
-	h1
+	h2
 		color: $main_color
 		text-align: center
 		margin-bottom: 40px
@@ -4221,7 +4266,7 @@ nav[canvas]
 .five_reasons_why_choose_us
 	padding: 120px 0
 	background: #f8f8fa
-	h1
+	h2
 		color: $main_color
 		text-align: center
 		margin-bottom: 53px
