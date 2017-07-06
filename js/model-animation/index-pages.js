@@ -71,17 +71,22 @@ class IndexPageAnimation{
 	description(){
 		//HEADER
 		this.tl1
-			.from('.header_top', 3, {
+			.from('.header_top', 2.3, {
 				y: 50,
 				opacity: 0,
 				ease: Power3.easeOut
 		},this.headerTime)
-			.from('.header_title', 3,{
+			.from('.header_title', 2.3,{
 				y: 50,
 				opacity: 0,
 				ease: Power3.easeOut
 			},'-=1.7')
-			.from('.header_bot_txt', 3,{
+			.from('.header-form', 2.3,{
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut
+			},'-=1.7')
+			.from('.header_bot_txt', 2.3,{
 				y: 50,
 				opacity: 0,
 				ease: Power3.easeOut

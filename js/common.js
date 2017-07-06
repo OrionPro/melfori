@@ -142,7 +142,7 @@ $(document).ready(function () {
 			hoverDiv = document.querySelector('.hoverDivMenu'),
 			hoverTop = document.querySelector('.header_top'),
 			caret = document.querySelector('.caretup'),
-			section = document.querySelector(".section-1");
+			section = document.querySelector(".header");
 
 		function hideHeaderService() {
 			hoverDiv.style.opacity = '0';
@@ -231,8 +231,6 @@ $(document).ready(function () {
 var arr = ['sdsdsd',2,null];
 
 var currBody = document.getElementsByTagName('body')[0];
-
-
 
 	switch(currBody.className){
 
@@ -342,7 +340,7 @@ var currBody = document.getElementsByTagName('body')[0];
 	//  Активация слайдера
 
 	// Кастомные кнопки управления слайдером
-	var owlSeo = $('.seo-page-carousel.owl-carousel');
+	var owlSeo = $('.owl-carousel.seo-page-carousel');
 	owlSeo.owlCarousel({
 		loop: true,
 		items: 1,

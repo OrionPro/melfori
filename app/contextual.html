@@ -10,7 +10,6 @@
 		  content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta property="og:image" content="path/to/image.jpg">
 	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-	<link href="css/lightgallery.css" rel="stylesheet">
 	<!-- Bootstrap v3.3.4 Grid Styles -->
 	<style>
 		html {
@@ -1943,7 +1942,8 @@
 							<div>
 								<a href="tel:+380935848035">+38 (093) 58 48 035</a>
 							</div>
-							<button data-modal="modal-1" data-info="Обратный звонок" href="#" class="modal active">Обратный
+							<button data-modal="modal-1" data-info="Обратный звонок" href="#" class="modal active">
+								Обратный
 								звонок
 							</button>
 							<div class="select">
@@ -2023,9 +2023,26 @@
 					<b>С гарантией результата и экономией рекламного бюджета</b>
 
 					<div class="header-form">
-						<h3>Спросите всё, что интересует – перезвоним моментально</h3>
-						<input type="submit" class="modal" data-modal="modal-1"
-							   value="Проконсультироваться в 1 клик">
+						<h3>Сэкономьте время</h3>
+						<p>Обсудить задачу по телефону – быстрее и информативнее.</p>
+						<form>
+							<div>
+								<label>Напишите номер, мы перезвоним.</label>
+								<div class="modal_form_input_wrap">
+
+									<div class="modal_input_error">Заполните поле
+										<div class="modal_error_triangle"></div>
+										<div class="modal_error_chest_img"></div>
+									</div>
+									<input name="phone" class="modal_form_phone ua" placeholder="+38(___) ___-__-__"
+										   type="text">
+								</div>
+							</div>
+							<input type="submit" value="Обсудить по телефон">
+							<input type="hidden" name="form_name" value="Обсудить по телефон (Лендинг)">
+							<input type="hidden" name="form_type" value="normal">
+						</form>
+
 					</div>
 					<div class="decor-bottom-border">
 						<span></span>

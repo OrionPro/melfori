@@ -3229,8 +3229,8 @@ nav[canvas]
 		a
 			@extend %main_btn
 			display: block
-			margin: 20px 15px 0
-			padding: 15px
+			margin: auto
+			padding: 13px
 			text-align: center
 			text-decoration: none
 			width: 90%
@@ -3251,7 +3251,7 @@ nav[canvas]
 		font-size: 18px
 		margin: 0 auto 30px
 	form
-		input, button
+		input
 			background: transparent
 			display: block
 			width: 100%
@@ -3261,15 +3261,10 @@ nav[canvas]
 			outline: none
 			padding: 25px
 		button
-			padding: 0
-			height: 50px
-			transition: all 300ms linear
-			background: #ffffff
-			color: #00ccff
+			@extend %main_btn2
+			width: 100%
 			&:hover
-				/* style */
-				background: transparent
-				color: #fff
+				@extend %main_btn2_hover
 
 //секция smm-steps-section
 .smm-steps-section
