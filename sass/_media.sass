@@ -39,19 +39,6 @@
 					.img-wrap
 						margin-right: 10px
 						width: 90px
-	.header_top
-		padding-left: 9px
-		padding-right: 9px
-	.header_nav
-		top: 4px
-	.header_modal
-		margin-top: 14px
-		margin-left: 5px
-		button
-			width: 130px
-			font-size: 14px
-		a
-			font-size: 14px
 	.title_block_left_decor
 		width: 100%
 		margin: auto
@@ -72,26 +59,12 @@
 			.modal_form_input_wrap
 				display: inline-block
 	.header_logo
-		margin-left: 0
-		margin-top: 40px
-		img
-			height: 40px
-	.header_nav
-		margin: 0
-		ul
-			margin: 0
-			margin-top: 13px
-			padding-left: 10px
-			li
-				margin-right: 5px
-				&:first-child
-					margin-left: 5px
-				&:last-child
-					a
-						margin-right: 0
-				a
-					margin-right: 10px
-					font-size: 15px
+		flex-basis: 28%
+		a
+			justify-content: space-between
+			span
+				padding-left: 10px
+				font-size: 15px
 	.hoverDivMenu
 		ul
 			margin-left: 5px
@@ -250,7 +223,13 @@
 			button
 				position: static
 				margin-top: 30px
-
+	.why_effective.why_profitably
+		.why_profitably_item_img
+			.rotating-cross
+				left: 145px
+			.rotating-cross-small
+				left: 265px
+				bottom: 10px
 	.internet-shop-instruction
 		.content
 			ul
@@ -570,9 +549,7 @@
 	.header_nav
 		display: none
 	.header_logo
-		display: inline-block
-		margin-top: 33px
-		padding: 0 20px 0 75px
+		flex-basis: 35%
 	.header_modal
 		display: inline-block
 		margin-top: 7px
@@ -793,7 +770,7 @@
 			font-size: 48px
 	.owl-carousel
 		width: 90%
-
+		margin: 0 auto
 	.header
 		&.company-site-header
 			h1
@@ -893,6 +870,10 @@
 			margin-bottom: 30px
 			input
 				margin: auto
+	.header_top
+		padding: 30px 0 0 80px
+		.header_logo
+			flex-basis: 45%
 	.hoverDivMenu
 		display: none
 	.final-coutdown
@@ -978,7 +959,14 @@
 					margin: 0 0 20px
 			.content
 				padding: 45px
-
+	.why_effective.why_profitably
+		.why_profitably_item_img
+			.rotating-cross
+				top: 0
+				left: 60px
+			.rotating-cross-small
+				left: 175px
+				bottom: 10px
 	.internet-shop-instruction
 		&.company-site
 			.content
@@ -1112,8 +1100,10 @@
 	h3
 		font-size: 28px
 		padding: 0 15px
-	.header_logo
-		display: block
+	.header_top
+		.header_logo
+			flex-basis: 60%
+
 	.header
 		&.header-mk
 			.header-form
@@ -1337,7 +1327,12 @@
 			.text,
 			.bold
 				font-size: 14px
-
+	.why_effective.why_profitably
+		.why_profitably_item_img
+			.rotating-cross
+				display: none
+			.rotating-cross-small
+				display: none
 	.blog-section
 		.blog-content-container
 			.content
@@ -1503,6 +1498,12 @@
 							text-align: center
 						p
 							text-align: center
+@media only screen and (max-width : 830px)
+	.our-team-carousel
+		.custom-btn-team-left
+			left: 10px
+		.custom-btn-team-right
+			right: 10px
 @media only screen and (max-width: 760px) and (orientation: landscape)
 	.close
 		right: 20px
@@ -1868,7 +1869,11 @@
 					//height: calc(100% - 95px)
 				.mask
 					//height: calc(100% - 155px)
-
+	.our-team-carousel
+		.custom-btn-team-left
+			display: none
+		.custom-btn-team-right
+			display: none
 
 @media only screen and (max-width : 480px)
 	/**/
@@ -2119,6 +2124,11 @@
 				.about-rate
 					.how-mach
 						font-size: 70px
+	.who-we-are-body
+		&.our-team-carousel
+			.who-we-are-item
+				.item-faces
+					height: 555px
 @media only screen and (max-width : 400px)
 
 	.header

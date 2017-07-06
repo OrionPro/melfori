@@ -166,37 +166,38 @@ $(document).ready(function () {
 		}
 
 		section.onmouseover = function (e) {
-			if (e.clientY > 325)hideHeaderService()
+			if (e.clientY > 325) hideHeaderService();
 		}
 	}
 //секция who we are item замена фото при ховере
-	const allFaces = document.querySelectorAll('.item-faces');
+	if(document.querySelectorAll('.item-faces')) {
+		const allFaces = document.querySelectorAll('.item-faces');
 
-	for( let item of allFaces){
-		item.lastElementChild.style.display = 'none';
-		item.addEventListener('mouseenter',function (){
-			this.firstElementChild.classList.remove('active-image');
-			setTimeout(()=>{
-				this.firstElementChild.style.display = 'none';
-				this.lastElementChild.style.display = 'block';
-				},200);
-			setTimeout(()=>{
-				this.lastElementChild.classList.add('active-image');
-			},250);
-		},false);
+		for (let item of allFaces) {
+			item.lastElementChild.style.display = 'none';
+			item.addEventListener('mouseenter', function () {
+				this.firstElementChild.classList.remove('active-image');
+				setTimeout(() => {
+					this.firstElementChild.style.display = 'none';
+					this.lastElementChild.style.display = 'block';
+				}, 200);
+				setTimeout(() => {
+					this.lastElementChild.classList.add('active-image');
+				}, 250);
+			}, false);
 
-		item.addEventListener('mouseleave',function (){
-			this.lastElementChild.classList.remove('active-image');
-			// setTimeout(()=>{
+			item.addEventListener('mouseleave', function () {
+				this.lastElementChild.classList.remove('active-image');
+				// setTimeout(()=>{
 				this.lastElementChild.style.display = 'none';
 				this.firstElementChild.style.display = 'block';
 				// },200);
-			// setTimeout(()=>{
+				// setTimeout(()=>{
 				this.firstElementChild.classList.add('active-image');
-			// },250);
-		},false)
+				// },250);
+			}, false)
+		}
 	}
-
 	//подклбчение LIGHTGALLERY отсюда vadjs
 	function lightgallery(main, child) {
 		$(main).lightGallery({
@@ -226,42 +227,12 @@ $(document).ready(function () {
 
 		timeline.play();
 
-	// function currBody(bodyClassName) {
-	// 	var body = document.getElementsByTagName('body')[0];
-	//
-	// 	if (body.className === bodyClassName) {
-	// 		return true;
-	// 	} else {
-	// 		return false;
-	// 	}
-	//
-	// }
 
 var arr = ['sdsdsd',2,null];
 
 var currBody = document.getElementsByTagName('body')[0];
 
-	// if (currBody("design-pages")) {
-	// 	lightgallery('.lightGallery', '.clickGal');
-	// }
-	// if (currBody("review")) {
-	//
-	// 	lightgallery(".lightGallery", '.openLetter');
-	//
-	//
-	// }
-	// if (currBody('about-us-pages')) {
-	// 	lightgallery("#lightGallery", '.iconPlus');
-	// }
-	// if(currBody('VkAdvacment')){
-	// 	lightgallery('.lightGallery','.open_gallery');
-	// }
-	// if(currBody('instagram_advacement')){
-	// 	lightgallery('.lightGallery','.open_gallery');
-	// }
-	// if(currBody('facebook_advacement')){
-	// 	lightgallery('.lightGallery','.open_gallery');
-	// }
+
 
 	switch(currBody.className){
 
@@ -281,6 +252,9 @@ var currBody = document.getElementsByTagName('body')[0];
 			lightgallery('.lightGallery','.open_gallery');
 			break;
 		case 'facebook_advacement':
+			lightgallery('.lightGallery','.open_gallery');
+			break;
+		case 'main-seo-pages':
 			lightgallery('.lightGallery','.open_gallery');
 			break;
 		default:
@@ -366,38 +340,66 @@ var currBody = document.getElementsByTagName('body')[0];
 	});
 
 	//  Активация слайдера
-	$(".owl-carousel").owlCarousel({
-	    loop: true,
-	    items: 1,
-		margin: 10
-	});
 
 	// Кастомные кнопки управления слайдером
-	var owl = $('.owl-carousel');
-	owl.owlCarousel();
+	var owlSeo = $('.seo-page-carousel.owl-carousel');
+	owlSeo.owlCarousel({
+		loop: true,
+		items: 1,
+		margin: 10
+	});
 	// Go to the next item
 	$('.customNextBtn').click(function() {
-	    owl.trigger('next.owl.carousel', [700]);
+		owlSeo.trigger('next.owl.carousel', [700]);
 	});
 	// Go to the previous item
 	$('.customPrevBtn').click(function() {
 	    // With optional speed parameter
 	    // Parameters has to be in square bracket '[]'
-	    owl.trigger('prev.owl.carousel', [700]);
+		owlSeo.trigger('prev.owl.carousel', [700]);
 	});
-	$('.owl-carousel').lightGallery({
-		selector: '.carousel_main_img',
-		zoom: true
-	});
+
 	// отслеживаем изменение инпута file
 	$('#file').change(function(){
 		// Если файл прикрепили то заносим значение value в переменную
-		// Если файл прикрепили то заносим значение value в переменную
+		// Если файл прикрепили то заосим значение value в переменную
 		var fileResult = $(this).val();
 		// И дальше передаем значение в инпут который под загрузчиком
 		$(this).parent().find('.fileLoad').find('input').val(fileResult);
 	});
 	var teamCarousel = $('.our-team-carousel .owl-carousel');
+	    teamCarousel.owlCarousel({
+		loop: true,
+		responsiveClass: true,
+		responsive:{
+			0:{
+				items: 1,
+				margin: 0
+			},
+			475:{
+				items:2,
+				margin: 10
+			},
+			600:{
+				items:3,
+				margin: 10
+			},
+			1000:{
+				items:4,
+				margin: 10
+			},
+			1250:{
+				items:5,
+				margin: 20
+			}
+		}
+	});
+	    $('.custom-btn-team-left').click(function () {
+			teamCarousel.trigger('prev.owl.carousel', [700]);
+		});
+	$('.custom-btn-team-right').click(function () {
+		teamCarousel.trigger('next.owl.carousel', [700]);
+	});
 	/* Добавляем новый класс кнопке если инпут файл получил фокус */
 	$('#file').hover(function(){
 		$(this).parent().find('span').addClass('button-hover');

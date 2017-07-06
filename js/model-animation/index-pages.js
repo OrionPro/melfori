@@ -897,12 +897,69 @@ class IndexPageAnimation{
 				x: -30,
 				opacity: 0,
 				ease: Power3.easeOut
+
 			},"-=0.7")
+			.from('.img-fa3x',1,{
+				y:	20,
+				opacity: 0,
+				ease: Bounce.easeOut,
+				rotation: 50,
+				onComplete: ()=>{
+					rotationGear('.img-fa3x',-1)
+				}
+			},'-=1.5')
+			.from('.img-fa2x',1,{
+				y:	20,
+				opacity: 0,
+				ease: Bounce.easeOut,
+				rotation: 50,
+				onComplete: ()=>{
+					rotationGear('.img-fa2x',-1)
+				}
+			},'-=1.5')
+			.from('.img-fa1x',1,{
+				y:	20,
+				opacity: 0,
+				ease: Bounce.easeOut,
+				rotation: 50,
+				onComplete: ()=>{
+					rotationGear('.img-fa1x',-1)
+				}
+			},'-=1.5')
+			.from('.img-fa1x-1',1,{
+				y:	20,
+				opacity: 0,
+				ease: Bounce.easeOut,
+				rotation: 50,
+				onComplete: ()=>{
+					rotationGear('.img-fa1x-1',-1)
+				}
+			},'-=1.5')
+			.from('.img-fa1x-2',1,{
+				y:	20,
+				opacity: 0,
+				ease: Bounce.easeOut,
+				rotation: 50,
+				onComplete: ()=>{
+					rotationGear('.img-fa1x-2',-1)
+				}
+			},'-=1.5')
+			.from('.img-fa1x-3',1,{
+				y:	20,
+				opacity: 0,
+				ease: Bounce.easeOut,
+				rotation: 50,
+				onComplete: ()=>{
+					rotationGear('.img-fa1x-3',-1)
+				}
+			},'-=1.5')
 			.from('.section-5 .why_profitably_item_txt', 0.7,{
 				x: 30,
 				opacity: 0,
 				ease: Power3.easeOut
 			},"-=1");
+
+
 
 	//	section 6
 		this.tl6
