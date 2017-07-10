@@ -130,11 +130,27 @@ class CheckboxesInoputs {
 	}
 }
 
-
 var burgerEff = new BurgerEff;
 
-
 $(document).ready(function () {
+//	делаем ширину у текстового блока в якорях
+	$(document).find(".anchors .anchors__text-block span").each(function () {
+		let widthSpan = $(this).width();
+		$(this).parent().css({
+			"width": widthSpan + 80
+		});
+		$(this).parent().addClass("not-active");
+	});
+	$(".anchors .anchors__text-block").css("position", "absolute");
+	$(".anchors .anchors__item").hover(function () {
+
+			$(this).find('.anchors__text-block').show().addClass("active").removeClass("not-active");
+		},
+		(function () {
+			$(this).find('.anchors__text-block').hide().removeClass("active").addClass("not-active");
+		})
+	);
+
 //	страница SMM hovers на больших иконках
 	$(".contextual-not-pay-section.smm-pages .social-item").hover(function () {
 			$(this).find('.social-item__img').addClass('active');

@@ -1,4 +1,3 @@
-
 // Подключение Helpers function
 import {activePages} from './helper/helper.js';
 
@@ -11,102 +10,113 @@ import SeoPageAnimation from './model-animation/seo-page.js';
 import ReviewPageAnimation from './model-animation/reviews.js';
 // Запуск необходимой анимации
 class Animation {
-	
-	constructor(){
+
+	constructor() {
 		this.IndexPageAnimation = new IndexPageAnimation();
 		this.AboutUsAnimation = new AboutUsAnimation();
 		this.ContextualAnimation = new ContextualAnimation();
 		this.DesignPagesAnimation = new DesignPagesAnimation();
 		this.SeoPageAnimation = new SeoPageAnimation();
 		this.ReviewPageAnimation = new ReviewPageAnimation();
+		//	Анимации для всех страниц
+		this.tlAll1 = new TimelineMax();
 
+		this.tlAll.pause();
 	}
 
-	initialization(){
+	initialization() {
 // Инициализация настроек анимаций
-		if(activePages('main-pages')){
+		if (activePages('main-pages')) {
 			this.IndexPageAnimation.description();
 		}
-		if(activePages('about-us-pages')){
+		if (activePages('about-us-pages')) {
 			this.AboutUsAnimation.description();
 
 		}
-		if(activePages('contextual-pages')){
+		if (activePages('contextual-pages')) {
 			this.ContextualAnimation.description();
 
 		}
-		if(activePages('design-pages')){
+		if (activePages('design-pages')) {
 			this.DesignPagesAnimation.description();
 		}
-		if(activePages('main-seo-pages')){
+		if (activePages('main-seo-pages')) {
 			this.SeoPageAnimation.description();
-		if(activePages('reviews-page')){
-			this.ReviewPageAnimation.description()
-		}
-
+			if (activePages('reviews-page')) {
+				this.ReviewPageAnimation.description()
+			}
 		}
 	}
-	play(){
+
+	play() {
 		//	Запуск анимация
-		if(activePages('main-pages')){
+		if (activePages('main-pages')) {
 			this.IndexPageAnimation.start();
 		}
-		if(activePages('about-us-pages')){
+		if (activePages('about-us-pages')) {
 			this.AboutUsAnimation.start();
 		}
-		if(activePages('contextual-pages')){
+		if (activePages('contextual-pages')) {
 			this.ContextualAnimation.start();
 		}
-		if(activePages('design-pages')){
+		if (activePages('design-pages')) {
 			this.DesignPagesAnimation.start();
 		}
-		if(activePages('main-seo-pages')){
+		if (activePages('main-seo-pages')) {
 			this.SeoPageAnimation.start();
 		}
-		if(activePages('review')){
+		if (activePages('review')) {
 			this.ReviewPageAnimation.start()
 		}
+		$(".anchors .anchors__item").hover(function () {
+			console.log($(this));
+
+			this.tlAll1.from(".anchors .anchors__text-block", 0.6, {
+				y: 100,
+				ease: Power3.easeOut
+			});
+			tl5.resume();
+		});
 	}
 }
 
-function hovers(){
-	
-	TweenMax.set('.who_are_we_item_text', {scaleX:0});
-	TweenMax.set('.who_are_we_item_img img', {scaleX:1});
+function hovers() {
 
-	$('.who_are_we_item').hover(function() {
+	TweenMax.set('.who_are_we_item_text', {scaleX: 0});
+	TweenMax.set('.who_are_we_item_img img', {scaleX: 1});
+
+	$('.who_are_we_item').hover(function () {
 
 		let image = $(this).find('.who_are_we_item_img img');
 		let text = $(this).find('.who_are_we_item_text');
 
-		let inM =  new TimelineMax();
+		let inM = new TimelineMax();
 
 		inM.to(image, 0.3, {
 			scaleX: 0
 		});
 		inM.to(text, 0.3, {
 			scaleX: 1
-		},"-=0.1")
-	
-		
-	}, function() {
+		}, "-=0.1")
+
+
+	}, function () {
 
 		let image = $(this).find('.who_are_we_item_img img');
 		let text = $(this).find('.who_are_we_item_text');
 
-		let outM =  new TimelineMax();
+		let outM = new TimelineMax();
 
-		outM.add('lable','+=0.20').to(text, 0.3, {
+		outM.add('lable', '+=0.20').to(text, 0.3, {
 			scaleX: 0
-		},"lable");
-		outM.add('lable','+=0.05').to(image, 0.3, {
+		}, "lable");
+		outM.add('lable', '+=0.05').to(image, 0.3, {
 			scaleX: 1
-		},"lable");
+		}, "lable");
 
 
 	})
 }
-
 
 
 var anim = new Animation;
@@ -117,15 +127,14 @@ $(window).scroll(function () {
 	}
 });
 
-$(window).ready(function() {
+$(window).ready(function () {
 	hovers();
 
-	
+
 	if (document.documentElement.clientWidth >= 1200) {
 		anim.play();
 		anim.initialization();
 	}
-
 
 
 });
