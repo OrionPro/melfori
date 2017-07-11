@@ -162,7 +162,7 @@ $(document).ready(function () {
 			tlAnchor.pause();
 			setTimeout(() => {
 				$(this).find('.anchors__text-block').removeClass("active").addClass("not-active");
-			}, 400);
+			}, 200);
 		})
 	);
 
