@@ -19,9 +19,7 @@ class Animation {
 		this.SeoPageAnimation = new SeoPageAnimation();
 		this.ReviewPageAnimation = new ReviewPageAnimation();
 		//	Анимации для всех страниц
-		this.tlAll1 = new TimelineMax();
 
-		this.tlAll.pause();
 	}
 
 	initialization() {
@@ -68,15 +66,6 @@ class Animation {
 		if (activePages('review')) {
 			this.ReviewPageAnimation.start()
 		}
-		$(".anchors .anchors__item").hover(function () {
-			console.log($(this));
-
-			this.tlAll1.from(".anchors .anchors__text-block", 0.6, {
-				y: 100,
-				ease: Power3.easeOut
-			});
-			tl5.resume();
-		});
 	}
 }
 

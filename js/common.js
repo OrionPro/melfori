@@ -133,6 +133,17 @@ class CheckboxesInoputs {
 var burgerEff = new BurgerEff;
 
 $(document).ready(function () {
+
+	// Анимация якорей
+	let tlAnchor = new TimelineMax();
+
+	tlAnchor.pause();
+
+	tlAnchor.from($(this).find('.anchors__text-block'), 0.5, {
+		x: 10,
+		opacity: 0,
+		ease: Power0.easeNone
+	});
 //	делаем ширину у текстового блока в якорях
 	$(document).find(".anchors .anchors__text-block span").each(function () {
 		let widthSpan = $(this).width();
@@ -143,11 +154,15 @@ $(document).ready(function () {
 	});
 	$(".anchors .anchors__text-block").css("position", "absolute");
 	$(".anchors .anchors__item").hover(function () {
-
+			tlAnchor.play();
 			$(this).find('.anchors__text-block').show().addClass("active").removeClass("not-active");
 		},
 		(function () {
-			$(this).find('.anchors__text-block').hide().removeClass("active").addClass("not-active");
+			tlAnchor.seek(0);
+			tlAnchor.pause();
+			setTimeout(() => {
+				$(this).find('.anchors__text-block').removeClass("active").addClass("not-active");
+			}, 400);
 		})
 	);
 
@@ -365,6 +380,23 @@ $(document).ready(function () {
 	//  Активация слайдера
 
 	// Кастомные кнопки управления слайдером
+	var owlContextSeo = $('.owl-carousel.context-carousel');
+	owlContextSeo.owlCarousel({
+		loop: true,
+		items: 1,
+		margin: 10
+	});
+	// Go to the next item
+	$('.customNextBtn').click(function () {
+		owlContextSeo.trigger('next.owl.carousel', [700]);
+	});
+	// Go to the previous item
+	$('.customPrevBtn').click(function () {
+		// With optional speed parameter
+		// Parameters has to be in square bracket '[]'
+		owlContextSeo.trigger('prev.owl.carousel', [700]);
+	});
+
 	var owlSeo = $('.owl-carousel.seo-page-carousel');
 	owlSeo.owlCarousel({
 		loop: true,
@@ -381,7 +413,6 @@ $(document).ready(function () {
 		// Parameters has to be in square bracket '[]'
 		owlSeo.trigger('prev.owl.carousel', [700]);
 	});
-
 	// отслеживаем изменение инпута file
 	$('#file').change(function () {
 		// Если файл прикрепили то заносим значение value в переменную
