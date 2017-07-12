@@ -138,12 +138,12 @@ $(document).ready(function () {
 
 	TweenMax.set('.anchors__text-block', {
 		x: 10,
-		opacity: 0
+		autoAlpha: 0
 	});
 	function resetTween() {
 		TweenMax.set($(this).find('.anchors__text-block'), {
 			x: 10,
-			opacity: 0
+			autoAlpha: 0
 		});
 	}
 //	делаем ширину у текстового блока в якорях
@@ -157,24 +157,19 @@ $(document).ready(function () {
 	$(".anchors .anchors__text-block").css("position", "absolute");
 	$(".anchors .anchors__item").hover(function () {
 			$(this).find('.anchors__text-block').removeClass("not-active");
-			TweenMax.to($(this).find('.anchors__text-block'), 0.4, {
+			TweenMax.to($(this).find('.anchors__text-block'), 0.3, {
 				x: 0,
-				opacity: 1,
-				visibility: 1,
+				autoAlpha: 1,
 				ease: Power0.easeNone,
 				onStart: resetTween
 			});
 		},
 		(function () {
-			TweenMax.to($(this).find('.anchors__text-block'), 0.4, {
+			TweenMax.to($(this).find('.anchors__text-block'), 0.3, {
 				x: 10,
-				opacity: 0,
-				visibility: 0,
+				autoAlpha: 0,
 				ease: Power0.easeNone
 			});
-			setTimeout( () => {
-				$(this).find('.anchors__text-block').addClass("not-active");
-			} , 1000)
 		})
 	);
 
