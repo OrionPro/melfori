@@ -135,15 +135,17 @@ var burgerEff = new BurgerEff;
 $(document).ready(function () {
 
 	// Анимация якорей
-	let tlAnchor = new TimelineMax();
 
-	tlAnchor.pause();
-
-	tlAnchor.from($(this).find('.anchors__text-block'), 0.5, {
+	TweenMax.set('.anchors__text-block', {
 		x: 10,
-		opacity: 0,
-		ease: Power0.easeNone
+		opacity: 0
 	});
+	function resetTween() {
+		TweenMax.set($(this).find('.anchors__text-block'), {
+			x: 10,
+			opacity: 0
+		});
+	}
 //	делаем ширину у текстового блока в якорях
 	$(document).find(".anchors .anchors__text-block span").each(function () {
 		let widthSpan = $(this).width();
@@ -154,15 +156,20 @@ $(document).ready(function () {
 	});
 	$(".anchors .anchors__text-block").css("position", "absolute");
 	$(".anchors .anchors__item").hover(function () {
-			tlAnchor.play();
-			$(this).find('.anchors__text-block').show().addClass("active").removeClass("not-active");
+			$(this).find('.anchors__text-block').removeClass("not-active");
+			TweenMax.to($(this).find('.anchors__text-block'), 0.4, {
+				x: 0,
+				opacity: 1,
+				ease: Power0.easeNone,
+				onStart: resetTween
+			});
 		},
 		(function () {
-			tlAnchor.seek(0);
-			tlAnchor.pause();
-			setTimeout(() => {
-				$(this).find('.anchors__text-block').removeClass("active").addClass("not-active");
-			}, 200);
+			TweenMax.to($(this).find('.anchors__text-block'), 0.4, {
+				x: 10,
+				opacity: 0,
+				ease: Power0.easeNone
+			});
 		})
 	);
 
@@ -295,6 +302,9 @@ $(document).ready(function () {
 		case 'main-seo-pages':
 			lightgallery('.lightGallery', '.open_gallery');
 			break;
+		case 'contextual-pages':
+			lightgallery('.lightGallery', '.open_gallery');
+			break;
 		default:
 			console.log("unanimated page");
 
@@ -380,39 +390,39 @@ $(document).ready(function () {
 	//  Активация слайдера
 
 	// Кастомные кнопки управления слайдером
-	var owlContextSeo = $('.owl-carousel.context-carousel');
-	owlContextSeo.owlCarousel({
+
+	$('.owl-carousel').owlCarousel({
 		loop: true,
 		items: 1,
 		margin: 10
 	});
 	// Go to the next item
 	$('.customNextBtn').click(function () {
-		owlContextSeo.trigger('next.owl.carousel', [700]);
+		$('.owl-carousel').trigger('next.owl.carousel', [700]);
 	});
 	// Go to the previous item
 	$('.customPrevBtn').click(function () {
 		// With optional speed parameter
 		// Parameters has to be in square bracket '[]'
-		owlContextSeo.trigger('prev.owl.carousel', [700]);
+		$('.owl-carousel').trigger('prev.owl.carousel', [700]);
 	});
 
-	var owlSeo = $('.owl-carousel.seo-page-carousel');
-	owlSeo.owlCarousel({
-		loop: true,
-		items: 1,
-		margin: 10
-	});
-	// Go to the next item
-	$('.customNextBtn').click(function () {
-		owlSeo.trigger('next.owl.carousel', [700]);
-	});
-	// Go to the previous item
-	$('.customPrevBtn').click(function () {
-		// With optional speed parameter
-		// Parameters has to be in square bracket '[]'
-		owlSeo.trigger('prev.owl.carousel', [700]);
-	});
+	// var owlSeo = $('.owl-carousel.seo-page-carousel');
+	// owlSeo.owlCarousel({
+	// 	loop: true,
+	// 	items: 1,
+	// 	margin: 10
+	// });
+	// // Go to the next item
+	// $('.customNextBtn').click(function () {
+	// 	owlSeo.trigger('next.owl.carousel', [700]);
+	// });
+	// // Go to the previous item
+	// $('.customPrevBtn').click(function () {
+	// 	// With optional speed parameter
+	// 	// Parameters has to be in square bracket '[]'
+	// 	owlSeo.trigger('prev.owl.carousel', [700]);
+	// });
 	// отслеживаем изменение инпута file
 	$('#file').change(function () {
 		// Если файл прикрепили то заносим значение value в переменную
@@ -421,40 +431,40 @@ $(document).ready(function () {
 		// И дальше передаем значение в инпут который под загрузчиком
 		$(this).parent().find('.fileLoad').find('input').val(fileResult);
 	});
-	var teamCarousel = $('.our-team-carousel .owl-carousel');
-	teamCarousel.owlCarousel({
-		loop: true,
-		responsiveClass: true,
-		responsive: {
-			0: {
-				items: 1,
-				margin: 0
-			},
-			475: {
-				items: 2,
-				margin: 10
-			},
-			600: {
-				items: 3,
-				margin: 10
-			},
-			1000: {
-				items: 4,
-				margin: 10
-			},
-			1250: {
-				items: 5,
-				margin: 20
-			}
-		}
-	});
-	$('.custom-btn-team-left').click(function () {
-		teamCarousel.trigger('prev.owl.carousel', [700]);
-	});
-	$('.custom-btn-team-right').click(function () {
-		teamCarousel.trigger('next.owl.carousel', [700]);
-	});
-	/* Добавляем новый класс кнопке если инпут файл получил фокус */
+	// var teamCarousel = $('.our-team-carousel .owl-carousel');
+	// teamCarousel.owlCarousel({
+	// 	loop: true,
+	// 	responsiveClass: true,
+	// 	responsive: {
+	// 		0: {
+	// 			items: 1,
+	// 			margin: 0
+	// 		},
+	// 		475: {
+	// 			items: 2,
+	// 			margin: 10
+	// 		},
+	// 		600: {
+	// 			items: 3,
+	// 			margin: 10
+	// 		},
+	// 		1000: {
+	// 			items: 4,
+	// 			margin: 10
+	// 		},
+	// 		1250: {
+	// 			items: 5,
+	// 			margin: 20
+	// 		}
+	// 	}
+	// });
+	// $('.custom-btn-team-left').click(function () {
+	// 	teamCarousel.trigger('prev.owl.carousel', [700]);
+	// });
+	// $('.custom-btn-team-right').click(function () {
+	// 	teamCarousel.trigger('next.owl.carousel', [700]);
+	// });
+	// /* Добавляем новый класс кнопке если инпут файл получил фокус */
 	$('#file').hover(function () {
 		$(this).parent().find('span').addClass('button-hover');
 	}, function () {
