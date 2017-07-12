@@ -160,6 +160,7 @@ $(document).ready(function () {
 			TweenMax.to($(this).find('.anchors__text-block'), 0.4, {
 				x: 0,
 				opacity: 1,
+				visibility: 1,
 				ease: Power0.easeNone,
 				onStart: resetTween
 			});
@@ -168,8 +169,12 @@ $(document).ready(function () {
 			TweenMax.to($(this).find('.anchors__text-block'), 0.4, {
 				x: 10,
 				opacity: 0,
+				visibility: 0,
 				ease: Power0.easeNone
 			});
+			setTimeout( () => {
+				$(this).find('.anchors__text-block').addClass("not-active");
+			} , 1000)
 		})
 	);
 
