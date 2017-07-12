@@ -135,7 +135,6 @@ var burgerEff = new BurgerEff;
 $(document).ready(function () {
 
 	// Анимация якорей
-
 	TweenMax.set('.anchors__text-block', {
 		x: 10,
 		autoAlpha: 0
