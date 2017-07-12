@@ -248,7 +248,8 @@ $(document).ready(function () {
 	function lightgallery(main, child) {
 		$(main).lightGallery({
 				selector: child,
-				zoom: true
+				zoom: true,
+				thumbnail:true
 			}
 		)
 
@@ -277,38 +278,7 @@ $(document).ready(function () {
 
 	var arr = ['sdsdsd', 2, null];
 
-	var currBody = document.getElementsByTagName('body')[0];
 
-	switch (currBody.className) {
-
-		case 'design-pages':
-			lightgallery('.lightGallery', '.clickGal');
-			break;
-		case "review":
-			lightgallery(".lightGallery", '.openLetter');
-			break;
-		case 'about-us-pages':
-			lightgallery("#lightGallery", '.iconPlus');
-			break;
-		case 'VkAdvacment':
-			lightgallery('.lightGallery', '.open_gallery');
-			break;
-		case 'instagram_advacement':
-			lightgallery('.lightGallery', '.open_gallery');
-			break;
-		case 'facebook_advacement':
-			lightgallery('.lightGallery', '.open_gallery');
-			break;
-		case 'main-seo-pages':
-			lightgallery('.lightGallery', '.open_gallery');
-			break;
-		case 'contextual-pages':
-			lightgallery('.lightGallery', '.open_gallery');
-			break;
-		default:
-			console.log("unanimated page");
-
-	}
 	//final-coutdown
 	function finalCountdown(date, count) {
 		var _DAYinMS = 86400000,
@@ -406,6 +376,47 @@ $(document).ready(function () {
 		// Parameters has to be in square bracket '[]'
 		$('.owl-carousel').trigger('prev.owl.carousel', [700]);
 	});
+
+	var currBody = document.getElementsByTagName('body')[0];
+
+	setTimeout( function () {
+		switch (currBody.className) {
+
+			case 'design-pages':
+				lightgallery('.lightGallery', '.clickGal');
+				break;
+			case "review":
+				lightgallery(".lightGallery", '.openLetter');
+				break;
+			case 'about-us-pages':
+				lightgallery("#lightGallery", '.iconPlus');
+				break;
+			case 'VkAdvacment':
+				lightgallery('.lightGallery', '.open_gallery');
+				break;
+			case 'instagram_advacement':
+				lightgallery('.lightGallery', '.open_gallery');
+				break;
+			case 'facebook_advacement':
+				lightgallery('.lightGallery', '.open_gallery');
+				break;
+			case 'main-seo-pages':
+				lightgallery('.lightGallery', '.open_gallery');
+				break;
+			case 'contextual-pages':
+				lightgallery('.lightGallery', '.open_gallery');
+				break;
+			case 'smm':
+				lightgallery('.lightGallery', '.open_gallery');
+				break;
+			case 'seo_audit':
+				lightgallery('.lightGallery', '.open_gallery');
+				break;
+			default:
+				console.log("unanimated page");
+
+		}
+	}, 1000);
 
 	// var owlSeo = $('.owl-carousel.seo-page-carousel');
 	// owlSeo.owlCarousel({

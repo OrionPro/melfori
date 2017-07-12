@@ -220,7 +220,7 @@ class SeoPageAnimation{
 				scale: 0.5,
 				ease: Power3.easeOut
 			},"-=0.7")
-			.from('.modal',1,{
+			.from('.form-wrap .modal',1,{
 				y: 50,
 				opacity: 0,
 				ease: Power3.easeOut
