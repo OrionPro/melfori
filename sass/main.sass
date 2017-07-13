@@ -2519,7 +2519,7 @@ nav[canvas]
 		transition: 0.5s
 		&:hover
 			color: $main_color
-.seo-page-carousel
+.owl-carousel
 	width: 970px
 	margin: 20px auto 20px
 	position: relative
@@ -3250,8 +3250,8 @@ nav[canvas]
 		a
 			@extend %main_btn
 			display: block
-			margin: 20px 15px 0
-			padding: 15px
+			margin: auto
+			padding: 13px
 			text-align: center
 			text-decoration: none
 			width: 90%
@@ -3272,7 +3272,7 @@ nav[canvas]
 		font-size: 18px
 		margin: 0 auto 30px
 	form
-		input, button
+		input
 			background: transparent
 			display: block
 			width: 100%
@@ -3282,15 +3282,10 @@ nav[canvas]
 			outline: none
 			padding: 25px
 		button
-			padding: 0
-			height: 50px
-			transition: all 300ms linear
-			background: #ffffff
-			color: #00ccff
+			@extend %main_btn2
+			width: 100%
 			&:hover
-				/* style */
-				background: transparent
-				color: #fff
+				@extend %main_btn2_hover
 
 //секция smm-steps-section
 .smm-steps-section
@@ -3432,14 +3427,38 @@ nav[canvas]
 	&.smm-pages
 		text-align: center
 		.social-item
-			.vk-img
-				margin-bottom: 30px
-				margin-top: 10px
+			&:hover .text
+				color: $main_color
+			a
+				width: 100%
+				height: 100%
+				position: absolute
+				top: 0
+				left: 0
+			.social-item__img
+				margin-bottom: 15px
+				height: 105px
+				&.vk-img
+					background: url(../img/vk.png) center top no-repeat
+					transition: background 0.5s
+					&.active
+						background: url(../img/vk_hover.png) center top no-repeat
+				&.inst-img
+					background: url(../img/inst.png) center top no-repeat
+					transition: background 0.5s
+					&.active
+						background: url(../img/inst_hover.png) center top no-repeat
+				&.fb-img
+					background: url(../img/fb.png) center top no-repeat
+					transition: background 0.5s
+					&.active
+						background: url(../img/fb_hover.png) center top no-repeat
 			img
 				margin-bottom: 15px
 			.text
 				font-size: 24px
 				line-height: 1
+				transition: color 0.5s
 				b
 					display: inline-block
 					margin-bottom: 10px
