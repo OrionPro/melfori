@@ -241,7 +241,6 @@ class ContextualAnimation {
 			}, "-=0.5")
 			.from('.section-6 .carousel_txt_wrap ', 1, {
 				y: 30,
-				opacity: 0,
 				ease: Power3.easeOut
 			}, "-=1")
 			.from('.section-6 .customNextBtn', 2.5, {
