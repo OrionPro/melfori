@@ -51,10 +51,8 @@ class BurgerEff {
 }
 
 // TABS
-$(".tabs-items-wrap .tabs-item").on('click', function (event) {
-	//ссылки которые будут переключать табы
+function tabsItems(event) {
 	event.preventDefault();
-
 	$(".tabs-items-wrap .tabs-item").removeClass('active'); //убираем активные состояния у ссылок
 
 	$(this).addClass('active'); //Добавляем активное состояние у той что нажали
@@ -62,7 +60,39 @@ $(".tabs-items-wrap .tabs-item").on('click', function (event) {
 	var data = $(this).data('tab'); //создаём переменную с датой
 	$('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
 	$('.tabs-wrap[data-tab=' + data + ']').addClass('active'); //если таб соответствует тому, какой data
-});
+}
+const tabsItemsElem = $(".tabs-items-wrap .tabs-item");
+
+let changeActive = (function(ev,p,c){
+	let i = 0;
+	return function(ev,p,c){
+		let x = p[i];
+		if( ++i === p.length){ i = 0}
+		for(let i = p.length;i--;){
+			p[i].classList.remove('active')
+		}
+		if(c){
+			clearInterval(c);
+			ev.preventDefault();
+			x = ev.target;
+		}
+		x.classList.add('active');
+		var data = $(x).data('tab'); //создаём переменную с датой
+		$('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
+		$('.tabs-wrap[data-tab=' + data + ']').addClass('active');
+
+	}
+}());
+
+let timerId = setInterval(changeActive,4000,null,tabsItemsElem);
+
+for(let i = tabsItemsElem.length;i--;){
+	tabsItemsElem[i].addEventListener('click', ev => changeActive(ev,tabsItemsElem,timerId))
+}
+
+$(".tabs-items-wrap .tabs-item").on('click', tabsItems);
+
+
 $(".tabs-items").on('click', function (event) {
 	//ссылки которые будут переключать табы
 	event.preventDefault();
