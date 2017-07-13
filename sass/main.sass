@@ -977,6 +977,27 @@ nav[canvas]
 	min-height: 410px
 	text-align: center
 	background-color: $main_color
+	&.text-input
+		background: transparent
+		min-height: inherit
+		.unique_challenge_form
+			form
+				.modal_form_input_wrap
+					input
+						border-color: $main_color
+						color: $main_color
+						&::placeholder
+							color: $main_color
+				input[type=submit]
+					background: $main_color
+					color: #fff
+					border-color: $main_color
+					transition: all 300ms linear
+					&:hover
+						/* style */
+						background: #fff
+						color:  $main_color
+						border-color: $main_color
 	&.services
 		min-height: 500px
 	&.index
@@ -2498,7 +2519,7 @@ nav[canvas]
 		transition: 0.5s
 		&:hover
 			color: $main_color
-.seo-page-carousel
+.owl-carousel
 	width: 970px
 	margin: 20px auto 20px
 	position: relative
@@ -3229,8 +3250,8 @@ nav[canvas]
 		a
 			@extend %main_btn
 			display: block
-			margin: 20px 15px 0
-			padding: 15px
+			margin: auto
+			padding: 13px
 			text-align: center
 			text-decoration: none
 			width: 90%
@@ -3251,7 +3272,7 @@ nav[canvas]
 		font-size: 18px
 		margin: 0 auto 30px
 	form
-		input, button
+		input
 			background: transparent
 			display: block
 			width: 100%
@@ -3261,15 +3282,10 @@ nav[canvas]
 			outline: none
 			padding: 25px
 		button
-			padding: 0
-			height: 50px
-			transition: all 300ms linear
-			background: #ffffff
-			color: #00ccff
+			@extend %main_btn2
+			width: 100%
 			&:hover
-				/* style */
-				background: transparent
-				color: #fff
+				@extend %main_btn2_hover
 
 //секция smm-steps-section
 .smm-steps-section
@@ -3411,14 +3427,38 @@ nav[canvas]
 	&.smm-pages
 		text-align: center
 		.social-item
-			.vk-img
-				margin-bottom: 30px
-				margin-top: 10px
+			&:hover .text
+				color: $main_color
+			a
+				width: 100%
+				height: 100%
+				position: absolute
+				top: 0
+				left: 0
+			.social-item__img
+				margin-bottom: 15px
+				height: 105px
+				&.vk-img
+					background: url(../img/vk.png) center top no-repeat
+					transition: background 0.5s
+					&.active
+						background: url(../img/vk_hover.png) center top no-repeat
+				&.inst-img
+					background: url(../img/inst.png) center top no-repeat
+					transition: background 0.5s
+					&.active
+						background: url(../img/inst_hover.png) center top no-repeat
+				&.fb-img
+					background: url(../img/fb.png) center top no-repeat
+					transition: background 0.5s
+					&.active
+						background: url(../img/fb_hover.png) center top no-repeat
 			img
 				margin-bottom: 15px
 			.text
 				font-size: 24px
 				line-height: 1
+				transition: color 0.5s
 				b
 					display: inline-block
 					margin-bottom: 10px
@@ -4337,7 +4377,76 @@ nav[canvas]
 		text-align: center
 		margin-bottom: 53px
 
-
+// anchors
+.anchors
+	width: 300px
+	height: 100%
+	right: 50px
+	position: fixed
+	overflow: hidden
+	z-index: 100
+	&::-webkit-scrollbar
+		width: 8px
+	&::-webkit-scrollbar-thumb
+		background-color: $main_color
+		&:hover
+			background-color: darken($main_color, 10%)
+	&::-webkit-scrollbar-track-piece
+		background-color: transparent
+	.anchors__table
+		width: 100%
+		height: 100%
+		display: table
+		align-items: center
+	.anchors__cell
+		display: table-cell
+		padding: 0 1em
+		vertical-align: middle
+		text-align: right
+	.anchors__wrap-item
+		display: inline-block
+		position: relative
+		z-index: 1
+	.anchors__item
+		display: block
+		vertical-align: middle
+		margin-bottom: 30px
+		position: relative
+		&:last-of-type
+			margin-bottom: 0
+	.anchor__line
+		width: 1px
+		height: 100%
+		position: absolute
+		left: calc(50% - 1px)
+		border: 1px solid #01c1e6
+		z-index: -1
+	.anchors__text-block
+		height: 40px
+		padding-left: 20px
+		padding-right: 20px
+		display: block
+		right: 10px
+		top: 0
+		line-height: 40px
+		text-align: left
+		border: 1px solid #01c1e6
+		background-color: #ffffff
+		box-shadow: 0 3px 4.8px 0.2px rgba(0,0,0,.17)
+		border-radius: 20px
+		transition: 0.5s
+		z-index: -1
+		&.active
+			display: block !important
+		&.not-active
+			display: none
+	.anchors__img-block
+		width: 40px
+		height: 40px
+		@extend %flex
+		border: 1px solid #fff
+		border-radius: 50%
+		background-color: #01c1e6
 // Секия footer
 footer
 	border-bottom: 3px solid #00ccff

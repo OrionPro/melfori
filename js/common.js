@@ -1,11 +1,11 @@
 // подключение common.js
 // import {rotationGear} from './helper/helper.js';
-function rotationGear(elements, direction = 1){
+function rotationGear(elements, direction = 1) {
 	var gearSmall = new TimelineMax();
 	gearSmall
-		.from(elements, 2,{
+		.from(elements, 2, {
 			rotation: 360 * direction,
-			force3D:false,
+			force3D: false,
 			ease: Power0.easeNone
 		});
 	gearSmall.repeat(Infinity);
@@ -23,13 +23,15 @@ class BurgerEff {
 		];
 		this.description = this.description.bind(this);
 	}
-	mobileMenuBg(){
+
+	mobileMenuBg() {
 		var menu = $('div[off-canvas]');
-		
+
 	}
+
 	description() {
 
-		setTimeout(()=> {
+		setTimeout(() => {
 			this.description();
 		}, 1500)
 
@@ -76,24 +78,22 @@ $(".tabs-items").on('click', function (event) {
 function chechBoxes() {
 	var container = $('.checkbox-container .item'),
 		checkbox = container.find('input[type=checkbox]');
-	checkbox.change(function(){
+	checkbox.change(function () {
 		var parent = $(this).parent('.check'),
 			text = parent.siblings('.text');
 		$(this).toggleClass('active');
 		text.find('b').toggleClass('active');
 
-		var	arrVal = [];
+		var arrVal = [];
 		checkbox.each(function () {
-			if($(this).hasClass('active')){
-				arrVal.push(' ' + $(this).parent('.check').siblings('.text').find('b').text() )
-					$('.setting-check-hidden').val(arrVal)
+			if ($(this).hasClass('active')) {
+				arrVal.push(' ' + $(this).parent('.check').siblings('.text').find('b').text())
+				$('.setting-check-hidden').val(arrVal)
 			}
 		})
 	})
 
 }
-
-
 
 
 $(window).resize(function () {
@@ -104,45 +104,91 @@ $(window).resize(function () {
 });
 
 
-class CheckboxesInoputs{
+class CheckboxesInoputs {
 
-	setValues(value){
+	setValues(value) {
 		var hidden = $('[data-sync=setting-check-hidden]'),
 			arrVal = [];
 
-		$('[data-sync='+ value +']').click(function () {
+		$('[data-sync=' + value + ']').click(function () {
 			var nowVal = hidden.val();
-			
-			if($(this).attr('type') === 'checkbox'){
-				var checkbox = $('[data-sync='+ value +'][type=checkbox]');
+
+			if ($(this).attr('type') === 'checkbox') {
+				var checkbox = $('[data-sync=' + value + '][type=checkbox]');
 
 				checkbox.each(function () {
-					if($(this).hasClass('active')){
-					
+					if ($(this).hasClass('active')) {
+
 						console.log(valueText)
 
 					}
 				})
-			}else{
+			} else {
 				return false;
 			}
 		});
 	}
 }
 
-
-
 var burgerEff = new BurgerEff;
 
-
 $(document).ready(function () {
+
+	// Анимация якорей
+
+	TweenMax.set('.anchors__text-block', {
+		x: 10,
+		opacity: 0
+	});
+	function resetTween() {
+		TweenMax.set($(this).find('.anchors__text-block'), {
+			x: 10,
+			opacity: 0
+		});
+	}
+//	делаем ширину у текстового блока в якорях
+	$(document).find(".anchors .anchors__text-block span").each(function () {
+		let widthSpan = $(this).width();
+		$(this).parent().css({
+			"width": widthSpan + 80
+		});
+		$(this).parent().addClass("not-active");
+	});
+	$(".anchors .anchors__text-block").css("position", "absolute");
+	$(".anchors .anchors__item").hover(function () {
+			$(this).find('.anchors__text-block').removeClass("not-active");
+			TweenMax.to($(this).find('.anchors__text-block'), 0.4, {
+				x: 0,
+				opacity: 1,
+				ease: Power0.easeNone,
+				onStart: resetTween
+			});
+		},
+		(function () {
+			TweenMax.to($(this).find('.anchors__text-block'), 0.4, {
+				x: 10,
+				opacity: 0,
+				ease: Power0.easeNone
+			});
+		})
+	);
+
+//	страница SMM hovers на больших иконках
+	$(".contextual-not-pay-section.smm-pages .social-item").hover(function () {
+			$(this).find('.social-item__img').addClass('active');
+		},
+		(function () {
+			$(this).find('.social-item__img').removeClass('active');
+		})
+	);
+
 // подключение нового хедера vadjs
 	if (document.querySelector(".hoverDivMenu") !== null) {
 		var service = document.querySelectorAll('.header_nav ul li'),
 			hoverDiv = document.querySelector('.hoverDivMenu'),
 			hoverTop = document.querySelector('.header_top'),
 			caret = document.querySelector('.caretup'),
-			section = document.querySelector(".section-1");
+			section = document.querySelector(".header");
 
 		function hideHeaderService() {
 			hoverDiv.style.opacity = '0';
@@ -170,7 +216,7 @@ $(document).ready(function () {
 		}
 	}
 //секция who we are item замена фото при ховере
-	if(document.querySelectorAll('.item-faces')) {
+	if (document.querySelectorAll('.item-faces')) {
 		const allFaces = document.querySelectorAll('.item-faces');
 
 		for (let item of allFaces) {
@@ -202,21 +248,23 @@ $(document).ready(function () {
 	function lightgallery(main, child) {
 		$(main).lightGallery({
 				selector: child,
-				zoom: true
+				zoom: true,
+				thumbnail:true
 			}
 		)
 
 	}
+
 	var timeline = new TimelineMax;
 
-		timeline.from('.gear-1', 1, {
-			ease: Bounce.easeOut,
-			rotation: -50,
-			onComplete: () => {
-				rotationGear('.gear-1')
+	timeline.from('.gear-1', 1, {
+		ease: Bounce.easeOut,
+		rotation: -50,
+		onComplete: () => {
+			rotationGear('.gear-1')
 
-			}
-		}, '-=1.5')
+		}
+	}, '-=1.5')
 		.from('.gear-2', 1, {
 			ease: Bounce.easeOut,
 			rotation: 50,
@@ -225,49 +273,19 @@ $(document).ready(function () {
 			}
 		}, '-=1.5');
 
-		timeline.play();
+	timeline.play();
 
 
-var arr = ['sdsdsd',2,null];
-
-var currBody = document.getElementsByTagName('body')[0];
+	var arr = ['sdsdsd', 2, null];
 
 
-
-	switch(currBody.className){
-
-		case 'design-pages':
-			lightgallery('.lightGallery', '.clickGal');
-			break;
-		case "review":
-			lightgallery(".lightGallery", '.openLetter');
-			break;
-		case 'about-us-pages':
-			lightgallery("#lightGallery", '.iconPlus');
-			break;
-		case 'VkAdvacment':
-			lightgallery('.lightGallery','.open_gallery');
-			break;
-		case 'instagram_advacement':
-			lightgallery('.lightGallery','.open_gallery');
-			break;
-		case 'facebook_advacement':
-			lightgallery('.lightGallery','.open_gallery');
-			break;
-		case 'main-seo-pages':
-			lightgallery('.lightGallery','.open_gallery');
-			break;
-		default:
-			console.log("unanimated page");
-
-	}
 	//final-coutdown
 	function finalCountdown(date, count) {
 		var _DAYinMS = 86400000,
-			 dateNow = Date.now(),
-			 cur = count;
+			dateNow = Date.now(),
+			cur = count;
 		date = typeof date === 'number' ? date : Date.parse(date);
-		count -=  Math.floor((dateNow - date) / _DAYinMS);
+		count -= Math.floor((dateNow - date) / _DAYinMS);
 		if (count < 0) {
 
 			return finalCountdown(date + (_DAYinMS * cur), cur);
@@ -278,8 +296,8 @@ var currBody = document.getElementsByTagName('body')[0];
 	var d = new Date(2017, 5, 9);
 	var final = finalCountdown(d, 10);
 
-	if(document.querySelector('.final-coutdown-point')){
-	document.querySelector('.final-coutdown-point').innerHTML = final;
+	if (document.querySelector('.final-coutdown-point')) {
+		document.querySelector('.final-coutdown-point').innerHTML = final;
 	}
 
 	// //до сюда vadj
@@ -290,7 +308,7 @@ var currBody = document.getElementsByTagName('body')[0];
 
 	chechBoxes();
 
-	 // Стилизация скролла
+	// Стилизация скролла
 	$(".couple_of_words_txt").mCustomScrollbar({
 		theme: "my-theme"
 	});
@@ -301,10 +319,10 @@ var currBody = document.getElementsByTagName('body')[0];
 		className.map(el => {
 			if (el == "ua") {
 				$(".modal_form_phone").mask("+38(999) 999-99-99");
-				$(".modal_form_phone").attr('placeholder','+38(___) ___-__-__' );
+				$(".modal_form_phone").attr('placeholder', '+38(___) ___-__-__');
 			} else {
 				$(".modal_form_phone").mask("+7(999) 999-99-99");
-				$(".modal_form_phone").attr('placeholder','+7(___) ___-__-__' );
+				$(".modal_form_phone").attr('placeholder', '+7(___) ___-__-__');
 			}
 		})
 	});
@@ -320,13 +338,13 @@ var currBody = document.getElementsByTagName('body')[0];
 	// });
 
 	// скролл по ссылке с атрибутом href
-	$(".header_nav a[href*='#']").on("click", function(e) {
-	    e.preventDefault();
-	    var anchor = $(this);
-	    $('html, body').stop().animate({
-	        scrollTop: $(anchor.attr('href')).offset().top
-	    }, 500);
-	    return false;
+	$(".header_nav a[href*='#']").on("click", function (e) {
+		e.preventDefault();
+		var anchor = $(this);
+		$('html, body').stop().animate({
+			scrollTop: $(anchor.attr('href')).offset().top
+		}, 500);
+		return false;
 	});
 
 	// Скролл по классу .scroll_to и атрибуту data-scroll у кнопки к примеру (data-scroll="куда скроллим" в элементе куда скроллим ставим id потом впишем в куда скроллим)
@@ -342,68 +360,125 @@ var currBody = document.getElementsByTagName('body')[0];
 	//  Активация слайдера
 
 	// Кастомные кнопки управления слайдером
-	var owlSeo = $('.seo-page-carousel.owl-carousel');
-	owlSeo.owlCarousel({
+
+	$('.owl-carousel').owlCarousel({
 		loop: true,
 		items: 1,
 		margin: 10
 	});
 	// Go to the next item
-	$('.customNextBtn').click(function() {
-		owlSeo.trigger('next.owl.carousel', [700]);
+	$('.customNextBtn').click(function () {
+		$('.owl-carousel').trigger('next.owl.carousel', [700]);
 	});
 	// Go to the previous item
-	$('.customPrevBtn').click(function() {
-	    // With optional speed parameter
-	    // Parameters has to be in square bracket '[]'
-		owlSeo.trigger('prev.owl.carousel', [700]);
+	$('.customPrevBtn').click(function () {
+		// With optional speed parameter
+		// Parameters has to be in square bracket '[]'
+		$('.owl-carousel').trigger('prev.owl.carousel', [700]);
 	});
 
+	var currBody = document.getElementsByTagName('body')[0];
+
+	setTimeout( function () {
+		switch (currBody.className) {
+
+			case 'design-pages':
+				lightgallery('.lightGallery', '.clickGal');
+				break;
+			case "review":
+				lightgallery(".lightGallery", '.openLetter');
+				break;
+			case 'about-us-pages':
+				lightgallery("#lightGallery", '.iconPlus');
+				break;
+			case 'VkAdvacment':
+				lightgallery('.lightGallery', '.open_gallery');
+				break;
+			case 'instagram_advacement':
+				lightgallery('.lightGallery', '.open_gallery');
+				break;
+			case 'facebook_advacement':
+				lightgallery('.lightGallery', '.open_gallery');
+				break;
+			case 'main-seo-pages':
+				lightgallery('.lightGallery', '.open_gallery');
+				break;
+			case 'contextual-pages':
+				lightgallery('.lightGallery', '.open_gallery');
+				break;
+			case 'smm':
+				lightgallery('.lightGallery', '.open_gallery');
+				break;
+			case 'seo_audit':
+				lightgallery('.lightGallery', '.open_gallery');
+				break;
+			default:
+				console.log("unanimated page");
+
+		}
+	}, 1000);
+
+	// var owlSeo = $('.owl-carousel.seo-page-carousel');
+	// owlSeo.owlCarousel({
+	// 	loop: true,
+	// 	items: 1,
+	// 	margin: 10
+	// });
+	// // Go to the next item
+	// $('.customNextBtn').click(function () {
+	// 	owlSeo.trigger('next.owl.carousel', [700]);
+	// });
+	// // Go to the previous item
+	// $('.customPrevBtn').click(function () {
+	// 	// With optional speed parameter
+	// 	// Parameters has to be in square bracket '[]'
+	// 	owlSeo.trigger('prev.owl.carousel', [700]);
+	// });
 	// отслеживаем изменение инпута file
-	$('#file').change(function(){
+	$('#file').change(function () {
 		// Если файл прикрепили то заносим значение value в переменную
 		// Если файл прикрепили то заосим значение value в переменную
 		var fileResult = $(this).val();
 		// И дальше передаем значение в инпут который под загрузчиком
 		$(this).parent().find('.fileLoad').find('input').val(fileResult);
 	});
-	var teamCarousel = $('.our-team-carousel .owl-carousel');
-	    teamCarousel.owlCarousel({
-		loop: true,
-		responsiveClass: true,
-		responsive:{
-			0:{
-				items: 1,
-				margin: 0
-			},
-			475:{
-				items:2,
-				margin: 10
-			},
-			600:{
-				items:3,
-				margin: 10
-			},
-			1000:{
-				items:4,
-				margin: 10
-			},
-			1250:{
-				items:5,
-				margin: 20
-			}
-		}
-	});
-	    $('.custom-btn-team-left').click(function () {
-			teamCarousel.trigger('prev.owl.carousel', [700]);
-		});
-	$('.custom-btn-team-right').click(function () {
-		teamCarousel.trigger('next.owl.carousel', [700]);
-	});
-	/* Добавляем новый класс кнопке если инпут файл получил фокус */
-	$('#file').hover(function(){
+	// var teamCarousel = $('.our-team-carousel .owl-carousel');
+	// teamCarousel.owlCarousel({
+	// 	loop: true,
+	// 	responsiveClass: true,
+	// 	responsive: {
+	// 		0: {
+	// 			items: 1,
+	// 			margin: 0
+	// 		},
+	// 		475: {
+	// 			items: 2,
+	// 			margin: 10
+	// 		},
+	// 		600: {
+	// 			items: 3,
+	// 			margin: 10
+	// 		},
+	// 		1000: {
+	// 			items: 4,
+	// 			margin: 10
+	// 		},
+	// 		1250: {
+	// 			items: 5,
+	// 			margin: 20
+	// 		}
+	// 	}
+	// });
+	// $('.custom-btn-team-left').click(function () {
+	// 	teamCarousel.trigger('prev.owl.carousel', [700]);
+	// });
+	// $('.custom-btn-team-right').click(function () {
+	// 	teamCarousel.trigger('next.owl.carousel', [700]);
+	// });
+	// /* Добавляем новый класс кнопке если инпут файл получил фокус */
+	$('#file').hover(function () {
 		$(this).parent().find('span').addClass('button-hover');
-	}, function(){
+	}, function () {
 		$(this).parent().find('span').removeClass('button-hover');
 	});
 

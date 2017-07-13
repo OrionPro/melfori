@@ -33,9 +33,10 @@ $font_SFUIDisplay-Bold: "SFUIDisplay-Bold", Arial, sans-serif
 	width: 270px
 	height: 50px
 	background-color: #01c1e6
-	border: 1px solid #01c1e6
 	border-radius: 10px
+	border: none
 	@include font(#fff, 16px, $font_SFUIDisplay-Regular)
+	box-shadow: 0 3px 4.8px 0.2px rgba(0, 0, 0, 0.17)
 	transition: background-color, color, border, 0.5s
 %main_btn_hover
 	color: $main_color
@@ -53,22 +54,21 @@ $font_SFUIDisplay-Bold: "SFUIDisplay-Bold", Arial, sans-serif
 	width: 370px
 	height: 50px
 	background-color: white
-	border: transparent
+	border: none
 	border-radius: 10px
 	@include font($main_color, 16px, $font_SFUIDisplay-Regular)
+	box-shadow: 0 3px 4.8px 0.2px rgba(0, 0, 0, 0.17)
 	transition: background-color, color, border, 0.5s
+	color: $main_color
 %main_btn2_hover
 	background-color: transparent
-	border: 1px solid white
 	color: white
 %main_btn2_active
 	background-color: transparent
-	border: 1px solid white
 	color: white
 	outline: 0
 %main_btn2_focus
 	background-color: transparent
-	border: 1px solid white
 	color: white
 	outline: 0
 

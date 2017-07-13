@@ -161,11 +161,11 @@ $(document).ready(function() {
 		e.preventDefault();
 		var id = $(this).data('modal');
 		var txt = $(this).data('info');
-		// var title =  $(this).data('title'); // для изменения title в модалке
+		var title =  $(this).data('title'); // для изменения title в модалке
 		$(".popup[data-modal=" + id + "]").toggle("fade", 200).find("form").css('display', 'block');
 		$(".popup[data-modal=" + id + "] input[name=form_name]").val(txt);
 		// $(".popup[data-modal="+id+"] h2").html(title); // прописать в ссылку data-title="нужный title"
-
+		$(".popup[data-modal=" + id + "] p").html(title);
 		if (window.matchMedia("(min-width: 992px)").matches) {
 			$("body").css({ "overflow": "hidden", "padding-right": "17px" });
 		}
@@ -298,7 +298,13 @@ $(document).ready(function() {
 		//console.log(erorr_finish);
 		var size = error.length - 1;
 		if (erorr_finish > size) { // в зависимости от полей которые проверяются (в нашем случае 3 поля)
-			var data = form.serialize(); // подготавливаем данные
+			var utm_source = $("input[name='utm_source']").val();
+			var utm_campaign = $("input[name='utm_campaign']").val();
+			var utm_content = $("input[name='utm_content']").val();
+			var utm_term = $("input[name='utm_term']").val();
+			var country = $("input[name='country_name']").val();
+			var data = form.serialize() + "&utm_source=" + utm_source + "&utm_campaign=" + utm_campaign + "&utm_content=" + utm_content + "&utm_term=" + utm_term;
+
 
 
 			$.ajax({ // инициализируем ajax запрос
@@ -314,51 +320,68 @@ $(document).ready(function() {
 				success: function(data) { // событие после удачного обращения к серверу и получения ответа
 					//-----------------------------для страницы contextual---------------------------
 					if( form.find('input[name="form_type_download_contextual"]').val() == 'download') {
-						console.log(form.find('input[name="form_type_download"]').val());
-						$.getJSON("http://ip-api.com/json/?callback=?", function (data_country) {
-							if (data_country.country == "Ukraine") {
-								location.href = '/doc/Dogovor-kontekst.docx';
-							}
-							if (data_country.country == "Russia") {
-								location.href = '/doc/Dogovor-kontekst.docx';
-							}
-							else {
-								location.href = '/doc/Dogovor-kontekst.docx';
-							}
-						});
+
+						if(country == 'UA'){
+							location.href = '/doc/Dogovor-kontekst.docx'
+						}
+						if(country == 'EN'){
+							location.href = '/doc/Dogovor-kontekst.docx'
+						}
+						else{
+							location.href = '/doc/Dogovor-kontekst.docx'
+						}
 					}
 //-----------------------------для страницы internetshops---------------------------
 					if( form.find('input[name="form_type_download_internetshops"]').val() == 'download') {
-						console.log(form.find('input[name="form_type_download"]').val());
-						$.getJSON("http://ip-api.com/json/?callback=?", function (data_country) {
-							if (data_country.country == "Ukraine") {
-								location.href = '/doc/Dogovor_na_razrabotku_veb-sayta.docx';
-							}
-							if (data_country.country == "Russia") {
-								location.href = '/doc/Dogovor_na_razrabotku_veb-sayta.docx';
-							}
-							else {
-								location.href = '/doc/Dogovor_na_razrabotku_veb-sayta.docx';
-							}
-						});
-					}
+						if(country == 'UA'){
+							location.href = '/doc/Dogovor_na_razrabotku_veb-sayta.docx'
+						}
+						if(country == 'EN'){
+							location.href = '/doc/Dogovor_na_razrabotku_veb-sayta.docx'
+						}
+						else{
+							location.href = '/doc/Dogovor_na_razrabotku_veb-sayta.docx'
+						}
 
+					}
+					if( form.find('input[name="form_type_download_landing"]').val() == 'download') {
+						if(country == 'UA'){
+							location.href = '/doc/Dogovor_na_razrabotku_veb-sayta.docx'
+						}
+						if(country == 'EN'){
+							location.href = '/doc/Dogovor_na_razrabotku_veb-sayta.docx'
+						}
+						else{
+							location.href = '/doc/Dogovor_na_razrabotku_veb-sayta.docx'
+						}
+
+					}
+					if( form.find('input[name="form_type_download_companysite"]').val() == 'download') {
+						if(country == 'UA'){
+							location.href = '/doc/Dogovor_na_razrabotku_veb-sayta.docx'
+						}
+						if(country == 'EN'){
+							location.href = '/doc/Dogovor_na_razrabotku_veb-sayta.docx'
+						}
+						else{
+							location.href = '/doc/Dogovor_na_razrabotku_veb-sayta.docx'
+						}
+
+					}
 
 					if( form.find('input[name="form_type_download"]').val() == 'download') {
-						console.log(form.find('input[name="form_type_download"]').val());
-						$.getJSON("http://ip-api.com/json/?callback=?", function (data_country) {
-							if (data_country.country == "Ukraine") {
-								location.href = '/img/file/Poryadok_raboty_frontend_razrabotchika.pdf';
-							}
-							if (data_country.country == "Russia") {
-								location.href = '/img/file/Poryadok_raboty_frontend_razrabotchika.pdf';
-							}
-							else {
-								location.href = '/img/file/Poryadok_raboty_frontend_razrabotchika.pdf';
-							}
-						});
+						if(country == 'UA'){
+							location.href = '/img/file/Poryadok_raboty_frontend_razrabotchika.pdf'
+						}
+						if(country == 'EN'){
+							location.href = '/img/file/Poryadok_raboty_frontend_razrabotchika.pdf'
+						}
+						else{
+							location.href = '/img/file/Poryadok_raboty_frontend_razrabotchika.pdf'
+						}
 
 					}
+
 					if (data['error']) { // если обработчик вернул ошибку
 						alert(data['error']); // покажем её текст
 					} else { // если все прошло ок
@@ -519,6 +542,14 @@ $(document).ready(function() {
 			//console.log(error[i]);
 		}
 		//console.log(erorr_finish);
+		var utm_source = $("input[name='utm_source']").val();
+		var utm_campaign = $("input[name='utm_campaign']").val();
+		var utm_content = $("input[name='utm_content']").val();
+		var utm_term = $("input[name='utm_term']").val();
+		a.append('utm_source', utm_source);
+		a.append('utm_campaign', utm_campaign);
+		a.append('utm_content', utm_content);
+		a.append('utm_term', utm_term);
 		var size = error.length - 1;
 		if (erorr_finish > size) {
 			$.ajax({

@@ -1731,640 +1731,650 @@
 	</noscript>
 </head>
 
-<div>
-	<div class="loader">
-		<div class="loader_inner"></div>
+<body class="smm">
+<div class="loader">
+	<div class="loader_inner"></div>
+</div>
+<!-- Модальное окно -->
+<div class="popup" data-modal="modal-1">
+	<div class="dm-table">
+		<div class="dm-cell">
+			<div class="dm-modal">
+				<a href="#" class="close">
+				</a>
+				<p class='success_mail'>Спасибо! Ваша заявка уже обрабатывается менеджером и в ближайшее время он с
+					вами
+					свяжется.</p>
+				<form id="form">
+					<div>
+						<label>Введите своё имя</label>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="name" class="modal_form_input" type="text">
+						</div>
+					</div>
+					<div>
+						<label>Введите свой телефон</label>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="phone" class="modal_form_phone" type="text">
+						</div>
+					</div>
+					<div>
+						<label>Введите свой e-mail</label>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="email" class="modal_form_email" type="text">
+						</div>
+					</div>
+					<div>
+						<div class="select">
+							<div class="slct_arrow">
+								<i class="fa fa-angle-down"></i>
+							</div>
+							<a href="#" class="slct">Выбор заголовков:</a>
+							<ul class="drop">
+								<li>Вы крутые</li>
+								<li>Я в Вас влюбился</li>
+								<li>Быстрей Вас только Флеш</li>
+							</ul>
+							<input type="hidden" id="select" name="services">
+						</div>
+					</div>
+					<input type="hidden" name="form_name" value="">
+					<input type="hidden" name="form_type" value="modal">
+					<input type="submit" value="Отправить">
+				</form>
+			</div>
+		</div>
 	</div>
-	<!-- Модальное окно -->
-	<div class="popup" data-modal="modal-1">
-		<div class="dm-table">
-			<div class="dm-cell">
-				<div class="dm-modal">
-					<a href="#" class="close">
-					</a>
-					<p class='success_mail'>Спасибо! Ваша заявка уже обрабатывается менеджером и в ближайшее время он с
-						вами
-						свяжется.</p>
-					<form id="form">
-						<div>
-							<label>Введите своё имя</label>
-							<div class="modal_form_input_wrap">
-								<div class="modal_input_error">Заполните поле
-									<div class="modal_error_triangle"></div>
-									<div class="modal_error_chest_img"></div>
-								</div>
-								<input name="name" class="modal_form_input" type="text">
-							</div>
+	<div class="overlay">
+	</div>
+</div>
+<!-- Модальное окно 2-->
+<div class="popup" data-modal="modal-res">
+	<div class="dm-table">
+		<div class="dm-cell">
+			<div class="dm-modal">
+				<p class='success_mail'>Заявка отправлена</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- вариант меню на мобильном -->
+<div class="popup pop3" data-modal="modal-3">
+	<div class="dm-table">
+		<div class="dm-cell">
+			<div class="dm-modal">
+				<nav class="header_nav_mobile">
+					<ul>
+						<li>
+							<a href="#">Примеры кухонь</a>
+						</li>
+						<li>
+							<a href="#">Преимущества</a>
+						</li>
+						<li>
+							<a href="#">Отзывы</a>
+						</li>
+						<li>
+							<a href="tel:73842596168">+7 3842 59 61 68</a>
+						</li>
+						<li>
+							<a href="#">Примеры кухонь</a>
+						</li>
+						<li>
+							<a href="#">Преимущества</a>
+						</li>
+						<li>
+							<a href="#">Отзывы</a>
+						</li>
+						<li>
+							<a href="#">Примеры кухонь</a>
+						</li>
+						<li>
+							<a href="#">Преимущества</a>
+						</li>
+						<li>
+							<a href="#">Отзывы</a>
+						</li>
+						<li>
+							<a href="#">Примеры кухонь</a>
+						</li>
+						<li>
+							<a href="#">Преимущества</a>
+						</li>
+						<li>
+							<a href="#">Отзывы</a>
+						</li>
+						<li>
+							<a href="#">Примеры кухонь</a>
+						</li>
+						<li>
+							<a href="#">Преимущества</a>
+						</li>
+						<li>
+							<a href="#">Отзывы</a>
+						</li>
+						<li>
+							<a href="#">Примеры кухонь</a>
+						</li>
+						<li>
+							<a href="#">Преимущества</a>
+						</li>
+						<li>
+							<a href="#">Отзывы</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div class="overlay">
+	</div>
+</div>
+<!-- Здесь пишем код -->
+<!-- header -->
+<nav canvas="" class="">
+	<div class="mnu_btn">
+		<label id="nav-button-label">
+			<div id="nav-lines">
+				<i class="nav-line"></i>
+				<i class="nav-line"></i>
+				<i class="nav-line"></i>
+				<i class="nav-line"></i>
+			</div>
+		</label>
+	</div>
+</nav>
+<div canvas="container">
+	<header class="header header-SMM">
+		<div class="video-container">
+			<video id="Video" class="video" loop autoplay muted>
+				<source src="img/header_video.webm" type="video/webm">
+				<source src="img/header_video.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="header_top">
+					<div class="header-about-menu">
+						<div class="header_logo">
+							<a href="/" class="logo">
+								<img src="img/top_logo.png" alt="">
+								<span>Делаем маркетинг <br/>
+                            в интернете эффективным</span>
+							</a>
 						</div>
-						<div>
-							<label>Введите свой телефон</label>
-							<div class="modal_form_input_wrap">
-								<div class="modal_input_error">Заполните поле
-									<div class="modal_error_triangle"></div>
-									<div class="modal_error_chest_img"></div>
-								</div>
-								<input name="phone" class="modal_form_phone" type="text">
+						<nav class="header_nav">
+							<ul>
+								<li>
+									<a href="/">Главная</a>
+								</li>
+								<li>
+									<a href="#">Услуги
+										<i class="fa fa-angle-down caretup"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#">Смотреть работы</a>
+								</li>
+								<li>
+									<a href="#">О нас</a>
+								</li>
+								<li>
+									<a href="#">Отзывы</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="header_modal">
+							<div>
+								<a href="tel:+380935848035">+38 (093) 58 48 035</a>
 							</div>
-						</div>
-						<div>
-							<label>Введите свой e-mail</label>
-							<div class="modal_form_input_wrap">
-								<div class="modal_input_error">Заполните поле
-									<div class="modal_error_triangle"></div>
-									<div class="modal_error_chest_img"></div>
-								</div>
-								<input name="email" class="modal_form_email" type="text">
-							</div>
-						</div>
-						<div>
+							<button data-modal="modal-1" data-info="Обратный звонок" href="#" class="modal active">
+								Обратный
+								звонок
+							</button>
 							<div class="select">
 								<div class="slct_arrow">
 									<i class="fa fa-angle-down"></i>
 								</div>
-								<a href="#" class="slct">Выбор заголовков:</a>
+								<a href="#" class="slct">RU</a>
 								<ul class="drop">
-									<li>Вы крутые</li>
-									<li>Я в Вас влюбился</li>
-									<li>Быстрей Вас только Флеш</li>
+									<li>
+										<a href="#"></a>
+										RU
+									</li>
+									<li>
+										<a href="#"></a>
+										UA
+									</li>
+									<li>
+										<a href="#"></a>
+										EN
+									</li>
 								</ul>
 								<input type="hidden" id="select" name="services">
 							</div>
 						</div>
-						<input type="hidden" name="form_name" value="">
-						<input type="hidden" name="form_type" value="modal">
-						<input type="submit" value="Отправить">
+					</div>
+					<div class="hoverDivMenu">
+						<ul>
+							<li>РАЗРАБОТКА</li>
+							<li>
+								<a>Создание сайта компании</a>
+							</li>
+							<li>
+								<a>Разработка интернет-магазина</a>
+							</li>
+							<li>
+								<a>Landing page</a>
+							</li>
+							<li>
+								<a>Мобильные приложения</a>
+							</li>
+						</ul>
+						<ul>
+							<li>ИНТЕРНЕТ-МАРКЕТИНГ</li>
+							<li>
+								<a>Продвижение сайта(SEO)</a>
+							</li>
+							<li>
+								<a>Контекстная реклама</a>
+							</li>
+							<li>
+								<a>Юзабилити аудит</a>
+							</li>
+						</ul>
+						<ul>
+							<li>УСЛУГИ ДИЗАЙНА</li>
+							<li>
+								<a>Дизайн сайтов</a>
+							</li>
+							<li>
+								<a>Разработка логотипов</a>
+							</li>
+						</ul>
+						<ul>
+							<li>КРЕАТИВНАЯЯ РЕКЛАМА</li>
+							<li>
+								<a>Наружная креативная реклама</a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+				<div class="header_title">
+					<h1>
+						Комплексное продвижение вашего бизнеса <br>
+						в социальных сетях с миллионными <br>
+						аудиториями
+					</h1>
+					<b>Управление репутацией, работа с целевой аудиторией и повышение <br>
+						продаж – комплексный SMM от Мелфори</b>
+					<div class="decor-bottom-border">
+						<span></span>
+					</div>
+				</div>
+				<div class="header-form">
+					<h3>Сэкономьте время</h3>
+					<p>Обсудить задачу по телефону – быстрее и информативнее.</p>
+					<form>
+						<div>
+							<div class="modal_form_input_wrap">
+
+								<div class="modal_input_error">Заполните поле
+									<div class="modal_error_triangle"></div>
+									<div class="modal_error_chest_img"></div>
+								</div>
+								<label>Напишите номер, мы перезвоним.</label>
+								<input name="phone" class="modal_form_phone ua" placeholder="+38(___) ___-__-__"
+									   type="text">
+							</div>
+						</div>
+						<input type="submit" value="Обсудить по телефон">
+						<input type="hidden" name="form_name" value="Обсудить по телефон (Лендинг)">
+						<input type="hidden" name="form_type" value="normal">
+					</form>
+				</div>
+				<div class="header_bot_txt">
+					<a href="#" class="scroll_to" data-scroll="vacancies-developers">
+						<i class="fa fa-angle-down"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+	<!--секция smm-steps-section-->
+	<section class="smm-steps-section" id="vacancies-developers">
+		<div class="container">
+			<div class="row">
+				<div class="title-wrap">
+					<h2 class="lineH-1">Социальные сети – тренд 21 века, <br>
+						который работает на ваши продажи</h2>
+				</div>
+				<div class="social-wrap col-lg-10 col-md-12 col-sm-12 col-xs-12">
+					<div class="social-item">
+						<img src="img/youtube.png" alt="">
+					</div>
+					<div class="social-item">
+						<img src="img/vkontakte.png" alt="">
+					</div>
+					<div class="social-item">
+						<img src="img/facebook.png" alt="">
+					</div>
+					<div class="social-item">
+						<img src="img/instagram.png" alt="">
+					</div>
+				</div>
+				<div class="item-title">
+					<h3>SMM – уникальная возможность <br>
+						наладить тёплую связь с потенциальными клиентами</h3>
+					<p class="lineH-1">Грамотный маркетинг <br>
+						в социальных сетях обеспечивает:</p>
+				</div>
+				<div class="content col-lg-7">
+					<div class="gear-wrap">
+						<i class="gear-1"></i>
+						<i class="gear-2"></i>
+					</div>
+					<ul>
+						<li class="clearfix">
+							<div class="arrow"></div>
+							<div class="decor-img">
+								<span>1</span>
+							</div>
+							<aside class="center-text">
+								<p>Создание позитивного имиджа бизнеса</p>
+							</aside>
+						</li>
+						<li class="clearfix">
+							<div class="arrow"></div>
+							<div class="decor-img">
+								<span>2</span>
+							</div>
+							<aside class="center-text">
+								<p>Оперативную работу с обратной связью</p>
+							</aside>
+						</li>
+						<li class="clearfix">
+							<div class="decor-img">
+								<span>3</span>
+							</div>
+							<aside class="center-text">
+								<p>
+									Линейное увеличение продаж
+								</p>
+							</aside>
+						</li>
+					</ul>
+				</div>
+				<div class="aducation">
+					<p class="lineH-1">Это простой способ достучаться до клиента на расстоянии, <br>
+						и смотивировать на покупку вашего продукта</p>
+					<i class="header_i"></i>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--секция contextual-not-pay-section-->
+	<section class="contextual-not-pay-section smm-pages white">
+		<div class="container">
+			<div class="row">
+				<h2>Мы работаем с вашей целевой аудиторией <br>
+					по трём фронтам</h2>
+				<div class="clearfix witnBottom">
+					<div class="col-lg-4 col-md-4 col-sm-4">
+						<div class="social-item">
+							<a href="#">
+							</a>
+							<div class="social-item__img vk-img">
+							</div>
+							<div class="text">
+								<b>ВКОНТАКТЕ</b>
+								<p>Самая популярная соцсеть <br>
+									в России</p>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4">
+						<div class="social-item">
+							<a href="#">
+							</a>
+							<div class="social-item__img inst-img">
+							</div>
+							<div class="text">
+								<b>ИНСТАГРАМ</b>
+								<p>Главный инструмент продаж <br>
+									– фотографии и видео</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4">
+						<div class="social-item">
+							<a href="#">
+							</a>
+							<div class="social-item__img fb-img">
+							</div>
+							<div class="text">
+								<b>ФЕЙСБУК</b>
+								<p>Высокая концентрация <br>
+									платежеспособных людей</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="decore-scheme-wrap">
+					<div class="title-item">
+						<div class="title-item-decore white">
+							<span>Что мы делаем:</span>
+							<div class="gear-color">
+								<div class="small">
+									<span class="img"></span>
+								</div>
+								<div class="big">
+									<span class="img"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="decore smm-decore">
+						<div class="mask white">
+							<div class="item">
+								<div class="content white">
+									<p class="lineH-1">1. Оформляем персональные страницы <br>
+										вашего бренда</p>
+									<span class="bottom-decore white"></span>
+								</div>
+							</div>
+							<div class="item">
+								<div class="content white">
+									<p class="lineH-1">2. Привлекаем платежеспособную, <br>
+										лояльную аудиторию</p>
+									<span class="bottom-decore white"></span>
+								</div>
+							</div>
+							<div class="item">
+								<div class="content white">
+									<p class="lineH-1">3. Работаем с лидерами мнений <br>
+										и обратной связью</p>
+									<span class="bottom-decore white"></span>
+								</div>
+							</div>
+							<div class="item">
+								<div class="content white">
+									<p class="lineH-1">4. Создаём интересный тематический контент</p>
+									<span class="bottom-decore white"></span>
+								</div>
+							</div>
+							<div class="item">
+								<div class="content white">
+									<p class="lineH-1">5. Обеспечиваем клиентами из социальных <br>
+										сетей</p>
+									<span class="bottom-decore white"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="smm-button-wrap">
+						<input type="submit" class="modal" data-modal="modal-1"
+							   value="Заказать продвижение в соцсетях">
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- секция unique_challenge ten_recommendations-->
+	<section class="unique_challenge ten_recommendations">
+		<div class="container">
+			<div class="row">
+				<h2>Уже используете соцсети для бизнеса?</h2>
+				<p>Мы бесплатно поможем увеличить вашу аудиторию и количество продаж. Оставьте заявку <br>
+					на аудит ваших социальных сетей!</p>
+				<div class="unique_challenge_form">
+					<form>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="input" class="modal_form_input" placeholder="Ссылки на ваши соцсети"
+								   type="text">
+						</div>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="phone" class="modal_form_phone ua" placeholder="+7(___) ___-__-__"
+								   type="text">
+						</div>
+						<input type="submit" value="Проконсультироваться">
+						<input type="hidden" name="form_name" value="Проконсультироваться SMM">
+						<input type="hidden" name="form_type" value="normal">
 					</form>
 				</div>
 			</div>
 		</div>
-		<div class="overlay">
-		</div>
-	</div>
-	<!-- Модальное окно 2-->
-	<div class="popup" data-modal="modal-res">
-		<div class="dm-table">
-			<div class="dm-cell">
-				<div class="dm-modal">
-					<p class='success_mail'>Заявка отправлена</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- вариант меню на мобильном -->
-	<div class="popup pop3" data-modal="modal-3">
-		<div class="dm-table">
-			<div class="dm-cell">
-				<div class="dm-modal">
-					<nav class="header_nav_mobile">
-						<ul>
-							<li>
-								<a href="#">Примеры кухонь</a>
-							</li>
-							<li>
-								<a href="#">Преимущества</a>
-							</li>
-							<li>
-								<a href="#">Отзывы</a>
-							</li>
-							<li>
-								<a href="tel:73842596168">+7 3842 59 61 68</a>
-							</li>
-							<li>
-								<a href="#">Примеры кухонь</a>
-							</li>
-							<li>
-								<a href="#">Преимущества</a>
-							</li>
-							<li>
-								<a href="#">Отзывы</a>
-							</li>
-							<li>
-								<a href="#">Примеры кухонь</a>
-							</li>
-							<li>
-								<a href="#">Преимущества</a>
-							</li>
-							<li>
-								<a href="#">Отзывы</a>
-							</li>
-							<li>
-								<a href="#">Примеры кухонь</a>
-							</li>
-							<li>
-								<a href="#">Преимущества</a>
-							</li>
-							<li>
-								<a href="#">Отзывы</a>
-							</li>
-							<li>
-								<a href="#">Примеры кухонь</a>
-							</li>
-							<li>
-								<a href="#">Преимущества</a>
-							</li>
-							<li>
-								<a href="#">Отзывы</a>
-							</li>
-							<li>
-								<a href="#">Примеры кухонь</a>
-							</li>
-							<li>
-								<a href="#">Преимущества</a>
-							</li>
-							<li>
-								<a href="#">Отзывы</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
-		<div class="overlay">
-		</div>
-	</div>
-	<!-- Здесь пишем код -->
-	<!-- header -->
-	<nav canvas="" class="">
-		<div class="mnu_btn">
-			<label id="nav-button-label">
-				<div id="nav-lines">
-					<i class="nav-line"></i>
-					<i class="nav-line"></i>
-					<i class="nav-line"></i>
-					<i class="nav-line"></i>
-				</div>
-			</label>
-		</div>
-	</nav>
-	<div canvas="container">
-		<header class="header header-SMM">
-			<div class="video-container">
-				<video id="Video" class="video" loop autoplay muted>
-					<source src="img/header_video.webm" type="video/webm">
-					<source src="img/header_video.mp4" type="video/mp4">
-				</video>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="header_top">
-						<div class="header-about-menu">
-							<div class="header_logo">
-								<a href="/" class="logo">
-									<img src="img/top_logo.png" alt="">
-									<span>Делаем маркетинг <br/>
-                            в интернете эффективным</span>
-								</a>
-							</div>
-							<nav class="header_nav">
-								<ul>
-									<li>
-										<a href="/">Главная</a>
-									</li>
-									<li>
-										<a href="#">Услуги
-											<i class="fa fa-angle-down caretup"></i>
-										</a>
-									</li>
-									<li>
-										<a href="#">Смотреть работы</a>
-									</li>
-									<li>
-										<a href="#">О нас</a>
-									</li>
-									<li>
-										<a href="#">Отзывы</a>
-									</li>
-								</ul>
-							</nav>
-							<div class="header_modal">
-								<div>
-									<a href="tel:+380935848035">+38 (093) 58 48 035</a>
-								</div>
-								<button data-modal="modal-1" data-info="Обратный звонок" href="#" class="modal active">Обратный
-									звонок
-								</button>
-								<div class="select">
-									<div class="slct_arrow">
-										<i class="fa fa-angle-down"></i>
-									</div>
-									<a href="#" class="slct">RU</a>
-									<ul class="drop">
-										<li>
-											<a href="#"></a>
-											RU
-										</li>
-										<li>
-											<a href="#"></a>
-											UA
-										</li>
-										<li>
-											<a href="#"></a>
-											EN
-										</li>
-									</ul>
-									<input type="hidden" id="select" name="services">
-								</div>
-							</div>
-						</div>
-						<div class="hoverDivMenu">
-							<ul>
-								<li>РАЗРАБОТКА</li>
-								<li>
-									<a>Создание сайта компании</a>
-								</li>
-								<li>
-									<a>Разработка интернет-магазина</a>
-								</li>
-								<li>
-									<a>Landing page</a>
-								</li>
-								<li>
-									<a>Мобильные приложения</a>
-								</li>
-							</ul>
-							<ul>
-								<li>ИНТЕРНЕТ-МАРКЕТИНГ</li>
-								<li>
-									<a>Продвижение сайта(SEO)</a>
-								</li>
-								<li>
-									<a>Контекстная реклама</a>
-								</li>
-								<li>
-									<a>Юзабилити аудит</a>
-								</li>
-							</ul>
-							<ul>
-								<li>УСЛУГИ ДИЗАЙНА</li>
-								<li>
-									<a>Дизайн сайтов</a>
-								</li>
-								<li>
-									<a>Разработка логотипов</a>
-								</li>
-							</ul>
-							<ul>
-								<li>КРЕАТИВНАЯЯ РЕКЛАМА</li>
-								<li>
-									<a>Наружная креативная реклама</a>
-								</li>
-
-							</ul>
-						</div>
-					</div>
-					<div class="header_title">
-						<h1>
-							Комплексное продвижение вашего бизнеса <br>
-							в социальных сетях с миллионными <br>
-							аудиториями
-						</h1>
-						<b>Управление репутацией, работа с целевой аудиторией и повышение <br>
-							продаж – комплексный SMM от Мелфори</b>
-						<div class="decor-bottom-border">
-							<span></span>
-						</div>
-					</div>
-					<div class="header-form">
-						<h3>Сэкономьте время</h3>
-						<p>Обсудить задачу по телефону – быстрее и информативнее.</p>
-						<form>
-							<div>
-								<div class="modal_form_input_wrap">
-
-									<div class="modal_input_error">Заполните поле
-										<div class="modal_error_triangle"></div>
-										<div class="modal_error_chest_img"></div>
-									</div>
-									<label>Напишите номер, мы перезвоним.</label>
-									<input name="phone" class="modal_form_phone ua" placeholder="+38(___) ___-__-__"
-										   type="text">
-								</div>
-							</div>
-							<input type="submit" value="Обсудить по телефон">
-							<input type="hidden" name="form_name" value="Обсудить по телефон (Лендинг)">
-							<input type="hidden" name="form_type" value="normal">
-						</form>
-					</div>
-					<div class="header_bot_txt">
-						<a href="#" class="scroll_to" data-scroll="vacancies-developers">
-							<i class="fa fa-angle-down"></i>
-						</a>
-					</div>
-				</div>
-			</div>
-		</header>
-
-
-		<!--секция smm-steps-section-->
-		<section class="smm-steps-section" id="vacancies-developers">
-			<div class="container">
-				<div class="row">
-					<div class="title-wrap">
-						<h2 class="lineH-1">Социальные сети – тренд 21 века, <br>
-							который работает на ваши продажи</h2>
-					</div>
-					<div class="social-wrap col-lg-10 col-md-12 col-sm-12 col-xs-12">
-						<div class="social-item">
-							<img src="img/youtube.png" alt="">
-						</div>
-						<div class="social-item">
-							<img src="img/vkontakte.png" alt="">
-						</div>
-						<div class="social-item">
-							<img src="img/facebook.png" alt="">
-						</div>
-						<div class="social-item">
-							<img src="img/instagram.png" alt="">
-						</div>
-					</div>
-					<div class="item-title">
-						<h3>SMM – уникальная возможность <br>
-							наладить тёплую связь с потенциальными клиентами</h3>
-						<p class="lineH-1">Грамотный маркетинг <br>
-							в социальных сетях обеспечивает:</p>
-					</div>
-					<div class="content col-lg-7">
-						<div class="gear-wrap">
-							<i class="gear-1"></i>
-							<i class="gear-2"></i>
-						</div>
-						<ul>
-							<li class="clearfix">
-								<div class="arrow"></div>
-								<div class="decor-img">
-									<span>1</span>
-								</div>
-								<aside class="center-text">
-									<p>Создание позитивного имиджа бизнеса</p>
-								</aside>
-							</li>
-							<li class="clearfix">
-								<div class="arrow"></div>
-								<div class="decor-img">
-									<span>2</span>
-								</div>
-								<aside class="center-text">
-									<p>Оперативную работу с обратной связью</p>
-								</aside>
-							</li>
-							<li class="clearfix">
-								<div class="decor-img">
-									<span>3</span>
-								</div>
-								<aside class="center-text">
-									<p>
-										Линейное увеличение продаж
-									</p>
-								</aside>
-							</li>
-						</ul>
-					</div>
-					<div class="aducation">
-						<p class="lineH-1">Это простой способ достучаться до клиента на расстоянии, <br>
-							и смотивировать на покупку вашего продукта</p>
-						<i class="header_i"></i>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!--секция contextual-not-pay-section-->
-		<section class="contextual-not-pay-section smm-pages white">
-			<div class="container">
-				<div class="row">
-					<h2>Мы работаем с вашей целевой аудиторией <br>
-						по трём фронтам</h2>
-					<div class="clearfix witnBottom">
-						<div class="col-lg-4 col-md-4 col-sm-4">
-							<div class="social-item">
-								<img src="img/vk.png" class="vk-img" alt="">
-								<div class="text">
-									<b>ВКОНТАКТЕ</b>
-									<p>Самая популярная соцсеть <br>
-										в России</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-4">
-							<div class="social-item">
-								<img src="img/inst.png" alt="">
-								<div class="text">
-									<b>ИНСТАГРАМ</b>
-									<p>Главный инструмент продаж <br>
-										– фотографии и видео</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-4">
-							<div class="social-item">
-								<img src="img/fb.png" alt="">
-								<div class="text">
-									<b>ФЕЙСБУК</b>
-									<p>Высокая концентрация <br>
-										платежеспособных людей</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="decore-scheme-wrap">
-						<div class="title-item">
-							<div class="title-item-decore white">
-								<span>Что мы делаем:</span>
-								<div class="gear-color">
-									<div class="small">
-										<span class="img"></span>
-									</div>
-									<div class="big">
-										<span class="img"></span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="decore smm-decore">
-							<div class="mask white">
-								<div class="item">
-									<div class="content white">
-										<p class="lineH-1">1. Оформляем персональные страницы <br>
-											вашего бренда</p>
-										<span class="bottom-decore white"></span>
-									</div>
-								</div>
-								<div class="item">
-									<div class="content white">
-										<p class="lineH-1">2. Привлекаем платежеспособную, <br>
-											лояльную аудиторию</p>
-										<span class="bottom-decore white"></span>
-									</div>
-								</div>
-								<div class="item">
-									<div class="content white">
-										<p class="lineH-1">3. Работаем с лидерами мнений <br>
-											и обратной связью</p>
-										<span class="bottom-decore white"></span>
-									</div>
-								</div>
-								<div class="item">
-									<div class="content white">
-										<p class="lineH-1">4. Создаём интересный тематический контент</p>
-										<span class="bottom-decore white"></span>
-									</div>
-								</div>
-								<div class="item">
-									<div class="content white">
-										<p class="lineH-1">5. Обеспечиваем клиентами из социальных <br>
-											сетей</p>
-										<span class="bottom-decore white"></span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="smm-button-wrap">
-							<input type="submit" class="modal" data-modal="modal-1"
-								   value="Заказать продвижение в соцсетях">
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</section>
-
-
-		<!-- секция unique_challenge ten_recommendations-->
-		<section class="unique_challenge ten_recommendations">
-			<div class="container">
-				<div class="row">
-					<h2>Уже используете соцсети для бизнеса?</h2>
-					<p>Мы бесплатно поможем увеличить вашу аудиторию и количество продаж. Оставьте заявку <br>
-						на аудит ваших социальных сетей!</p>
-					<div class="unique_challenge_form">
-						<form>
-							<div class="modal_form_input_wrap">
-								<div class="modal_input_error">Заполните поле
-									<div class="modal_error_triangle"></div>
-									<div class="modal_error_chest_img"></div>
-								</div>
-								<input name="input" class="modal_form_input" placeholder="Ссылки на ваши соцсети"
-									   type="text">
-							</div>
-							<div class="modal_form_input_wrap">
-								<div class="modal_input_error">Заполните поле
-									<div class="modal_error_triangle"></div>
-									<div class="modal_error_chest_img"></div>
-								</div>
-								<input name="phone" class="modal_form_phone ua" placeholder="+7(___) ___-__-__"
-									   type="text">
-							</div>
-							<input type="submit" value="Проконсультироваться">
-							<input type="hidden" name="form_name" value="Проконсультироваться SMM">
-							<input type="hidden" name="form_type" value="normal">
-						</form>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!--секция  our_advantages internet-shop-goods-->
-		<section id="our_advantages" class="our_advantages internet-shop-goods">
-			<div class="container">
-				<div class="row">
-					<div class="title-wrap">
-						<h2> Как мы работаем:</h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="internet-shop-goods-wrap clearfix">
-						<div class="col-lg-4 col-md-4 col-sm-4">
-							<div class="internet-shop-goods-item">
-								<div class="item">
-									<p><b>Анализируем ваш</b> бизнес и составляем <br>
-										подробный портрет клиента</p>
-									<span class="decor">1</span>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-4">
-							<div class="internet-shop-goods-item">
-								<div class="item">
-									<p><b>Составляем</b> маркетинговый <br>
-										и контент-план на месяц / квартал / год</p>
-									<span class="decor">2</span>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-4">
-							<div class="internet-shop-goods-item">
-								<div class="item">
-									<p><b>Внедряем</b> инструменты, создаём <br>
-										уникальный контент и работаем <br>
-										с вашими клиентами</p>
-									<span class="decor">3</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="aducation">
-					<p class="lineH-1"><b>Как результат:</b> <br>
-						люди выбирают вас, а не конкурентов = доходы растут</p>
-					<i class="header_i"></i>
-				</div>
-			</div>
-		</section>
-
-		<section class="smm-guarantees-section">
-			<div class="container">
-				<div class="row">
-					<div class="title-wrap">
-						<h2>Какие гарантии?</h2>
-					</div>
-					<div class="guarantees-wrap">
-						<div class="item item-1">
-							<img src="img/smartphone.png" alt="">
-							<p>Гарантия количества <br>
-								привлечённых подписчиков</p>
-						</div>
-						<div class="item">
-							<img src="img/calcolator.png" alt="">
-							<p>Гарантия не выхода <br>
-								за рамки бюджета</p>
-						</div>
-					</div>
-					<div class="warning-wrap">
-						<div class="content">
-							<img src="img/warning.png" alt="">
-							<h3>ВАЖНО:</h3>
-							<p><b>Вы платите от $ 99 в месяц</b> за ожидаемый результат и запланированные показатели
-								<br>
-								При заказе SMM сразу для нескольких социальных сетей – стоимость ниже на 20% от общего
-								чека</p>
-						</div>
-					</div>
-					<div class="final-coutdown">
-						<h2>Успей закать настройку Яндекс.Директ и Google Adwords <br><span class="red-span-color"> Осталось <span
-								class="final-coutdown-point"></span> свободных мест из 10</span></h2>
-					</div>
-					<div class="header_i">
-
-					</div>
-					<div class="text-input">
-						<h2>Оставьте заявку на настройку и мы начнем работать над Вашим проектом прямо сейчас</h2>
-						<form action="">
-							<div class="col-lg-4 col-md-4 input-forms">
-								<input type="text" placeholder="Имя">
-							</div>
-							<div class="col-lg-4 col-md-4 input-forms">
-								<input type="text" placeholder="+38(___)_-_-_">
-							</div>
-							<div class="col-lg-4 col-md-4 put-button">
-								<a href="№">Оставить заявку</a>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-	</div>
 	</section>
-	<section class="several_cases contextual smm gray">
+
+	<!--секция  our_advantages internet-shop-goods-->
+	<section id="our_advantages" class="our_advantages internet-shop-goods">
+		<div class="container">
+			<div class="row">
+				<div class="title-wrap">
+					<h2> Как мы работаем:</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="internet-shop-goods-wrap clearfix">
+					<div class="col-lg-4 col-md-4 col-sm-4">
+						<div class="internet-shop-goods-item">
+							<div class="item">
+								<p><b>Анализируем ваш</b> бизнес и составляем <br>
+									подробный портрет клиента</p>
+								<span class="decor">1</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4">
+						<div class="internet-shop-goods-item">
+							<div class="item">
+								<p><b>Составляем</b> маркетинговый <br>
+									и контент-план на месяц / квартал / год</p>
+								<span class="decor">2</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4">
+						<div class="internet-shop-goods-item">
+							<div class="item">
+								<p><b>Внедряем</b> инструменты, создаём <br>
+									уникальный контент и работаем <br>
+									с вашими клиентами</p>
+								<span class="decor">3</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="aducation">
+				<p class="lineH-1"><b>Как результат:</b> <br>
+					люди выбирают вас, а не конкурентов = доходы растут</p>
+				<i class="header_i"></i>
+			</div>
+		</div>
+	</section>
+
+	<section class="smm-guarantees-section">
+		<div class="container">
+			<div class="row">
+				<div class="title-wrap">
+					<h2>Какие гарантии?</h2>
+				</div>
+				<div class="guarantees-wrap">
+					<div class="item item-1">
+						<img src="img/smartphone.png" alt="">
+						<p>Гарантия количества <br>
+							привлечённых подписчиков</p>
+					</div>
+					<div class="item">
+						<img src="img/calcolator.png" alt="">
+						<p>Гарантия не выхода <br>
+							за рамки бюджета</p>
+					</div>
+				</div>
+				<div class="warning-wrap">
+					<div class="content">
+						<img src="img/warning.png" alt="">
+						<h3>ВАЖНО:</h3>
+						<p><b>Вы платите от $ 99 в месяц</b> за ожидаемый результат и запланированные показатели
+							<br>
+							При заказе SMM сразу для нескольких социальных сетей – стоимость ниже на 20% от общего
+							чека</p>
+					</div>
+				</div>
+				<div class="final-coutdown">
+					<h2>Успей закать настройку Яндекс.Директ и Google Adwords <br><span class="red-span-color"> Осталось <span
+							class="final-coutdown-point"></span> свободных мест из 10</span></h2>
+				</div>
+				<div class="header_i">
+
+				</div>
+				<div class="text-input">
+					<h2>Оставьте заявку на настройку и мы начнем работать над Вашим проектом прямо сейчас</h2>
+					<form action="">
+						<div class="col-lg-4 col-md-4 input-forms">
+							<input type="text" placeholder="Имя">
+						</div>
+						<div class="col-lg-4 col-md-4 input-forms">
+							<input type="text" placeholder="+38(___)_-_-_">
+						</div>
+						<div class="col-lg-4 col-md-4 put-button">
+							<a href="№">Оставить заявку</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="several_cases contextual smm gray lightGallery">
 		<div class="container">
 			<div class="row">
 				<div class="title-wrap">
@@ -2374,7 +2384,7 @@
 					<div class="owl-carousel">
 						<div>
 							<p class="title_slide">Название компании: «Melfori»</p>
-							<div class="carousel_main_img">
+							<div class="carousel_main_img open_gallery" data-src="img/slider_google.jpg">
 								<img src="img/slider_google.jpg" alt="" width="960" height="467">
 							</div>
 							<div class="carousel_txt_wrap clearfix">
@@ -2411,7 +2421,7 @@
 						</div>
 						<div>
 							<p class="title_slide">Название компании: «Melfori»</p>
-							<div class="carousel_main_img">
+							<div class="carousel_main_img open_gallery" data-src="img/slider_google.jpg">
 								<img src="img/slider_google.jpg" alt="" width="960" height="467">
 							</div>
 							<div class="carousel_txt_wrap clearfix">
@@ -2490,7 +2500,7 @@
 			</div>
 		</div>
 	</footer>
-</div>
+</body>
 <div off-canvas="id-1 left shift">
 	<nav class="header_nav_mobile">
 		<ul class="menu">
