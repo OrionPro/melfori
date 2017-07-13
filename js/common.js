@@ -51,10 +51,8 @@ class BurgerEff {
 }
 
 // TABS
-$(".tabs-items-wrap .tabs-item").on('click', function (event) {
-	//ссылки которые будут переключать табы
+function tabsItems(event) {
 	event.preventDefault();
-
 	$(".tabs-items-wrap .tabs-item").removeClass('active'); //убираем активные состояния у ссылок
 
 	$(this).addClass('active'); //Добавляем активное состояние у той что нажали
@@ -62,7 +60,29 @@ $(".tabs-items-wrap .tabs-item").on('click', function (event) {
 	var data = $(this).data('tab'); //создаём переменную с датой
 	$('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
 	$('.tabs-wrap[data-tab=' + data + ']').addClass('active'); //если таб соответствует тому, какой data
-});
+}
+// setInterval(function () {
+// 	setTimeout( function () {
+// 		$('.tabs-item[data-tab=1]').trigger('click');
+// 	}, 0);
+// 	setTimeout( function () {
+// 		$('.tabs-item[data-tab=2]').trigger('click');
+// 	}, 4000);
+// 	setTimeout( function () {
+// 		$('.tabs-item[data-tab=3]').trigger('click');
+// 	}, 8000);
+// 	setTimeout( function () {
+// 		$('.tabs-item[data-tab=4]').trigger('click');
+// 	}, 12000);
+// 	setTimeout( function () {
+// 		$('.tabs-item[data-tab=5]').trigger('click');
+// 	}, 16000);
+// },20000);
+
+
+$(".tabs-items-wrap .tabs-item").on('click', tabsItems);
+
+
 $(".tabs-items").on('click', function (event) {
 	//ссылки которые будут переключать табы
 	event.preventDefault();
