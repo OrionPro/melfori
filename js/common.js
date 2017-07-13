@@ -61,24 +61,34 @@ function tabsItems(event) {
 	$('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
 	$('.tabs-wrap[data-tab=' + data + ']').addClass('active'); //если таб соответствует тому, какой data
 }
-// setInterval(function () {
-// 	setTimeout( function () {
-// 		$('.tabs-item[data-tab=1]').trigger('click');
-// 	}, 0);
-// 	setTimeout( function () {
-// 		$('.tabs-item[data-tab=2]').trigger('click');
-// 	}, 4000);
-// 	setTimeout( function () {
-// 		$('.tabs-item[data-tab=3]').trigger('click');
-// 	}, 8000);
-// 	setTimeout( function () {
-// 		$('.tabs-item[data-tab=4]').trigger('click');
-// 	}, 12000);
-// 	setTimeout( function () {
-// 		$('.tabs-item[data-tab=5]').trigger('click');
-// 	}, 16000);
-// },20000);
+const tabsItemsElem = $(".tabs-items-wrap .tabs-item");
 
+let changeActive = (function(ev,p,c){
+	let i = 0;
+	return function(ev,p,c){
+		let x = p[i];
+		if( ++i === p.length){ i = 0}
+		for(let i = p.length;i--;){
+			p[i].classList.remove('active')
+		}
+		if(c){
+			clearInterval(c);
+			ev.preventDefault();
+			x = ev.target;
+		}
+		x.classList.add('active');
+		var data = $(x).data('tab'); //создаём переменную с датой
+		$('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
+		$('.tabs-wrap[data-tab=' + data + ']').addClass('active');
+
+	}
+}());
+
+let timerId = setInterval(changeActive,4000,null,tabsItemsElem);
+
+for(let i = tabsItemsElem.length;i--;){
+	tabsItemsElem[i].addEventListener('click', ev => changeActive(ev,tabsItemsElem,timerId))
+}
 
 $(".tabs-items-wrap .tabs-item").on('click', tabsItems);
 
