@@ -74,7 +74,20 @@ $(".tabs-items").on('click', function (event) {
 	$('.tabPortfolioContent[data-tab=' + data + ']').show("fade", 500).addClass('activeTabState'); //если таб соответствует тому, какой data
 
 });
+//анимированная кнопка вниз на хедере
+const buttonGoDown = document.querySelector('.header_bot_txt > a > i');
+	function getRandomColor(to){
+		"use strict";
+		let red = Math.random() * to | 0;
+		let green = Math.random() * to | 0;
+		let blue = Math.random() * to | 0;
 
+		return `rgb(${red},${green},${blue})`;
+	}
+
+	setInterval(function(){
+		buttonGoDown.style.color = getRandomColor(255);
+	},1500);
 function chechBoxes() {
 	var container = $('.checkbox-container .item'),
 		checkbox = container.find('input[type=checkbox]');
@@ -315,15 +328,15 @@ $(document).ready(function () {
 	$(".modal_form_phone").each(function () {
 		var className = $(this).attr('class').split(' ');
 
-		className.map(el => {
-			if (el == "ua") {
-				$(".modal_form_phone").mask("+38(999) 999-99-99");
-				$(".modal_form_phone").attr('placeholder', '+38(___) ___-__-__');
-			} else {
-				$(".modal_form_phone").mask("+7(999) 999-99-99");
-				$(".modal_form_phone").attr('placeholder', '+7(___) ___-__-__');
-			}
-		})
+		// className.map(el => {
+		// 	if (el == "ua") {
+		// 		$(".modal_form_phone").mask("+38(999) 999-99-99");
+		// 		$(".modal_form_phone").attr('placeholder', '+38(___) ___-__-__');
+		// 	} else {
+		// 		$(".modal_form_phone").mask("+7(999) 999-99-99");
+		// 		$(".modal_form_phone").attr('placeholder', '+7(___) ___-__-__');
+		// 	}
+		// })
 	});
 	// для инициализации tooltips
 	// $( document ).tooltip({

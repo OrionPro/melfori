@@ -38,7 +38,7 @@ class SeoPageAnimation{
 		this.tl1
 			.from('.header_top', 3, {
 				y: 50,
-				opacity: 0,
+				autoAlpha: 0,
 				ease: Power3.easeOut
 			}, this.headerTime)
 			.from('.header_title', 3, {
@@ -66,9 +66,6 @@ class SeoPageAnimation{
 
 
 		this.tl2
-			.from(".hot_clients",0.5,{
-				opacity: 0
-			},'-=1.5')
 			.from('.hotClients_per_hour', 1, {
 				y: 50,
 				opacity: 0,
@@ -77,12 +74,12 @@ class SeoPageAnimation{
 			.from(".about-wrap", 1,{
 				x: -100,
 				opacity: 0,
-				ease: Bounce.easeOut
+				ease: Power3.easeOut
 			},'-=0.8')
 			.from(".img-wrap", 1,{
 				x: 100,
 				opacity: 0,
-				ease: Bounce.easeOut
+				ease: Power3.easeOut
 			},'-=1');
 
 		this.tl3
@@ -106,16 +103,9 @@ class SeoPageAnimation{
 				scale: 1.2,
 				opacity: 0,
 				ease: Power3.easeOut
-			},'-=0.1')
-			.from('.content-wrap  h3', 1,{
-				scale: 0.8,
-				opacity: 0,
-				ease: Power3.easeOut
-			},'-=0.3');
+			},'-=0.1');
+
 		this.tl4
-			.from('.ten_recommendations',0.3,{
-				opacity: 0
-			},'-=0.3')
 			.from('.ten_recommendations > h2', 1,{
 				y: 50,
 				opacity: 0,
@@ -126,31 +116,14 @@ class SeoPageAnimation{
 				opacity: 0,
 				ease: Power3.easeOut
 				}, '-=0.3')
-			.from('.animation_form_address', 1,{
+			.from('.unique_challenge_form', 1,{
 				x: 30,
 				opacity: 0,
 				scale: 0.95,
 				rotation: 5,
 				ease: Power3.easeOut
-			},'-=0.5')
-			.from('.animation_form_email', 1,{
-				x: 30,
-				opacity: 0,
-				scale: 0.95,
-				rotation: 5,
-				ease: Power3.easeOut
-			}, '-=0.5')
-			.from('.animation_seo_class', 1,{
-				x: -50,
-				opacity: 0,
-				scale: 0.95,
-				rotation: 5,
-				ease: Power3.easeOut
-			},'-=0.8');
+			},'-=0.5');
 		this.tl5
-			.from('.contextual-steps-section',0.5,{
-				backgroundColor: '#fff'
-			},"-=0.1")
 			.from('.whatIncludeinSeo',1,{
 				y: 50,
 				opacity: 0,
@@ -190,11 +163,8 @@ class SeoPageAnimation{
 				onComplete: ()=>{
 					rotationGear('.gear-2', -1)
 				}
-			},'-=1.5')
-			.from('.our_advantages ',1,{
-				backgroundColor: '#fff'
-			},"+=0.2");
-		
+			},'-=1.5');
+
 		this.tl6
 			.from('.result_of_action',1,{
 				x: 50,
@@ -237,10 +207,7 @@ class SeoPageAnimation{
 				x: -10,
 				y: 10,
 				ease: Power3.linear
-			},"+=0.3")
-			.from('.contextual-form-section',0.5,{
-				backgroundColor: '#fff'
-			},"-=0.5");
+			},"+=0.3");
 		
 		this.tl8
 			.from('.lineH_min',4,{

@@ -2357,19 +2357,32 @@
 				<div class="header_i">
 
 				</div>
-				<div class="text-input">
+				<div class="text-input unique_challenge">
 					<h2>Оставьте заявку на настройку и мы начнем работать над Вашим проектом прямо сейчас</h2>
-					<form action="">
-						<div class="col-lg-4 col-md-4 input-forms">
-							<input type="text" placeholder="Имя">
-						</div>
-						<div class="col-lg-4 col-md-4 input-forms">
-							<input type="text" placeholder="+38(___)_-_-_">
-						</div>
-						<div class="col-lg-4 col-md-4 put-button">
-							<a href="№">Оставить заявку</a>
-						</div>
-					</form>
+					<div class="unique_challenge_form">
+						<form>
+							<div class="modal_form_input_wrap">
+								<div class="modal_input_error">Заполните поле
+									<div class="modal_error_triangle"></div>
+									<div class="modal_error_chest_img"></div>
+								</div>
+								<input name="input" class="modal_form_input animation_form_address" placeholder="Имя"
+									   type="text">
+							</div>
+
+							<div class="modal_form_input_wrap">
+								<div class="modal_input_error">Заполните поле
+									<div class="modal_error_triangle"></div>
+									<div class="modal_error_chest_img"></div>
+								</div>
+								<input name="phone" class="modal_form_phone ua" type="text">
+							</div>
+
+							<input type="submit" class="animation_seo_class" value="Оставить Заявку">
+							<input type="hidden" name="form_name" value="бесплатная консультация по контекстной рекламе">
+							<input type="hidden" name="form_type" value="normal">
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>

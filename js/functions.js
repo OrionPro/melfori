@@ -303,7 +303,7 @@ $(document).ready(function() {
 			var utm_content = $("input[name='utm_content']").val();
 			var utm_term = $("input[name='utm_term']").val();
 			var country = $("input[name='country_name']").val();
-			var data = form.serialize() + "&utm_source=" + utm_source + "&utm_campaign=" + utm_campaign + "&utm_content=" + utm_content + "&utm_term=" + utm_term;
+			var data = form.serialize() + "&utm_source=" + utm_source + "&utm_campaign=" + utm_campaign + "&utm_content=" + utm_content + "&utm_term=" + utm_term + "&country_name=" + country;
 
 
 
@@ -334,13 +334,13 @@ $(document).ready(function() {
 //-----------------------------для страницы internetshops---------------------------
 					if( form.find('input[name="form_type_download_internetshops"]').val() == 'download') {
 						if(country == 'UA'){
-							location.href = '/doc/Dogovor_na_razrabotku_veb-sayta.docx'
+							location.href = '/doc/Chek_list_melfori_dlya_internet_magazina.pdf'
 						}
 						if(country == 'EN'){
-							location.href = '/doc/Dogovor_na_razrabotku_veb-sayta.docx'
+							location.href = '/doc/Chek_list_melfori_dlya_internet_magazina.pdf'
 						}
 						else{
-							location.href = '/doc/Dogovor_na_razrabotku_veb-sayta.docx'
+							location.href = '/doc/Chek_list_melfori_dlya_internet_magazina.pdf'
 						}
 
 					}
@@ -546,10 +546,12 @@ $(document).ready(function() {
 		var utm_campaign = $("input[name='utm_campaign']").val();
 		var utm_content = $("input[name='utm_content']").val();
 		var utm_term = $("input[name='utm_term']").val();
-		a.append('utm_source', utm_source);
-		a.append('utm_campaign', utm_campaign);
-		a.append('utm_content', utm_content);
-		a.append('utm_term', utm_term);
+		var country = $("input[name='country_name']").val();
+		$data.append('utm_source', utm_source);
+		$data.append('utm_campaign', utm_campaign);
+		$data.append('utm_content', utm_content);
+		$data.append('utm_term', utm_term);
+		$data.append('country_name', country);
 		var size = error.length - 1;
 		if (erorr_finish > size) {
 			$.ajax({

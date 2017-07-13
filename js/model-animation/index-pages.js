@@ -126,16 +126,11 @@ class IndexPageAnimation{
 				opacity: 0,
 				ease: Power3.easeOut
 			},'-=0.5')
-			.staggerFrom('.section-2 .our_advantages_item', 0.5,{
+			.staggerFrom('.section-2 .wrap_our_advantages_item', 0.5,{
 				y: -30,
 				opacity: 0,
 				ease: Power3.easeOut
-			},0.3,'-=1')
-			.from('.section-2 .our_advantages-download', 0.5,{
-				y: 30,
-				opacity: 0,
-				ease: Power3.easeOut
-			},'-=0.5');
+			},0.3,'-=1');
 
 		//section 3
 
