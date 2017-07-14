@@ -19,7 +19,6 @@ class BurgerEff {
 			'e90320',
 			'920182',
 			'00be92'
-
 		];
 		this.description = this.description.bind(this);
 	}
@@ -61,34 +60,38 @@ function tabsItems(event) {
 	$('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
 	$('.tabs-wrap[data-tab=' + data + ']').addClass('active'); //если таб соответствует тому, какой data
 }
-const tabsItemsElem = $(".tabs-items-wrap .tabs-item");
 
-let changeActive = (function(ev,p,c){
-	let i = 0;
-	return function(ev,p,c){
-		let x = p[i];
-		if( ++i === p.length){ i = 0}
-		for(let i = p.length;i--;){
-			p[i].classList.remove('active')
-		}
-		if(c){
-			clearInterval(c);
-			ev.preventDefault();
-			x = ev.target;
-		}
-		x.classList.add('active');
-		var data = $(x).data('tab'); //создаём переменную с датой
-		$('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
-		$('.tabs-wrap[data-tab=' + data + ']').addClass('active');
+if($('div').hasClass('tabs-items-wrap')){
+	const tabsItemsElem = $(".tabs-items-wrap .tabs-item");
 
+	let changeActive = (function(ev,p,c){
+		let i = 0;
+		return function(ev,p,c){
+			let x = p[i];
+			if( ++i === p.length){ i = 0}
+			for(let i = p.length;i--;){
+				p[i].classList.remove('active')
+			}
+			if(c){
+				clearInterval(c);
+				ev.preventDefault();
+				x = ev.target;
+			}
+			x.classList.add('active');
+			let data = $(x).data('tab'); //создаём переменную с датой
+			$('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
+			$('.tabs-wrap[data-tab=' + data + ']').addClass('active');
+
+		}
+	}());
+
+	let timerId = setInterval(changeActive,4000,null,tabsItemsElem);
+
+	for(let i = tabsItemsElem.length;i--;){
+		tabsItemsElem[i].addEventListener('click', ev => changeActive(ev,tabsItemsElem,timerId))
 	}
-}());
-
-let timerId = setInterval(changeActive,4000,null,tabsItemsElem);
-
-for(let i = tabsItemsElem.length;i--;){
-	tabsItemsElem[i].addEventListener('click', ev => changeActive(ev,tabsItemsElem,timerId))
 }
+
 
 $(".tabs-items-wrap .tabs-item").on('click', tabsItems);
 
@@ -192,10 +195,16 @@ $(document).ready(function () {
 	$(document).find(".anchors .anchors__text-block span").each(function () {
 		let widthSpan = $(this).width();
 		$(this).parent().css({
-			"width": widthSpan + 80
+			"width": widthSpan + 60
 		});
 		$(this).parent().addClass("not-active");
 	});
+	$(".anchors .anchors__text-block").css("position", "absolute");
+
+	if(window.matchMedia("(max-width: 992px)").matches) {
+		$(".anchors").css("display", "none");
+	}
+
 	$(".anchors .anchors__text-block").css("position", "absolute");
 	$(".anchors .anchors__item").hover(function () {
 			$(this).find('.anchors__text-block').removeClass("not-active");
@@ -528,8 +537,12 @@ $(document).ready(function () {
 });
 
 $(window).resize(function () {
-
-
+	if(window.matchMedia("(max-width: 992px)").matches) {
+		$(".anchors").css("display", "none");
+	}
+	if(window.matchMedia("(min-width: 992px)").matches) {
+		$(".anchors").css("display", "block");
+	}
 });
 
 $(window).scroll(function () {

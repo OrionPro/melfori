@@ -4448,6 +4448,9 @@ nav[canvas]
 		&:hover .anchor__line.settings-bot
 			border: 1px solid #f97b02
 			z-index: -1
+		&:hover .anchor__line.graph
+			border: 1px solid #00be92
+			z-index: -1
 	.anchor__line
 		width: 1px
 		height: 100%
@@ -4479,6 +4482,11 @@ nav[canvas]
 			top: -32px
 			height: 40px
 			z-index: -2
+		&.graph
+			top: -32px
+			height: 40px
+			z-index: -2
+
 	.anchors__text-block
 		height: 40px
 		padding-left: 20px
@@ -4505,8 +4513,19 @@ nav[canvas]
 		@extend %flex
 		border: 1px solid #fff
 		border-radius: 50%
+		font-size: 30px
+		color: #ffffff
+		font-family: $font_SFUIDisplay-Bold
 		background-color: #01c1e6
 		transition: background-color 0.5s
+	a
+		&:hover
+			text-decoration: none
+		&:active
+			text-decoration: none
+		&:focus
+			text-decoration: none
+
 // Секия footer
 footer
 	border-bottom: 3px solid #00ccff
