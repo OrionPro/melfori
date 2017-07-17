@@ -481,7 +481,109 @@ nav[canvas]
 			&:focus
 				text-decoration: none
 				@extend %main_btn_focus
-
+.contextual-rates
+	padding-bottom: 130px
+	h2
+		text-align: center
+		color: $main_color
+	.rates-table
+		.rates-menu
+			width: 100%
+			margin: 30px 0
+			padding: 0
+			border: 1px solid #eeeff2
+			border-radius: 20px
+			cursor: pointer
+			position: relative
+			.rates-menu-item, .back-main-color
+				display: inline-block
+				font-size: 18px
+				color: black
+				text-align: center
+				height: 50px
+				line-height: 50px
+				width: 33%
+				transition: $transition
+				background-color: transparent
+				.icon
+					display: inline-flex
+					height: 100%
+					align-items: center
+					svg
+						fill: #fff
+						stroke: #222224
+			.back-main-color
+				position: absolute
+				top: 0
+				left: 0
+				background: $main_color
+				color: #fff
+				border-radius: 20px
+				.icon
+					svg
+						stroke: #fff
+						fill: #fff
+	.rates-table-desk
+		table
+			width: 100%
+			.caption-table
+				border-bottom: 1px solid #eeeff2
+				th
+					font-size: 24px
+					color: $main_color
+					padding-bottom: 15px
+					text-align: center
+					&:first-of-type
+						/* style */
+						text-align: left
+						width: 678px
+			.description-table
+				&:hover td
+					/* style */
+					color: #fa9143
+				&:hover td i
+					/* style */
+					color: #fa9143
+				.description-prices
+					width: 175px
+				td
+					color: black
+					font-size: 18px
+					text-align: center
+					padding-top: 5px
+					cursor: pointer
+					transition: $transition
+					&:first-of-type
+						/* style */
+						text-align: left
+					i
+						color: $main_color
+						transition: $transition
+						&.fa-close
+							color: #acb0bc
+				&.first
+					td
+						padding-top: 25px
+				&.last
+					td
+						padding-top: 40px
+						font-size: 24px
+						color: black
+						font-weight: bolder
+						cursor: text
+						user-select: none
+						&:first-of-type
+							/* style */
+							font-size: 36px
+						span
+							color: $main_color
+				&.buttons
+					button
+						@extend %main_btn
+						width: 90%
+						&:hover
+							/* style */
+							@extend %main_btn_hover
 
 .langing-page-whe-call-section
 	background: #f8f8fa

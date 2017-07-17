@@ -61,38 +61,88 @@ function tabsItems(event) {
 	$('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
 	$('.tabs-wrap[data-tab=' + data + ']').addClass('active'); //если таб соответствует тому, какой data
 }
-const tabsItemsElem = $(".tabs-items-wrap .tabs-item");
 
-let changeActive = (function(ev,p,c){
-	let i = 0;
-	return function(ev,p,c){
-		let x = p[i];
-		if( ++i === p.length){ i = 0}
-		for(let i = p.length;i--;){
-			p[i].classList.remove('active')
-		}
-		if(c){
-			clearInterval(c);
-			ev.preventDefault();
-			x = ev.target;
-		}
-		x.classList.add('active');
-		var data = $(x).data('tab'); //создаём переменную с датой
-		$('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
-		$('.tabs-wrap[data-tab=' + data + ']').addClass('active');
+if(document.querySelector(".tabs-items-wrap .tabs-item")) {
+	const tabsItemsElem = $(".tabs-items-wrap .tabs-item");
 
+	let changeActive = (function (ev, p, c) {
+		let i = 0;
+		return function (ev, p, c) {
+			let x = p[i];
+			if (++i === p.length) {
+				i = 0
+			}
+			for (let i = p.length; i--;) {
+				p[i].classList.remove('active')
+			}
+			if (c) {
+				clearInterval(c);
+				ev.preventDefault();
+				x = ev.target;
+			}
+			x.classList.add('active');
+			var data = $(x).data('tab'); //создаём переменную с датой
+			$('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
+			$('.tabs-wrap[data-tab=' + data + ']').addClass('active');
+
+		}
+	}());
+
+	let timerId = setInterval(changeActive, 4000, null, tabsItemsElem);
+
+	for (let i = tabsItemsElem.length; i--;) {
+		tabsItemsElem[i].addEventListener('click', ev => changeActive(ev, tabsItemsElem, timerId))
 	}
-}());
 
-let timerId = setInterval(changeActive,4000,null,tabsItemsElem);
-
-for(let i = tabsItemsElem.length;i--;){
-	tabsItemsElem[i].addEventListener('click', ev => changeActive(ev,tabsItemsElem,timerId))
+	$(".tabs-items-wrap .tabs-item").on('click', tabsItems);
 }
+//contextual-rates tabs
+ if(document.querySelector('.contextual-rates')){
 
-$(".tabs-items-wrap .tabs-item").on('click', tabsItems);
 
 
+	const ratesMenuItems = document.querySelectorAll('.rates-menu-item'),
+		backMainColor = document.querySelector('.back-main-color'),
+		changePrices = document.querySelectorAll('.description-prices'),
+		changeDirect = document.querySelectorAll('.change-direct');
+
+	let curState = function(i,arr,obj,prices){
+		"use strict";
+		let item = arr[i];
+		let counter = 0;
+		for(let key in item ) {
+			if(Array.isArray(item[key])){
+				for(let i = prices.length;i--;){
+					prices[i].textContent = `${item[key][i]} грн`;
+				}
+				return;
+			}
+			obj[counter++].textContent = item[key];
+		}
+		};
+	 let directText;
+	 $.ajax({
+		 type: "GET",
+		 url: "/direct-text.json",
+		 success: function(data){
+			 directText = data;
+		 }
+	 });
+	setTimeout(()=>{curState(0,directText,changeDirect,changePrices)},100);
+	let goBackFromTo = function () {
+		"use strict";
+		backMainColor.firstElementChild.innerHTML = this.firstElementChild.innerHTML;
+		backMainColor.style.left = this.getAttribute('data-go') + '%';
+		backMainColor.lastElementChild.textContent = this.lastElementChild.textContent;
+		curState(this.getAttribute('data-num'),directText,changeDirect,changePrices);
+
+	};
+
+	for(let i = ratesMenuItems.length; i--; ){
+		ratesMenuItems[i].addEventListener('click',goBackFromTo);
+		ratesMenuItems[i].setAttribute('data-num', i);
+		}
+ }
 $(".tabs-items").on('click', function (event) {
 	//ссылки которые будут переключать табы
 	event.preventDefault();
