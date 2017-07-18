@@ -65,7 +65,7 @@ class IndexPageAnimation{
 		//инициализация настроек time line
 
 
-		this.start = this.start;
+		this.start = this.start.bind(this);
 	}
 
 	description(){
@@ -884,82 +884,730 @@ class IndexPageAnimation{
 		//section 5
 		this.tl5
 			.from('.section-5 .title-wrap', 0.7,{
-				y: -30,
+				y: 30,
 				opacity: 0,
 				ease: Power3.easeOut
 			})
 			.from('.section-5 .title_block_left_decor', 0.7,{
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut
+			},"-=0.7")
+			.from("#g6653", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+				transformOrigin: "50% 50%",
+				onComplete: ()=>{
+					rotationGear('#g6653',-1)
+				}
+				},'-=0.5')
+			.from("#g6661", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+				transformOrigin: "50% 50%",
+				onComplete: ()=>{
+					rotationGear('#g6661',-1)
+				}
+			},'-=0.5')
+			.from("#g6675", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+				transformOrigin: "50% 50%",
+				onComplete: ()=>{
+					rotationGear('#g6675',-1)
+				}
+				},'-=0.5')
+		.from("#g6066", 0.7, {
+			y: 30,
+			scaleY: 0,
+			opacity: 0,
+			ease: Power3.easeOut,
+			transformOrigin: "0% 0%"
+			},'-=0.5')
+		.from("#g6060", 0.7, {
+				y: -30,
+				scaleY: 0,
+				opacity: 0,
+				ease: Power3.easeOut,
+				transformOrigin: "0% 0%"
+				},'-=0.5')
+		.from("#g7029", 0.7, {
+			x: 100,
+			scaleX: 0,
+			opacity: 0,
+			ease: Power3.easeOut,
+			},'-=0.5')
+			.from("#rect4772", 0.7, {
+				x: 200,
+				scaleX: 0,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0')
+			.from("#g4776", 0.7, {
+				y: 30,
+				scaleY: 0,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#g5994", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+				transformOrigin: "50% 50%",
+				onComplete: ()=>{
+					rotationGear('#g5994',-1)
+				}
+				},'-=0.5')
+			.from("#rect4959", 0.7, {
 				y: -30,
 				opacity: 0,
-				ease: Power3.easeOut
-			},"-=0.7")
-			.from('.section-5 .why_profitably_item_img', 0.7,{
-				x: -30,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4853", 0.7, {
+				y: 30,
 				opacity: 0,
-				ease: Power3.easeOut
-
-			},"-=0.7")
-			.from('.img-fa3x',1,{
-				y:	20,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path4893", 0.7, {
+				y: 30,
 				opacity: 0,
-				ease: Bounce.easeOut,
-				rotation: 50,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4949", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4957", 0.7, {
+				y: -30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4947", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path4967", 0.7, {
+				y: -30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4945", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path4969", 0.7, {
+				y: -30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4943", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#polygon5009", 0.7, {
+				y: -30,
+				opacity: 0,
+				scaleY: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4941", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path4987", 0.7, {
+				y: -30,
+				opacity: 0,
+				scaleY: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4939", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path4985", 0.7, {
+				y: -30,
+				opacity: 0,
+				scaleY: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4937", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path4983", 0.7, {
+				y: -30,
+				opacity: 0,
+				scaleY: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4935", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#g4973", 0.7, {
+				y: -30,
+				opacity: 0,
+				scaleY: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4933", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4971", 0.7, {
+				y: -30,
+				opacity: 0,
+				scaleY: 0,
+				transformOrigin: "0% 0%",
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4931", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#g4881", 0.7, {
+				opacity: 0,
+				scaleY: 0,
+				transformOrigin: "0% 0%",
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4929", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#g4875", 0.7, {
+				y: 30,
+				scaleY: 0,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.5')
+			.from("#g6689", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+				transformOrigin: "50% 50%",
 				onComplete: ()=>{
-					rotationGear('.img-fa3x',-1)
+					rotationGear('#g6689',1)
 				}
-			},'-=1.5')
-			.from('.img-fa2x',1,{
-				y:	20,
+			},'-=0.7')
+			.from("#path4871", 0.7, {
+				y: -30,
 				opacity: 0,
-				ease: Bounce.easeOut,
-				rotation: 50,
-				onComplete: ()=>{
-					rotationGear('.img-fa2x',-1)
-				}
-			},'-=1.5')
-			.from('.img-fa1x',1,{
-				y:	20,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#polygon4865", 0.7, {
+				y: -30,
 				opacity: 0,
-				ease: Bounce.easeOut,
-				rotation: 50,
-				onComplete: ()=>{
-					rotationGear('.img-fa1x',-1)
-				}
-			},'-=1.5')
-			.from('.img-fa1x-1',1,{
-				y:	20,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#polygon4867", 0.7, {
+				y: -30,
 				opacity: 0,
-				ease: Bounce.easeOut,
-				rotation: 50,
-				onComplete: ()=>{
-					rotationGear('.img-fa1x-1',-1)
-				}
-			},'-=1.5')
-			.from('.img-fa1x-2',1,{
-				y:	20,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path4873", 0.7, {
+				y: -30,
 				opacity: 0,
-				ease: Bounce.easeOut,
-				rotation: 50,
-				onComplete: ()=>{
-					rotationGear('.img-fa1x-2',-1)
-				}
-			},'-=1.5')
-			.from('.img-fa1x-3',1,{
-				y:	20,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path4823", 0.7, {
+				y: -30,
 				opacity: 0,
-				ease: Bounce.easeOut,
-				rotation: 50,
-				onComplete: ()=>{
-					rotationGear('.img-fa1x-3',-1)
-				}
-			},'-=1.5')
-			.from('.section-5 .why_profitably_item_txt', 0.7,{
+				scaleY: 0,
+				ease: Power3.easeOut,
+				transformOrigin: "0 50%",
+			},'-=0.7')
+			.from("#rect4825", 0.7, {
 				x: 30,
 				opacity: 0,
-				ease: Power3.easeOut
-			},"-=1");
-
-
+				scaleY: 0,
+				ease: Power3.easeOut,
+				transformOrigin: "50% 0",
+			},'-=0.6')
+			.from("#path4829", 0.7, {
+				y: 30,
+				opacity: 0,
+				scaleY: 0,
+				ease: Power3.easeOut,
+				transformOrigin: "0 50%",
+			},'-=0.7')
+			.from("#path4827", 0.7, {
+				y: 30,
+				opacity: 0,
+				scaleY: 0,
+				ease: Power3.easeOut,
+				transformOrigin: "0 50%",
+			},'-=0.7')
+			.from("#path4835", 0.7, {
+				y: 30,
+				opacity: 0,
+				scaleY: 0,
+				ease: Power3.easeOut,
+				transformOrigin: "0 50%",
+			},'-=0.7')
+			.from("#path4831", 0.7, {
+				y: 30,
+				opacity: 0,
+				scaleY: 0,
+				ease: Power3.easeOut,
+				transformOrigin: "0 50%",
+			},'-=0.7')
+			.from("#rect4861", 0.7, {
+				y: 30,
+				opacity: 0,
+				scaleY: 0,
+				ease: Power3.easeOut,
+				transformOrigin: "0 50%",
+			},'-=0.7')
+			.from("#path4863", 0.7, {
+				y: -30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#circle4853", 0.7, {
+				y: -30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path4857", 0.7, {
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.6')
+			.from("#path4859", 0.7, {
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.6')
+			.from("#rect4837", 0.7, {
+				opacity: 0,
+				scaleY: 0,
+				y: -30,
+				ease: Power3.easeOut,
+			},'-=0.6')
+			.from("#rect4841", 0.7, {
+				opacity: 0,
+				scaleY: 0,
+				y: -30,
+				ease: Power3.easeOut,
+			},'-=0.6')
+			.from("#rect4843", 0.7, {
+				opacity: 0,
+				scaleY: 0,
+				y: -30,
+				ease: Power3.easeOut,
+			},'-=0.6')
+			.from("#rect4845", 0.7, {
+				opacity: 0,
+				scaleY: 0,
+				y: -30,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#polygon4849", 0.7, {
+				opacity: 0,
+				scaleY: 0,
+				y: -30,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4851", 0.7, {
+				opacity: 0,
+				scaleY: 0,
+				y: -30,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#g6703", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+				transformOrigin: "50% 50%",
+				onComplete: ()=>{
+					rotationGear('#g6703',1)
+				}
+				},'-=0.5')
+			.from("#rect5160", 0.7, {
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect5162", 0.7, {
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect5164", 0.7, {
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect5166", 0.7, {
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect5168", 0.7, {
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect5170", 0.7, {
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect5172", 0.7, {
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect5174", 0.7, {
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect5176", 0.7, {
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect5178", 0.7, {
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect5180", 0.7, {
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#circle5182", 0.7, {
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path5184", 0.7, {
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path5186", 0.7, {
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path5188", 0.7, {
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path5190", 0.7, {
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path5192", 0.7, {
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path5194", 0.7, {
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path5196", 0.7, {
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path5198", 0.7, {
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path5200", 0.7, {
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path4883", 0.7, {
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#g5192", 0.7, {
+			y: 50,
+			opacity: 0,
+			ease: Power3.easeOut,
+				},'-=0.7')
+			.from("#g5184", 0.7, {
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#g6717", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+				transformOrigin: "50% 50%",
+				onComplete: ()=>{
+					rotationGear('#g6717',1)
+				}
+			},'-=0.5')
+			.from("#path5264", 0.7, {
+				y:-10,
+				scaleY:0,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path5284", 0.7, {
+				y:-10,
+				scaleY:0,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path5270", 0.7, {
+				y:-10,
+				scaleY:0,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path5274", 0.7, {
+				y:-10,
+				scaleY:0,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path5276", 0.7, {
+				y:-10,
+				scaleY:0,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path5278", 0.7, {
+				y:-10,
+				scaleY:0,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path5282", 0.7, {
+				y:-10,
+				scaleY:0,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#delete999", 0.7, {
+				y:-10,
+				scaleY:0,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path5290", 0.7, {
+				y:-10,
+				scaleY:0,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path5258", 0.7, {
+				y:-10,
+				scaleY:0,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path5262", 0.7, {
+				y:-10,
+				scaleY:0,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#pig-nouse", 0.7, {
+				y:-10,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path5280", 0.7, {
+				y:-10,
+				scaleY:0,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path5288", 0.7, {
+				y: 20,
+				scaleY:0,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path5260", 0.7, {
+				y: 20,
+				scaleY:0,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path4887", 0.7, {
+				x:-10,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path4891", 0.7, {
+				y: 10,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4915", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4913", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4911", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4909", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4907", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4905", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4903", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4901", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4899", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4897", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4895", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path4953", 0.7, {
+				x: -30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path4951", 0.7, {
+				x: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path4955", 0.7, {
+				x: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4925", 0.7, {
+				y: -30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4923", 0.7, {
+				y: -30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4921", 0.7, {
+				y: -30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#rect4919", 0.7, {
+				y: -30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path5268", 0.7, {
+				y: -30,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path4622", 0.7, {
+				x: 30,
+				scaleX: 0,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#path4622", 0.7, {
+				x: 30,
+				scaleX: 0,
+				opacity: 0,
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#g4977", 0.7, {
+				x: 30,
+				scaleX: 0,
+				opacity: 0,
+				transformOrigin: "50% 50%",
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#g7198", 0.7, {
+				x: 30,
+				scaleX: 0,
+				opacity: 0,
+				transformOrigin: "50% 50%",
+				ease: Power3.easeOut,
+			},'-=0.7')
+			.from("#g6027", 0.7, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut,
+				transformOrigin: "50% 50%",
+			onComplete: ()=>{
+				rotationGear('#g6027',1)
+			}
+		},'-=0.5')
+		.from("#text434", 0.7, {
+			y: 30,
+			scaleY: 2,
+			opacity: 0,
+			transformOrigin: "50% 50%",
+			ease: Power3.easeOut,
+		},'-=0.7')
+		.from("#g4197-8", 0.7, {
+			y: -30,
+			scaleY: 2,
+			opacity: 0,
+			transformOrigin: "50% 50%",
+			ease: Power3.easeOut,
+		},'-=0.7');
 
 	//	section 6
 		this.tl6
