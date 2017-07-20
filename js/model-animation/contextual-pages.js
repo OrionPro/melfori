@@ -22,6 +22,7 @@ class ContextualAnimation {
 		this.tl9 = new TimelineMax();
 		this.tl10 = new TimelineMax();
 		this.tl11 = new TimelineMax();
+		this.tl12 = new TimelineMax();
 
 		//time line динамический
 		this.arrow = new TimelineMax();
@@ -40,6 +41,7 @@ class ContextualAnimation {
 		this.tl9.pause();
 		this.tl10.pause();
 		this.tl11.pause();
+		this.tl12.pause();
 	}
 
 
@@ -47,17 +49,17 @@ class ContextualAnimation {
 	description() {
 		//HEADER
 		this.tl1
-			.from('.header_top', 3, {
+			.from('.header_top', 1.8, {
 				y: 50,
 				opacity: 0,
 				ease: Power3.easeOut
 			}, this.headerTime)
-			.from('.header_title', 3, {
+			.from('.header_title', 1.8, {
 				y: 50,
 				opacity: 0,
 				ease: Power3.easeOut
-			}, '-=1.7')
-			.from('.header-form', 3, {
+			}, '-=1')
+			.from('.header-form', 1.8, {
 				y: 50,
 				opacity: 0,
 				ease: Power3.easeOut,
@@ -72,14 +74,14 @@ class ContextualAnimation {
 						});
 					this.arrow.repeat(Infinity);
 				}
-			}, '-=1.7');
+			}, '-=1');
 
 		this.tl2
 			.from('.section-2 h2', 1, {
 				y: -30,
 				opacity: 0,
 				ease: Power3.easeOut
-			}, "+=0.5")
+			}, "-=0.5")
 			.from('.section-2 .about-wrap', 1, {
 				x: -30,
 				opacity: 0,
@@ -89,22 +91,22 @@ class ContextualAnimation {
 				x: 30,
 				opacity: 0,
 				ease: Power3.easeOut
-			}, "-=1")
+			}, "-=0.5")
 			.from('.section-2 h3', 1, {
 				y: -30,
 				opacity: 0,
 				ease: Power3.easeOut
-			}, "-=0.7")
+			}, "-=0.5")
 			.from('.section-2 .decore-scheme-wrap', 1, {
 				y: -30,
 				opacity: 0,
 				ease: Power3.easeOut
-			}, "-=0.7")
+			}, "-=0.5")
 			.from('.section-2 .decore-scheme-wrap .title-item-decore', 1, {
 				y: 30,
 				opacity: 0,
 				ease: Power3.easeOut
-			}, "-=0.7")
+			}, "-=0.5")
 
 			//начало анимации шестеренок
 			.from('.section-2 .decore-scheme-wrap .small', 1, {
@@ -115,7 +117,7 @@ class ContextualAnimation {
 				onComplete: ()=>{
 					rotationGear('.decore-scheme-wrap .small span')
 				}
-			}, "-=0.5")
+			}, "-=0.8")
 			.from('.section-2 .decore-scheme-wrap .big', 1, {
 				y: -20,
 				opacity: 0,
@@ -124,7 +126,7 @@ class ContextualAnimation {
 				onComplete: () =>{
 					rotationGear('.decore-scheme-wrap .big span', -1)
 				}
-			}, "-=0.7")
+			}, "-=1")
 			//конец анимации шестеренок
 
 			.staggerFrom('.section-2 .decore-scheme-wrap .item', 1, {
@@ -149,12 +151,12 @@ class ContextualAnimation {
 				x: 30,
 				opacity: 0,
 				ease: Bounce.easeOut
-			}, "-=1")
+			}, "-=0.5")
 			.from('.section-3 .about-text-wrap', 1, {
 				y: 30,
 				opacity: 0,
 				ease: Power3.easeOut
-			}, "-=1")
+			}, "-=0.5")
 			.from('.section-3 .contextual-google-yandex-form', 1, {
 				y: -30,
 				opacity: 0,
@@ -176,14 +178,14 @@ class ContextualAnimation {
 				y: -30,
 				opacity: 0,
 				ease: Power3.easeOut
-			},"-=0.7");
+			},"-=0.5");
 
 		this.tl5
 			.from('.section-5 .title-wrap', 1, {
 				y: -30,
 				opacity: 0,
 				ease: Power3.easeOut
-			}, "+=0.5")
+			}, "-=0.5")
 			//начало анимации шестеренок
 			.from('.section-5 .gear-1', 1, {
 				y: 20,
@@ -202,7 +204,7 @@ class ContextualAnimation {
 				onComplete: () =>{
 					rotationGear('.section-5 .gear-2', -1)
 				}
-			}, "-=0.7")
+			}, "-=0.5")
 			// конец анимации шестеренок
 			.staggerFrom('.section-5 .content ul li', 1, {
 				y: -30,
@@ -216,7 +218,7 @@ class ContextualAnimation {
 			}, 0.5,"-=2.7")
 			.staggerFrom('.section-5 .content ul .arrow', 0.5, {
 				width: 0
-			}, 0.5,"-=2.5")
+			}, 0.5,"-=2.7")
 			.from('.section-5 .context-prise-wrap .decore-img', 1, {
 				x: -10,
 				opacity: 0,
@@ -226,7 +228,27 @@ class ContextualAnimation {
 				x: 10,
 				opacity: 0,
 				ease: Power3.easeOut
-			},"-=1.3");
+			},"-=1.5")
+			.from('.final-coutdown', 1, {
+					y: 30,
+					opacity: 0,
+					ease: Power3.easeOut
+				},"-=0.5")
+			.from('.header_i', 1, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut
+			},"-=0.5")
+			.from('.text-input h2', 1, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut
+			},"-=0.5")
+			.from('.section-5 .unique_challenge_form', 0.5, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut
+			},"-=0.5");
 
 		this.tl6
 			.from('.section-6 .title-wrap', 1, {
@@ -268,7 +290,28 @@ class ContextualAnimation {
 				y: 30,
 				opacity: 0,
 				ease: Power3.easeOut
-			}, "-=1")
+			}, "-=0.5");
+		this.tl8
+			.from('.contextual-rates h2',1,{
+				y: -30,
+				opacity: 0,
+				ease: Power3.easeOut
+			},'-=0.5')
+			.from('.rates-menu', 1 ,{
+				y: 50,
+				opacity: 0,
+				ease: Power3.easeOut
+			},'-=0.5')
+			.from('.back-main-color', 1 ,{
+				y: -50,
+				opacity: 0,
+				ease: Power3.easeOut
+			},'-=0.3')
+			.staggerFrom('.rates-table-desk table tr',0.5,{
+				y:30,
+				opacity: 0,
+				skewX:'30deg'
+			},0.1,'-=0.5');
 	}
 
 	start() {
@@ -292,6 +335,9 @@ class ContextualAnimation {
 		}
 		if (activeSection('section-7', 300, 500)) {
 			this.tl7.play();
+		}
+		if (activeSection('contextual-rates', 300, 500)) {
+			this.tl8.play();
 		}
 	}
 }

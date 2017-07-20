@@ -66,7 +66,7 @@ nav[canvas]
 // Секция our_advantages
 .our_advantages
 	min-height: 1010px
-	background-color: #f8f8fa
+	background-color: #fff
 	text-align: center
 	position: relative
 	z-index: 1
@@ -482,7 +482,7 @@ nav[canvas]
 				text-decoration: none
 				@extend %main_btn_focus
 .contextual-rates
-	padding-bottom: 130px
+	padding: 30px 0 130px
 	h2
 		text-align: center
 		color: $main_color
@@ -501,7 +501,7 @@ nav[canvas]
 				color: black
 				text-align: center
 				height: 50px
-				line-height: 50px
+				line-height: 55px
 				width: 33%
 				transition: $transition
 				background-color: transparent
@@ -512,6 +512,9 @@ nav[canvas]
 					svg
 						fill: #fff
 						stroke: #222224
+				span
+					display: inline-block
+					vertical-align: top
 			.back-main-color
 				position: absolute
 				top: 0
@@ -538,6 +541,9 @@ nav[canvas]
 						text-align: left
 						width: 678px
 			.description-table
+				&.table-color
+					td
+						color: $main_color
 				&:hover td
 					/* style */
 					color: #fa9143
@@ -882,6 +888,11 @@ nav[canvas]
 						vertical-align: middle
 				aside
 					display: inline-block
+					transition: $transition
+					cursor: pointer
+					&:hover
+						/* style */
+						color: $main_color
 					&.center-text
 						display: table
 						font-size: 24px
@@ -3058,7 +3069,6 @@ nav[canvas]
 					@extend %main_btn_focus
 
 .contextual-steps-section, .five_reasons_why_choose_us
-
 	background: #fff
 	text-align: center
 	&.gray-bg
@@ -3254,11 +3264,11 @@ nav[canvas]
 				border-color: $main_color
 .rates_on_our_advancement
 	background: #fff
-	padding: 120px 0
+	padding: 0 0 80px
 	h2
 		text-align: center
 		color: $main_color
-		margin-bottom: 45px
+		margin-bottom: 55px
 	.rates
 		cursor: pointer
 		box-shadow:  0 3px 15px 0 rgba(50, 50, 50, 0.75)
@@ -3366,7 +3376,7 @@ nav[canvas]
 .free_audit_your_instagram_page
 	background:	#00ccff
 	color: #fff
-	padding: 120px 0
+	padding: 20px 0 120px
 	h2
 		text-align: center
 		color: #fff !important
@@ -4476,7 +4486,7 @@ nav[canvas]
 				img
 					max-width: 100%
 .five_reasons_why_choose_us
-	padding: 120px 0
+	padding: 40px 0
 	background: #f8f8fa
 	h2
 		color: $main_color
