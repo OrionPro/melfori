@@ -95,56 +95,9 @@ if($('div').hasClass('tabs-items-wrap')){
 	}
 
 }
-//contextual-rates tabs
- if(document.querySelector('.contextual-rates')){
-
-
 $(".tabs-items-wrap .tabs-item").on('click', tabsItems);
 
 
-
-	const ratesMenuItems = document.querySelectorAll('.rates-menu-item'),
-		backMainColor = document.querySelector('.back-main-color'),
-		changePrices = document.querySelectorAll('.description-prices'),
-		changeDirect = document.querySelectorAll('.change-direct');
-
-	let curState = function(i,arr,obj,prices){
-		"use strict";
-		let item = arr[i];
-		let counter = 0;
-		for(let key in item ) {
-			if(Array.isArray(item[key])){
-				for(let i = prices.length;i--;){
-					prices[i].textContent = `${item[key][i]} грн`;
-				}
-				return;
-			}
-			obj[counter++].textContent = item[key];
-		}
-		};
-	 let directText;
-	 $.ajax({
-		 type: "GET",
-		 url: "/direct-text.json",
-		 success: function(data){
-			 directText = data;
-		 }
-	 });
-	setTimeout(()=>{curState(0,directText,changeDirect,changePrices)},100);
-	let goBackFromTo = function () {
-		"use strict";
-		backMainColor.firstElementChild.innerHTML = this.firstElementChild.innerHTML;
-		backMainColor.style.left = this.getAttribute('data-go') + '%';
-		backMainColor.lastElementChild.textContent = this.lastElementChild.textContent;
-		curState(this.getAttribute('data-num'),directText,changeDirect,changePrices);
-
-	};
-
-	for(let i = ratesMenuItems.length; i--; ){
-		ratesMenuItems[i].addEventListener('click',goBackFromTo);
-		ratesMenuItems[i].setAttribute('data-num', i);
-		}
- }
 $(".tabs-items").on('click', function (event) {
 	//ссылки которые будут переключать табы
 	event.preventDefault();
@@ -226,8 +179,79 @@ class CheckboxesInoputs {
 }
 
 var burgerEff = new BurgerEff;
+//для back end
+
+
+// let ajaxString;
+// let country = $("input[name='country_name']").val();
+//  switch(country){
+//  case 'UA':
+//  ajaxString = '../json/direct-text-ua.json';
+//  break;
+//  case'RU':
+//  ajaxString = '../json/direct-text-ru.json';
+//  break;
+//  default:
+//  ajaxString = '../json/direct-text-en.json'
+//  }
+//  let directText;
+//  $.ajax({
+//  type: "GET",
+//  url: ajaxString,
+//  success: function(data){
+//  directText = data;
+//  }
+//  });
+
+
+let directText;
+$.ajax({
+	type: "GET",
+	url: "/direct-text.json",
+	success: function(data){
+		directText = data;
+	}
+});
 
 $(document).ready(function () {
+	//contextual-rates tabs
+	if(document.querySelector('.contextual-rates')){
+
+		const ratesMenuItems = document.querySelectorAll('.rates-menu-item'),
+			backMainColor = document.querySelector('.back-main-color'),
+			changePrices = document.querySelectorAll('.description-prices'),
+			changeDirect = document.querySelectorAll('.change-direct');
+
+		let curState = function(i,arr,obj,prices){
+			"use strict";
+			let item = arr[i];
+			let counter = 0;
+			for(let key in item ) {
+				if(Array.isArray(item[key])){
+					for(let i = prices.length;i--;){
+						prices[i].textContent = `${item[key][i]} грн`;
+					}
+					return;
+				}
+				obj[counter++].textContent = item[key];
+			}
+		};
+
+		setTimeout(()=>{curState(0,directText,changeDirect,changePrices)},200);
+		let goBackFromTo = function () {
+			"use strict";
+			backMainColor.firstElementChild.innerHTML = this.firstElementChild.innerHTML;
+			backMainColor.style.left = this.getAttribute('data-go') + '%';
+			backMainColor.lastElementChild.textContent = this.lastElementChild.textContent;
+			curState(this.getAttribute('data-num'),directText,changeDirect,changePrices);
+
+		};
+
+		for(let i = ratesMenuItems.length; i--; ){
+			ratesMenuItems[i].addEventListener('click',goBackFromTo);
+			ratesMenuItems[i].setAttribute('data-num', i);
+		}
+	}
 
 	// Анимация якорей
 	TweenMax.set('.anchors__text-block', {
@@ -331,9 +355,9 @@ $(document).ready(function () {
 	if (document.querySelectorAll('.item-faces')) {
 		const allFaces = document.querySelectorAll('.item-faces');
 
-		for (let item of allFaces) {
-			item.lastElementChild.style.display = 'none';
-			item.addEventListener('mouseenter', function () {
+		for (let i = allFaces.length;i--;) {
+			allFaces[i].lastElementChild.style.display = 'none';
+			allFaces[i].addEventListener('mouseenter', function () {
 				this.firstElementChild.classList.remove('active-image');
 				setTimeout(() => {
 					this.firstElementChild.style.display = 'none';
@@ -344,7 +368,7 @@ $(document).ready(function () {
 				}, 250);
 			}, false);
 
-			item.addEventListener('mouseleave', function () {
+			allFaces[i].addEventListener('mouseleave', function () {
 				this.lastElementChild.classList.remove('active-image');
 				// setTimeout(()=>{
 				this.lastElementChild.style.display = 'none';
@@ -398,7 +422,7 @@ $(document).ready(function () {
 			cur = count;
 		date = typeof date === 'number' ? date : Date.parse(date);
 		count -= Math.floor((dateNow - date) / _DAYinMS);
-		if (count < 0) {
+		if (count < 1) {
 
 			return finalCountdown(date + (_DAYinMS * cur), cur);
 		}

@@ -306,7 +306,6 @@ $(document).ready(function() {
 			var data = form.serialize() + "&utm_source=" + utm_source + "&utm_campaign=" + utm_campaign + "&utm_content=" + utm_content + "&utm_term=" + utm_term + "&country_name=" + country;
 
 
-
 			$.ajax({ // инициализируем ajax запрос
 				type: 'POST', // отправляем в POST формате, можно GET
 				url: '../../site/mail', // путь до обработчика, у нас он лежит в той же папке
