@@ -61,9 +61,6 @@ function tabsItems(event) {
 	$('.tabs-wrap[data-tab=' + data + ']').addClass('active'); //если таб соответствует тому, какой data
 }
 
-	$(".tabs-items-wrap .tabs-item").on('click', tabsItems);
-
-
 if($('div').hasClass('tabs-items-wrap')){
 	const tabsItemsElem = $(".tabs-items-wrap .tabs-item");
 
@@ -95,20 +92,9 @@ if($('div').hasClass('tabs-items-wrap')){
 	}
 
 }
+
 $(".tabs-items-wrap .tabs-item").on('click', tabsItems);
 
-
-$(".tabs-items").on('click', function (event) {
-	//ссылки которые будут переключать табы
-	event.preventDefault();
-
-	$(".tabs-items").removeClass('active_class_tabs'); //убираем активные состояния у ссылок
-	$(this).addClass('active_class_tabs'); //Добавляем активное состояние у той что нажали
-	var data = $(this).data('tab'); //создаём переменную с датой
-	$('.tabPortfolioContent').hide().removeClass("activeTabState"); //убираем активные состояния у табов
-	$('.tabPortfolioContent[data-tab=' + data + ']').show("fade", 500).addClass('activeTabState'); //если таб соответствует тому, какой data
-
-});
 //анимированная кнопка вниз на хедере
 const buttonGoDown = document.querySelector('.header_bot_txt > a > i');
 	function getRandomColor(to){
@@ -150,7 +136,6 @@ $(window).resize(function () {
 
 
 });
-
 
 class CheckboxesInoputs {
 
