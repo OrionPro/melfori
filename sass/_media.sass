@@ -317,6 +317,17 @@
 			.why_profitably_item_txt
 				padding-top: 39px
 
+	.contextual-steps-section
+		.description-in-five-steps
+			.description-in-five-steps-item
+				flex-direction: column
+				.paragraff
+					text-align: center
+					h3
+						text-align: center
+				input
+					margin: 15px 0 10px
+
 	.internet-shop-instruction
 		.content
 			ul
@@ -416,6 +427,13 @@
 							display: none
 			.img-wrap-mk
 				width: 50%
+	.contextual-not-pay-section
+		.decore-scheme-wrap
+			.decore
+				margin-bottom: 0
+
+	.decore-scheme-wrap-form
+		margin-bottom: 120px
 
 	.portfolio-design-section
 		.contant
@@ -1112,11 +1130,24 @@
 		form
 			& > div
 				margin-bottom: 20px
+	.contextual-not-pay-section
+		.decore-scheme-wrap-form
+			p
+				padding: 0 10px
 /* Small Devices, Tablets */
 
 @media only screen and (max-width : 868px)
 	.header-about-menu
 		display: inline-block
+	.popup.pop5
+		.modal-text
+			i
+				right: 20px
+			.unique_challenge_form
+				text-align: center
+				.form-inputs, .form-text-area
+					padding-right: 0
+					padding-left: 0
 @media only screen and (max-width : 768px)
 	h2
 		margin-bottom: 10px !important
@@ -1144,6 +1175,7 @@
 		&.seo-header
 			.header-form
 				top: calc(50% - -50px)
+
 	.vacancies-developers
 		&.vacancies
 			.vacancies-item
@@ -1807,6 +1839,14 @@
 				.texarea-wrap
 					textarea
 						width: 100%
+	.popup.pop5
+		.modal-text
+			p
+				padding-bottom: 25px
+			input,textarea,input[type=submit]
+				width: 300px
+				margin-bottom: 10px
+
 	.unique_challenge
 		input
 			width: 90%
@@ -2228,7 +2268,30 @@
 						font-size: 14px
 					.description
 						font-size: 12px
-
+	.form-description-about-seo
+		.unique_challenge
+			.unique_challenge_form
+				input
+					width: 300px
+	.contextual-steps-section
+		.description-in-five-steps
+			.description-in-five-steps-item
+				input
+					width: 300px
+	.contextual-not-pay-section
+		.decore-scheme-wrap-form
+			.unique-form-decore
+				form
+					input
+						width: 300px
+					input[type=submit]
+						width: 300px
+	.carousel-wrap
+		.about-our-results-carousel
+			.about-our-results-item
+				width: 300px
+				.mask-item
+					font-size: 16px
 @media only screen and (max-width : 380px)
 
 	h2

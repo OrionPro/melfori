@@ -1639,7 +1639,7 @@
 		}
 
 		html .loader .loader_inner {
-			background-image: url(../img/preloader.gif);
+			background-image: url('img/preloader.gif');
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center center;
@@ -1731,7 +1731,7 @@
 	</noscript>
 </head>
 
-<body class="internet-shop-pages">
+<body class="main-pages">
 <div class="loader">
 	<div class="loader_inner"></div>
 </div>
@@ -1741,22 +1741,22 @@
 		<div class="dm-cell">
 			<div class="dm-modal">
 				<a href="#" class="close">
+					<i class="fa fa-close"></i>
 				</a>
 				<p class='success_mail'>Спасибо! Ваша заявка уже обрабатывается менеджером и в ближайшее время он с вами
 					свяжется.</p>
 				<form id="form">
+					<p class="title">Обратный звонок</p>
 					<div>
-						<label>Введите своё имя</label>
 						<div class="modal_form_input_wrap">
 							<div class="modal_input_error">Заполните поле
 								<div class="modal_error_triangle"></div>
 								<div class="modal_error_chest_img"></div>
 							</div>
-							<input name="name" class="modal_form_input" type="text">
+							<input name="name" class="modal_form_input" placeholder="Имя" type="text">
 						</div>
 					</div>
 					<div>
-						<label>Введите свой телефон</label>
 						<div class="modal_form_input_wrap">
 							<div class="modal_input_error">Заполните поле
 								<div class="modal_error_triangle"></div>
@@ -1766,27 +1766,12 @@
 						</div>
 					</div>
 					<div>
-						<label>Введите свой e-mail</label>
 						<div class="modal_form_input_wrap">
 							<div class="modal_input_error">Заполните поле
 								<div class="modal_error_triangle"></div>
 								<div class="modal_error_chest_img"></div>
 							</div>
-							<input name="email" class="modal_form_email" type="text">
-						</div>
-					</div>
-					<div>
-						<div class="select">
-							<div class="slct_arrow">
-								<i class="fa fa-angle-down"></i>
-							</div>
-							<a href="#" class="slct">Выбор заголовков:</a>
-							<ul class="drop">
-								<li>Вы крутые</li>
-								<li>Я в Вас влюбился</li>
-								<li>Быстрей Вас только Флеш</li>
-							</ul>
-							<input type="hidden" id="select" name="services">
+							<input name="email" class="modal_form_email" placeholder="E-mail" type="text">
 						</div>
 					</div>
 					<input type="hidden" name="form_name" value="">
@@ -1809,6 +1794,49 @@
 		</div>
 	</div>
 </div>
+<div class="popup pop4" data-modal="modal-4">
+	<div class="dm-table">
+		<div class="dm-cell">
+			<div class="dm-modal">
+				<a href="#" class="close">
+					<i class="fa fa-close"></i>
+				</a>
+				<p class='success_mail'>Спасибо! Ваша заявка уже обрабатывается менеджером и в ближайшее время он с вами
+					свяжется.</p>
+				<form>
+					<p class="title">НЕ УХОДИТЕ С ПУСТЫМИ РУКАМИ!</p>
+					<div class="pop4_inner_wrap">
+						<p>Оставьте почту и получите чек-лист, который
+							поможет проанализировать вашу рекламную
+							кампанию и улучшит ее.<span> Снижайте затраты
+						и повышайте количество клиентов.</span>
+						</p>
+						<div>
+							<div class="modal_form_input_wrap">
+								<div class="modal_input_error">Заполните поле
+									<div class="modal_error_triangle"></div>
+									<div class="modal_error_chest_img"></div>
+								</div>
+								<input name="email" class="modal_form_email" placeholder="E-mail" type="text">
+							</div>
+						</div>
+						<input type="hidden" name="form_name" value="Не уходите с пустыми руками!">
+						<input type="hidden" name="form_type" value="modal">
+						<input type="submit" value="Заказать">
+					</div>
+					<div class="pop4_foto">
+						<img src="img/madal4_foto.png" alt="">
+						<p>Андрей Боженко</p>
+						<p>Руководитель отдела
+							маркетинга</p>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="overlay">
+	</div>
+</div>
 <!-- вариант меню на мобильном -->
 <div class="popup pop3" data-modal="modal-3">
 	<div class="dm-table">
@@ -1825,55 +1853,6 @@
 						<li>
 							<a href="#">Отзывы</a>
 						</li>
-						<li>
-							<a href="tel:73842596168">+7 3842 59 61 68</a>
-						</li>
-						<li>
-							<a href="#">Примеры кухонь</a>
-						</li>
-						<li>
-							<a href="#">Преимущества</a>
-						</li>
-						<li>
-							<a href="#">Отзывы</a>
-						</li>
-						<li>
-							<a href="#">Примеры кухонь</a>
-						</li>
-						<li>
-							<a href="#">Преимущества</a>
-						</li>
-						<li>
-							<a href="#">Отзывы</a>
-						</li>
-						<li>
-							<a href="#">Примеры кухонь</a>
-						</li>
-						<li>
-							<a href="#">Преимущества</a>
-						</li>
-						<li>
-							<a href="#">Отзывы</a>
-						</li>
-						<li>
-							<a href="#">Примеры кухонь</a>
-						</li>
-						<li>
-							<a href="#">Преимущества</a>
-						</li>
-						<li>
-							<a href="#">Отзывы</a>
-						</li>
-						<li>
-							<a href="#">Примеры кухонь</a>
-						</li>
-						<li>
-							<a href="#">Преимущества</a>
-						</li>
-						<li>
-							<a href="#">Отзывы</a>
-						</li>
-					</ul>
 				</nav>
 			</div>
 		</div>
@@ -1895,330 +1874,8 @@
 		</label>
 	</div>
 </nav>
-<div class="anchors">
-	<div class="anchors__table">
-		<div class="anchors__cell">
-			<div class="anchors__wrap-item">
-				<div class="anchors__item">
-					<div class="anchor__line settings"></div>
-					<div class="anchors__text-block settings">
-						<span>Делаем</span>
-					</div>
-					<a href="#">
-						<div class="anchors__img-block settings">
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 54 54" style="enable-background:new 0 0 54 54;" xml:space="preserve" width="25px" height="25px">
-<g>
-	<path d="M27,18c-4.962,0-9,4.038-9,9s4.038,9,9,9s9-4.038,9-9S31.962,18,27,18z" fill="#FFFFFF"/>
-	<path d="M51.22,21h-2.018c-0.515-1.911-1.272-3.74-2.26-5.457l1.426-1.426c0.525-0.525,0.814-1.224,0.814-1.966   c0-0.743-0.289-1.441-0.814-1.967l-4.553-4.553c-1.05-1.049-2.881-1.051-3.933,0l-1.426,1.426C36.74,6.07,34.911,5.313,33,4.798   V2.78C33,1.247,31.753,0,30.22,0H23.78C22.247,0,21,1.247,21,2.78v2.018c-1.911,0.515-3.74,1.272-5.457,2.26l-1.426-1.426   c-1.051-1.052-2.883-1.05-3.933,0l-4.553,4.553c-0.525,0.525-0.814,1.224-0.814,1.967c0,0.742,0.289,1.44,0.814,1.966l1.426,1.426   C6.07,17.26,5.312,19.089,4.798,21H2.78C1.247,21,0,22.247,0,23.78v6.438C0,31.752,1.247,33,2.78,33h2.018   c0.515,1.911,1.272,3.74,2.26,5.457l-1.426,1.426c-0.525,0.525-0.814,1.224-0.814,1.966c0,0.743,0.289,1.441,0.814,1.967   l4.553,4.553c1.05,1.051,2.882,1.052,3.933,0l1.426-1.426c1.717,0.987,3.546,1.745,5.457,2.26v2.017C21,52.752,22.247,54,23.78,54   h6.439c1.533,0,2.78-1.248,2.78-2.781v-2.017c1.911-0.515,3.74-1.272,5.457-2.26l1.426,1.426c1.052,1.052,2.882,1.05,3.933,0   l4.553-4.553c0.525-0.525,0.814-1.224,0.814-1.967c0-0.742-0.289-1.44-0.814-1.966l-1.426-1.426   c0.987-1.717,1.745-3.546,2.26-5.457h2.018c1.533,0,2.78-1.248,2.78-2.781V23.78C54,22.247,52.753,21,51.22,21z M39,27   c0,6.617-5.383,12-12,12s-12-5.383-12-12s5.383-12,12-12S39,20.383,39,27z" fill="#FFFFFF"/>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-</svg>
-
-
-						</div>
-					</a>
-				</div>
-				<div class="anchors__item megaphone">
-					<div class="anchor__line megaphone"></div>
-					<div class="anchors__text-block megaphone">
-						<span>Возможности магазина</span>
-					</div>
-					<a href="#">
-						<div class="anchors__img-block megaphone">
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="22px" height="22px">
-<g>
-	<g>
-		<path d="M139.13,105.739H116.87c-22.204,0-40.859,14.619-47.407,34.664C30.096,147.099,0,181.362,0,222.609    c0,41.247,30.096,75.51,69.463,82.206c6.548,20.045,25.203,34.664,47.407,34.664h22.261c20.186,0,40.717,0.963,61.217,2.71    v-239.16C179.848,104.775,159.317,105.739,139.13,105.739z M66.783,269.836c-19.435-6.891-33.391-25.461-33.391-47.228    s13.956-40.337,33.391-47.229V269.836z" fill="#FFFFFF"/>
-	</g>
-</g>
-<g>
-	<g>
-		<path d="M227.173,448.956l-11.961-71.751c-25.366-2.785-50.991-4.335-76.082-4.335H116.87c-1.124,0-2.217-0.125-3.331-0.169    l15.559,91.995c4.087,24.185,24.859,41.739,49.38,41.739C208.984,506.435,232.185,479.016,227.173,448.956z" fill="#FFFFFF"/>
-	</g>
-</g>
-<g>
-	<g>
-		<path d="M478.609,5.565c-18.442,0-33.391,14.949-33.391,33.391v367.304c0,18.442,14.949,33.391,33.391,33.391    S512,424.703,512,406.261V38.957C512,20.515,497.051,5.565,478.609,5.565z" fill="#FFFFFF"/>
-	</g>
-</g>
-<g>
-	<g>
-		<path d="M233.739,99.385v246.447c79.481,10.338,119.878,26.156,178.087,46.119V53.266    C354.042,73.081,313.55,89.005,233.739,99.385z" fill="#FFFFFF"/>
-	</g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-</svg>
-
-						</div>
-					</a>
-				</div>
-				<div class="anchors__item">
-					<div class="anchor__line forward-media-step"></div>
-					<div class="anchors__text-block forward-media-step">
-						<span>Как работаем</span>
-					</div>
-					<a href="#">
-						<div class="anchors__img-block forward-media-step">
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="23px" height="23px" viewBox="0 0 402.927 402.927" style="enable-background:new 0 0 402.927 402.927;" xml:space="preserve">
-<g>
-	<g id="Layer_8_6_">
-		<path d="M148.169,2.796C151.396,0.934,154.99,0,158.599,0c3.597,0,7.196,0.934,10.43,2.79l216.437,180.612    c6.443,3.727,10.427,10.61,10.427,18.061c0,7.447-3.972,14.339-10.427,18.063L169.022,400.13c-6.452,3.729-14.414,3.729-20.853,0    c-6.452-3.73-10.427-10.61-10.427-18.063V20.859C137.749,13.409,141.717,6.52,148.169,2.796z M7.035,8.553V394.36    c0,4.604,3.736,8.346,8.334,8.34h68.813c4.61,0,8.346-3.735,8.346-8.34V8.559c0-4.611-3.736-8.346-8.346-8.34H15.369    C10.771,0.213,7.035,3.948,7.035,8.553z" fill="#FFFFFF"/>
-	</g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-</svg>
-
-						</div>
-					</a>
-				</div>
-				<div class="anchors__item">
-					<div class="anchor__line fair-stand"></div>
-					<div class="anchors__text-block fair-stand">
-						<span>Есть магазин?</span>
-					</div>
-					<a href="#">
-						<div class="anchors__img-block fair-stand">
-							<?xml version="1.0" encoding="iso-8859-1"?>
-							<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 366.79 366.79" style="enable-background:new 0 0 366.79 366.79;" xml:space="preserve" width="25px" height="25px">
-    <g>
-        <g id="Layer_5_38_">
-            <path d="M331.82,63.705c1.444,3.582-0.534,6.512-4.395,6.512H39.364c-3.861,0-5.92-2.961-4.575-6.58L55.981,6.581    C57.326,2.962,61.585,0,65.445,0h233.676c3.861,0,8.201,2.929,9.646,6.51L331.82,63.705z" fill="#FFFFFF" />
-            <path d="M32.344,106.039c0,14.053,11.392,25.444,25.445,25.444c10.579,0,19.647-6.455,23.484-15.642    c0.761-1.821,2.52-1.795,3.288,0.038c3.846,9.167,12.906,15.604,23.469,15.604c10.609,0,19.701-6.494,23.52-15.724    c0.742-1.796,2.419-1.94,3.12-0.203c3.768,9.337,12.915,15.927,23.603,15.927c10.687,0,19.832-6.588,23.6-15.926    c0.701-1.737,2.341-1.737,3.042,0c3.769,9.338,12.915,15.926,23.601,15.926c10.687,0,19.833-6.588,23.6-15.926    c0.703-1.737,2.34-1.737,3.039,0c3.769,9.337,12.916,15.927,23.604,15.927c10.688,0,19.834-6.588,23.602-15.926    c0.699-1.737,2.339-1.737,3.038,0c3.769,9.337,12.914,15.927,23.603,15.927c14.053,0,25.445-11.392,25.445-25.444V95.285    c0,0,0-5.021-5.302-5.021c-72.441,0-215.995,0-289.76,0c-7.04,0-7.04,5.219-7.04,5.219L32.344,106.039z" fill="#FFFFFF" />
-            <path d="M327.065,342.699c0-0.005,0.001-0.009,0.001-0.013V241.792c0-6.12-5.009-11.128-11.127-11.128H50.851    c-6.12,0-11.128,5.008-11.128,11.128v100.894c0,0.658,0,3.59,0,4.445c0,10.858,8.802,19.659,19.659,19.659    c7.443,0,13.904-4.144,17.237-10.247c0.476-0.873,0.818-2.729,5.548-2.729h202.764c4.451,0,5.272,1.833,5.74,2.693    c3.327,6.122,9.799,10.283,17.256,10.283c10.857,0,19.14-8.801,19.14-19.659C327.067,345.605,327.065,345.217,327.065,342.699z" fill="#FFFFFF" />
-            <path d="M91.226,148.782c-0.133-1.813-1.642-3.258-3.485-3.258H77.602c-1.931,0-3.51,1.579-3.51,3.51v0.046v58.106v0.046    c0,1.932,1.58,3.51,3.51,3.51h10.139c1.844,0,3.353-1.445,3.485-3.258c0.009-0.03,0.025-0.06,0.025-0.091v-0.161v-58.199v-0.161    C91.251,148.841,91.235,148.812,91.226,148.782z" fill="#FFFFFF" />
-            <path d="M293.63,148.782c-0.133-1.813-1.642-3.258-3.485-3.258h-10.139c-1.932,0-3.511,1.579-3.511,3.51v0.046v58.106v0.046    c0,1.932,1.579,3.51,3.511,3.51h10.139c1.844,0,3.353-1.445,3.485-3.258c0.009-0.03,0.025-0.06,0.025-0.091v-0.161v-58.199v-0.161    C293.656,148.841,293.638,148.812,293.63,148.782z" fill="#FFFFFF" />
-        </g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-</svg>
-
-						</div>
-					</a>
-				</div>
-				<div class="anchors__item">
-					<div class="anchor__line eye"></div>
-					<div class="anchors__text-block eye">
-						<span>Примеры работ</span>
-					</div>
-					<a href="#">
-						<div class="anchors__img-block eye">
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 488.85 488.85" style="enable-background:new 0 0 488.85 488.85;" xml:space="preserve" width="25px" height="25px">
-    <g>
-        <path d="M244.425,98.725c-93.4,0-178.1,51.1-240.6,134.1c-5.1,6.8-5.1,16.3,0,23.1c62.5,83.1,147.2,134.2,240.6,134.2   s178.1-51.1,240.6-134.1c5.1-6.8,5.1-16.3,0-23.1C422.525,149.825,337.825,98.725,244.425,98.725z M251.125,347.025   c-62,3.9-113.2-47.2-109.3-109.3c3.2-51.2,44.7-92.7,95.9-95.9c62-3.9,113.2,47.2,109.3,109.3   C343.725,302.225,302.225,343.725,251.125,347.025z M248.025,299.625c-33.4,2.1-61-25.4-58.8-58.8c1.7-27.6,24.1-49.9,51.7-51.7   c33.4-2.1,61,25.4,58.8,58.8C297.925,275.625,275.525,297.925,248.025,299.625z" fill="#FFFFFF" />
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-</svg>
-
-						</div>
-					</a>
-				</div>
-				<div class="anchors__item">
-					<div class="anchor__line settings-bot"></div>
-					<div class="anchors__text-block settings">
-						<span>Стоимость</span>
-					</div>
-					<a href="#">
-						<div class="anchors__img-block settings">
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 401.601 401.6" style="enable-background:new 0 0 401.601 401.6;" xml:space="preserve">
-    <g>
-        <g>
-            <path d="M116.682,229.329c11.286,0,22.195-0.729,32.518-2.086V114.094c-10.322-1.356-21.232-2.085-32.518-2.085    c-64.441,0-116.681,23.693-116.681,52.921v11.477C0.001,205.634,52.241,229.329,116.682,229.329z" fill="#FFFFFF" />
-            <path d="M116.682,288.411c11.286,0,22.195-0.729,32.518-2.084v-33.166c-10.325,1.356-21.229,2.095-32.518,2.095    c-56.25,0-103.199-18.054-114.227-42.082c-1.606,3.5-2.454,7.124-2.454,10.839v11.477    C0.001,264.718,52.241,288.411,116.682,288.411z" fill="#FFFFFF" />
-            <path d="M149.199,314.823v-2.578c-10.325,1.356-21.229,2.095-32.518,2.095c-56.25,0-103.199-18.054-114.227-42.082    C0.848,275.757,0,279.381,0,283.096v11.477c0,29.229,52.24,52.922,116.681,52.922c12.887,0,25.282-0.95,36.873-2.7    c-2.873-5.877-4.355-12.075-4.355-18.496V314.823z" fill="#FFFFFF" />
-            <path d="M284.92,22.379c-64.441,0-116.681,23.693-116.681,52.921v11.477c0,29.228,52.24,52.921,116.681,52.921    c64.44,0,116.681-23.693,116.681-52.921V75.3C401.601,46.072,349.36,22.379,284.92,22.379z" fill="#FFFFFF" />
-            <path d="M284.92,165.626c-56.25,0-103.199-18.053-114.227-42.082c-1.606,3.499-2.454,7.123-2.454,10.839v11.477    c0,29.228,52.24,52.921,116.681,52.921c64.44,0,116.681-23.693,116.681-52.921v-11.477c0-3.716-0.848-7.34-2.454-10.839    C388.119,147.573,341.17,165.626,284.92,165.626z" fill="#FFFFFF" />
-            <path d="M284.92,224.71c-56.25,0-103.199-18.054-114.227-42.082c-1.606,3.499-2.454,7.123-2.454,10.839v11.477    c0,29.229,52.24,52.922,116.681,52.922c64.44,0,116.681-23.693,116.681-52.922v-11.477c0-3.716-0.848-7.34-2.454-10.839    C388.119,206.657,341.17,224.71,284.92,224.71z" fill="#FFFFFF" />
-            <path d="M284.92,286.983c-56.25,0-103.199-18.054-114.227-42.082c-1.606,3.5-2.454,7.123-2.454,10.838v11.478    c0,29.228,52.24,52.921,116.681,52.921c64.44,0,116.681-23.693,116.681-52.921v-11.478c0-3.715-0.848-7.34-2.454-10.838    C388.119,268.928,341.17,286.983,284.92,286.983z" fill="#FFFFFF" />
-            <path d="M284.92,346.066c-56.25,0-103.199-18.053-114.227-42.081c-1.606,3.5-2.454,7.125-2.454,10.838V326.3    c0,29.228,52.24,52.921,116.681,52.921c64.44,0,116.681-23.693,116.681-52.921v-11.478c0-3.715-0.848-7.34-2.454-10.838    C388.119,328.012,341.17,346.066,284.92,346.066z" fill="#FFFFFF" />
-        </g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-</svg>
-
-						</div>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
 <div canvas="container">
-	<header class="header section-1 internet-shop-header">
+	<header class="header section-1">
 		<div class="video-container">
 			<video id="Video" class="video" loop autoplay muted>
 				<source src="img/header_video.webm" type="video/webm">
@@ -2259,32 +1916,35 @@
 						</nav>
 						<div class="header_modal">
 							<div>
+								<i class="fa fa-mobile-phone"></i>
 								<a href="tel:+380935848035">+38 (093) 58 48 035</a>
 							</div>
-							<button data-modal="modal-1" data-info="Обратный звонок" href="#" class="modal active">Обратный
-								звонок
-							</button>
 							<div class="select">
 								<div class="slct_arrow">
 									<i class="fa fa-angle-down"></i>
 								</div>
-								<a href="#" class="slct">RU</a>
+								<a href="#" class="slct">
+									<i class="fa fa-globe"></i>
+									EN
+								</a>
 								<ul class="drop">
 									<li>
 										<a href="#"></a>
+										<i class="fa fa-globe"></i>
 										RU
 									</li>
 									<li>
 										<a href="#"></a>
-										UA
-									</li>
-									<li>
-										<a href="#"></a>
+										<i class="fa fa-globe"></i>
 										EN
 									</li>
 								</ul>
-								<input type="hidden" id="select" name="services">
+								<input type="hidden" name="services">
 							</div>
+							<button data-modal="modal-1" data-info="Обратный звонок" href="#" class="modal active">
+								Обратный
+								звонок
+							</button>
 						</div>
 					</div>
 					<div class="hoverDivMenu">
@@ -2333,13 +1993,9 @@
 						</ul>
 					</div>
 				</div>
-				<div class="header_title">
-					<h1>Интернет-магазин для вашего бизнеса</br>[под ключ]</h1>
-					<p class="price"> от $ 350</p>
-					<p>Приносит прибыль с первого дня работы – окупается в течение 1 месяца</p>
-					<div class="decor-bottom-border">
-						<span></span>
-					</div>
+				<div class="header_title index">
+					<h1>Квалифицированная СЕО-оптимизация</h1>
+					<p>Поисковики полюбят Ваш сайт</p>
 				</div>
 				<div class="header-form">
 					<h3>Сэкономьте время</h3>
@@ -2363,404 +2019,356 @@
 
 				</div>
 				<div class="header_bot_txt">
-					<a href="#" class="scroll_to" data-scroll="internet-shop-goods">
+
+					<a href="#" class="scroll_to" data-scroll="our_advantages">
 						<i class="fa fa-angle-down"></i>
 					</a>
 				</div>
 			</div>
 		</div>
 	</header>
-	<!-- Секция  internet-shop-goods-->
-	<section id="internet-shop-goods" class="our_advantages internet-shop-goods section-2">
+	<section class="we-make-you-get-result">
 		<div class="container">
-			<div class="row">
-				<div class="title-wrap">
-					<h2>У вас есть товары</h2>
-					<p>продажу которых нужно поставить на поток?</p>
-				</div>
-				<div class="title_block_left_decor">
-					<div class="title_block_left_decor_img">
-					</div>
-					<p>Мы разработаем для вас интернет-магазин</br>
-					с полным функционалом уже через 21 день</p>
+			<div class="about-section">
+				<p>Проведем комплекс мер по SEO-оптимизации, в результате чего Ваш сайт
+					станет эффективным инструментом для привлечения клиентов.</p>
+				<div class="decor-img">
+					<span></span>
 				</div>
 			</div>
-			<div class="row">
-				<h3 class="title-wrap-h3">Мощный функционал для продаж</h3>
-				<div class="internet-shop-goods-wrap clearfix">
-					<div class="col-lg-3 col-md-3 col-sm-6">
-						<div class="internet-shop-goods-item">
-							<div class="item">
-								<b>Стильный дизайн</b>
-								<p>и удобная структура</p>
-								<span class="decor">1</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-3 col-sm-6">
-						<div class="internet-shop-goods-item">
-							<div class="item">
-								<b>30+ платёжных систем</b>
-								<p>для удобства клиентов</p>
-								<span class="decor">2</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-3 col-sm-6">
-						<div class="internet-shop-goods-item">
-							<div class="item">
-								<b>Удобная <span>панель</span></b>
-								<p>управления</p>
-								<span class="decor">3</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-3 col-sm-6">
-						<div class="internet-shop-goods-item">
-							<div class="item">
-								<b>Каталог товаров</b>
-								<p>с продвинутым поиском</p>
-								<span class="decor">4</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-3 col-sm-6">
-						<div class="internet-shop-goods-item">
-							<div class="item">
-								<b>Экспорт и импорт</b>
-								<p>товаров в 1 клик!</p>
-								<span class="decor">5</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-3 col-sm-6">
-						<div class="internet-shop-goods-item">
-							<div class="item">
-								<b>Удобное оформление </b>
-								<p>покупки с регистрацией</p>
-								<p>и без</p>
-								<span class="decor">6</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-3 col-sm-6">
-						<div class="internet-shop-goods-item">
-							<div class="item">
-								<b>Гибкая система <span>скидок</span></b>
-								<p>и акций для ваших</p>
-								<p>клиентов</p>
-								<span class="decor">7</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-3 col-sm-6">
-						<div class="internet-shop-goods-item">
-							<div class="item">
-								<b>Оптимизация <span>под</span></b>
-								<p>поисковые системы</p>
-								<span class="decor">8</span>
-							</div>
-						</div>
-					</div>
-				</div>
+			<div class="titel-of-section">
+				<h2>Мы делаем - Вы получаете результат:</h2>
 			</div>
-			<div class="form-title-unique-wrap">
-				<div class="row">
-					<div class="form-wrap">
-						<div class="item-title"><h3>Это далеко не все</h3>
-							<p>что будет в вашем интернет-магазине</p>
-							<p>Скачайте документ с полным перечнем и стоимостью функций</p></div>
-						<div class="unique_challenge_form">
-							<form id="form">
-								<div>
-									<div class="modal_form_input_wrap">
-										<div class="modal_input_error">Заполните поле
-											<div class="modal_error_triangle"></div>
-											<div class="modal_error_chest_img"></div>
-										</div>
-										<input name="email" class="modal_form_email" placeholder="E-mail"
-											   type="text">
-									</div>
-								</div>
-								<input type="submit" value="Получить на почту">
-								<input type="hidden" name="form_name"
-									   value="Получить на почту информацию по интернет магазинам">
-								<input type="hidden" name="form_type" value="normal">
-							</form>
-						</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 percents-container">
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<div class="percents-img">
+						<img src="img/47%25.png" alt="">
 					</div>
+					<p>Увеличение скорости загрузки</p>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<div class="percents-img">
+						<img src="img/100%25.png" alt="">
+					</div>
+					<p>Соответствие всем нормам и стандартам</p>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<div class="percents-img">
+						<img src="img/65%25.png" alt="">
+					</div>
+					<p>Повышение успеха продвижения сайта</p>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<div class="percents-img">
+						<img src="img/33%25.png" alt="">
+					</div>
+					<p>Лояльность поисковых систем к
+						продвигаемым страницам</p>
 				</div>
 			</div>
 		</div>
 	</section>
-
-
-	<!--секци internet-shops-video-->
-	<section class="internet-shops-video section-3">
+	<section class="form-description-about-seo">
 		<div class="container">
-			<div class="row">
-				<div class="title-wrap">
-					<h2>Посмотрите короткое видео</h2>
-					<p>в котором показаны все возможности интернет-магазина от Мелфори</p>
-					<p>Такие же будут и у вас</p>
-				</div>
-				<div class="video-wrap">
-					<div class="video-item">
-						<iframe width="100%" height="470" src="https://www.youtube.com/embed/mhJh5_6MuCk"
-								frameborder="0"
-								allowfullscreen></iframe>
-					</div>
-				</div>
-				<input type="submit" class="modal button" data-modal="modal-1" value="Заказать разработку магазина">
-			</div>
-		</div>
-	</section>
-
-
-	<section class="internet-shop-instruction section-4">
-		<div class="container">
-			<div class="row">
-				<div class="title-wrap">
-					<h2>Ваш магазин будет полностью автономным</h2>
-					<p>Это значит – минимум временных затрат, и максимум продаж. Большая часть функций
-						автоматизирована!</p>
-				</div>
-				<div class="content">
-					<div class="gear-wrap">
-						<i class="gear-1"></i>
-						<i class="gear-2"></i>
-					</div>
-					<ul>
-						<li class="clearfix">
-							<div class="arrow"></div>
-							<img src="img/icon-4.png" alt="">
-							<aside>
-								<b>1. Оставьте заявку на консультацию</b>
-								<p>Мы не начнём работу прежде, чем поймём,</p>
-								<p>какой результат вы ожидаете увидеть.</p>
-							</aside>
-							<input type="submit" class="modal button" data-modal="modal-1" value="Оставить заявку">
-						</li>
-
-						<li>
-							<div class="arrow"></div>
-							<img src="img/icon-3.png" alt="">
-							<aside>
-								<b>2. Получите смету на разработку магазина</b>
-								<p>Мы поймём, какой интернет-магазин вам требуется, и рассчитаем</p>
-								<p>его стоимость. Покажем, из чего она складывается.</p>
-								<p>Озвучим сроки создания магазина.</p>
-							</aside>
-							<input type="submit" class="modal button" data-modal="modal-1"
-								   value="Посмотреть пример сметы">
-						</li>
-						<li>
-							<div class="arrow"></div>
-							<img src="img/icon-2.png" alt="">
-							<aside>
-								<b>3. Если условия вас устраивают – подпишите договор о сотрудничестве</b>
-								<p>В нём подробно описаны условия работы, права и обязанности сторон.</p>
-								<p>Мы даём финансовую гарантию соблюдения сроков.</p>
-								<p>Посмотрите, как это выглядит в договоре.</p>
-							</aside>
-							<a class="button" href="#">Посмотреть пример сметы</a>
-						</li>
-						<li>
-							<div class="arrow"></div>
-							<img src="img/icon-1.png" alt="">
-							<aside>
-								<b>4. Внесите минимальную предоплату за первый этап работы</b>
-								<p>Как правило, она составляет не более 30% от стоимости.</p>
-								<p>После того, как мы выполним первый этап работы,</p>
-								<p>вы убедитесь в нашей порядочности и сможете оплатить следующий.</p>
-							</aside>
-						</li>
-						<li>
-
-							<img src="img/icon.png" alt="">
-							<aside>
-								<b>5. Получите ваш интернет магазин в обещанный срок</b>
-								<p>Вы проверяете функционал магазина, даёте правки, если такие есть.</p>
-								<p>Мы дорабатываем магазин до совершенного вида.</p>
-								<p>Показываем, как добавлять товары и управлять магазином.</p>
-							</aside>
-						</li>
-					</ul>
-					<div class="addition-wrap">
-						<h3>
-							<p>Интернет-магазин готов к использованию</p>
-							<p>– пора привлечь первых клиентов!</p>
-						</h3>
-						<p class="text">С этим вам поможет услуга настройки контекстной рекламы (по желанию)</p>
-						<a href="#" class="more-link">Скачать предложение по настройке рекламы</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-<!--отсюда vadjs-->
-	<section class="why_effective us-internet-shop-section section-5">
-		<div class="container">
-			<div class="row">
-				<h2>Оцените несколько магазинов</h2>
-				<p>которые уже приносят прибыль нашим клиентам</p>
-				<div class="clearfix items-wrap">
-					<div class="col-lg-4 col-md-4">
-						<div class="item-wrap">
-							<a href="#" class="img-wrap">
-								<img src="img/how_good_img1.jpg" alt="">
-								<div class="hover-eff">
-									<h5>SOME TEXT</h5>
-									<p>melfori.com</p>
-								</div>
-							</a>
-							<ul class="list-wrap">
-								<li><p>Разработан для, компании «Melfori»</p></li>
-								<li>
-									<p>Ссылка на проект:
-										<a href="#" target="_blank">melfori.com</a>
-									</p>
-								</li>
-								<li><p> В чем суть проекта: <span>140тыс./мес. руб.</span></p></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4">
-						<div class="item-wrap">
-							<a href="#" class="img-wrap">
-								<img src="img/how_good_img1.jpg" alt="">
-								<div class="hover-eff">
-									<h5>SOME TEXT</h5>
-									<p>melfori.com</p>
-								</div>
-							</a>
-							<ul class="list-wrap">
-								<li><p>Разработан для, компании «Melfori»</p></li>
-								<li>
-									<p>Ссылка на проект:
-										<a href="#" target="_blank">melfori.com</a>
-									</p>
-								</li>
-								<li><p> В чем суть проекта: <span>140тыс./мес. руб.</span></p></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4">
-						<div class="item-wrap">
-							<a href="#" class="img-wrap">
-								<img src="img/how_good_img1.jpg" alt="">
-								<div class="hover-eff">
-									<h5>SOME TEXT</h5>
-									<p>melfori.com</p>
-								</div>
-							</a>
-							<ul class="list-wrap">
-								<li><p>Разработан для, компании «Melfori»</p></li>
-								<li>
-									<p>Ссылка на проект:
-										<a href="#" target="_blank">melfori.com</a>
-									</p>
-								</li>
-								<li><p> В чем суть проекта: <span>140тыс./мес. руб.</span></p></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<button class="modal" data-modal="modal-1">Получить такой же интернет-магазин</button>
-			</div>
-		</div>
-	</section>
-	<!-- Секция unique_challenge -->
-	<section class="unique_challenge internet-shop-form-section section-6">
-		<div class="container">
-			<div class="row">
-				<div class="title-wrap">
-					<h2>Остались вопросы?</h2>
-					<p>Консультируем подробно и бесплатно.</p>
-				</div>
+			<div class="text-input unique_challenge">
+				<h2>Обратись сейчас и получи бесплатный аудит сайта</h2>
+				<p>Мы проанализируем Ваш сайт и укажем на ошибки, если они есть.</p>
 				<div class="unique_challenge_form">
-					<aside>
-						<p>Мы такие люди, как и вы – понимаем, что вам нужно, и предложим оптимальное решение.</p>
-						<p>Оставьте ваш номер телефона. Перезвоним сейчас.</p>
-					</aside>
 					<form>
-						<div>
-							<div class="modal_form_input_wrap">
-								<div class="modal_input_error">Заполните поле
-									<div class="modal_error_triangle"></div>
-									<div class="modal_error_chest_img"></div>
-								</div>
-								<input name="phone" class="modal_form_phone ua" placeholder="+38(___) __-__-___"
-									   type="text">
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
 							</div>
+							<input name="input" class="modal_form_input animation_form_address" placeholder="Имя"
+								   type="text">
 						</div>
-						<input type="submit" value="Проконсультироваться">
-						<input type="hidden" name="form_name" value="Остались вопросы? Инернет магазины">
+
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="phone" class="modal_form_phone ua" type="text">
+						</div>
+
+						<input type="submit" class="animation_seo_class" value="Заявка на аудит сайта">
+						<input type="hidden" name="form_name"
+							   value="бесплатная консультация по контекстной рекламе">
+						<input type="hidden" name="form_type" value="normal">
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="title-wrap">
+					<h2> Наш опыт, выраженный в цыфрах:</h2>
+				</div>
+			</div>
+			<div class="internet-shop-goods-wrap clearfix">
+				<div class="col-lg-4 col-md-4 col-sm-12">
+					<div class="internet-shop-goods-item">
+						<div class="item">
+							<span>328</span>
+							<p> страниц, выведенных</br>
+								в ТОП-3</p>
+							<span class="decor">328</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12">
+					<div class="internet-shop-goods-item">
+						<div class="item">
+							<span>+4%</span>
+							<p>средний рост конверсии </br>
+								сайта</p>
+							<span class="decor">+4%</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12">
+					<div class="internet-shop-goods-item">
+						<div class="item">
+							<span>+643 000</span>
+							<p>посетителей после </br>
+								продвиженияй</p>
+							<span class="decor">+643K</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="about-wrap">
+				<p>Стоимость СЕО-продвижения начинается от 100$, все зависит от индивидуальных
+					особенностей проекта: объема работ, сложности и прочее.</p>
+			</div>
+
+			<div class="what-includes-in-seo">
+				<h2>Что входит в комплект СЕО-оптимизации</h2>
+				<div class="col-md-6 col-sm-12">
+					<ul class="list-includes">
+						<li>Анализ поисковых запросов</li>
+						<li>Подбор и использование ключевых
+							слов для целевых разделов или
+							страниц</li>
+						<li>Оптимзация URL и структуры
+							продвигаемых страниц</li>
+						<li>Оптимизация и составление мета
+							тегов: title, h1-h6, keywords, description</li>
+						<li>Оптимизация избражений</li>
+						<li>Оптимизация HTML, CSS, JavaScript</li>
+						<li>Оптимизация скорости загрузки сайта</li>
+					</ul>
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<ul class="list-includes">
+						<li>Поиск и удаление битых ссылок/дублей
+							страниц</li>
+						<li>Настройка robots.txt для поисковых систем</li>
+						<li>Правильная перелинковка внутренних страниц
+							с учетом требований SEO</li>
+						<li>Настройка зеркал сайта</li>
+						<li>Создание карты сайта sitemap.xml</li>
+						<li>Настройка в инструментах вебмастера Яндекс
+							и Google</li>
+						<li>Настройка региональной привязки сайта</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="unique_challenge contextual-form-section">
+		<div class="container">
+			<div class="row">
+				<h2 class="lineH_min">Желаете вырваться в лидеры? Мы поможем!</h2>
+				<p>Оптимизация сайта оказывает ключевое влияние на позиции в поисковой выдаче.
+				</br>Чем лучше будет оптимизирован ресурс, тем больше будет продаж.
+				</p>
+				<div class="unique_challenge_form">
+					<form>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="phone" class="modal_form_phone ua" type="text">
+						</div>
+						<input type="submit" value="Оставить заявку">
+						<input type="hidden" name="form_name" value="Проконсультироваться (SEO страница)">
 						<input type="hidden" name="form_type" value="normal">
 					</form>
 				</div>
 			</div>
 		</div>
 	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+
+				<div class="footerColumn col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<ul>
+						<li>О нас:</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-warning"></i>
+								Вакансии
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-bolt"></i>
+								О нас
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-info"></i>
+								Блог
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-folder-open"></i>
+								Смотреть работы
+							</a>
+						</li>
+
+					</ul>
+				</div>
+				<div class="footerColumn col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<ul>
+						<li>Услуги:</li>
+						<li>
+							<a href="#">Разработка сайтов</a>
+						</li>
+						<li>
+							<a href="#">Копирайтинг</a>
+						</li>
+						<li>
+							<a href="#">Проектирование дизайна</a>
+						</li>
+						<li>
+							<a href="#">SEO-продвижение</a>
+						</li>
+						<li>
+							<a href="#">Работа с соцсетями (SMM)</a>
+						</li>
+						<li>
+							<a href="#">Создание контекстной рекламы</a>
+						</li>
+						<li>
+							<a href="#">Аудит и аналитика интернет ресурсов</a>
+						</li>
+						<li>
+							<a href="#">Создание маркетинг-китов</br> и коммерческих предложений</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footerColumn col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<ul>
+						<li>Наши ресурсы:</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-instagram"></i>
+								imelfori_studio
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-vk"></i>
+								vk.com/melfori_studio
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-facebook-square"></i>
+								facebook.com
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-twitter"></i>
+								twitter.com/melfori_info
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footerColumn ourContacts col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<ul>
+						<li>Наши контакты:</li>
+						<li>
+							<i class="fa fa-envelope"></i>
+							info@melfori.com
+						</li>
+						<li>
+							<i class="fa fa-mobile-phone"></i>
+							+38 (067) 571-78-38
+						</li>
+						<li>
+							<i class="fa fa-skype"></i>
+							Melfori_studio
+						</li>
+						<li>
+							<i class="fa fa-home"></i>
+							ООО «МЕЛФОРИ» <br>
+							<p>
+								<a href="#">г. Харьков, ул. Юрьевская 17,</a>
+							</p>
+							<p>
+								<a href="#">г Кременьчуг ул. Советская 4.</a>
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="logoMelforiWrap">
+				<div class="logoMelfori">
+					<img src="../img/top_logo.png" alt="logo">
+				</div>
+				<div class="wrapText">
+					<i class="fa fa-copyright"></i>
+					<p>
+						Melfori digital agency 2017
+						Все права защищины.
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
 </div>
 <div off-canvas="id-1 left shift">
 	<nav class="header_nav_mobile">
 		<ul class="menu">
+
 			<li>
-				<a href="#">1</a>
+				<a href="#">Главная</a>
 			</li>
 			<li>
-				<a href="#">Преимущества</a>
+				<a href="#">Услуги</a>
 			</li>
 			<li>
-				<a href="#">Отзывы</a>
+				<a href="#">Смотреть работы</a>
 			</li>
 			<li>
-				<a href="tel:73842596168">+7 3842 59 61 68</a>
-			</li>
-			<li>
-				<a href="#">Преимущества</a>
-			</li>
-			<li>
-				<a href="#">Отзывы</a>
-			</li>
-			<li>
-				<a href="#">Примеры кухонь</a>
-			</li>
-			<li>
-				<a href="#">Преимущества</a>
+				<a href="#">О нас</a>
 			</li>
 			<li>
 				<a href="#">Отзывы</a>
 			</li>
 			<li>
-				<a href="#">Примеры кухонь</a>
+				<div class="select">
+					<div class="slct_arrow">
+						<i class="fa fa-angle-down"></i>
+					</div>
+					<a href="#" class="slct">RU</a>
+					<ul class="drop">
+						<li>RU</li>
+						<li>UA</li>
+						<li>EN</li>
+					</ul>
+					<input type="hidden" id="select" name="services">
+				</div>
 			</li>
-			<li>
-				<a href="#">Преимущества</a>
-			</li>
-			<li>
-				<a href="#">Отзывы</a>
-			</li>
-			<li>
-				<a href="#">Примеры кухонь</a>
-			</li>
-			<li>
-				<a href="#">Преимущества</a>
-			</li>
-			<li>
-				<a href="#">Отзывы</a>
-			</li>
-			<li>
-				<a href="#">Примеры кухонь</a>
-			</li>
-			<li>
-				<a href="#">Преимущества</a>
-			</li>
-			<li>
-				<a href="#">Отзывы</a>
-			</li>
+
 		</ul>
 	</nav>
 </div>
@@ -2771,139 +2379,13 @@
 <div off-canvas="id-4 bottom shift">
 </div>
 <div class="hidden"></div>
-<footer class="footer section-11">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-3 col-md-3 col-sm-3">
-				<div class="footer-logo">
-					<img src="img/footer-logo.png" alt="">
-					<p>Делаем маркетинг <br>
-						в интернете эффективным</p>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-3">
-				<div class="select">
-					<div class="slct_arrow">
-						<i class="fa fa-angle-down"></i>
-					</div>
-					<a href="#" class="slct">
-						<i class="flag ru"></i>
-						Русский
-					</a>
-					<ul class="drop">
-						<li>
-							<i class="flag ru"></i>
-							Русский
-						</li>
-						<li>
-							<i class="flag ru"></i>
-							Русский
-						</li>
-						<li>
-							<i class="flag ru"></i>
-							Русский
-						</li>
-					</ul>
-					<input type="hidden" id="select" name="services">
-				</div>
-				<div class="social-link clearfix">
-					<div class="item">
-						<a href="#">
-							<i class="fa fa-instagram"></i>
-						</a>
-					</div>
-					<div class="item">
-						<a href="#">
-							<i class="fa fa-vk"></i>
-						</a>
-					</div>
-					<div class="item">
-						<a href="#">
-							<i class="fa fa-facebook-f"></i>
-						</a>
-					</div>
-					<div class="item">
-						<a href="#">
-							<i class="fa fa-twitter"></i>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-3">
-				<div class="contacts-container">
-					<p>Наши контакты:</p>
-					<ul>
-						<li>
-							<a href="mailto:info@melfori.com">
-								<i class='fa fa-envelope email'></i>
-								<span>info@melfori.com</span>
-							</a>
-						</li>
-						<li>
-							<a href="tel:+380675717838">
-								<i class='fa fa-mobile-phone phone'></i>
-								<span>+38 (067) 571-78-38</span>
-							</a>
-						</li>
-						<li>
-							<a href="https://www.google.com.ua/maps/place/%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%AE%D1%80'%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%B0,+17,+%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2,+%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C/@49.9936995,36.2537179,17z/data=!3m1!4b1!4m5!3m4!1s0x4127a094e71ee6c1:0x8ed25fb6ed4a8696!8m2!3d49.9936995!4d36.2559066"
-							   target="_blank">
-								<i class="fa fa-home home"></i>
-								<span>ООО «МЕЛФОРИ»<br>
-										г. Харьков, ул. Юрьевка 17</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-3">
-				<div class="contacts-container">
-					<p>Наши ресурсы:</p>
-					<ul>
-						<li>
-							<a href="#" target="_blank">
-								<i class='fa fa-globe'></i>
-								<span>landing.melfori.com</span>
-							</a>
-						</li>
-						<li>
-							<a href="#" target="_blank">
-								<i class='fa fa-globe'></i>
-								<span>instagram.melfori.com</span>
-							</a>
-						</li>
-						<li>
-							<a href="#" target="_blank">
-								<i class="fa fa-instagram"></i>
-								<span>imelfori_studio</span>
-							</a>
-						</li>
-						<li>
-							<a href="#" target="_blank">
-								<i class="fa fa-vk"></i>
-								<span>vk.com/melfori_studio</span>
-							</a>
-						</li>
-						<li>
-							<a href="#" target="_blank">
-								<i class="fa fa-facebook-square"></i>
-								<span>facebook.com</span>
-							</a>
-						</li>
-						<li>
-							<a href="#" target="_blank">
-								<i class="fa fa-twitter"></i>
-								<span>twitter.com/melfori_info</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
 <!--[if lt IE 9]>
-<script src="libs/html5shiv/es5-shim.min.js"></script>
+</script>
+
+
+<
+script
+src = "libs/html5shiv/es5-shim.min.js" ></script>
 <script src="libs/html5shiv/html5shiv.min.js"></script>
 <script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>`
 <script src="libs/respond/respond.min.js"></script>
@@ -2918,8 +2400,7 @@
 			{
 				"src": "js/App.js",
 				"async": false
-			},
-			{
+			}, {
 				"src": "js/animation.js",
 				"async": false
 			},

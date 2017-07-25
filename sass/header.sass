@@ -83,7 +83,15 @@ p
 .hidden
 	display: none
 // Модальное окно
-
+.md-content
+	transform-style: preserve-3d
+	transform: perspective(100px) rotateX(-60deg)
+	transform-origin: 50% 0
+	transition: all 0.5s
+	opacity: 0
+.md-show
+	transform: rotateX(0deg)
+	opacity: 1
 .popup
 	width: 100%
 	height: 100%
@@ -145,6 +153,66 @@ p
 					& + p
 						font-size: 16px
 						font-family: $font_SFUIDisplay-Light
+	&.pop5
+		background: #fff
+		display: flex
+		justify-content: center
+		align-items: center
+		.modal-text
+			position: relative
+			z-index: 1002
+			h2
+				text-align: center
+				color: $main_color
+				margin: 0
+			p
+				text-align: center
+				padding-bottom: 50px
+			i
+				position: absolute
+				top: 0
+				right: 0
+				font-size: 3rem
+				color: $main_color
+				cursor: pointer
+				transition: $transition
+				&:hover
+					/* style */
+					color: $main_bg_gray
+
+			input, textarea
+				@extend %main_btn2
+				border: 1px solid $main_color
+				color: $main_color
+				margin-bottom: 25px
+				padding-left: 15px
+				outline: none
+				&::-webkit-input-placeholder
+					color: $main_color
+				&:-moz-placeholder
+					color: $main_color
+				&::-moz-placeholder
+					color: $main_color
+				&:-ms-input-placeholder
+					color: $main_color
+			.form-inputs
+				display: inline-block
+				vertical-align: top
+				padding-right: 10px
+			.form-text-area
+				display: inline-block
+				vertical-align: top
+				padding-left: 10px
+			input[type=submit]
+				@extend %main_btn2
+				display: block
+				margin: 0 auto
+				color: #fff
+				background: $main_color
+			textarea
+				resize: none
+				height: 200px
+				padding-top: 15px
 .dm-table
 	display: table
 	width: 100%
