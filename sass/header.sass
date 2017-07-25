@@ -35,11 +35,11 @@ body
 	//-moz-osx-font-smoothing: grayscale
 
 h1
-	@include font($main_txt_color, 55px, $font_SFUIDisplay-Thin, 1.2)
+	@include font($main_txt_color, 50px, $font_SFUIDisplay-Thin, 1.2)
 	margin-bottom: 15px
 h2
 	margin-top: 100px
-	@include font(#fff, 50px, $font_SFUIDisplay-Thin, 1.2)
+	@include font(#fff, 45px, $font_SFUIDisplay-Thin, 1.2)
 	&.lineH_min
 		line-height: 1
 	& + p
@@ -454,10 +454,18 @@ p
 	right: 0
 	top: calc(100% - 394px)
 	h3
-		margin: 0
+		margin: 0 0 5px 0
 		color: $main_txt_color
-		margin-bottom: 5px
+		font: 35px SFUIDisplay-Thin,Arial,sans-serif
+		line-height: 1.2
 		font-weight: bold
+	p
+		&.title-h2
+			margin: 0 0 5px 0
+			color: $main_txt_color
+			font: 35px SFUIDisplay-Thin,Arial,sans-serif
+			line-height: 1.2
+			font-weight: bold
 	p
 		font-size: 18px
 		padding-left: 15px
