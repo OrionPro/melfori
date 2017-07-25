@@ -20,7 +20,6 @@ class BurgerEff {
 			'920182',
 			'00be92'
 		];
-		this.description = this.description.bind(this);
 	}
 
 	mobileMenuBg() {
@@ -32,12 +31,13 @@ class BurgerEff {
 
 		setTimeout(() => {
 			this.description();
-		}, 1500)
+		}, 1500);
 
 		if (document.documentElement.clientWidth <= this.state) {
 			var color = this.color;
 			this.line.each(function () {
-				let random = parseInt((Math.random(5) * 5) + 1);
+				let random = ((Math.random() * 5) + 1) | 0;
+
 
 				for (var i = 0; i < color.length; i++) {
 					if (random == i) {
@@ -166,27 +166,27 @@ class CheckboxesInoputs {
 var burgerEff = new BurgerEff;
 //для back end
 
-
-// let ajaxString;
-// let country = $("input[name='country_name']").val();
-//  switch(country){
-//  case 'UA':
-//  ajaxString = '../json/direct-text-ua.json';
-//  break;
-//  case'RU':
-//  ajaxString = '../json/direct-text-ru.json';
-//  break;
-//  default:
-//  ajaxString = '../json/direct-text-en.json'
-//  }
-//  let directText;
-//  $.ajax({
-//  type: "GET",
-//  url: ajaxString,
-//  success: function(data){
-//  directText = data;
-//  }
-//  });
+/*
+let ajaxString;
+let country = $("input[name='country_name']").val();
+ switch(country){
+ case 'UA':
+ ajaxString = '../json/direct-text-ua.json';
+ break;
+ case'RU':
+ ajaxString = '../json/direct-text-ru.json';
+ break;
+ default:
+ ajaxString = '../json/direct-text-en.json'
+ }
+ let directText;
+ $.ajax({
+ type: "GET",
+ url: ajaxString,
+ success: function(data){
+ directText = data;
+ }
+ });*/
 
 
 let directText;
@@ -433,7 +433,9 @@ $(document).ready(function () {
 	$(".couple_of_words_txt").mCustomScrollbar({
 		theme: "my-theme"
 	});
-
+	$(".description-contextual").mCustomScrollbar({
+		theme: "my-theme"
+	});
 	$(".modal_form_phone").each(function () {
 		var className = $(this).attr('class').split(' ');
 
@@ -487,13 +489,36 @@ $(document).ready(function () {
 	});
 
 	//  Активация слайдера
-
 	// Кастомные кнопки управления слайдером
+	var owlContext = $('.about-our-results-carousel');
+	owlContext.owlCarousel({
+		loop: true,
+		responsiveClass: true,
+		responsive: {
+			0:{
+				items: 1,
+				margin: 30,
+			},
+			768: {
+				items: 2,
+				margin: 30
+			},
+			1200:{
+				items:3,
 
+			}
+		}
+	});
+	$('.right-btn').click(function () {
+		owlContext.trigger('next.owl.carousel', [700]);
+	});
+	$('.left-btn').click(function () {
+		owlContext.trigger('prev.owl.carousel', [700]);
+	});
 	$('.owl-carousel').owlCarousel({
 		loop: true,
-		items: 1,
-		margin: 10
+		items:1
+
 	});
 	// Go to the next item
 	$('.customNextBtn').click(function () {
@@ -542,7 +567,7 @@ $(document).ready(function () {
 				lightgallery('.lightGallery', '.open_gallery');
 				break;
 			default:
-				console.log("unanimated page");
+				console.log("");
 
 		}
 	}, 1000);

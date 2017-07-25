@@ -96,7 +96,37 @@ if ( 'addEventListener' in document ) {
 
 
 $(document).ready(function() {
-   
+	function get_name_browser() {
+		// получаем данные userAgent
+		const ua = navigator.userAgent;
+		// с помощью регулярок проверяем наличие текста,
+		// соответствующие тому или иному браузеру
+		if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+		if (ua.search(/Firefox/) > 0) return 'Firefox';
+		if (ua.search(/Opera/) > 0) return 'Opera';
+		if (ua.search(/Safari/) > 0) return 'Safari';
+		if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+		if (ua.search(/Trident/) > 0) return 'Trident';
+		// условий может быть и больше.
+		// сейчас сделаны проверки только
+		// для популярных браузеров
+		return 'Не определен';
+	}
+   var currbrowser = get_name_browser();
+	var whiteMenu = document.querySelector('.popup.pop5');
+	var openModal = document.querySelector('.internet-explorer');
+	var closeModal = document.querySelector('.modal-text > .fa-close');
+	if(currbrowser ===  'Internet Explorer' || currbrowser === 'Trident' ){
+		whiteMenu.classList.remove('md-content');
+		whiteMenu.style.display = 'none';
+		openModal.addEventListener('click',function () {
+			whiteMenu.style.display = 'flex'
+		});
+		closeModal.addEventListener('click',function () {
+			whiteMenu.style.display = 'none'
+		});
+	}
+
 	var md = new MobileDetect(window.navigator.userAgent);
 
 	if (md.userAgent() == "Safari" && md.mobile() == "iPhone" || md.mobile() == "iPad" ) {
@@ -162,10 +192,15 @@ $(document).ready(function() {
 		var id = $(this).data('modal');
 		var txt = $(this).data('info');
 		var title =  $(this).data('title'); // для изменения title в модалке
-		$(".popup[data-modal=" + id + "]").toggle("fade", 200).find("form").css('display', 'block');
-		$(".popup[data-modal=" + id + "] input[name=form_name]").val(txt);
-		// $(".popup[data-modal="+id+"] h2").html(title); // прописать в ссылку data-title="нужный title"
-		$(".popup[data-modal=" + id + "] p").html(title);
+		if(id === "modal-white" ){
+			$(".popup[data-modal=" + id + "]").addClass('md-show');
+		}
+		else {
+			$(".popup[data-modal=" + id + "]").toggle("fade", 200).find("form").css('display', 'block');
+			$(".popup[data-modal=" + id + "] input[name=form_name]").val(txt);
+			// $(".popup[data-modal="+id+"] h2").html(title); // прописать в ссылку data-title="нужный title"}
+			$(".popup[data-modal=" + id + "] p").html(title);
+		}
 		if (window.matchMedia("(min-width: 992px)").matches) {
 			$("body").css({ "overflow": "hidden", "padding-right": "17px" });
 		}
@@ -176,13 +211,22 @@ $(document).ready(function() {
 	});
 	// overlay для закрытия
 	$(".overlay").click(function() {
-		$(this).parent().toggle("drop", { direction: "up" }, 200);
+		if(this.parentElement.classList.contains('md-show') && currbrowser !== 'Internet Explorer' || currbrowser !== 'Trident' ){
+			this.parentElement.classList.remove('md-show');
+		}else {
+			$(this).parent().toggle("drop", {direction: "up"}, 200);
+		}
 		$("body").css({ "overflow": "inherit", "padding-right": "0" });
+
 	});
 	// закрываем модальное окно на крестик
 	$(".popup .close").click(function(e) {
 		e.preventDefault();
 		$(this).parents(".popup").hide("drop", { direction: "up" }, 200);
+		$("body").css({ "overflow": "inherit", "padding-right": "0" });
+	});
+	$(".popup .modal-text .fa-close").click(function(){
+		$('.pop5.md-content').removeClass('md-show');
 		$("body").css({ "overflow": "inherit", "padding-right": "0" });
 	});
 	//обработчик кнопки на нажатие btn_mnu
@@ -227,7 +271,7 @@ $(document).ready(function() {
 				},500);
 				error.push(true); // ошибка
 			} else if ($(this).val() !== '') { // если находим не пустое
-				$(this).siblings('.modal_input_error').hide("fade", 500)
+				$(this).siblings('.modal_input_error').hide("fade", 500);
 				error.push(false); // нет ошибки
 			}
 			$(this).focus(function() {
