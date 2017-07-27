@@ -10,6 +10,7 @@ import SeoPageAnimation from './model-animation/seo-page.js';
 import ReviewPageAnimation from './model-animation/reviews.js';
 import InternetShopsAnimation from './model-animation/internet-magazin.js';
 import AdvancmentSmm from './model-animation/advancment-smm.js';
+import SmmAnimation from './model-animation/smm-pages.js';
 // Запуск необходимой анимации
 class Animation {
 
@@ -22,6 +23,7 @@ class Animation {
 		this.ReviewPageAnimation = new ReviewPageAnimation();
 		this.InternetShopsAnimation = new InternetShopsAnimation();
 		this.AdvancmentSmm = new AdvancmentSmm();
+		this.SmmAnimation = new SmmAnimation();
 		//	Анимации для всех страниц
 
 	}
@@ -53,6 +55,9 @@ class Animation {
 		if (activePages('advancment-smm')) {
 			this.AdvancmentSmm.description()
 		}
+		if (activePages('smm')) {
+			this.SmmAnimation.description()
+		}
 	}
 
 	play() {
@@ -80,6 +85,9 @@ class Animation {
 		}
 		if (activePages('advancment-smm')) {
 			this.AdvancmentSmm.start()
+		}
+		if (activePages('smm')) {
+			this.SmmAnimation.start()
 		}
 	}
 }
