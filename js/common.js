@@ -166,7 +166,7 @@ class CheckboxesInoputs {
 var burgerEff = new BurgerEff;
 //для back end
 
-/*
+
 let ajaxString;
 let country = $("input[name='country_name']").val();
  switch(country){
@@ -186,17 +186,17 @@ let country = $("input[name='country_name']").val();
  success: function(data){
  directText = data;
  }
- });*/
+  });
 
 
-let directText;
-$.ajax({
-	type: "GET",
-	url: "/direct-text.json",
-	success: function(data){
-		directText = data;
-	}
-});
+// let directText;
+// $.ajax({
+// 	type: "GET",
+// 	url: "/direct-text.json",
+// 	success: function(data){
+// 		directText = data;
+// 	}
+// });
 
 $(document).ready(function () {
 	//contextual-rates tabs
@@ -214,7 +214,7 @@ $(document).ready(function () {
 			for(let key in item ) {
 				if(Array.isArray(item[key])){
 					for(let i = prices.length;i--;){
-						prices[i].textContent = `${item[key][i]} грн`;
+						prices[i].textContent = `${item[key][i]} `;
 					}
 					return;
 				}
@@ -239,10 +239,14 @@ $(document).ready(function () {
 	}
 
 	// Анимация якорей
+	const timeMax = new TimelineMax ();
 	TweenMax.set('.anchors__text-block', {
 		x: 10,
 		autoAlpha: 0
 	});
+	timeMax.from('.anchors', 1,{
+		opacity: 0
+	}, "+=3");
 	function resetTween() {
 		TweenMax.set($(this).find('.anchors__text-block'), {
 			x: 10,
@@ -375,7 +379,18 @@ $(document).ready(function () {
 		)
 
 	}
-
+	$('.fa-question-circle').tooltip({
+		track: true,
+		position: {
+			my:'left+30 top-20',
+			collision:'none',
+			using: function(position){
+				"use strict";
+				$(this).css(position);
+				$(this).addClass('unique-tooltip');
+			}
+		}
+	});
 	var timeline = new TimelineMax;
 
 	timeline.from('.gear-1', 1, {

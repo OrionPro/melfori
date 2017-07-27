@@ -77,7 +77,7 @@ class ContextualAnimation {
 			}, '-=1');
 
 		this.tl2
-			.from('.section-2 h2', 1, {
+			.from('.section-2 .title-wrap', 1, {
 				y: -30,
 				opacity: 0,
 				ease: Power3.easeOut
@@ -135,7 +135,7 @@ class ContextualAnimation {
 				scaleY: 0.9,
 				ease: Power3.easeOut
 			},0.3, "-=1")
-			.staggerFrom('.decore-scheme-wrap-form input', 1, {
+			.staggerFrom('.unique-form-decore .animation-input', 1, {
 				y: 30,
 				autoAlpha: 0,
 				scaleY: 0.9,
@@ -149,7 +149,7 @@ class ContextualAnimation {
 			}, "-=1");
 
 		this.tl3
-			.from('.section-3 h2', 1, {
+			.from('.section-3 .title-wrap', 1, {
 				y: -30,
 				opacity: 0,
 				ease: Power3.easeOut
@@ -158,12 +158,13 @@ class ContextualAnimation {
 				x: -30,
 				opacity: 0,
 				ease: Bounce.easeOut
-			}, "-=0.5")
+			}, "-=0.5", "browser-view")
+			.add("browser-view", "-=1")
 			.from('.google-view', 1, {
 				x: 30,
 				opacity: 0,
 				ease: Bounce.easeOut
-			},"-=0.5")
+			}, "browser-view")
 			.from('.section-3 .about-text-wrap', 1, {
 				y: 30,
 				opacity: 0,
@@ -233,7 +234,7 @@ class ContextualAnimation {
 			}, "-=0.5");
 
 		this.tl7
-			.from('.section-7 h2', 1, {
+			.from('.section-7 .title-wrap', 1, {
 				y: -30,
 				autoAlpha: 0,
 				ease: Power3.easeOut
@@ -249,7 +250,7 @@ class ContextualAnimation {
 				ease: Power3.easeOut
 			}, "-=0.5");
 		this.tl8
-			.from('.contextual-rates h2',1,{
+			.from('.contextual-rates .title-wrap',1,{
 				y: -30,
 				autoAlpha: 0,
 				ease: Power3.easeOut
@@ -265,7 +266,7 @@ class ContextualAnimation {
 				skewX:'30deg'
 			},0.1,'-=0.5');
 		this.tl9
-			.from('.section-9 h2',1,{
+			.from('.section-9 .title-wrap',1,{
 				y: -30,
 				autoAlpha: 0,
 				ease: Power3.easeOut

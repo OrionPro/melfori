@@ -704,6 +704,8 @@ nav[canvas]
 				&:hover td i
 					/* style */
 					color: #fa9143
+				&:hover td span
+					color: #000
 				.description-prices
 					width: 175px
 				.table-font-style
@@ -747,6 +749,7 @@ nav[canvas]
 						&:hover
 							/* style */
 							@extend %main_btn_hover
+
 .what-is-a-contextual-advertising
 	padding-bottom: 80px
 	h2
@@ -756,6 +759,8 @@ nav[canvas]
 		height: 230px
 		overflow-y: auto
 		margin: 0 auto
+		p
+			text-indent: 20px
 .langing-page-whe-call-section
 	background: #f8f8fa
 	min-height: 874px
@@ -782,18 +787,22 @@ nav[canvas]
 			img
 				width: 100%
 		.text-wrap
-			padding-top: 62px
 			width: 470px
 			display: inline-block
 			h3
-				margin: 0
+				margin: 0 0 39px
 				line-height: 0.9
-				margin-bottom: 39px
 			aside
 				line-height: 1.3
 				font-size: 24px
 				p
 					margin-bottom: 15px
+				button
+					@extend %main_btn
+					margin-bottom: 15px
+					&:hover
+						/* style */
+						@extend %main_btn_hover
 				a
 					color: #01c1e6
 					&:hover
@@ -2286,12 +2295,10 @@ nav[canvas]
 		background: #f8f8fa
 
 	&.us-internet-shop-section, .tab_working_div
-
 		h2
 			margin-bottom: 3px
 		.items-wrap
 			margin-bottom: 45px
-		.item-wrap
 			.button
 				margin-top: 30px
 				margin-bottom: 50px
@@ -2307,36 +2314,52 @@ nav[canvas]
 					width: 100%
 				.hover-eff
 					position: absolute
-					height: 0
+					top: 0
+					left: 10px
 					width: calc(100% - 10px)
-					bottom: 200px
-					opacity: 0
-					background: rgba(48,60,72, 0.9)
+					height: 100%
+					opacity: 1
+					background: rgba(255,255,255, 0.8)
 					transition: .3s
 					text-align: center
 					padding: 20px
+					display: flex
+					flex-direction: column
+					justify-content: center
+					.niche-logo
+						display: flex
+						justify-content: space-between
+						.niche
+							font-size: 18px
+							h5
+								font-weight: bold
+							span
+								display: block
+								font-weight: lighter
+						.logo
+							img
+								max-width: 100%
 					p
 						font-size: 18px
 						font-weight: bold
-						color: #fff
+						color: #000
 						opacity: 1
 						transition: .3s
 						text-align: center
 						max-height: 60%
 						display: block
 					h4
-						color: #fff
+						color: #000
 						margin: 120px 0 10px
 						font-size: 24px
 					h5
 						font-size: 25px
 						margin: 50px 0 10px
-						color: #fff
+						color: #000
 				&:hover
 					.hover-eff
 						opacity: 1
 						bottom: 5px
-						height: calc(100% - 10px)
 						p
 							opacity: 1
 
@@ -2936,8 +2959,11 @@ nav[canvas]
 				color: #fff
 				font-size: 18px
 				padding: 20px 30px
+				width: 99%
 				height: 98%
 				background: rgba(0,0,0,0.5)
+				display: flex
+				flex-direction: column
 				.title-maskitem
 					h5
 						font-weight: bold
@@ -2956,8 +2982,10 @@ nav[canvas]
 					display: flex
 					align-items: center
 					justify-content: center
-					margin: 10px auto 0
+					align-self: center
 					cursor: pointer
+					margin-top: auto
+
 					@extend %main_btn
 					&:hover
 						@extend %main_btn_hover
@@ -3097,11 +3125,14 @@ nav[canvas]
 				background: #fff
 				color: $main_color
 				outline: none
-				box-shadow: 0px 5px 15px 0px rgba(50, 50, 50, 0.75);
+
 				&:hover
 					/* style */
-					box-shadow: none
-
+					color: #fff
+					@extend %main_btn_hover
+.decore-wrap
+	.decore
+		margin-bottom: 0
 
 	&.smm-form-section
 		h2
@@ -3301,10 +3332,19 @@ nav[canvas]
 						@extend %main_btn_active
 					&:focus
 						@extend %main_btn_focus
-
+	p
+		padding-left: 20px
+		text-align: justify
 	.decore-scheme-wrap
 		width: 631px
+		.order-advancment-in-smm
+			@extend %main_btn
+			width: 370px
+			&:hover
+				@extend %main_btn_hover
 		.decore
+			&.no-margin-bottom
+				margin-bottom: 20px
 			width: 100%
 			padding: 2px
 			margin-bottom: 120px
@@ -3418,6 +3458,7 @@ nav[canvas]
 						position: absolute
 						right: 0
 						@include sprite($arrow-color)
+
 .contextual-google-yandex-section
 	background: #fff
 	text-align: center
@@ -3803,8 +3844,7 @@ nav[canvas]
 		padding: 23px  0 0
 		position: relative
 		float: none
-		margin: auto
-		margin-bottom: 59px
+		margin: 0 auto 59px
 		ul
 			margin: 0px
 			padding-left: 101px
@@ -3875,7 +3915,6 @@ nav[canvas]
 		.gear-wrap
 			position: absolute
 			top: 0
-			top: 0px
 			left: 71px
 			.gear-2
 				display: inline-block
@@ -3892,6 +3931,124 @@ nav[canvas]
 				height: 30px
 				background: url('../img/gear2.png') no-repeat
 				background-size: contain
+//секция smm-rates
+.smm-rates
+	padding-bottom: 100px
+	.smm-rates-title
+		color: $main_color
+		h2
+			color: $main_color
+			text-align: center
+			padding-bottom: 60px
+	.smm-rates-table
+		table
+			width: 100%
+			.smm-rates-table-title
+				.table-title-premium
+					border-top: 1px solid $main_bg_gray
+					position: relative
+					width: 240px
+					&:before
+						content: "Самый популярный"
+						/* style */
+						position: absolute
+						top: -50px
+						left: -4px
+						width: 246px
+						height: 50px
+						display: flex
+						justify-content: center
+						align-items: center
+						background: $main_color
+						color: #fff
+						border-radius: 12px 12px 0 0
+						border: 3px solid #eeeff2
+						border-bottom: none
+						font-size: 18px
+						font-weight: lighter
+				th
+					background: $main_bg_gray
+					&:first-of-type
+						/* style */
+						background: #fff
+					&:nth-of-type(2)
+						border-radius: 12px 0 0 0
+					&:last-of-type
+						/* style */
+						border-radius: 0 12px 0 0
+					h3
+						margin: 0
+						text-align: center
+						padding: 20px 0 15px
+					span
+						display: block
+						font-weight: bold
+						text-align: center
+						font-size: 22px
+						padding-bottom: 20px
+			tr
+				transition: $transition
+				cursor: pointer
+				&:hover td
+					/* style */
+					color: $main_color_orange
+				&:hover td .fa-check
+					color: $main_color_orange
+				td
+					background: $main_bg_gray
+					text-align: center
+					padding: 10px 10px 10px 0
+					transition: $transition
+					i
+						font-size: 2rem
+						color: gray
+					.fa-question-circle
+						color: $main_color
+						cursor: pointer
+						float: right
+						&:hover:before
+							/* style */
+							content: "\f29c"
+					.fa-check
+						color: $main_color
+						transition: $transition
+					&:first-of-type
+						/* style */
+						background:	#fff
+						text-align: left
+					&:nth-of-type(1)
+						border-right: 4px solid white
+					&:last-of-type(4)
+						border-left: 4px solid white
+				.table-title-premium
+					background: #fff
+					border-left: 3px solid #eeeff2
+					border-right: 3px solid #eeeff2
+					&:first-of-type
+						/* style */
+						background: #000
+			.smm-rates-last
+				td
+					&:nth-of-type(2)
+						/* style */
+						border-radius: 0 0 0 12px
+						padding-left: 10px
+					&:last-of-type
+						/* style */
+						border-radius: 0 0 12px  0
+					button
+						@extend %main_btn
+						width: 150px
+						outline: none
+						margin: 0 auto
+						&:hover
+							/* style */
+							@extend %main_btn_hover
+				.table-title-premium
+					border-radius: 0 0 20px 20px
+					border: 3px solid #eeeff2
+					border-top: none
+
 //	Секция hot_clients
 .contextual-not-pay-section
 	.witnBottom
@@ -3908,6 +4065,7 @@ nav[canvas]
 			padding: 5px
 	&.smm-pages
 		text-align: center
+		padding-bottom: 100px
 		.social-item
 			&:hover .text
 				color: $main_color

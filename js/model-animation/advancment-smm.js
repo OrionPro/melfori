@@ -201,7 +201,7 @@ class AdvancmentSmm{
 		if (activeSection('section-5',300,500)) {
 			this.tl5.play();
 		}
-		if (activeSection('section-6',300,500)) {
+		if (activeSection('section-6',500,700)) {
 			this.tl6.play();
 		}
 	}

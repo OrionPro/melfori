@@ -226,13 +226,14 @@
 		}
 
 		table {
-			border-collapse: collapse;
+			border-collapse: separate;
 			border-spacing: 0
 		}
 
 		td,
 		th {
-			padding: 0
+			padding: 0;
+
 		}
 
 		* {
@@ -1736,59 +1737,7 @@
 	<div class="loader_inner"></div>
 </div>
 <!-- Модальное окно -->
-<div class="popup pop5 md-content" data-modal='modal-white'>
-		<div class="modal-text">
-			<h2>Обсудить проект</h2>
-			<p>проконсультиройтесь со специалистом</p>
-			<i class="fa fa-close"></i>
-			<div class="unique_challenge_form">
-				<form id="form">
-					<div class="form-inputs">
-					<div>						
-						<div class="modal_form_input_wrap">
-							<div class="modal_input_error">Заполните поле
-								<div class="modal_error_triangle"></div>
-								<div class="modal_error_chest_img"></div>
-							</div>
-							<input name="name" class="modal_form_input" type="text" placeholder="Имя">
-						</div>
-					</div>
-					<div>
 
-						<div class="modal_form_input_wrap">
-							<div class="modal_input_error">Заполните поле
-								<div class="modal_error_triangle"></div>
-								<div class="modal_error_chest_img"></div>
-							</div>
-							<input name="phone" class="modal_form_phone" type="text" placeholder=" Телефон">
-						</div>
-					</div>
-					<div>
-
-						<div class="modal_form_input_wrap">
-							<div class="modal_input_error">Заполните поле
-								<div class="modal_error_triangle"></div>
-								<div class="modal_error_chest_img"></div>
-							</div>
-							<input name="email" class="modal_form_email" type="text" placeholder=" E-mail">
-						</div>
-					</div>
-					<div>
-					</div>
-					</div>
-					<div class="form-text-area">
-						<textarea placeholder="Ваша идея" cols="30" rows="10"></textarea>
-					</div>
-					<input type="hidden" name="form_name" value="">
-					<input type="hidden" name="form_type" value="modal">
-					<input type="submit" value="Отправить">
-
-				</form>
-			</div>
-		</div>
-	<div class="overlay">
-	</div>
-</div>
 <div class="popup pop " data-modal="modal-1">
 	<div class="dm-table">
 		<div class="dm-cell">
@@ -2375,11 +2324,13 @@
 			</div>
 		</div>
 	</header>
-
 	<section id="contextual-not-pay-section" class="contextual-not-pay-section section-2">
 		<div class="container">
 			<div class="row">
-				<h2>Не платите за лишних людей</h2>
+
+				<div class="title-wrap">
+					<h2>Не платите за лишних людей</h2>
+				</div>
 				<div class="clearfix">
 					<div class="col-lg-8 col-md-8 col-sm-9">
 						<div class="about-wrap">
@@ -2453,7 +2404,7 @@
 						<div class="unique-form-decore">
 							<div class="unique_challenge_form">
 								<form>
-									<div class="modal_form_input_wrap">
+									<div class="modal_form_input_wrap animation-input">
 										<div class="modal_input_error">Заполните поле
 											<div class="modal_error_triangle"></div>
 											<div class="modal_error_chest_img"></div>
@@ -2461,14 +2412,14 @@
 										<input type="text" placeholder="Имя"
 											   class="modal_form_input animation_form_address">
 									</div>
-									<div class="modal_form_input_wrap">
+									<div class="modal_form_input_wrap animation-input">
 										<div class="modal_input_error">Заполните поле
 											<div class="modal_error_triangle"></div>
 											<div class="modal_error_chest_img"></div>
 										</div>
 										<input name="email" placeholder="E-mail" class="modal_form_email" type="text">
 									</div>
-									<div class="modal_form_input_wrap">
+									<div class="modal_form_input_wrap animation-input">
 										<div class="modal_input_error">Заполните поле
 											<div class="modal_error_triangle"></div>
 											<div class="modal_error_chest_img"></div>
@@ -2476,7 +2427,7 @@
 										<input name="phone" placeholder="333" class="modal_form_phone ua" type="text">
 									</div>
 
-									<div class="modal_form_input_wrap">
+									<div class="modal_form_input_wrap animation-input">
 										<div class="modal_input_error">Заполните поле
 											<div class="modal_error_triangle"></div>
 											<div class="modal_error_chest_img"></div>
@@ -2484,7 +2435,8 @@
 										<input type="text" placeholder="Ссылка на Ваш сайт (для анализа)"
 											   class="modal_form_input animation_form_address">
 									</div>
-									<input type="submit" value="Давайте работать">
+									<div class="animation-input">
+										<input type="submit" value="Давайте работать"></div>
 								</form>
 							</div>
 						</div>
@@ -2499,8 +2451,9 @@
 	<section class="contextual-google-yandex-section section-3">
 		<div class="container">
 			<div class="row">
-				<h2>Мы обеспечиваем своих клиентов заявками
-					сразу по двум фронтам</h2>
+				<div class="title-wrap">
+					<h2>Мы обеспечиваем своих клиентов заявками					сразу по двум фронтам</h2>
+				</div>
 				<div class="clearfix">
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 yandex-view">
 						<div class="img-wrap">
@@ -2638,14 +2591,14 @@
 							<h3>Проконсультируйтесь, уточните важные моменты</h3>
 							<p>Мы выслушаем вас, и предложим оптимальный план сотрудничества</p>
 						</div>
-						<input type="text" value="Оставить заявку"></div>
+						<input type="text" value="Оставить заявку" readonly></div>
 					<div class="description-in-five-steps-item">
 						<span class="number">-2</span>
 						<div class="paragraff">
 							<h3>Прочитайте и подпишите договор </h3>
 							<p>В нём указаны наши обязанности и ваши гарантии</p>
 						</div>
-						<input type="text" value="Скачать бриф"></div>
+						<input type="text" value="Скачать бриф" readonly></div>
 					<div class="description-in-five-steps-item">
 						<span class="number">-3</span>
 						<div class="paragraff">
@@ -2666,7 +2619,7 @@
 							<h3>Не упустите первых клиентов! </h3>
 							<p>Они начнут звонить, писать и оставлять заявки сразу после запуска</p>
 						</div>
-						<input type="text" value="Скачать пример договора"></div>
+						<input type="text" value="Скачать пример договора" readonly></div>
 				</div>
 			</div>
 			<div class="context-prise-wrap col-lg-10">
@@ -2684,945 +2637,969 @@
 					</p>
 				</div>
 			</div>
-	</div>
-</section>
+		</div>
+	</section>
 
-<section class="several_cases contextual gray section-6 lightGallery">
-	<div class="container">
-		<div class="row">
-			<div class="title-wrap">
-				<h2>Посмотрите на реальные результаты</h2>
-				<p>тех, кто доверил нам настройку контекстной рекламы</p>
-			</div>
-			<div class="carousel-wrap">
-				<div class="about-our-results-carousel">
-					<div class="about-our-results-item">
-						<div class="inside-item-results"
-							 style="background: url(img/services_item_img1.jpg) top center no-repeat">
-							<img src="img/services_item_img1.jpg" height="317" alt="">
-						</div>
-						<div class="mask-item">
-							<div class="title-maskitem">
-								<h5>Кейс</h5>
-								<span>Proxy-seller.ru</span>
-							</div>
-							<p>Разработали интерактивный landing и увеличили количество обращенийв 2 раза Разработали
-								интерактивный landing и увеличили количество обращений в 2 раза</p>
-							<a data-src="img/services_item_img1.jpg" class="open_gallery">
-								<i class="fa fa-eye"></i>
-								<span>Смотреть кейс</span>
-							</a>
-						</div>
-					</div>
-					<div class="about-our-results-item">
-						<div class="inside-item-results"
-							 style="background: url(img/services_item_img1.jpg) top center no-repeat">
-							<img src="img/services_item_img1.jpg" height="300" alt="">
-						</div>
-						<div class="mask-item">
-							<div class="title-maskitem">
-								<h5>Кейс</h5>
-								<span>Proxy-seller.ru</span>
-							</div>
-							<p>Разработали интерактивный landing и увеличили количество обращенийв 2 раза Разработали
-								интерактивный landing и увеличили количество обращений в 2 раза</p>
-							<a data-src="img/services_item_img1.jpg" class="open_gallery">
-								<i class="fa fa-eye"></i>
-								<span>Смотреть кейс</span>
-							</a>
-						</div>
-					</div>
-					<div class="about-our-results-item">
-						<div class="inside-item-results"
-							 style="background: url(img/services_item_img1.jpg) top center no-repeat">
-							<img src="img/services_item_img1.jpg" height="300" alt="">
-						</div>
-						<div class="mask-item">
-							<div class="title-maskitem">
-								<h5>Кейс</h5>
-								<span>Proxy-seller.ru</span>
-							</div>
-							<p>Разработали интерактивный landing и увеличили количество обращенийв 2 раза Разработали
-								интерактивный landing и увеличили количество обращений в 2 раза</p>
-							<a data-src="img/services_item_img1.jpg" class="open_gallery">
-								<i class="fa fa-eye"></i>
-								<span>Смотреть кейс</span>
-							</a>
-						</div>
-					</div>
-					<div class="about-our-results-item">
-						<div class="inside-item-results"
-							 style="background: url(img/services_item_img1.jpg) top center no-repeat">
-							<img src="img/services_item_img1.jpg" height="300" alt="">
-						</div>
-						<div class="mask-item">
-							<div class="title-maskitem">
-								<h5>Кейс</h5>
-								<span>Proxy-seller.ru</span>
-							</div>
-							<p>Разработали интерактивный landing и увеличили количество обращенийв 2 раза Разработали
-								интерактивный landing и увеличили количество обращений в 2 раза</p>
-							<a data-src="img/services_item_img1.jpg" class="open_gallery">
-								<i class="fa fa-eye"></i>
-								<span>Смотреть кейс</span>
-							</a>
-						</div>
-					</div>
-					<div class="about-our-results-item">
-						<div class="inside-item-results"
-							 style="background: url(img/services_item_img1.jpg) top center no-repeat">
-							<img src="img/services_item_img1.jpg" height="300" alt="">
-						</div>
-						<div class="mask-item">
-							<div class="title-maskitem">
-								<h5>Кейс</h5>
-								<span>Proxy-seller.ru</span>
-							</div>
-							<p>Разработали интерактивный landing и увеличили количество обращенийв 2 раза Разработали
-								интерактивный landing и увеличили количество обращений в 2 раза</p>
-							<a data-src="img/services_item_img1.jpg" class="open_gallery">
-								<i class="fa fa-eye"></i>
-								<span>Смотреть кейс</span></a>
-						</div>
-					</div>
+	<section class="several_cases contextual gray section-6 lightGallery">
+		<div class="container">
+			<div class="row">
+				<div class="title-wrap">
+					<h2>Посмотрите на реальные результаты</h2>
+					<p>тех, кто доверил нам настройку контекстной рекламы</p>
 				</div>
-				<div class="carousel-buttons">
-					<div class="left-btn">
-						<i class="fa fa-angle-left">
-
-						</i>
+				<div class="carousel-wrap">
+					<div class="about-our-results-carousel">
+						<div class="about-our-results-item">
+							<div class="inside-item-results"
+								 style="background: url(img/services_item_img1.jpg) top center no-repeat">
+								<img src="img/services_item_img1.jpg" height="317" alt="">
+							</div>
+							<div class="mask-item">
+								<div class="title-maskitem">
+									<h5>Кейс</h5>
+									<span>Proxy-seller.ru</span>
+								</div>
+								<p>Разработали интерактивный landing и увеличили количество обращенийв 2 раза
+									Разработали
+									интерактивный landing и увеличили количество обращений в 2 раза</p>
+								<a data-src="img/services_item_img1.jpg" class="open_gallery">
+									<i class="fa fa-eye"></i>
+									<span>Смотреть кейс</span>
+								</a>
+							</div>
+						</div>
+						<div class="about-our-results-item">
+							<div class="inside-item-results"
+								 style="background: url(img/services_item_img1.jpg) top center no-repeat">
+								<img src="img/services_item_img1.jpg" height="300" alt="">
+							</div>
+							<div class="mask-item">
+								<div class="title-maskitem">
+									<h5>Кейс</h5>
+									<span>Proxy-seller.ru</span>
+								</div>
+								<p>Разработали интерактивный landing и увеличили количество обращенийв 2 раза
+									Разработали
+									интерактивный landing и увеличили количество обращений в 2 раза</p>
+								<a data-src="img/services_item_img1.jpg" class="open_gallery">
+									<i class="fa fa-eye"></i>
+									<span>Смотреть кейс</span>
+								</a>
+							</div>
+						</div>
+						<div class="about-our-results-item">
+							<div class="inside-item-results"
+								 style="background: url(img/services_item_img1.jpg) top center no-repeat">
+								<img src="img/services_item_img1.jpg" height="300" alt="">
+							</div>
+							<div class="mask-item">
+								<div class="title-maskitem">
+									<h5>Кейс</h5>
+									<span>Proxy-seller.ru</span>
+								</div>
+								<p>Разработали интерактивный landing и увеличили количество обращенийв 2 раза
+									Разработали
+									интерактивный landing и увеличили количество обращений в 2 раза</p>
+								<a data-src="img/services_item_img1.jpg" class="open_gallery">
+									<i class="fa fa-eye"></i>
+									<span>Смотреть кейс</span>
+								</a>
+							</div>
+						</div>
+						<div class="about-our-results-item">
+							<div class="inside-item-results"
+								 style="background: url(img/services_item_img1.jpg) top center no-repeat">
+								<img src="img/services_item_img1.jpg" height="300" alt="">
+							</div>
+							<div class="mask-item">
+								<div class="title-maskitem">
+									<h5>Кейс</h5>
+									<span>Proxy-seller.ru</span>
+								</div>
+								<p>Разработали интерактивный landing и увеличили количество обращенийв 2 раза
+									Разработали
+									интерактивный landing и увеличили количество обращений в 2 раза</p>
+								<a data-src="img/services_item_img1.jpg" class="open_gallery">
+									<i class="fa fa-eye"></i>
+									<span>Смотреть кейс</span>
+								</a>
+							</div>
+						</div>
+						<div class="about-our-results-item">
+							<div class="inside-item-results"
+								 style="background: url(img/services_item_img1.jpg) top center no-repeat">
+								<img src="img/services_item_img1.jpg" height="300" alt="">
+							</div>
+							<div class="mask-item">
+								<div class="title-maskitem">
+									<h5>Кейс</h5>
+									<span>Proxy-seller.ru</span>
+								</div>
+								<p>Разработали интерактивный landing и увеличили количество обращенийв 2 раза
+									Разработали
+									интерактивный landing и увеличили количество обращений в 2 раза</p>
+								<a data-src="img/services_item_img1.jpg" class="open_gallery">
+									<i class="fa fa-eye"></i>
+									<span>Смотреть кейс</span></a>
+							</div>
+						</div>
 					</div>
-					<div class="right-btn">
-						<i class="fa fa-angle-right"></i>
+					<div class="carousel-buttons">
+						<div class="left-btn">
+							<i class="fa fa-angle-left">
+
+							</i>
+						</div>
+						<div class="right-btn">
+							<i class="fa fa-angle-right"></i>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
-<section class="contextual-rates section-8">
-	<div class="container">
-		<h2>Стоймость услуг</h2>
-		<div class="rates-table">
-			<div class="rates-menu">
-				<div class="rates-menu-item" data-go='0'>
-					<div class="icon">
+	</section>
+	<section class="contextual-rates section-8">
+		<div class="container">
+			<div class="title-wrap">
+				<h2>Стоймость услуг</h2>
+			</div>
+			<div class="rates-table">
+				<div class="rates-menu">
+					<div class="rates-menu-item" data-go='0'>
+						<div class="icon">
 
-						<svg
-								xmlns:dc="http://purl.org/dc/elements/1.1/"
-								xmlns:cc="http://creativecommons.org/ns#"
-								xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-								xmlns:svg="http://www.w3.org/2000/svg"
-								xmlns="http://www.w3.org/2000/svg"
-								xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-								xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-								width="27.5"
-								height="26.5"
-								viewBox="0 0 27.5 26.5"
-								id="svg2"
-								version="1.1"
-								inkscape:version="0.91 r13725"
-								sodipodi:docname="Настройка Яндекс. Директ.svg">
-							<defs
-									id="defs4"/>
-							<sodipodi:namedview
-									id="base"
-									pagecolor="#ffffff"
-									bordercolor="#666666"
-									borderopacity="1.0"
-									inkscape:pageopacity="0.0"
-									inkscape:pageshadow="2"
-									inkscape:zoom="11.2"
-									inkscape:cx="18.980235"
-									inkscape:cy="13.026986"
-									inkscape:document-units="px"
-									inkscape:current-layer="layer1"
-									showgrid="false"
-									showguides="true"
-									inkscape:guide-bbox="true"
-									units="px"
-									inkscape:window-width="1536"
-									inkscape:window-height="801"
-									inkscape:window-x="-8"
-									inkscape:window-y="-8"
-									inkscape:window-maximized="1"/>
-							<metadata
-									id="metadata7">
-								<rdf:RDF>
-									<cc:Work
-											rdf:about="">
-										<dc:format>image/svg+xml</dc:format>
-										<dc:type
-												rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-										<dc:title></dc:title>
-									</cc:Work>
-								</rdf:RDF>
-							</metadata>
-							<g
-									inkscape:label="Layer 1"
-									inkscape:groupmode="layer"
-									id="layer1"
-									transform="translate(0,-1025.8622)">
+							<svg
+									xmlns:dc="http://purl.org/dc/elements/1.1/"
+									xmlns:cc="http://creativecommons.org/ns#"
+									xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+									xmlns:svg="http://www.w3.org/2000/svg"
+									xmlns="http://www.w3.org/2000/svg"
+									xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+									xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+									width="27.5"
+									height="26.5"
+									viewBox="0 0 27.5 26.5"
+									id="svg2"
+									version="1.1"
+									inkscape:version="0.91 r13725"
+									sodipodi:docname="Настройка Яндекс. Директ.svg">
+								<defs
+										id="defs4"/>
+								<sodipodi:namedview
+										id="base"
+										pagecolor="#ffffff"
+										bordercolor="#666666"
+										borderopacity="1.0"
+										inkscape:pageopacity="0.0"
+										inkscape:pageshadow="2"
+										inkscape:zoom="11.2"
+										inkscape:cx="18.980235"
+										inkscape:cy="13.026986"
+										inkscape:document-units="px"
+										inkscape:current-layer="layer1"
+										showgrid="false"
+										showguides="true"
+										inkscape:guide-bbox="true"
+										units="px"
+										inkscape:window-width="1536"
+										inkscape:window-height="801"
+										inkscape:window-x="-8"
+										inkscape:window-y="-8"
+										inkscape:window-maximized="1"/>
+								<metadata
+										id="metadata7">
+									<rdf:RDF>
+										<cc:Work
+												rdf:about="">
+											<dc:format>image/svg+xml</dc:format>
+											<dc:type
+													rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+											<dc:title></dc:title>
+										</cc:Work>
+									</rdf:RDF>
+								</metadata>
 								<g
-										id="g4167"
-										transform="translate(-568.57414,807.72546)">
-									<path
-											inkscape:connector-curvature="0"
-											id="path4161"
-											d="m 569.22097,218.79695 24.30679,0 0,15.46796 1.70464,7.38674 -4.35629,0 -2.39911,-7.38674 -1.6415,0 -0.0631,3.09359 -3.8512,0 -0.12627,-3.09359 -2.46225,0 0,9.53331 -3.6618,0 0.1894,-9.53331 -3.21986,0 0,9.53331 -4.34776,0.003 z"
-											style="fill:none;fill-rule:evenodd;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
-									<rect
-											y="222.14308"
-											x="574.71368"
-											height="2.4622469"
-											width="12.437503"
-											id="rect4163"
-											style="opacity:1;fill-opacity:1;fill-rule:evenodd;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-dashoffset:0;stroke-opacity:0.80392157"/>
-									<rect
-											style="opacity:1;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-dashoffset:0;stroke-opacity:0.80392157"
-											id="rect4165"
-											width="12.437503"
-											height="2.4622469"
-											x="574.71368"
-											y="225.86803"/>
-								</g>
-							</g>
-						</svg>
-
-					</div>
-					<span>Настройка Яндекс Директ</span>
-				</div>
-				<div class="rates-menu-item" data-go='33'>
-					<div class="icon">
-						<svg
-								xmlns:dc="http://purl.org/dc/elements/1.1/"
-								xmlns:cc="http://creativecommons.org/ns#"
-								xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-								xmlns:svg="http://www.w3.org/2000/svg"
-								xmlns="http://www.w3.org/2000/svg"
-								xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-								xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-								width="27.5"
-								height="26.5"
-								viewBox="0 0 27.5 26.5"
-								id="svg2"
-								version="1.1"
-								inkscape:version="0.91 r13725"
-								sodipodi:docname="Настройка Google. Adwords.svg">
-							<defs
-									id="defs4"/>
-							<sodipodi:namedview
-									id="base"
-									pagecolor="#ffffff"
-									bordercolor="#666666"
-									borderopacity="1.0"
-									inkscape:pageopacity="0.0"
-									inkscape:pageshadow="2"
-									inkscape:zoom="5.6"
-									inkscape:cx="14.734843"
-									inkscape:cy="26.611352"
-									inkscape:document-units="px"
-									inkscape:current-layer="layer1"
-									showgrid="false"
-									showguides="true"
-									inkscape:guide-bbox="true"
-									units="px"
-									inkscape:window-width="1536"
-									inkscape:window-height="801"
-									inkscape:window-x="-8"
-									inkscape:window-y="-8"
-									inkscape:window-maximized="1">
-								<sodipodi:guide
-										position="56.568543,-31.567267"
-										orientation="0,1"
-										id="guide4194"/>
-								<sodipodi:guide
-										position="64.018418,-53.159278"
-										orientation="0,1"
-										id="guide4196"/>
-								<sodipodi:guide
-										position="53.033009,-42.173869"
-										orientation="1,0"
-										id="guide4198"/>
-							</sodipodi:namedview>
-							<metadata
-									id="metadata7">
-								<rdf:RDF>
-									<cc:Work
-											rdf:about="">
-										<dc:format>image/svg+xml</dc:format>
-										<dc:type
-												rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-										<dc:title></dc:title>
-									</cc:Work>
-								</rdf:RDF>
-							</metadata>
-							<g
-									inkscape:label="Layer 1"
-									inkscape:groupmode="layer"
-									id="layer1"
-									transform="translate(0,-1025.8622)">
-								<path
-										style="fill-rule:evenodd;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-										d="m 10.606602,1028.3711 -7.9549514,21.592 6.187184,0 4.6719564,-10.9854 5.303301,10.9854 5.682108,0 -7.449875,-21.592 z"
-										id="path4200"
-										inkscape:connector-curvature="0"/>
-							</g>
-						</svg>
-					</div>
-					<span>Насторойка Google. Adwords</span>
-				</div>
-				<div class="rates-menu-item" data-go='67'>
-					<div class="icon">
-						<svg
-								xmlns:dc="http://purl.org/dc/elements/1.1/"
-								xmlns:cc="http://creativecommons.org/ns#"
-								xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-								xmlns:svg="http://www.w3.org/2000/svg"
-								xmlns="http://www.w3.org/2000/svg"
-								xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-								xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-								width="27.5"
-								height="26.5"
-								viewBox="0 0 27.5 26.5"
-								id="svg2"
-								version="1.1"
-								inkscape:version="0.91 r13725"
-								sodipodi:docname="Комплексный Пакет ЯД+GA.svg">
-							<defs
-									id="defs4"/>
-							<sodipodi:namedview
-									id="base"
-									pagecolor="#ffffff"
-									bordercolor="#666666"
-									borderopacity="1.0"
-									inkscape:pageopacity="0.0"
-									inkscape:pageshadow="2"
-									inkscape:zoom="11.2"
-									inkscape:cx="11.515824"
-									inkscape:cy="27.704067"
-									inkscape:document-units="px"
-									inkscape:current-layer="layer1"
-									showgrid="false"
-									showguides="true"
-									inkscape:guide-bbox="true"
-									units="px"
-									inkscape:window-width="1536"
-									inkscape:window-height="801"
-									inkscape:window-x="-8"
-									inkscape:window-y="-8"
-									inkscape:window-maximized="1">
-								<sodipodi:guide
-										position="56.568543,-31.567267"
-										orientation="0,1"
-										id="guide4194"/>
-								<sodipodi:guide
-										position="64.018418,-53.159278"
-										orientation="0,1"
-										id="guide4196"/>
-								<sodipodi:guide
-										position="53.033009,-42.173869"
-										orientation="1,0"
-										id="guide4198"/>
-							</sodipodi:namedview>
-							<metadata
-									id="metadata7">
-								<rdf:RDF>
-									<cc:Work
-											rdf:about="">
-										<dc:format>image/svg+xml</dc:format>
-										<dc:type
-												rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-										<dc:title></dc:title>
-									</cc:Work>
-								</rdf:RDF>
-							</metadata>
-							<g
-									inkscape:label="Layer 1"
-									inkscape:groupmode="layer"
-									id="layer1"
-									transform="translate(0,-1025.8622)">
-								<g
-										id="g4231"
-										transform="matrix(0.75442143,0,0,0.75442143,5.0309232,281.17753)">
-									<path
-											inkscape:connector-curvature="0"
-											id="path4200"
-											d="m 12.840821,991.18431 2.257205,16.38439 3.92402,-2.0925 -0.752214,-8.54722 7.078697,5.17362 3.603691,-1.9217 -12.027214,-11.1745 z"
-											style="fill-opacity:1;fill-rule:evenodd;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+										inkscape:label="Layer 1"
+										inkscape:groupmode="layer"
+										id="layer1"
+										transform="translate(0,-1025.8622)">
 									<g
-											transform="translate(-6.6469355,-31.103335)"
-											inkscape:label="Layer 1"
-											id="layer1-5">
+											id="g4167"
+											transform="translate(-568.57414,807.72546)">
+										<path
+												inkscape:connector-curvature="0"
+												id="path4161"
+												d="m 569.22097,218.79695 24.30679,0 0,15.46796 1.70464,7.38674 -4.35629,0 -2.39911,-7.38674 -1.6415,0 -0.0631,3.09359 -3.8512,0 -0.12627,-3.09359 -2.46225,0 0,9.53331 -3.6618,0 0.1894,-9.53331 -3.21986,0 0,9.53331 -4.34776,0.003 z"
+												style="fill:none;fill-rule:evenodd;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+										<rect
+												y="222.14308"
+												x="574.71368"
+												height="2.4622469"
+												width="12.437503"
+												id="rect4163"
+												style="opacity:1;fill-opacity:1;fill-rule:evenodd;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-dashoffset:0;stroke-opacity:0.80392157"/>
+										<rect
+												style="opacity:1;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-dashoffset:0;stroke-opacity:0.80392157"
+												id="rect4165"
+												width="12.437503"
+												height="2.4622469"
+												x="574.71368"
+												y="225.86803"/>
+									</g>
+								</g>
+							</svg>
+
+						</div>
+						<span>Настройка Яндекс Директ</span>
+					</div>
+					<div class="rates-menu-item" data-go='33'>
+						<div class="icon">
+							<svg
+									xmlns:dc="http://purl.org/dc/elements/1.1/"
+									xmlns:cc="http://creativecommons.org/ns#"
+									xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+									xmlns:svg="http://www.w3.org/2000/svg"
+									xmlns="http://www.w3.org/2000/svg"
+									xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+									xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+									width="27.5"
+									height="26.5"
+									viewBox="0 0 27.5 26.5"
+									id="svg2"
+									version="1.1"
+									inkscape:version="0.91 r13725"
+									sodipodi:docname="Настройка Google. Adwords.svg">
+								<defs
+										id="defs4"/>
+								<sodipodi:namedview
+										id="base"
+										pagecolor="#ffffff"
+										bordercolor="#666666"
+										borderopacity="1.0"
+										inkscape:pageopacity="0.0"
+										inkscape:pageshadow="2"
+										inkscape:zoom="5.6"
+										inkscape:cx="14.734843"
+										inkscape:cy="26.611352"
+										inkscape:document-units="px"
+										inkscape:current-layer="layer1"
+										showgrid="false"
+										showguides="true"
+										inkscape:guide-bbox="true"
+										units="px"
+										inkscape:window-width="1536"
+										inkscape:window-height="801"
+										inkscape:window-x="-8"
+										inkscape:window-y="-8"
+										inkscape:window-maximized="1">
+									<sodipodi:guide
+											position="56.568543,-31.567267"
+											orientation="0,1"
+											id="guide4194"/>
+									<sodipodi:guide
+											position="64.018418,-53.159278"
+											orientation="0,1"
+											id="guide4196"/>
+									<sodipodi:guide
+											position="53.033009,-42.173869"
+											orientation="1,0"
+											id="guide4198"/>
+								</sodipodi:namedview>
+								<metadata
+										id="metadata7">
+									<rdf:RDF>
+										<cc:Work
+												rdf:about="">
+											<dc:format>image/svg+xml</dc:format>
+											<dc:type
+													rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+											<dc:title></dc:title>
+										</cc:Work>
+									</rdf:RDF>
+								</metadata>
+								<g
+										inkscape:label="Layer 1"
+										inkscape:groupmode="layer"
+										id="layer1"
+										transform="translate(0,-1025.8622)">
+									<path
+											style="fill-rule:evenodd;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+											d="m 10.606602,1028.3711 -7.9549514,21.592 6.187184,0 4.6719564,-10.9854 5.303301,10.9854 5.682108,0 -7.449875,-21.592 z"
+											id="path4200"
+											inkscape:connector-curvature="0"/>
+								</g>
+							</svg>
+						</div>
+						<span>Насторойка Google. Adwords</span>
+					</div>
+					<div class="rates-menu-item" data-go='67'>
+						<div class="icon">
+							<svg
+									xmlns:dc="http://purl.org/dc/elements/1.1/"
+									xmlns:cc="http://creativecommons.org/ns#"
+									xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+									xmlns:svg="http://www.w3.org/2000/svg"
+									xmlns="http://www.w3.org/2000/svg"
+									xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+									xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+									width="27.5"
+									height="26.5"
+									viewBox="0 0 27.5 26.5"
+									id="svg2"
+									version="1.1"
+									inkscape:version="0.91 r13725"
+									sodipodi:docname="Комплексный Пакет ЯД+GA.svg">
+								<defs
+										id="defs4"/>
+								<sodipodi:namedview
+										id="base"
+										pagecolor="#ffffff"
+										bordercolor="#666666"
+										borderopacity="1.0"
+										inkscape:pageopacity="0.0"
+										inkscape:pageshadow="2"
+										inkscape:zoom="11.2"
+										inkscape:cx="11.515824"
+										inkscape:cy="27.704067"
+										inkscape:document-units="px"
+										inkscape:current-layer="layer1"
+										showgrid="false"
+										showguides="true"
+										inkscape:guide-bbox="true"
+										units="px"
+										inkscape:window-width="1536"
+										inkscape:window-height="801"
+										inkscape:window-x="-8"
+										inkscape:window-y="-8"
+										inkscape:window-maximized="1">
+									<sodipodi:guide
+											position="56.568543,-31.567267"
+											orientation="0,1"
+											id="guide4194"/>
+									<sodipodi:guide
+											position="64.018418,-53.159278"
+											orientation="0,1"
+											id="guide4196"/>
+									<sodipodi:guide
+											position="53.033009,-42.173869"
+											orientation="1,0"
+											id="guide4198"/>
+								</sodipodi:namedview>
+								<metadata
+										id="metadata7">
+									<rdf:RDF>
+										<cc:Work
+												rdf:about="">
+											<dc:format>image/svg+xml</dc:format>
+											<dc:type
+													rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+											<dc:title></dc:title>
+										</cc:Work>
+									</rdf:RDF>
+								</metadata>
+								<g
+										inkscape:label="Layer 1"
+										inkscape:groupmode="layer"
+										id="layer1"
+										transform="translate(0,-1025.8622)">
+									<g
+											id="g4231"
+											transform="matrix(0.75442143,0,0,0.75442143,5.0309232,281.17753)">
+										<path
+												inkscape:connector-curvature="0"
+												id="path4200"
+												d="m 12.840821,991.18431 2.257205,16.38439 3.92402,-2.0925 -0.752214,-8.54722 7.078697,5.17362 3.603691,-1.9217 -12.027214,-11.1745 z"
+												style="fill-opacity:1;fill-rule:evenodd;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
 										<g
-												id="g4167"
-												transform="translate(-568.57414,807.72546)">
-											<path
-													sodipodi:nodetypes="cccccccccccccccccccc"
-													inkscape:connector-curvature="0"
-													id="path4161"
-													d="m 569.22097,218.79695 19.4193,0.0348 1.72376,12.09399 3.36271,-1.79371 -0.19905,5.13284 1.70464,7.38674 -4.35629,0 -2.39911,-7.38674 -1.6415,0 -0.0631,3.09359 -3.8512,0 -0.12627,-3.09359 -2.46225,0 0,9.53331 -3.6618,0 0.1894,-9.53331 -3.21986,0 0,9.53331 -4.34776,0.003 z"
-													style="fill-rule:evenodd;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
-											<rect
-													y="222.14308"
-													x="574.71368"
-													height="2.4622469"
-													width="12.437503"
-													id="rect4163"
-													style="opacity:1;fill-opacity:1;fill-rule:evenodd;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-dashoffset:0;stroke-opacity:0.80392157"/>
-											<rect
-													style="opacity:1;fill-opacity:1;fill-rule:evenodd;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-dashoffset:0;stroke-opacity:0.80392157"
-													id="rect4165"
-													width="12.437503"
-													height="2.4622469"
-													x="574.71368"
-													y="225.86803"/>
+												transform="translate(-6.6469355,-31.103335)"
+												inkscape:label="Layer 1"
+												id="layer1-5">
+											<g
+													id="g4167"
+													transform="translate(-568.57414,807.72546)">
+												<path
+														sodipodi:nodetypes="cccccccccccccccccccc"
+														inkscape:connector-curvature="0"
+														id="path4161"
+														d="m 569.22097,218.79695 19.4193,0.0348 1.72376,12.09399 3.36271,-1.79371 -0.19905,5.13284 1.70464,7.38674 -4.35629,0 -2.39911,-7.38674 -1.6415,0 -0.0631,3.09359 -3.8512,0 -0.12627,-3.09359 -2.46225,0 0,9.53331 -3.6618,0 0.1894,-9.53331 -3.21986,0 0,9.53331 -4.34776,0.003 z"
+														style="fill-rule:evenodd;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+												<rect
+														y="222.14308"
+														x="574.71368"
+														height="2.4622469"
+														width="12.437503"
+														id="rect4163"
+														style="opacity:1;fill-opacity:1;fill-rule:evenodd;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-dashoffset:0;stroke-opacity:0.80392157"/>
+												<rect
+														style="opacity:1;fill-opacity:1;fill-rule:evenodd;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-dashoffset:0;stroke-opacity:0.80392157"
+														id="rect4165"
+														width="12.437503"
+														height="2.4622469"
+														x="574.71368"
+														y="225.86803"/>
+											</g>
 										</g>
 									</g>
 								</g>
-							</g>
-						</svg>
+							</svg>
+						</div>
+						<span>Комплексный Пакет ЯД+GA</span>
 					</div>
-					<span>Комплексный Пакет ЯД+GA</span>
-				</div>
-				<div class="back-main-color">
-					<div class="icon">
+					<div class="back-main-color">
+						<div class="icon">
 
-						<svg
-								xmlns:dc="http://purl.org/dc/elements/1.1/"
-								xmlns:cc="http://creativecommons.org/ns#"
-								xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-								xmlns:svg="http://www.w3.org/2000/svg"
-								xmlns="http://www.w3.org/2000/svg"
-								xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-								xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-								width="27.5"
-								height="26.5"
-								viewBox="0 0 27.5 26.5"
-								id="svg2"
-								version="1.1"
-								inkscape:version="0.91 r13725"
-								sodipodi:docname="Настройка Яндекс. Директ.svg">
-							<defs
-									id="defs4"/>
-							<sodipodi:namedview
-									id="base"
-									pagecolor="#ffffff"
-									bordercolor="#666666"
-									borderopacity="1.0"
-									inkscape:pageopacity="0.0"
-									inkscape:pageshadow="2"
-									inkscape:zoom="11.2"
-									inkscape:cx="18.980235"
-									inkscape:cy="13.026986"
-									inkscape:document-units="px"
-									inkscape:current-layer="layer1"
-									showgrid="false"
-									showguides="true"
-									inkscape:guide-bbox="true"
-									units="px"
-									inkscape:window-width="1536"
-									inkscape:window-height="801"
-									inkscape:window-x="-8"
-									inkscape:window-y="-8"
-									inkscape:window-maximized="1"/>
-							<metadata
-									id="metadata7">
-								<rdf:RDF>
-									<cc:Work
-											rdf:about="">
-										<dc:format>image/svg+xml</dc:format>
-										<dc:type
-												rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-										<dc:title></dc:title>
-									</cc:Work>
-								</rdf:RDF>
-							</metadata>
-							<g
-									inkscape:label="Layer 1"
-									inkscape:groupmode="layer"
-									id="layer1"
-									transform="translate(0,-1025.8622)">
+							<svg
+									xmlns:dc="http://purl.org/dc/elements/1.1/"
+									xmlns:cc="http://creativecommons.org/ns#"
+									xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+									xmlns:svg="http://www.w3.org/2000/svg"
+									xmlns="http://www.w3.org/2000/svg"
+									xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+									xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+									width="27.5"
+									height="26.5"
+									viewBox="0 0 27.5 26.5"
+									id="svg2"
+									version="1.1"
+									inkscape:version="0.91 r13725"
+									sodipodi:docname="Настройка Яндекс. Директ.svg">
+								<defs
+										id="defs4"/>
+								<sodipodi:namedview
+										id="base"
+										pagecolor="#ffffff"
+										bordercolor="#666666"
+										borderopacity="1.0"
+										inkscape:pageopacity="0.0"
+										inkscape:pageshadow="2"
+										inkscape:zoom="11.2"
+										inkscape:cx="18.980235"
+										inkscape:cy="13.026986"
+										inkscape:document-units="px"
+										inkscape:current-layer="layer1"
+										showgrid="false"
+										showguides="true"
+										inkscape:guide-bbox="true"
+										units="px"
+										inkscape:window-width="1536"
+										inkscape:window-height="801"
+										inkscape:window-x="-8"
+										inkscape:window-y="-8"
+										inkscape:window-maximized="1"/>
+								<metadata
+										id="metadata7">
+									<rdf:RDF>
+										<cc:Work
+												rdf:about="">
+											<dc:format>image/svg+xml</dc:format>
+											<dc:type
+													rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+											<dc:title></dc:title>
+										</cc:Work>
+									</rdf:RDF>
+								</metadata>
 								<g
-										id="g4167"
-										transform="translate(-568.57414,807.72546)">
-									<path
-											inkscape:connector-curvature="0"
-											id="path4161"
-											d="m 569.22097,218.79695 24.30679,0 0,15.46796 1.70464,7.38674 -4.35629,0 -2.39911,-7.38674 -1.6415,0 -0.0631,3.09359 -3.8512,0 -0.12627,-3.09359 -2.46225,0 0,9.53331 -3.6618,0 0.1894,-9.53331 -3.21986,0 0,9.53331 -4.34776,0.003 z"
-											style="fill:none;fill-rule:evenodd;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
-									<rect
-											y="222.14308"
-											x="574.71368"
-											height="2.4622469"
-											width="12.437503"
-											id="rect4163"
-											style="opacity:1;fill-opacity:1;fill-rule:evenodd;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-dashoffset:0;stroke-opacity:0.80392157"/>
-									<rect
-											style="opacity:1;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-dashoffset:0;stroke-opacity:0.80392157"
-											id="rect4165"
-											width="12.437503"
-											height="2.4622469"
-											x="574.71368"
-											y="225.86803"/>
+										inkscape:label="Layer 1"
+										inkscape:groupmode="layer"
+										id="layer1"
+										transform="translate(0,-1025.8622)">
+									<g
+											id="g4167"
+											transform="translate(-568.57414,807.72546)">
+										<path
+												inkscape:connector-curvature="0"
+												id="path4161"
+												d="m 569.22097,218.79695 24.30679,0 0,15.46796 1.70464,7.38674 -4.35629,0 -2.39911,-7.38674 -1.6415,0 -0.0631,3.09359 -3.8512,0 -0.12627,-3.09359 -2.46225,0 0,9.53331 -3.6618,0 0.1894,-9.53331 -3.21986,0 0,9.53331 -4.34776,0.003 z"
+												style="fill:none;fill-rule:evenodd;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+										<rect
+												y="222.14308"
+												x="574.71368"
+												height="2.4622469"
+												width="12.437503"
+												id="rect4163"
+												style="opacity:1;fill-opacity:1;fill-rule:evenodd;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-dashoffset:0;stroke-opacity:0.80392157"/>
+										<rect
+												style="opacity:1;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-dashoffset:0;stroke-opacity:0.80392157"
+												id="rect4165"
+												width="12.437503"
+												height="2.4622469"
+												x="574.71368"
+												y="225.86803"/>
+									</g>
 								</g>
-							</g>
-						</svg>
+							</svg>
 
+						</div>
+						<span>Настройка Яндекс Директ</span>
 					</div>
-					<span>Настройка Яндекс Директ</span>
+				</div>
+				<div class="rates-table-desk">
+					<table>
+						<tr class="caption-table">
+							<th>Что входит в наши услуги</th>
+							<th>Стандарт</th>
+							<th>Премиум</th>
+							<th>Голд</th>
+						</tr>
+						<tr class="description-table first">
+							<td>Анализ вашего бизнеса</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+						</tr>
+						<tr class="description-table">
+							<td>Разработка стратегии продвижения</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+						</tr>
+						<tr class="description-table ">
+							<td class="change-direct"></td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+						</tr>
+						<tr class="description-table">
+							<td>Отбор минус слов</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+						</tr>
+						<tr class="description-table ">
+							<td class="change-direct"></td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+						</tr>
+						<tr class="description-table">
+							<td>Быстрые ссылки</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+						</tr>
+						<tr class="description-table">
+							<td>Utm – метки</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+						</tr>
+						<tr class="description-table">
+							<td>Ретаргетинг</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+						</tr>
+						<tr class="description-table">
+							<td>Запуск рекламных акций</td>
+							<td>
+								<i class="fa fa-close"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+						</tr>
+						<tr class="description-table table-color">
+							<td>Подбор ключевых слов</td>
+							<td class="table-font-style">
+								до 500 ключей
+							</td>
+							<td class="table-font-style">
+								до 3000 ключей
+							</td>
+							<td class="table-font-style">
+								от 3000 ключей
+							</td>
+						</tr>
+						<tr class="description-table">
+							<td class='change-direct'>Поддержка личного менеджера</td>
+							<td>
+								<i class="fa fa-close"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+							<td>
+								<i class="fa fa-close"></i>
+							</td>
+						</tr>
+						<tr class="description-table">
+							<td class='change-direct'>Круглосуточная поддержка личного менеджера</td>
+							<td>
+								<i class="fa fa-close"></i>
+							</td>
+							<td>
+								<i class="fa fa-close"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+						</tr>
+						<tr class="description-table">
+							<td>Разбивка ключей на группы, подгруппы</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+						</tr>
+						<tr class="description-table">
+							<td>Настройка РСЯ</td>
+							<td>
+								<i class="fa fa-close"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+						</tr>
+						<tr class="description-table">
+							<td>A\B тесты объявлений</td>
+							<td>
+								<i class="fa fa-close"></i>
+							</td>
+							<td>
+								<i class="fa fa-close"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+						</tr>
+						<tr class="description-table">
+							<td>Выявление слабых сторон</td>
+							<td>
+								<i class="fa fa-close"></i>
+							</td>
+							<td>
+								<i class="fa fa-close"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+						</tr>
+						<tr class="description-table">
+							<td>Кампании для мобильных устройств</td>
+							<td>
+								<i class="fa fa-close"></i>
+							</td>
+							<td>
+								<i class="fa fa-close"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+						</tr>
+						<tr class="description-table">
+							<td>Сбор ключевых слов разного уровня</td>
+							<td>
+								<i class="fa fa-close"></i>
+							</td>
+							<td>
+								<i class="fa fa-close"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+						</tr>
+						<tr class="description-table">
+							<td>Расширение трафика по около тематическим запросам</td>
+							<td>
+								<i class="fa fa-close"></i>
+							</td>
+							<td>
+								<i class="fa fa-close"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+						</tr>
+						<tr class="description-table table-color">
+							<td>Срок изготовления:</td>
+							<td class="table-font-style">
+								до 3 рабочих дней
+							</td>
+							<td class="table-font-style">
+								до 7 рабочих дней
+							</td>
+							<td class="table-font-style">
+								до 14 рабочих дней
+							</td>
+						</tr>
+						<tr class="description-table table-color">
+							<td>Первичное ведение 1 месяц</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+							<td>
+								<i class="fa fa-check"></i>
+							</td>
+						</tr>
+						<tr class="description-table last">
+							<td><span>Цена</span> за услуги:</td>
+							<td class='description-prices'></td>
+							<td class='description-prices'></td>
+							<td class='description-prices'></td>
+						</tr>
+						<tr class="description-table buttons">
+							<td></td>
+							<td>
+								<button>Купить</button>
+							</td>
+							<td>
+								<button>Купить</button>
+							</td>
+							<td>
+								<button>Купить</button>
+							</td>
+						</tr>
+					</table>
 				</div>
 			</div>
-			<div class="rates-table-desk">
-				<table>
-					<tr class="caption-table">
-						<th>Что входит в наши услуги</th>
-						<th>Стандарт</th>
-						<th>Премиум</th>
-						<th>Голд</th>
-					</tr>
-					<tr class="description-table first">
-						<td>Анализ вашего бизнеса</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-					</tr>
-					<tr class="description-table">
-						<td>Разработка стратегии продвижения</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-					</tr>
-					<tr class="description-table ">
-						<td class="change-direct"></td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-					</tr>
-					<tr class="description-table">
-						<td>Отбор минус слов</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-					</tr>
-					<tr class="description-table ">
-						<td class="change-direct"></td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-					</tr>
-					<tr class="description-table">
-						<td>Быстрые ссылки</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-					</tr>
-					<tr class="description-table">
-						<td>Utm – метки</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-					</tr>
-					<tr class="description-table">
-						<td>Ретаргетинг</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-					</tr>
-					<tr class="description-table">
-						<td>Запуск рекламных акций</td>
-						<td>
-							<i class="fa fa-close"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-					</tr>
-					<tr class="description-table table-color">
-						<td >Подбор ключевых слов</td>
-						<td class="table-font-style">
-							до 500 ключей
-						</td>
-						<td class="table-font-style">
-							до 3000 ключей
-						</td>
-						<td class="table-font-style">
-							от 3000 ключей
-						</td>
-					</tr>
-					<tr class="description-table">
-						<td class='change-direct'>Поддержка личного менеджера</td>
-						<td>
-							<i class="fa fa-close"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-						<td>
-							<i class="fa fa-close"></i>
-						</td>
-					</tr>
-					<tr class="description-table">
-						<td class='change-direct'>Круглосуточная поддержка личного менеджера</td>
-						<td>
-							<i class="fa fa-close"></i>
-						</td>
-						<td>
-							<i class="fa fa-close"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-					</tr>
-					<tr class="description-table">
-						<td>Разбивка ключей на группы, подгруппы</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-					</tr>
-					<tr class="description-table">
-						<td>Настройка РСЯ</td>
-						<td>
-							<i class="fa fa-close"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-					</tr>
-					<tr class="description-table">
-						<td>A\B тесты объявлений</td>
-						<td>
-							<i class="fa fa-close"></i>
-						</td>
-						<td>
-							<i class="fa fa-close"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-					</tr>
-					<tr class="description-table">
-						<td>Выявление слабых сторон</td>
-						<td>
-							<i class="fa fa-close"></i>
-						</td>
-						<td>
-							<i class="fa fa-close"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-					</tr>
-					<tr class="description-table">
-						<td>Кампании для мобильных устройств</td>
-						<td>
-							<i class="fa fa-close"></i>
-						</td>
-						<td>
-							<i class="fa fa-close"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-					</tr>
-					<tr class="description-table">
-						<td>Сбор ключевых слов разного уровня</td>
-						<td>
-							<i class="fa fa-close"></i>
-						</td>
-						<td>
-							<i class="fa fa-close"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-					</tr>
-					<tr class="description-table">
-						<td>Расширение трафика по около тематическим запросам</td>
-						<td>
-							<i class="fa fa-close"></i>
-						</td>
-						<td>
-							<i class="fa fa-close"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-					</tr>
-					<tr class="description-table table-color">
-						<td>Срок изготовления: </td>
-						<td class="table-font-style">
-							до 3 рабочих дней
-						</td>
-						<td class="table-font-style">
-							до 7 рабочих дней
-						</td>
-						<td class="table-font-style">
-							до 14 рабочих дней
-						</td>
-					</tr>
-					<tr class="description-table table-color">
-						<td>Первичное ведение 1 месяц</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-						<td>
-							<i class="fa fa-check"></i>
-						</td>
-					</tr>
-					<tr class="description-table last">
-						<td><span>Цена</span> за услуги:</td>
-						<td class='description-prices'></td>
-						<td class='description-prices'></td>
-						<td class='description-prices'></td>
-					</tr>
-					<tr class="description-table buttons">
-						<td></td>
-						<td>
-							<button>Купить</button>
-						</td>
-						<td>
-							<button>Купить</button>
-						</td>
-						<td>
-							<button>Купить</button>
-						</td>
-					</tr>
-				</table>
+		</div>
+	</section>
+
+	<section class="unique_challenge contextual-form-section section-7">
+		<div class="container">
+			<div class="row">
+
+			<div class="title-wrap">
+					<h2>Остались вопросы?</h2>
+			</div>
+				<p>Задайте их нашему специалисту по телефону или оставьте заявку</p>
+				<div class="phone-button">
+					<span class="phone-number">+38 (068) 523-75-23</span>
+					<button data-modal="modal-white" class="modal active internet-explorer">Оставить заявку</button>
+				</div>
 			</div>
 		</div>
-	</div>
-</section>
-
-<section class="unique_challenge contextual-form-section section-7">
-	<div class="container">
-		<div class="row">
-			<h2>Остались вопросы?</h2>
-			<p>Задайте их нашему специалисту по телефону или оставьте заявку</p>
-			<div class="phone-button">
-				<span class="phone-number">+38 (068) 523-75-23</span>
-			<button data-modal="modal-white" class="modal active internet-explorer" >Оставить заявку</button>
+	</section>
+	<section class="what-is-a-contextual-advertising section-9">
+		<div class="container">
+			<div class="title-wrap">
+				<h2>Что такое Контекстная реклама?</h2>
 			</div>
-		</div>
-	</div>
-</section>
-<section class="what-is-a-contextual-advertising section-9">
-	<div class="container">
-		<h2>Что такое Контекстная реклама?</h2>
-		<div class="description-contextual">
-			<p>
-				Основное направление работы студии веб-дизайна «АРТ ЛИМОН» —  оказание комплексных услуг по созданию сайтов в Киеве. Наш главный  офис находится в городе Харькове, но работаем мы со всей Украиной и зарубежьем. На протяжение более 3-х лет мы предоставляем огромный  спектр услуг, связанных с дизайном, юзабилити, созданием сайтов  и их продвижением для наших клиентов.</p>
-
-				<p>Наша веб-студия АРТ-ЛИМОН готова предложить разнообразные  решения — от разработки сайтов-визиток и корпоративных сайтов  до интернет-магазинов. Все зависит от конкретных целей, которые ставит перед нами заказчик, а также выделенного бюджета. В некоторых случаях изготовление сайта в Киеве необходимо лишь для небольших представительских целей — в таком случае достаточно сделать  сайт-визитку или промо сайт. Мы по достоинству дорожим всеми нашими  клиентами и готовы гарантировать профессиональное создание сайта  в Харькове вне зависимости от его стоимости.</p>
-
-				<p>Перед тем как начать работы, мы исследуем рабочую область рынка, анализируем ресурсы конкурентов, оцениваем экономическую  эффективность. Создание сайта для Киевских или Харьковских клиентов
-					Основное направление работы студии веб-дизайна «АРТ ЛИМОН» —  оказание комплексных услуг по созданию сайтов в Киеве. Наш главный  офис находится в городе Харькове, но работаем мы со всей Украиной и зарубежьем. На протяжение более 3-х лет мы предоставляем огромный  спектр услуг, связанных с дизайном, юзабилити, созданием сайтов  и их продвижением для наших клиентов.</p>
-
-			<p>Наша веб-студия АРТ-ЛИМОН готова предложить разнообразные  решения — от разработки сайтов-визиток и корпоративных сайтов  до интернет-магазинов. Все зависит от конкретных целей, которые ставит перед нами заказчик, а также выделенного бюджета. В некоторых случаях изготовление сайта в Киеве необходимо лишь для небольших представительских целей — в таком случае достаточно сделать  сайт-визитку или промо сайт. Мы по достоинству дорожим всеми нашими  клиентами и готовы гарантировать профессиональное создание сайта  в Харькове вне зависимости от его стоимости.</p>
-
-				<p>Перед тем как начать работы, мы исследуем рабочую область рынка, анализируем ресурсы конкурентов, оцениваем экономическую  эффективность. Создание сайта для Киевских или Харьковских клиентов
-			</p>
-		</div>
-	</div>
-</section>
-<!-- Секция footer -->
-<footer>
-	<div class="container">
-		<div class="row">
-
-			<div class="footerColumn col-lg-3 col-md-3 col-sm-6 col-xs-12">
-				<ul>
-					<li>О нас:</li>
-					<li>
-						<a href="#">
-							<i class="fa fa-warning"></i>
-							Вакансии
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="fa fa-bolt"></i>
-							О нас
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="fa fa-info"></i>
-							Блог
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="fa fa-folder-open"></i>
-							Смотреть работы
-						</a>
-					</li>
-
-				</ul>
-			</div>
-			<div class="footerColumn col-lg-3 col-md-3 col-sm-6 col-xs-12">
-				<ul>
-					<li>Услуги:</li>
-					<li>
-						<a href="#">Разработка сайтов</a>
-					</li>
-					<li>
-						<a href="#">Копирайтинг</a>
-					</li>
-					<li>
-						<a href="#">Проектирование дизайна</a>
-					</li>
-					<li>
-						<a href="#">SEO-продвижение</a>
-					</li>
-					<li>
-						<a href="#">Работа с соцсетями (SMM)</a>
-					</li>
-					<li>
-						<a href="#">Создание контекстной рекламы</a>
-					</li>
-					<li>
-						<a href="#">Аудит и аналитика интернет ресурсов</a>
-					</li>
-					<li>
-						<a href="#">Создание маркетинг-китов</br> и коммерческих предложений</a>
-					</li>
-				</ul>
-			</div>
-			<div class="footerColumn col-lg-3 col-md-3 col-sm-6 col-xs-12">
-				<ul>
-					<li>Наши ресурсы:</li>
-					<li>
-						<a href="#">
-							<i class="fa fa-instagram"></i>
-							imelfori_studio
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="fa fa-vk"></i>
-							vk.com/melfori_studio
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="fa fa-facebook-square"></i>
-							facebook.com
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="fa fa-twitter"></i>
-							twitter.com/melfori_info
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="footerColumn ourContacts col-lg-3 col-md-3 col-sm-6 col-xs-12">
-				<ul>
-					<li>Наши контакты:</li>
-					<li>
-						<i class="fa fa-envelope"></i>
-						info@melfori.com
-					</li>
-					<li>
-						<i class="fa fa-mobile-phone"></i>
-						+38 (067) 571-78-38
-					</li>
-					<li>
-						<i class="fa fa-skype"></i>
-						Melfori_studio
-					</li>
-					<li>
-						<i class="fa fa-home"></i>
-						ООО «МЕЛФОРИ» <br>
-						<p>
-							<a href="#">г. Харьков, ул. Юрьевская 17,</a>
-						</p>
-						<p>
-							<a href="#">г Кременьчуг ул. Советская 4.</a>
-						</p>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="logoMelforiWrap">
-			<div class="logoMelfori">
-				<img src="../img/top_logo.png" alt="logo">
-			</div>
-			<div class="wrapText">
-				<i class="fa fa-copyright"></i>
+			<div class="description-contextual">
 				<p>
-					Melfori digital agency 2017
-					Все права защищины.
+					Контекстная реклама – наиболее эффективный тип интренет-рекламы. Высокие показатели отклика
+					обусловлены несколькими факторами:</p>
+				<ul>
+					<li>Показ объявлений осуществляется в соответствии с контекстом страницы (содержанием), то есть
+						только заинтересованным пользователям.
+					</li>
+					<li>Возможность перейти сразу на страницу с рекламируемым товаром (услугой).</li>
+				</ul>
+				<p>Показ объявлений осуществляется в соответствии с контекстом страницы (содержанием), то есть только
+					заинтересованным пользователям.</p>
+				<p>Хотите получать новых клиентов в самые короткие сроки? Вы должны заказать настройку контекстной
+					рекламы Яндекс.Директ и Google.Adwords от компании Мелфори. Наши опытные специалисты приведут к
+					успеху рекламную кампанию.</p>
+				<p>Большая работа выполняется на этапе анализа. Чтоб понять чего хотят потенциальные клиенты, нужно
+					думать как они, почувствовать потребности, предугадать поведение. Именно благодаря такому подходу,
+					наши клиенты получают высокие результаты конверсии (заказов).</p>
+				<p>Мы занимаемся не только настройкой и запуском контекстной рекламы в Яндекс.Директ и Google.Adwords,
+					но и ведением рекламной кампании. На этапе ведения, идет «шлифовка» поисковых запросов, анализ
+					поведения пользователей. Это позволяет сократить бюджет на контекстную рекламу, за счет снижения
+					цены за клики (за каждого клиента).</p>
+				<p>Настройка и ведение контекстной рекламы от Melfori это отличный способ, быстро получить новых
+					клиентов. Мы поможем зарабатывать больше уже сейчас!
 				</p>
 			</div>
 		</div>
-	</div>
-</footer>
+	</section>
+	<!-- Секция footer -->
+	<footer>
+		<div class="container">
+			<div class="row">
+
+				<div class="footerColumn col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<ul>
+						<li>О нас:</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-warning"></i>
+								Вакансии
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-bolt"></i>
+								О нас
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-info"></i>
+								Блог
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-folder-open"></i>
+								Смотреть работы
+							</a>
+						</li>
+
+					</ul>
+				</div>
+				<div class="footerColumn col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<ul>
+						<li>Услуги:</li>
+						<li>
+							<a href="#">Разработка сайтов</a>
+						</li>
+						<li>
+							<a href="#">Копирайтинг</a>
+						</li>
+						<li>
+							<a href="#">Проектирование дизайна</a>
+						</li>
+						<li>
+							<a href="#">SEO-продвижение</a>
+						</li>
+						<li>
+							<a href="#">Работа с соцсетями (SMM)</a>
+						</li>
+						<li>
+							<a href="#">Создание контекстной рекламы</a>
+						</li>
+						<li>
+							<a href="#">Аудит и аналитика интернет ресурсов</a>
+						</li>
+						<li>
+							<a href="#">Создание маркетинг-китов</br> и коммерческих предложений</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footerColumn col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<ul>
+						<li>Наши ресурсы:</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-instagram"></i>
+								imelfori_studio
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-vk"></i>
+								vk.com/melfori_studio
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-facebook-square"></i>
+								facebook.com
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-twitter"></i>
+								twitter.com/melfori_info
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footerColumn ourContacts col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<ul>
+						<li>Наши контакты:</li>
+						<li>
+							<i class="fa fa-envelope"></i>
+							info@melfori.com
+						</li>
+						<li>
+							<i class="fa fa-mobile-phone"></i>
+							+38 (067) 571-78-38
+						</li>
+						<li>
+							<i class="fa fa-skype"></i>
+							Melfori_studio
+						</li>
+						<li>
+							<i class="fa fa-home"></i>
+							ООО «МЕЛФОРИ» <br>
+							<p>
+								<a href="#">г. Харьков, ул. Юрьевская 17,</a>
+							</p>
+							<p>
+								<a href="#">г Кременьчуг ул. Советская 4.</a>
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="logoMelforiWrap">
+				<div class="logoMelfori">
+					<img src="../img/top_logo.png" alt="logo">
+				</div>
+				<div class="wrapText">
+					<i class="fa fa-copyright"></i>
+					<p>
+						Melfori digital agency 2017
+						Все права защищины.
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
 </div>
 <div off-canvas="id-1 left shift">
 	<nav class="header_nav_mobile">

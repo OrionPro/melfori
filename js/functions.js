@@ -192,6 +192,9 @@ $(document).ready(function() {
 		var id = $(this).data('modal');
 		var txt = $(this).data('info');
 		var title =  $(this).data('title'); // для изменения title в модалке
+		var file_name = $(this).data("file_name");
+		var trigger = $(this).data("trigger");
+		var mail_title = $(this).data("mail_title");
 		if(id === "modal-white" ){
 			$(".popup[data-modal=" + id + "]").addClass('md-show');
 		}
@@ -199,7 +202,9 @@ $(document).ready(function() {
 			$(".popup[data-modal=" + id + "]").toggle("fade", 200).find("form").css('display', 'block');
 			$(".popup[data-modal=" + id + "] input[name=form_name]").val(txt);
 			// $(".popup[data-modal="+id+"] h2").html(title); // прописать в ссылку data-title="нужный title"}
-			$(".popup[data-modal=" + id + "] p").html(title);
+			$(".popup[data-modal=" + id + "] .title").html(title);
+			$(".popup[data-modal=" + t + "] input[name=file]").val(file_name);
+			$(".popup[data-modal=" + t + "] input[name=trigger]").val(trigger); $(".popup[data-modal=" + t + "] input[name=mail_title]").val(mail_title);
 		}
 		if (window.matchMedia("(min-width: 992px)").matches) {
 			$("body").css({ "overflow": "hidden", "padding-right": "17px" });
@@ -211,7 +216,7 @@ $(document).ready(function() {
 	});
 	// overlay для закрытия
 	$(".overlay").click(function() {
-		if(this.parentElement.classList.contains('md-show') && currbrowser !== 'Internet Explorer' || currbrowser !== 'Trident' ){
+		if(this.parentElement.classList.contains('md-show')){
 			this.parentElement.classList.remove('md-show');
 		}else {
 			$(this).parent().toggle("drop", {direction: "up"}, 200);
@@ -431,6 +436,8 @@ $(document).ready(function() {
 
 						if (data['form_type'] == 'modal') {
 							$('.dm-modal form').hide();
+
+
 							$('.dm-modal .close').hide();
 							form.trigger('reset');
 							$('.dm-modal .success_mail').addClass('active'); //пишем что всё ок
@@ -444,6 +451,7 @@ $(document).ready(function() {
 						if (data['form_type'] == 'normal') { //надо писать в обычных формах <input type="hidden" name="form_type" value="normal">
 							form.trigger('reset');
 							$('.dm-modal .success_mail').addClass('active');
+							$('.pop5.md-content').removeClass('md-show');
 							$('.popup[data-modal=modal-res]').toggle("fade", 500);
 							//$("body").css({ "overflow": "hidden", "padding-right": "17px" });
 							setTimeout(function() {
