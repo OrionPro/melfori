@@ -228,7 +228,32 @@ class SmmAnimation {
 				y: -30,
 				opacity: 0,
 				ease: Power3.easeOut
-			}, "+=0.4");
+			}, "+=0.4")
+			.from('.section-6 .item p', 1, {
+				y: -30,
+				opacity: 0,
+				ease: Power3.easeOut
+			}, "-=0.6")
+			.from('.section-6 .warning-wrap .content', 1, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut
+			}, "-=0.6")
+			.from('.section-6 .warning-wrap .content img', 1, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut
+			}, "-=0.8")
+			.from('.section-6 .warning-wrap .content h3', 1, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut
+			}, "-=1")
+			.from('.section-6 .warning-wrap .content p', 1, {
+			y: 30,
+			opacity: 0,
+			ease: Power3.easeOut
+		}, "-=1.2");
 	}
 
 	start() {
