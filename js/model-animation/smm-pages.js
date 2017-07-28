@@ -216,6 +216,11 @@ class SmmAnimation {
 				y: -30,
 				opacity: 0,
 				ease: Power3.easeOut
+			},"-=0.5")
+			.from('.section-5 .aducation', 1, {
+				y: -30,
+				opacity: 0,
+				ease: Power3.easeOut
 			},"-=0.5");
 
 		this.tl6
@@ -223,24 +228,7 @@ class SmmAnimation {
 				y: -30,
 				opacity: 0,
 				ease: Power3.easeOut
-			}, "-=0.5")
-			.staggerFrom('.description-in-five-steps-item', 0.5, {
-				y: -30,
-				opacity: 0,
-				ease: Power3.easeOut
-			}, 0.3,"-=0.5")
-			.from('.section-6 .context-prise-wrap .decore-img', 1, {
-				x: -10,
-				opacity: 0,
-				ease: Power3.easeOut
-			},"-=0.5")
-			.from('.section-6 .context-prise-wrap .text', 1, {
-				x: 10,
-				opacity: 0,
-				ease: Power3.easeOut
-			},"-=0.5");
-
-
+			}, "+=0.4");
 	}
 
 	start() {
