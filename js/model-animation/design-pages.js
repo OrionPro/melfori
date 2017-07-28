@@ -71,7 +71,10 @@ class DesignPagesAnimation{
 						});
 					this.arrow.repeat(Infinity);
 				}
-			}, '-=1');
+			}, '-=1')
+			.from('.anchors', 1,{
+				opacity: 0
+			}, "-=1");
 		this.tl2
 			.from('.about-us-design-section h2',1,{
 				y: -30,

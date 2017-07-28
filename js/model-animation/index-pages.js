@@ -107,7 +107,10 @@ class IndexPageAnimation{
 
 					this.arrow.resume();
 				}
-			},'-=1.7');
+			},'-=1.7')
+			.from('.anchors', 1,{
+				opacity: 0
+			}, "-=1");
 
 		//section 2
 		this.tl2.add('section-2','+=0.5')

@@ -74,7 +74,10 @@ class SmmAnimation {
 						});
 					this.arrow.repeat(Infinity);
 				}
-			}, '-=1');
+			}, '-=1')
+			.from('.anchors', 1,{
+			opacity: 0
+		}, "-=1");
 		this.tl2
 			.from('.section-2 .title-wrap h2', 1.8, {
 				y: 50,

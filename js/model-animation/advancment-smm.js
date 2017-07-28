@@ -71,7 +71,10 @@ class AdvancmentSmm{
 						});
 					this.arrow.repeat(Infinity);
 				}
-			}, '-=1');
+			}, '-=1')
+			.from('.anchors', 1,{
+				opacity: 0
+			}, "-=1");
 		this.tl2
 			.from('.section-2 h2', 1, {
 				y: -30,

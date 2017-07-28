@@ -62,7 +62,10 @@ class SeoPageAnimation{
 
 					this.arrow.resume();
 				}
-			}, '-=1.7');
+			}, '-=1.7')
+			.from('.anchors', 1,{
+				opacity: 0
+			}, "-=1");
 
 
 		this.tl2

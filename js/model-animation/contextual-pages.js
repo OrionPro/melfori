@@ -74,7 +74,10 @@ class ContextualAnimation {
 						});
 					this.arrow.repeat(Infinity);
 				}
-			}, '-=1');
+			}, '-=1')
+			.from('.anchors', 1,{
+			opacity: 0
+		}, "-=1");
 
 		this.tl2
 			.from('.section-2 .title-wrap', 1, {
