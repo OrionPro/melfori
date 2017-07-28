@@ -239,15 +239,10 @@ $(document).ready(function () {
 	}
 
 	// Анимация якорей
-	const timeMax = new TimelineMax ();
 	TweenMax.set('.anchors__text-block', {
 		x: 10,
 		autoAlpha: 0
 	});
-	timeMax.from('.anchors', 1,{
-		opacity: 0,
-		ease: Power3.easeOut
-	}, "+=3");
 	function resetTween() {
 		TweenMax.set($(this).find('.anchors__text-block'), {
 			x: 10,
