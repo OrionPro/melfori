@@ -239,7 +239,6 @@ $(document).ready(function () {
 	}
 
 	// Анимация якорей
-	const timeMax = new TimelineMax ();
 	TweenMax.set('.anchors__text-block', {
 		x: 10,
 		autoAlpha: 0
