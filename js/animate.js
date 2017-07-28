@@ -14,7 +14,6 @@ import LandingPage from './model-animation/landing-page.js';
 import SmmAnimation from './model-animation/smm-pages.js';
 // Запуск необходимой анимации
 class Animation {
-
 	constructor() {
 		this.IndexPageAnimation = new IndexPageAnimation();
 		this.AboutUsAnimation = new AboutUsAnimation();
@@ -27,7 +26,6 @@ class Animation {
 		this.LandingPage  = new LandingPage();
 		this.SmmAnimation = new SmmAnimation();
 		//	Анимации для всех страниц
-
 	}
 
 	initialization() {
@@ -49,16 +47,17 @@ class Animation {
 			this.SeoPageAnimation.description();
 		}
 		if (activePages('reviews-page')) {
-			this.ReviewPageAnimation.description();
+			this.ReviewPageAnimation.description()
 		}
 		if (activePages('internet-shop-pages')) {
-			this.InternetShopsAnimation.description();
+
+			this.InternetShopsAnimation.description()
 		}
 		if (activePages('advancment-smm')) {
-			this.AdvancmentSmm.description();
+			this.AdvancmentSmm.description()
 		}
 		if (activePages('landing-page')) {
-			this.LandingPage.description();
+			this.LandingPage.description()
 		}
 		if (activePages('smm')) {
 			this.SmmAnimation.description()
@@ -83,7 +82,7 @@ class Animation {
 			this.SeoPageAnimation.start();
 		}
 		if (activePages('review')) {
-			this.ReviewPageAnimation.start();
+			this.ReviewPageAnimation.start()
 		}
 		if (activePages('internet-shop-pages')) {
 			this.InternetShopsAnimation.start()
