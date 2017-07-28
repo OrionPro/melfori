@@ -120,7 +120,7 @@ class ContextualAnimation {
 				onComplete: ()=>{
 					rotationGear('.decore-scheme-wrap .small span')
 				}
-			}, "-=0.8")
+			}, "-=0.8", "animation-input")
 			.from('.section-2 .decore-scheme-wrap .big', 1, {
 				y: -20,
 				opacity: 0,
@@ -129,28 +129,28 @@ class ContextualAnimation {
 				onComplete: () =>{
 					rotationGear('.decore-scheme-wrap .big span', -1)
 				}
-			}, "-=1")
+			}, "-=1", "animation-input")
 			//конец анимации шестеренок
 
 			.staggerFrom('.section-2 .decore-scheme-wrap .item', 1, {
-				y: 30,
 				opacity: 0,
+				y: 30,
 				scaleY: 0.9,
 				ease: Power3.easeOut
 			},0.3, "-=1")
-			.add("animation-input", "-=3")
-			.staggerFrom('.unique-form-decore .animation-input', 1, {
-				y: 30,
+			.add("animation-input", "-=2")
+			.staggerFrom('.section-2 .animation-input input', 0.3, {
 				autoAlpha: 0,
-				scaleY: 0.9,
-				ease: Power3.easeOut
-			}, 0.3, "animation-input")
+				y: 30,
+				scaleY: 1.4,
+				ease: Power0.easeOut
+			}, 0.2, "animation-input")
 			.from('.decore-scheme-wrap-form p', 1, {
 				y: 30,
 				opacity: 0,
 				scaleY: 0.9,
 				ease: Power3.easeOut
-			}, "-=1");
+			}, "-=1", "animation-input");
 
 		this.tl3
 			.from('.section-3 .title-wrap', 1, {

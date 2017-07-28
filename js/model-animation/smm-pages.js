@@ -84,11 +84,31 @@ class SmmAnimation {
 				opacity: 0,
 				ease: Power3.easeOut
 			}, '+=0.2')
-			.staggerFrom('.section-2 .content ul li', 1, {
+			.staggerFrom('.smm-steps-section .social-wrap .social-item', 0.5, {
 				y: -30,
 				opacity: 0,
 				ease: Power3.easeOut
-			}, 0.5,"-=0")
+			}, 0.2,"-=1")
+			.from('.section-2 .item-title h3', 1, {
+				x: 50,
+				opacity: 0,
+				ease: Power3.easeOut
+			}, '-=0.6')
+			.from('.smm-steps-section .aducation', 1, {
+				y: -50,
+				opacity: 0,
+				ease: Power3.easeOut
+			}, '+=0.6')
+			.from('.smm-steps-section .item-title p', 1, {
+				x: 50,
+				opacity: 0,
+				ease: Power3.easeOut
+			}, '-=2')
+			.staggerFrom('.section-2 .content ul li', 0.7, {
+				y: -30,
+				opacity: 0,
+				ease: Power3.easeOut
+			}, 0.3,"-=1.6")
 			.staggerFrom('.section-2 .content ul .arrow', 1, {
 				height: 0,
 				opacity: 0,
@@ -98,22 +118,17 @@ class SmmAnimation {
 				width: 0
 			}, 0.5,"-=0.5");
 		this.tl3
-			.from('.section-3 .title-wrap', 1, {
+			.from('.section-3 h2', 1, {
 				y: -30,
 				opacity: 0,
 				ease: Power3.easeOut
-			}, "-=0.5")
-			.from('.section-3 .about-wrap', 1, {
-				x: -30,
+			}, 0.4)
+			.staggerFrom('.section-3 .social-item', 0.7, {
+				y: -30,
 				opacity: 0,
 				ease: Power3.easeOut
-			}, "-=0.5")
-			.from('.section-3 .img-wrap', 1, {
-				x: 30,
-				opacity: 0,
-				ease: Power3.easeOut
-			}, "-=0.5")
-			.from('.section-3 h3', 1, {
+			}, 0.2, "-=0.5")
+			.from('.section-3 .title-wrap', 1, {
 				y: -30,
 				opacity: 0,
 				ease: Power3.easeOut
@@ -138,7 +153,7 @@ class SmmAnimation {
 				onComplete: ()=>{
 					rotationGear('.decore-scheme-wrap .small span')
 				}
-			}, "-=0.8")
+			}, "-=0.8", "animation-input")
 			.from('.section-3 .decore-scheme-wrap .big', 1, {
 				y: -20,
 				opacity: 0,
@@ -147,7 +162,7 @@ class SmmAnimation {
 				onComplete: () =>{
 					rotationGear('.decore-scheme-wrap .big span', -1)
 				}
-			}, "-=1")
+			}, "-=1", "animation-input")
 			//конец анимации шестеренок
 
 			.staggerFrom('.section-3 .decore-scheme-wrap .item', 1, {
@@ -156,48 +171,36 @@ class SmmAnimation {
 				scaleY: 0.9,
 				ease: Power3.easeOut
 			},0.3, "-=1")
-			.add("animation-input", "-=2.5")
-			.staggerFrom('.unique-form-decore .animation-input', 1, {
+			.add("animation-input", "-=2.3")
+			.staggerFrom('.section-3 .animation-input input', 0.6, {
 				y: 30,
 				autoAlpha: 0,
-				scaleY: 0.9,
-				ease: Power3.easeOut
-			}, 0.3, "animation-input")
+				scaleY: 1.4,
+				ease: Power0.easeOut
+			}, 0.2, "animation-input")
 			.from('.decore-scheme-wrap-form p', 1, {
 				y: 30,
 				opacity: 0,
 				scaleY: 0.9,
 				ease: Power3.easeOut
-			}, "-=1");
+			}, "-=1", "animation-input");
 
 		this.tl4
-			.from('.section-3 .title-wrap', 1, {
+			.from('.section-4 h2', 1, {
 				y: -30,
 				opacity: 0,
 				ease: Power3.easeOut
 			}, "+=0.5")
-			.from('.yandex-view', 1, {
+			.from('.section-4 p', 1, {
 				x: -30,
 				opacity: 0,
-				ease: Bounce.easeOut
-			}, "-=0.5", "browser-view")
-			.add("browser-view", "-=1")
-			.from('.google-view', 1, {
-				x: 30,
-				opacity: 0,
-				ease: Bounce.easeOut
-			}, "browser-view")
-			.from('.section-3 .about-text-wrap', 1, {
-				y: 30,
-				opacity: 0,
 				ease: Power3.easeOut
-			},"-=0.5")
-			.from('.section-3 .contextual-google-yandex-form', 1, {
+			}, "-=0.5")
+			.from('.section-4 form', 1, {
 				y: -30,
 				opacity: 0,
 				ease: Power3.easeOut
 			}, "-=0.5");
-
 		this.tl5
 			.from('.section-5 .title-wrap', 1, {
 				y: -30,
