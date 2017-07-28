@@ -10,6 +10,7 @@ import SeoPageAnimation from './model-animation/seo-page.js';
 import ReviewPageAnimation from './model-animation/reviews.js';
 import InternetShopsAnimation from './model-animation/internet-magazin.js';
 import AdvancmentSmm from './model-animation/advancment-smm.js';
+import LandingPage from './model-animation/landing-page.js';
 // Запуск необходимой анимации
 class Animation {
 
@@ -22,8 +23,8 @@ class Animation {
 		this.ReviewPageAnimation = new ReviewPageAnimation();
 		this.InternetShopsAnimation = new InternetShopsAnimation();
 		this.AdvancmentSmm = new AdvancmentSmm();
+		this.LandingPage  = new LandingPage();
 		//	Анимации для всех страниц
-
 	}
 
 	initialization() {
@@ -45,13 +46,16 @@ class Animation {
 			this.SeoPageAnimation.description();
 		}
 		if (activePages('reviews-page')) {
-			this.ReviewPageAnimation.description()
+			this.ReviewPageAnimation.description();
 		}
 		if (activePages('internet-shop-pages')) {
-			this.InternetShopsAnimation.description()
+			this.InternetShopsAnimation.description();
 		}
 		if (activePages('advancment-smm')) {
-			this.AdvancmentSmm.description()
+			this.AdvancmentSmm.description();
+		}
+		if (activePages('landing-page')) {
+			this.LandingPage.description();
 		}
 	}
 
@@ -73,13 +77,16 @@ class Animation {
 			this.SeoPageAnimation.start();
 		}
 		if (activePages('review')) {
-			this.ReviewPageAnimation.start()
+			this.ReviewPageAnimation.start();
 		}
 		if (activePages('internet-shop-pages')) {
 			this.InternetShopsAnimation.start()
 		}
 		if (activePages('advancment-smm')) {
-			this.AdvancmentSmm.start()
+			this.AdvancmentSmm.start();
+		}
+		if (activePages('landing-page')) {
+			this.LandingPage.start();
 		}
 	}
 }

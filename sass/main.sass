@@ -610,10 +610,12 @@ nav[canvas]
 		left: 5px
 		top: calc(50% - 50px)
 	.more-content
-		h3
-			line-height: 1.1
-			margin: 0
-			margin-bottom: 23px
+		.title-wrap
+			h4
+				line-height: 1.1
+				margin: 0 0 23px
+				font-size: 36px
+				font-weight: lighter
 		label
 			margin-bottom: 4px
 			display: inline-block
@@ -636,7 +638,7 @@ nav[canvas]
 				text-decoration: none
 				@extend %main_btn_focus
 .contextual-rates
-	padding: 30px 0 130px
+	padding: 20px 0 120px
 	h2
 		text-align: center
 		color: $main_color
@@ -784,8 +786,12 @@ nav[canvas]
 			margin-right: 50px
 			width: 659px
 			display: inline-block
+			text-align: center
+			padding-top: 50px
 			img
 				width: 100%
+			svg
+				max-width: 100%
 		.text-wrap
 			width: 470px
 			display: inline-block
@@ -2297,48 +2303,115 @@ nav[canvas]
 	&.us-internet-shop-section, .tab_working_div
 		h2
 			margin-bottom: 3px
-		.items-wrap
+		.items-wrap, .how_good_items
 			margin-bottom: 45px
-			.button
-				margin-top: 30px
-				margin-bottom: 50px
-				width: 320px
-			.img-wrap
-				display: block
-				background-image:  url('../img/decor-cub1.jpg')
-				background-size: contain
-				padding: 5px
+			.figure-item
 				position: relative
+				padding: 5px
+				background: url(../img/decor-cub1.jpg) no-repeat top center
+				background-size: cover
+				cursor: pointer
 				overflow: hidden
-				img
-					width: 100%
-				.hover-eff
-					position: absolute
-					top: 0
-					left: 10px
-					width: calc(100% - 10px)
-					height: 100%
+				margin-bottom: 35px
+				&:hover .figure-mask
+					/* style */
 					opacity: 1
-					background: rgba(255,255,255, 0.8)
-					transition: .3s
-					text-align: center
-					padding: 20px
+				&:hover .figure-mask .niche-logo
+					opacity: 1
+					transform: scale3d(1,1,1)
+				&:hover .figure-mask .task
+					opacity: 1
+					transform: scale3d(1,1,1)
+				&:hover .figure-mask .solution
+					opacity: 1
+					transform: scale3d(1,1,1)
+				&:hover .figure-mask .button-look
+					opacity: 1
+					transform: scale3d(1,1,1)
+				.inside-item-results
+					height: 400px
+				.figure-mask
+					padding: 30px
+					position: absolute
+					top: 4px
+					left: 4px
+					width: 98%
+					height: 98%
+					background: rgba(255,255,255,0.8)
 					display: flex
+					opacity: 0
 					flex-direction: column
-					justify-content: center
+					cursor: pointer
+					transition: $transition
 					.niche-logo
 						display: flex
 						justify-content: space-between
+						padding-bottom: 15px
+						opacity: 0
+						transition: opacity 0.35s, transform 0.35s
+						transform: scale(1.5)
 						.niche
-							font-size: 18px
 							h5
 								font-weight: bold
+								margin: 0
+								font-size: 18px
+								text-align: left
 							span
 								display: block
 								font-weight: lighter
+								text-align: left
 						.logo
+							display: flex
+							align-items: center
 							img
 								max-width: 100%
+					.task
+						padding-bottom: 15px
+						opacity: 0
+						transition: opacity 0.35s, transform 0.35s
+						transform: scale(1.5)
+						h5
+							margin: 0
+							font-size: 18px
+							font-weight: bold
+							text-align: left
+						span
+							font-size: 18px
+							font-weight: lighter
+							text-align: left
+							display: block
+					.solution
+						padding-bottom: 15px
+						opacity: 0
+						transition: opacity 0.35s, transform 0.35s
+						transform: scale(1.5)
+						h5
+							margin: 0
+							font-size: 18px
+							font-weight: bold
+							text-align: left
+						p
+							text-align: left
+							font-size: 16px
+							font-weight: lighter
+							margin: 0
+							display: block
+							max-height: 100px
+							overflow: hidden
+							text-overflow: ellipsis
+					.button-look
+						margin-top: auto
+						opacity: 1
+						transition: opacity 0.35s, transform 0.35s
+						transform: scale(0.5)
+						display: flex
+						justify-content: center
+						button
+							margin: 0 auto
+							&:hover
+								/* style */
+								background:	#fff
+
 					p
 						font-size: 18px
 						font-weight: bold
@@ -2370,9 +2443,8 @@ nav[canvas]
 				opacity: 0
 			.list-wrap
 				padding: 0
-				margin: 0px
+				margin: 13px 0 0 0
 				text-align: left
-				margin-top: 13px
 				p
 					margin: 0
 				li
@@ -2404,7 +2476,7 @@ nav[canvas]
 					text-align: left
 					@include font($main_txt_color, 18px, $font_SFUIDisplay-Light, 1)
 		button
-			margin-bottom: 115px
+			margin-bottom: 0px
 			@extend %main_btn
 			width: 370px
 			&:hover
@@ -2413,7 +2485,6 @@ nav[canvas]
 				@extend %main_btn_active
 			&:focus
 				@extend %main_btn_focus
-
 //	Секция couple_of_words
 .couple_of_words
 	text-align: center
@@ -4104,6 +4175,8 @@ nav[canvas]
 					margin-bottom: 10px
 					font-weight: 100
 					text-transform: uppercase
+				p
+					text-align: center
 //	Секция unlike_contextual_of_advertising
 .unlike_contextual_of_advertising
 	text-align: center
