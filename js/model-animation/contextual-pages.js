@@ -138,12 +138,13 @@ class ContextualAnimation {
 				scaleY: 0.9,
 				ease: Power3.easeOut
 			},0.3, "-=1")
+			.add("animation-input", "-=3")
 			.staggerFrom('.unique-form-decore .animation-input', 1, {
 				y: 30,
 				autoAlpha: 0,
 				scaleY: 0.9,
 				ease: Power3.easeOut
-			},0.3, "-=2.5")
+			}, 0.3, "animation-input")
 			.from('.decore-scheme-wrap-form p', 1, {
 				y: 30,
 				opacity: 0,
