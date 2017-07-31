@@ -217,7 +217,7 @@ class InternetShopsAnimation{
 				rotation: 5,
 				ease:  Power3.easeOut,
 			},0.3,'-=1.7')
-			.from('.section-5 button', 0.8, {
+			.from('.section-5 .animation-button', 0.8, {
 				y: 30,
 				opacity: 0,
 				ease: Power3.easeOut

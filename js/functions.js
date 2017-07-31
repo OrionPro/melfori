@@ -203,8 +203,8 @@ $(document).ready(function() {
 			$(".popup[data-modal=" + id + "] input[name=form_name]").val(txt);
 			// $(".popup[data-modal="+id+"] h2").html(title); // прописать в ссылку data-title="нужный title"}
 			$(".popup[data-modal=" + id + "] .title").html(title);
-			$(".popup[data-modal=" + t + "] input[name=file]").val(file_name);
-			$(".popup[data-modal=" + t + "] input[name=trigger]").val(trigger); $(".popup[data-modal=" + t + "] input[name=mail_title]").val(mail_title);
+			$(".popup[data-modal=" + id + "] input[name=file]").val(file_name);
+			$(".popup[data-modal=" + id + "] input[name=trigger]").val(trigger); $(".popup[data-modal=" + id + "] input[name=mail_title]").val(mail_title);
 		}
 		if (window.matchMedia("(min-width: 992px)").matches) {
 			$("body").css({ "overflow": "hidden", "padding-right": "17px" });

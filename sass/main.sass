@@ -65,11 +65,11 @@ nav[canvas]
 
 // Секция our_advantages
 .our_advantages
-	min-height: 1010px
 	background: $main_bg_gray
 	text-align: center
 	position: relative
 	z-index: 1
+	padding-bottom: 120px
 	h2
 		margin-bottom: -5px
 		color: $main_color
@@ -132,7 +132,7 @@ nav[canvas]
 		&:focus
 			text-decoration: none
 			@extend %main_btn_focus
-.five_reasons_why_choose_us
+.five_reasons_why_choose_us, .company-site-why-effective
 	background: #fff
 	text-align: center
 	&.gray-bg
@@ -291,6 +291,7 @@ nav[canvas]
 	&.internet-shop-goods
 		min-height: 0
 		background: $main_bg_gray
+		padding-bottom: 0
 		.aducation
 			font-size: 24px
 			margin-bottom: 109px
@@ -1227,6 +1228,7 @@ nav[canvas]
 	background-color: #fff
 	position: relative
 	z-index: 1
+	padding-top: 120px
 	&.white
 		background-color: #fff
 	h2
@@ -1268,7 +1270,6 @@ nav[canvas]
 .unique_challenge
 	text-align: center
 	background-color: $main_color
-	padding-bottom: 120px
 	&.text-input
 		background: transparent
 		min-height: inherit
@@ -1353,7 +1354,12 @@ nav[canvas]
 .why_effective
 	&.grey
 		background-color: #f8f8fa
-	&.why_profitably
+	&.section-8
+		padding-bottom: 120px
+	&.why_profitably,.section-7
+		padding-bottom: 120px
+	&.section-5,.section-3
+		padding-bottom: 0
 		.why_profitably_items
 			margin-top: 50px
 			margin-bottom: 120px
@@ -1451,6 +1457,7 @@ nav[canvas]
 			color: #fff
 			font-weight: 100
 	&.you_always_know_what_you_pay
+		padding-bottom: 120px
 		.just_for_size
 			font-size: 18px
 			margin-top: 30px
@@ -2292,7 +2299,6 @@ nav[canvas]
 				display: block !important
 
 .why_effective, .main_section_portfolio
-	padding-bottom: 120px
 	h2
 		margin: 0 0 30px
 	&.gray-bg
@@ -2859,6 +2865,7 @@ nav[canvas]
 				@extend %main_btn_focus
 
 .company-site-why-effective
+	padding: $padding
 	h2
 		line-height: 1
 		margin-bottom: 53px
@@ -2955,7 +2962,7 @@ nav[canvas]
 		background: #f8f8fa
 	&.contextual
 		.carousel_wrap
-			margin-bottom: 65px
+			padding-bottom: 120px
 	&.smm
 		.owl-carousel
 			.carousel_you_have_done
@@ -3168,6 +3175,7 @@ nav[canvas]
 .unique_challenge
 	&.ten_recommendations
 		padding-top: 9px
+
 		h2
 			line-height: 1
 			margin-bottom: 10px
@@ -3184,7 +3192,7 @@ nav[canvas]
 			align-items: center
 			flex-wrap: wrap
 			padding-top: 30px
-			margin-bottom: 123px
+			margin-bottom: 103px
 			.phone-number
 				font-size: 32px
 				color: #fff
@@ -3608,7 +3616,7 @@ nav[canvas]
 				&:focus
 					@extend %main_btn_focus
 
-.contextual-steps-section, .five_reasons_why_choose_us
+.contextual-steps-section, .five_reasons_why_choose_us, .company-site-why-effective
 	background: #fff
 	text-align: center
 	&.gray-bg
@@ -4283,9 +4291,8 @@ nav[canvas]
 .develop-site-problem-section
 	&.white
 		background: #ffffff
-	text-align: center
-	background: #f8f8fa
-	padding: 111px 0 50px
+		text-align: center
+		padding: 111px 0 50px
 	h2
 		color: $main_color
 		margin: 0
