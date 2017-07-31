@@ -20,9 +20,6 @@ class SmmAnimation {
 		this.tl7 = new TimelineMax();
 		this.tl8 = new TimelineMax();
 		this.tl9 = new TimelineMax();
-		this.tl10 = new TimelineMax();
-		this.tl11 = new TimelineMax();
-		this.tl12 = new TimelineMax();
 
 		//time line динамический
 		this.arrow = new TimelineMax();
@@ -39,9 +36,6 @@ class SmmAnimation {
 		this.tl7.pause();
 		this.tl8.pause();
 		this.tl9.pause();
-		this.tl10.pause();
-		this.tl11.pause();
-		this.tl12.pause();
 	}
 
 
@@ -290,12 +284,28 @@ class SmmAnimation {
 				opacity: 0,
 				ease: Power3.easeOut
 			}, "+=0.4")
-			.from('.section-8 .smm-rates-table table', 1, {
+			.staggerFrom('.section-8 .smm-rates-table table', 1, {
 				scaleY: 0.8,
 				opacity: 0,
 				ease: Power3.easeOut
 			}, 0.2, "-=0.6");
-	}
+		this.tl9
+			.from('.section-9 .contextual-form-section_wrap-title', 1, {
+				y: -30,
+				opacity: 0,
+				ease: Power3.easeOut
+			}, "+=0.4")
+			.from('.section-9 p', 1, {
+				y: -30,
+				opacity: 0,
+				ease: Power3.easeOut
+			}, "-=0.7")
+			.from('.section-9 .phone-button', 1, {
+				y: -30,
+				opacity: 0,
+				ease: Power3.easeOut
+			}, "-=0.7");
+}
 
 	start() {
 		if (activeSection('section-1')) {
