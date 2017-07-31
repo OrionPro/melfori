@@ -284,11 +284,11 @@ class SmmAnimation {
 				opacity: 0,
 				ease: Power3.easeOut
 			}, "+=0.4")
-			.staggerFrom('.section-8 .smm-rates-table table', 1, {
+			.from('.section-8 .smm-rates-table', 1, {
 				scaleY: 0.8,
 				opacity: 0,
 				ease: Power3.easeOut
-			}, 0.2, "-=0.6");
+			}, "-=0.6");
 		this.tl9
 			.from('.section-9 .contextual-form-section_wrap-title', 1, {
 				y: -30,
