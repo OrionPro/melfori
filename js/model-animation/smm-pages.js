@@ -45,7 +45,6 @@ class SmmAnimation {
 	}
 
 
-
 	description() {
 		//HEADER
 		this.tl1
@@ -75,9 +74,9 @@ class SmmAnimation {
 					this.arrow.repeat(Infinity);
 				}
 			}, '-=1')
-			.from('.anchors', 1,{
-			opacity: 0
-		}, "-=1");
+			.from('.anchors', 1, {
+				opacity: 0
+			}, "-=1");
 		this.tl2
 			.from('.section-2 .title-wrap h2', 1.8, {
 				y: 50,
@@ -88,7 +87,7 @@ class SmmAnimation {
 				y: -30,
 				opacity: 0,
 				ease: Power3.easeOut
-			}, 0.2,"-=1")
+			}, 0.2, "-=1")
 			.from('.section-2 .item-title h3', 1, {
 				x: 50,
 				opacity: 0,
@@ -108,15 +107,15 @@ class SmmAnimation {
 				y: -30,
 				opacity: 0,
 				ease: Power3.easeOut
-			}, 0.3,"-=1.6")
+			}, 0.3, "-=1.6")
 			.staggerFrom('.section-2 .content ul .arrow', 1, {
 				height: 0,
 				opacity: 0,
 				ease: Power3.easeOut
-			}, 0.5,"-=0.5")
+			}, 0.5, "-=0.5")
 			.staggerFrom('.section-2 .content ul .arrow', 0.5, {
 				width: 0
-			}, 0.5,"-=0.5");
+			}, 0.5, "-=0.5");
 		this.tl3
 			.from('.section-3 h2', 1, {
 				y: -30,
@@ -150,7 +149,7 @@ class SmmAnimation {
 				opacity: 0,
 				ease: Bounce.easeOut,
 				rotation: -50,
-				onComplete: ()=>{
+				onComplete: () => {
 					rotationGear('.decore-scheme-wrap .small span')
 				}
 			}, "-=0.8", "animation-input")
@@ -159,7 +158,7 @@ class SmmAnimation {
 				opacity: 0,
 				ease: Bounce.easeOut,
 				rotation: 50,
-				onComplete: () =>{
+				onComplete: () => {
 					rotationGear('.decore-scheme-wrap .big span', -1)
 				}
 			}, "-=1", "animation-input")
@@ -170,7 +169,7 @@ class SmmAnimation {
 				opacity: 0,
 				scaleY: 0.9,
 				ease: Power3.easeOut
-			},0.3, "-=1")
+			}, 0.3, "-=1")
 			.add("animation-input", "-=2.3")
 			.staggerFrom('.section-3 .animation-input input', 0.6, {
 				y: 30,
@@ -211,36 +210,91 @@ class SmmAnimation {
 				yPercent: -30,
 				opacity: 0,
 				ease: Power3.easeOut
-			},0.3 ,"-=0.5")
+			}, 0.3, "-=0.5")
 			.from('.section-5 .form-wrap', 1, {
 				y: -30,
 				opacity: 0,
 				ease: Power3.easeOut
-			},"-=0.5");
+			}, "-=0.5")
+			.from('.section-5 .aducation', 1, {
+				y: -30,
+				opacity: 0,
+				ease: Power3.easeOut
+			}, "-=0.5");
 
 		this.tl6
 			.from('.section-6 .title-wrap', 1, {
 				y: -30,
 				opacity: 0,
 				ease: Power3.easeOut
-			}, "-=0.5")
-			.staggerFrom('.description-in-five-steps-item', 0.5, {
+			}, "+=0.4")
+			.from('.section-6 .item p', 1, {
 				y: -30,
 				opacity: 0,
 				ease: Power3.easeOut
-			}, 0.3,"-=0.5")
-			.from('.section-6 .context-prise-wrap .decore-img', 1, {
-				x: -10,
+			}, "-=0.6")
+			.from('.smm_bg', 1, {
+				y: 30,
 				opacity: 0,
 				ease: Power3.easeOut
-			},"-=0.5")
-			.from('.section-6 .context-prise-wrap .text', 1, {
-				x: 10,
+			}, "-=0.4")
+			.staggerFrom('.smm_img1', 0.5, {
+				y: -30,
 				opacity: 0,
 				ease: Power3.easeOut
-			},"-=0.5");
-
-
+			}, 0.2, "-=1")
+			.staggerFrom('.smm_img2', 0.5, {
+				y: -30,
+				opacity: 0,
+				ease: Power3.easeOut
+			}, 0.2, "-=1")
+			.from('.section-6 .warning-wrap .content', 1, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut
+			}, "-=0.6")
+			.from('.section-6 .warning-wrap .content img', 1, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut
+			}, "-=0.8")
+			.from('.section-6 .warning-wrap .content h3', 1, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut
+			}, "-=1")
+			.from('.section-6 .warning-wrap .content p', 1, {
+				y: 30,
+				opacity: 0,
+				ease: Power3.easeOut
+			}, "-=1.2");
+		this.tl7
+			.from('.section-7 .title-wrap', 1, {
+				y: -30,
+				opacity: 0,
+				ease: Power3.easeOut
+			}, "+=0.4")
+			.from('.section-7 p.title_slide', 1, {
+				y: -30,
+				opacity: 0,
+				ease: Power3.easeOut
+			}, "-=0.6")
+			.from('.section-7 .carousel_wrap ', 1, {
+				scaleY: 0.8,
+				opacity: 0,
+				ease: Power3.easeOut
+			}, "-=1");
+		this.tl8
+			.from('.section-8 .smm-rates-title', 1, {
+				y: -30,
+				opacity: 0,
+				ease: Power3.easeOut
+			}, "+=0.4")
+			.from('.section-8 .smm-rates-table table', 1, {
+				scaleY: 0.8,
+				opacity: 0,
+				ease: Power3.easeOut
+			}, 0.2, "-=0.6");
 	}
 
 	start() {
@@ -262,7 +316,7 @@ class SmmAnimation {
 		if (activeSection('section-6', 300, 500)) {
 			this.tl6.play();
 		}
-		if (activeSection('section-7', 800, 900)) {
+		if (activeSection('section-7', 300, 500)) {
 			this.tl7.play();
 		}
 		if (activeSection('section-8', 300, 500)) {
@@ -273,4 +327,5 @@ class SmmAnimation {
 		}
 	}
 }
+
 export default SmmAnimation;
